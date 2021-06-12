@@ -1,0 +1,40 @@
+[
+  {
+    "links": [
+      "https://icms.cern.ch/tools/collaboration/units",
+      "https://icms.cern.ch/tools/collaboration/institutes",
+      "https://icms.cern.ch/tools/collaboration/people",
+      "https://icms.cern.ch/tools/collaboration/voting",
+      "https://icms.cern.ch/tools/collaboration/mo-list",
+      "https://icms.cern.ch/tools/collaboration/applicants",
+      "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+      "https://icms.cern.ch/tools/collaboration/statistics",
+      "https://icms.cern.ch/tools/collaboration/flags",
+      "https://icms.cern.ch/tools/institute/overdue-graduations",
+      "https://icms.cern.ch/tools/collaboration/tenures",
+      "https://icms.cern.ch/tools/collaboration/communications",
+      "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
+      "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+      "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+      "https://icms.cern.ch/tools/institute/profile",
+      "https://icms.cern.ch/tools/institute/pending-authors",
+      "https://icms.cern.ch/tools/institute/member-authors",
+      "https://icms.cern.ch/tools/institute/suspensions",
+      "https://icms.cern.ch/tools/institute/overdue-graduations",
+      "https://icms.cern.ch/tools/administration/engagement-office/due-corrector",
+      "https://icms.cern.ch/tools/administration/engagement-office/due-corrections",
+      "https://icms.cern.ch/tools/publications/cadi/lines",
+      "https://icms.cern.ch/tools/publications/cadi/arc-members",
+      "https://icms.cern.ch/tools/publications/cadi/awgs",
+      "https://icms.cern.ch/tools/publications/cadi/lines/approved",
+      "https://icms.cern.ch/tools/publications/cadi/lines/updated",
+      "https://icms.cern.ch/tools/publications/cadi/dashboard",
+      "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
+      "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
+      "https://icms.cern.ch/tools/publications/author-lists/files",
+      "https://icms.cern.ch/tools/publications/author-lists/author-data",
+      "https://icms.cern.ch/tools/publications/notes/entries",
+      "https://icms.cern.ch/tools/publications/notes/pending"
+    ]
+  }
+]
