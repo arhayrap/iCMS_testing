@@ -1,6 +1,7 @@
 [
   {
     "links": [
+      "https://icms.cern.ch/tools/",
       "https://icms.cern.ch/tools/collaboration/units",
       "https://icms.cern.ch/tools/collaboration/institutes",
       "https://icms.cern.ch/tools/collaboration/people",
@@ -34,7 +35,8 @@
       "https://icms.cern.ch/tools/publications/author-lists/files",
       "https://icms.cern.ch/tools/publications/author-lists/author-data",
       "https://icms.cern.ch/tools/publications/notes/entries",
-      "https://icms.cern.ch/tools/publications/notes/pending"
+      "https://icms.cern.ch/tools/publications/notes/pending",
+      "https://icms.cern.ch/tools/user/profile"
     ]
   }
 ]
