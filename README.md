@@ -13,7 +13,7 @@ Type login:
 Type password: 
 ```
 
-Mode: light, entire, both.
+Mode: "light", "entire", "both".
 
 ```terminal
 python ./data/visualization.py ./data/tools_out.json
