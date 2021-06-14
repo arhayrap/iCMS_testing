@@ -9,7 +9,7 @@ npm install
 For specific scripts and "light" mode:
 ```terminal
 python run.py light --spec ["cypress/integration/tools_test_spec.js","cypress/integration/epr_test_spec.js"]
-Type username: 
+Type login: 
 Type password: 
 ```
 
