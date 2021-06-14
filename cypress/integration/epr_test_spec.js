@@ -1,10 +1,9 @@
 describe("Checking epr", () => {
     var y = 1;
     var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
-    var n = 30; //334;
-    var start = 304;
+    var n = 34;
+    var start = 0;
     var links_path = "cypress/fixtures/epr_links.json";
-    //var user_path = "cypress/fixtures/users.json";
     var base = "https://icms-dev.cern.ch/epr/";
     var out_path = "data/epr_out.json";
     var out_path_light = "data/epr_out_surf.json";
@@ -61,7 +60,7 @@ describe("Checking epr", () => {
             //cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
-                url: 'https://icms-dev.cern.ch/epr/**',
+                url: 'https://icms.cern.ch/epr/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("POST request error : " + xhr.status + "  " + xhr.statusMessage);
@@ -70,7 +69,7 @@ describe("Checking epr", () => {
             }).as('posts');
             cy.route({
                 method: 'GET',
-                url: 'https://icms-dev.cern.ch/epr/**',
+                url: 'https://icms.cern.ch/epr/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);

@@ -8,7 +8,6 @@ describe('Get tools links', () => {
         let password = env["password"];
 	cy.login(login, password);
 	cy.wait(2000);
-	// cy.get("header > div > .text--secondary > button[aria-haspopup=true]").as("header_menu").each(($j, index0, $jdiv)=>{
 	cy.get("button[aria-haspopup=true]").as("header_menu").each(($j, index0, $jdiv)=>{
 	cy.log("index is -> ", index0);
 	cy.get("@header_menu").eq(index0).click({ force: true }).trigger("mouseover");

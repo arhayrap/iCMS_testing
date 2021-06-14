@@ -92,11 +92,11 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
                 cy.get("main table > tbody").each(($tab, index0, $tables) => {
                     cy.get("main table > tbody").eq(index0).children().then((tr1) => {
                         if (tr1.length <= 2 && !white_list) {
-			    if(!toggled){
-                        	site_state.warnings.push("Table warning: There is an empty table");
-			    }else{
-				site_state.warnings.push("Table warning: There is an empty table after toggling");
-			    }
+                            if (!toggled) {
+                                site_state.warnings.push("Table warning: There is an empty table");
+                            } else {
+                                site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            }
                         }
                     });
                 });
@@ -104,11 +104,11 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
                 cy.get("main table > tbody").each(($tab, index0, $tables) => {
                     cy.get("main table > tbody").eq(index0).children().then((tr1) => {
                         if (tr1.length <= 2 && !white_list) {
-			    if(!toggled){
-                        	site_state.warnings.push("Table warning: There is an empty table");
-			    }else{
-				site_state.warnings.push("Table warning: There is an empty table after toggling");
-			    }
+                            if (!toggled) {
+                                site_state.warnings.push("Table warning: There is an empty table");
+                            } else {
+                                site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            }
                         }
                     });
                 });
@@ -125,11 +125,11 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
                 cy.get("main table > tbody").each(($tab, index0, $tables) => {
                     cy.get("main table > tbody").children().then((tr1) => {
                         if (tr1.length <= 2 && !white_list) {
-			    if(!toggled){
-                        	site_state.warnings.push("Table warning: There is an empty table");
-			    }else{
-				site_state.warnings.push("Table warning: There is an empty table after toggling");
-			    }
+                            if (!toggled) {
+                                site_state.warnings.push("Table warning: There is an empty table");
+                            } else {
+                                site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            }
                         }
                     });
                 });
@@ -138,11 +138,11 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
                 cy.get("main table > tbody").each(($tab, index0, $tables) => {
                     cy.get("main table > tbody").children().then((tr1) => {
                         if (tr1.length <= 2 && !white_list) {
-			    if(!toggled){
-                        	site_state.warnings.push("Table warning: There is an empty table");
-			    }else{
-				site_state.warnings.push("Table warning: There is an empty table after toggling");
-			    }
+                            if (!toggled) {
+                                site_state.warnings.push("Table warning: There is an empty table");
+                            } else {
+                                site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            }
                         }
                     });
                 });
@@ -153,65 +153,114 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
     });
 })
 
-Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false)=>{
+Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false) => {
     cy.get("div.row div.v-card div.v-card__title")
-	.eq(2)
-	.siblings(".v-card__text").as("vcard")
-	.get("@vcard").find("div[role='list'] div.v-list-item__subtitle")
-	.should(($title)=>{expect($title).to.contain("Full Name");})
-	.siblings("div.v-list-item__title").eq(0).then(($elem)=>{
-	    if(!name){
-		console.log($elem.get(0).innerText == name);
-		if($elem.get(0).innerText == name){
-		    site_state.correct_profile = true;
-		}else{
-		    site_state.correct_profile = false;
-		}
-	    }else{
-		console.log($elem.get(0).innerText, name);
-		if($elem.get(0).innerText == name){
-		    site_state.correct_name_search = true;
-		}else{
-		    site_state.correct_name_search = false;
-		}
-	    }
-	});
+        .eq(2)
+        .siblings(".v-card__text").as("vcard")
+        .get("@vcard").find("div[role='list'] div.v-list-item__subtitle")
+        .should(($title) => {
+            expect($title).to.contain("Full Name");
+        })
+        .siblings("div.v-list-item__title").eq(0).then(($elem) => {
+            if (!name) {
+                console.log($elem.get(0).innerText == name);
+                if ($elem.get(0).innerText == name) {
+                    site_state.correct_profile = true;
+                } else {
+                    site_state.correct_profile = false;
+                }
+            } else {
+                console.log($elem.get(0).innerText, name);
+                if ($elem.get(0).innerText == name) {
+                    site_state.correct_name_search = true;
+                } else {
+                    site_state.correct_name_search = false;
+                }
+            }
+        });
 })
 
-Cypress.Commands.add("check_institute_dashboard", (site_state, k, name = false)=>{
+Cypress.Commands.add("check_institute_dashboard", (site_state, k, name = false) => {
     cy.get("div.v-card div.v-card__title")
-	.eq(1)
-	.siblings(".container").as("cont")
-	.get("@cont").find(".row div.col-9").eq(0).then(($elem)=>{
-		console.log($elem.get(0).innerText == name);
-		if($elem.get(0).innerText == name){
-		    site_state.correct_institute_search = true;
-		}else{
-		    site_state.correct_institute_search = false;
-		}
-	});
+        .eq(1)
+        .siblings(".container").as("cont")
+        .get("@cont").find(".row div.col-9").eq(0).then(($elem) => {
+            console.log($elem.get(0).innerText == name);
+            if ($elem.get(0).innerText == name) {
+                site_state.correct_institute_search = true;
+            } else {
+                site_state.correct_institute_search = false;
+            }
+        });
 })
 
-Cypress.Commands.add("check_logo_reference", (site_state, base)=>{
+Cypress.Commands.add("check_logo_reference", (site_state, base) => {
     cy.get("header .d-flex .v-toolbar__title").click();
-    if(cy.url().should('eq', base)){
-	site_state.correct_dashboard_url = true;
-    }else{
-	site_state.correct_dashboard_url = false;
+    if (cy.url().should('eq', base)) {
+        site_state.correct_dashboard_url = true;
+    } else {
+        site_state.correct_dashboard_url = false;
     }
 })
 
-Cypress.Commands.add("check_units", (site_state, k, base)=>{
-    cy.get("div.v-input--selection-controls__ripple").eq(1).click();
-    cy.check_tables(site_state.results[k], true);
-    //cy.wait(1000);
-    cy.get("header .d-flex .v-toolbar__title").click();
+Cypress.Commands.add("check_institutes", (site_state, k) => {
+    var key = {
+        "Member": "Yes",
+        "ForReference": "ForReference",
+        "Associated": "Associated",
+        "No": "No",
+        "Cooperating": "Cooperating",
+        "Leaving": "Leaving"
+    };
+    cy.get("i.mdi-menu-down").eq(1).click();
+    cy.get("div.menuable__content__active div[role='option']").eq(3).click();
+    cy.get("i.mdi-menu-down").eq(0).click();
+    cy.get("i.mdi-checkbox-marked").click();
+    cy.get(".menuable__content__active div[role='listbox'] div.v-list-item").as("outline").each((elem, index, arr) => {
+        console.log(elem)
+        cy.get("@outline").eq(index).click();
+        let option = elem.get(0).innerText;
+        console.log(elem.get(0).innerText, elem.get(0), option);
+        cy.wait(1000);
+        cy.get("tbody tr[class='']").each((tr, index, trs) => {
+            if (tr.get(0).children[3].innerText != key[option]) {
+                site_state.results[k].warnings.push("There is someting wrong in " + option + " table.");
+                return false;
+            }
+        });
+        cy.wait(1000);
+        cy.get("@outline").eq(index).click();
+    });
 })
 
-Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute)=>{
+Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
+    cy.get("div.v-input--selection-controls__ripple").eq(1).as("checkbox").click();
+    cy.check_tables(site_state.results[k], true);
+    cy.get("@checkbox").click();
+    cy.get("input[type='date']").type(date);
+    cy.get("main header button.v-btn").click();
+    cy.get("button.v-icon").click({
+        multiple: true,
+        force: true
+    });
+    cy.get("div.v-menu__content  div.v-card div.v-card__title div.v-input__control div.v-input__slot div.v-text-field__slot input").type(unit_name);
+    cy.get("div.v-treeview-node__children div.v-treeview-node__content span").click();
+    cy.get("main header div.v-toolbar__title").then(($elem) => {
+        if ($elem.get(0).innerText.split(": ")[1] == unit_name) {
+            site_state.results[k].correct_unit_search = true;
+        } else {
+            site_state.results[k].correct_unit_search = false;
+        }
+    });
+    cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
+        site_state.results[k].correct_arrow = true;
+    });
+})
+
+Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
     cy.get("button.v-btn--contained").eq(0).click();
     cy.wait_for_requests("@gets");
-    cy.check_tables(site_state.results[k]);
+    //cy.check_tables(site_state.results[k]);
     cy.go('back');
     cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000);
     cy.wait_for_requests("@gets");
@@ -226,7 +275,6 @@ Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, inst
     cy.check_institute_dashboard(site_state, k, institute);
     cy.go('back');
     cy.get("header .d-flex .v-toolbar__title").click();
-    //cy.check_profile_dashboard(site_state, k);
 })
 
 Cypress.Commands.add("check_tables_epr", (site_state) => {
@@ -239,24 +287,15 @@ Cypress.Commands.add("check_tables_epr", (site_state) => {
         var site = site_state;
         if ($body.find("table:visible").length) {
             cy.get("div.container table > tbody").as("table_body");
-            //cy.get("@table_body").each(($tabs, index0, $tab) => {
-            //    cy.get("@table_body").eq(index0).children().then((tr) => {
-		if($body.find("td.dataTables_empty").length){
-                    let td = cy.get("@table_body").find("td.dataTables_empty").then(($td)=>{
-		    /*var filtered = tr.filter(function(len, value){
-			if(td.length != 0){
-			    return value;
-			}
-		    });*/
-                	if ($td.length != 0 && !white_list) {
-			    for(let j = 0; j < $td.length; j++){
-				site.warnings.push("Table warning: There is an empty table");
-			    }
-                	}
-		    });
-                //})
-		}
-            //})
+            if ($body.find("td.dataTables_empty").length) {
+                let td = cy.get("@table_body").find("td.dataTables_empty").then(($td) => {
+                    if ($td.length != 0 && !white_list) {
+                        for (let j = 0; j < $td.length; j++) {
+                            site.warnings.push("Table warning: There is an empty table");
+                        }
+                    }
+                });
+            }
         } else {
             site_state.warnings = [];
         }

@@ -14,10 +14,12 @@ describe("Checking tools", () => {
     var out_path_light = "data/tools_out_surf.json";
     var name_surname = "Aram Hayrapetyan";
     var institute = "Yerevan Physics Institute";
+    var unit_name = "MUON Subdetector";
+    var date = "2012-12-10";
     var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var n = 1;
+    var n = 34;
     var start = 0;
     var env = Cypress.env()["flags"]
     var login = env["login"];
@@ -88,10 +90,11 @@ describe("Checking tools", () => {
 		    }else if(link == base){
 			cy.check_dashboard(site_state[0], k, base, name_surname, institute);
 		    }else if(link == base + "collaboration/units"){
-			cy.check_units(site_state[0], k);
-		    }else{
-			cy.check_tables(site_state[0].results[k]);
+			cy.check_units(site_state[0], k, unit_name, date);
+		    }else if(link == base + "collaboration/institutes"){
+			cy.check_institutes(site_state[0], k);
 		    }
+		    cy.check_tables(site_state[0].results[k]);
                 } else if(mode == "entire") {
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
                     site_state[0].results[k].load_time = performance.now();
@@ -102,16 +105,17 @@ describe("Checking tools", () => {
                     cy.wait(4000);
 		    cy.get_load_time(site_state[0].results[k]);
 		    if(link == profile){
-			cy.check_profile_dashboard_reference(site_state[0], k, base);
+			cy.check_profile_dashboard(site_state[0], k, base);
+			cy.check_logo_reference(site_state[0], base);
 		    }else if(link == base){
 			cy.check_dashboard(site_state[0], k, base, name_surname, institute);
 		    }else if(link == base + "collaboration/units"){
-			cy.check_units(site_state[0], k);
-		    }else{
-			cy.check_tables(site_state[0].results[k]);
+			cy.check_units(site_state[0], k, unit_name, date);
+		    }else if(link == base + "collaboration/institutes"){
+			cy.check_institutes(site_state[0], k);
 		    }
+		    cy.check_tables(site_state[0].results[k]);
                 }
-
             });
             if (mode == "light") {
                 cy.writeFile(out_path_light, site_state);
