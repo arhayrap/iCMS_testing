@@ -4,14 +4,16 @@
 cd iCMS_testing
 
 npm install
-
-npm run cy:run -- --env flags='{"login":"login","password":"password","mode":""}'
 ```
 
-For specific scripts and "light mode:
+For specific scripts and "light" mode:
 ```terminal
-npm run cy:run -- --env flags='{"login":"login","password":"password","mode":"light"}' --spec ["cypress/integration/tools_test_spec.js","cypress/integration/epr_test_spec.js"]
+python run.py light --spec ["cypress/integration/tools_test_spec.js","cypress/integration/epr_test_spec.js"]
+Type username: 
+Type password: 
 ```
+
+Mode: light, entire, both.
 
 ```terminal
 python ./data/visualization.py ./data/tools_out.json
