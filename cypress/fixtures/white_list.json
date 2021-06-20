@@ -1,0 +1,11 @@
+[
+  {
+    "links": [
+      "https://icms-dev.cern.ch/tools/institute/pending-authors",
+      "https://icms-dev.cern.ch/tools/institute/member-authors",
+      "https://icms-dev.cern.ch/tools/institute/suspensions",
+      "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrector",
+      "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build"
+    ]
+  }
+]
