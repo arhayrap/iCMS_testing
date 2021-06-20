@@ -233,6 +233,67 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
     });
 })
 
+Cypress.Commands.add("check_people", (site_state, k) => {
+    var key = [6,8,5];
+    cy.get(".v-data-footer__select div[role='button'] .v-select__slot").click();
+    cy.get("div.menuable__content__active div[role='option']").eq(2).click();
+    cy.get(".v-card__title .row .v-input").as("menu_items").each((item0, index0, items0) => {
+	if(index0 == 0 || index0 == 1 || index0 == 2){
+	    cy.get("@menu_items").eq(index0).click();
+	    cy.get("div[aria-selected='true']").click();
+	    cy.get("div.menuable__content__active div[role='option'] label").eq(index0).then((i) => {
+		let menu_item = i.innerText;
+	    });
+	    cy.get(".v-menu__content div[role='listbox']").as("outline").each((item1, index1, items1) => {
+		console.log(item1);
+		cy.get("@outline").eq(index1).click();
+		let option = item1.get(0).innerText;
+		console.log(item1.get(0).innerText, item1.get(0), option);
+		cy.wait(1000);
+		cy.get("tbody tr[class='']").each((tr, index, trs) => {
+		    if(trs.length > 2){
+			if (tr.get(0).children[key[index0]].innerText != option) {
+			    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item  + "' '" + option + "' table.");
+			    return false;
+			}
+		    }else{
+			site_state.results[k].warnings.push("The menu`s '" + menu_item  + "' '" + option + "' table is empty.");
+			return false;
+		    }
+		});
+		cy.wait(1000);
+		cy.get("@outline").eq(index).click();
+	    });
+	}else if(index0 == 4){
+	    cy.get(".v-data-table__wrapper thead").children().then((elems) => {
+		let n_thead = elems.length;
+	    });
+	    cy.get("@menu_items").eq(index0).click();
+	    cy.get(".v-data-table__wrapper thead").children().then((elems) => {
+		let n_thead -= elems.length;
+		if(n_thead != 3){
+		    site_state.results[k].additional = "There are " + n_thead + " extended colmuns instead of 3";
+		}
+	    });
+	}
+    });
+})
+
+Cypress.Commands.add("check_mo_list", (site_state, k) => {
+    //cy.get(".v-data-table__wrapper thead");
+    let initial = []
+    cy.get(".row .v-data-table__wrapper tbody tr").each((tr, index0, tbody) => {
+
+	//to be continued...
+
+    })
+    cy.get(".v-card__title .col-2").eq(0).as("mode").click();
+    cy.get("div[role='listbox']").eq(0).as("lb").children().then((children)=>{cy.get("@lb").eq(Math.floor(Math.random()*children.length)).click()});
+    cy.get(".v-card__title .col-2").eq(1).as("year");
+    
+
+})
+
 Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
     cy.get("div.v-input--selection-controls__ripple").eq(1).as("checkbox").click();
     cy.check_tables(site_state.results[k], true);
