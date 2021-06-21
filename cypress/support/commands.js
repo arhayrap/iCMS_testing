@@ -173,7 +173,7 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false) =>
                 console.log($elem.get(0).innerText, name);
                 if ($elem.get(0).innerText == name) {
                     site_state.correct_name_search = true;
-                } else {
+                 } else {
                     site_state.correct_name_search = false;
                 }
             }
@@ -235,19 +235,25 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
 
 Cypress.Commands.add("check_people", (site_state, k) => {
     var key = [6,8,5];
+    var menu_item = "";
+    var n_thead;
+    var option;
     cy.get(".v-data-footer__select div[role='button'] .v-select__slot").click();
     cy.get("div.menuable__content__active div[role='option']").eq(2).click();
     cy.get(".v-card__title .row .v-input").as("menu_items").each((item0, index0, items0) => {
 	if(index0 == 0 || index0 == 1 || index0 == 2){
 	    cy.get("@menu_items").eq(index0).click();
-	    cy.get("div[aria-selected='true']").click();
-	    cy.get("div.menuable__content__active div[role='option'] label").eq(index0).then((i) => {
-		let menu_item = i.innerText;
+	    cy.get("div[aria-selected='true']").click({multiple:true, force: true});
+	    //cy.wait(500);
+	    /*
+	    cy.get("div.menuable__content__active .v-list-item__title").then((i) => {
+		menu_item = i.innerText;
 	    });
-	    cy.get(".v-menu__content div[role='listbox']").as("outline").each((item1, index1, items1) => {
+	    */
+	    cy.get(".v-menu__content div[role='listbox']").as("outline").children().each((item1, index1, items1) => {
 		console.log(item1);
-		cy.get("@outline").eq(index1).click();
-		let option = item1.get(0).innerText;
+		cy.get("@outline").children().eq(index1).click({force: true});
+		option = item1.get(0).innerText;
 		console.log(item1.get(0).innerText, item1.get(0), option);
 		cy.wait(1000);
 		cy.get("tbody tr[class='']").each((tr, index, trs) => {
@@ -257,22 +263,22 @@ Cypress.Commands.add("check_people", (site_state, k) => {
 			    return false;
 			}
 		    }else{
-			site_state.results[k].warnings.push("The menu`s '" + menu_item  + "' '" + option + "' table is empty.");
+			site_state.results[k].warnings.push("The menu`s '" + menu_item  + "', '" + option + "' table is empty.");
 			return false;
 		    }
 		});
 		cy.wait(1000);
-		cy.get("@outline").eq(index).click();
+		cy.get("@outline").children().eq(index1).click({force: true});
 	    });
 	}else if(index0 == 4){
 	    cy.get(".v-data-table__wrapper thead").children().then((elems) => {
-		let n_thead = elems.length;
+		n_thead = elems.length;
 	    });
-	    cy.get("@menu_items").eq(index0).click();
+	    cy.get("@menu_items").children().eq(index0).click({force: true});
 	    cy.get(".v-data-table__wrapper thead").children().then((elems) => {
-		let n_thead -= elems.length;
+		n_thead -= elems.length;
 		if(n_thead != 3){
-		    site_state.results[k].additional = "There are " + n_thead + " extended colmuns instead of 3";
+		    site_state.results[k].additional = "There are " + n_thead + " extended colmuns instead of 3.";
 		}
 	    });
 	}
@@ -281,17 +287,52 @@ Cypress.Commands.add("check_people", (site_state, k) => {
 
 Cypress.Commands.add("check_mo_list", (site_state, k) => {
     //cy.get(".v-data-table__wrapper thead");
-    let initial = []
-    cy.get(".row .v-data-table__wrapper tbody tr").each((tr, index0, tbody) => {
-
-	//to be continued...
-
-    })
-    cy.get(".v-card__title .col-2").eq(0).as("mode").click();
-    cy.get("div[role='listbox']").eq(0).as("lb").children().then((children)=>{cy.get("@lb").eq(Math.floor(Math.random()*children.length)).click()});
-    cy.get(".v-card__title .col-2").eq(1).as("year");
-    
-
+    var initial = []
+    var stop0 = false;
+    var mode = "";
+    var i;
+    var year;
+    cy.get(".row .v-data-table__wrapper tbody tr").each((tr0, index0, trs0) => {
+	let initial = tr0.get(0).children[4].innerText;
+    });
+    cy.wait(2000);
+    cy.get(".v-card__title .col-2").children().eq(0).as("mode").click();
+    cy.get("div[role='listbox']").children().eq(0).as("lb").children().then((children)=>{
+	var i = Math.floor(Math.random()*children.length);
+	cy.get("@lb").children().eq(i).click({force: true});
+	mode = children[i].innerText;
+    });
+    cy.wait(2000);
+    cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
+	if(tr1.get(0).children[4].innerText != initial[index1] && !stop){
+	    stop0 = true;
+	}
+    }).then(() => {
+	if(!stop0){
+	    site_state.results[k].warnings.push("The '" + mode + "' option of 'mode' changed nothing.");
+	}else{
+	    stop0 = false;
+	}
+    });
+    cy.wait(2000);
+    cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
+    cy.get("div[role='listbox']").children().eq(1).as("lb").children().then((children)=>{
+	i = Math.floor(Math.random()*children.length);
+	cy.get("@lb").children().eq(i).click({force: true});
+	year = children[i].innerText;
+    });
+    cy.wait(2000);
+    cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
+	if(tr1.get(0).children[4].innerText != initial[index1] && !stop){
+	    stop0 = true;
+	}
+    }).then(() => {
+	if(!stop0){
+	    site_state.results[k].warnings.push("The '" + year + "' option of 'year' changed nothing.");
+	}else{
+	    stop0 = false;
+	}
+    });
 })
 
 Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
@@ -320,17 +361,17 @@ Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
 
 Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
     cy.get("button.v-btn--contained").eq(0).click();
-    cy.wait_for_requests("@gets");
+    //cy.wait_for_requests("@gets");
     //cy.check_tables(site_state.results[k]);
     cy.go('back');
     cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000);
-    cy.wait_for_requests("@gets");
+    //cy.wait_for_requests("@gets");
     cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
     cy.wait(2000);
     cy.check_profile_dashboard(site_state, k, name_surname);
     cy.go('back');
     cy.get("div.v-select__slot input:visible").eq(1).type(institute).wait(1000);
-    cy.wait_for_requests("@gets");
+    //cy.wait_for_requests("@gets");
     cy.get("div.v-select__slot input:visible").eq(1).type("{enter}");
     cy.wait(2000);
     cy.check_institute_dashboard(site_state, k, institute);

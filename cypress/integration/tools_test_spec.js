@@ -7,8 +7,8 @@ describe("Checking tools", () => {
         app_status: ""
     }];
     var links_path = "cypress/fixtures/tools_links.json";
-    var base = "https://icms.cern.ch/tools/";
-    var profile = "https://icms.cern.ch/tools/user/profile";
+    var base = "https://icms-dev.cern.ch/tools/";
+    var profile = "https://icms-dev.cern.ch/tools/user/profile";
     var user_path = "cypress/fixtures/users.json";
     var out_path = "data/tools_out.json";
     var out_path_light = "data/tools_out_surf.json";
@@ -19,8 +19,8 @@ describe("Checking tools", () => {
     var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var n = 34;
-    var start = 0;
+    var n = 3;
+    var start = 3;
     var env = Cypress.env()["flags"]
     var login = env["login"];
     var password = env["password"];
@@ -67,7 +67,7 @@ describe("Checking tools", () => {
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
             //cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
-        	url:"https://icms.cern.ch/tools-api/**",
+        	url:"https://icms-dev.cern.ch/tools-api/**",
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
@@ -93,6 +93,10 @@ describe("Checking tools", () => {
 			cy.check_units(site_state[0], k, unit_name, date);
 		    }else if(link == base + "collaboration/institutes"){
 			cy.check_institutes(site_state[0], k);
+		    }else if(link == base + "collaboration/people"){
+			cy.check_people(site_state[0], k);
+		    }else if(link == base + "collaboration/mo-list"){
+			cy.check_mo_list(site_state[0], k);
 		    }
 		    cy.check_tables(site_state[0].results[k]);
                 } else if(mode == "entire") {
@@ -113,6 +117,10 @@ describe("Checking tools", () => {
 			cy.check_units(site_state[0], k, unit_name, date);
 		    }else if(link == base + "collaboration/institutes"){
 			cy.check_institutes(site_state[0], k);
+		    }else if(link == base + "collaboration/people"){
+			cy.check_people(site_state[0], k);
+		    }else if(link == base + "collaboration/mo-list"){
+			cy.check_mo_list(site_state[0], k);
 		    }
 		    cy.check_tables(site_state[0].results[k]);
                 }
