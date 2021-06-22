@@ -19,8 +19,8 @@ describe("Checking tools", () => {
     var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var n = 3;
-    var start = 3;
+    var n = 35;
+    var start = 0;
     var env = Cypress.env()["flags"]
     var login = env["login"];
     var password = env["password"];
@@ -75,10 +75,12 @@ describe("Checking tools", () => {
                 }
             }).as("gets");
             cy.readFile(links_path).then(($link_obj) => {
+		console.log(mode)
                 let links = $link_obj[0]["links"];
                 let link = links[k + start];
                 site_state[0].results[k].url = link;
                 if (mode == "light") {
+		    console.log("light")
                     cy.visit(link);
                     site_state[0].username = login;
                     cy.login(login, password);

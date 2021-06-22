@@ -1,13 +1,13 @@
 [
   {
-    "date": "06-14-2021, 7:42",
+    "date": "06-22-2021, 12:28",
     "username": "arhayrap",
     "results": [
       {
         "url": "https://icms.cern.ch/epr/showMine",
         "status": 200,
-        "duration": 164,
-        "load_time": 40436.63000000379,
+        "duration": 163,
+        "load_time": 11781.315000000177,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -15,8 +15,8 @@
       {
         "url": "https://icms.cern.ch/epr/showMyInstPledges",
         "status": 200,
-        "duration": 133,
-        "load_time": 12399.375000000873,
+        "duration": 147,
+        "load_time": 11742.145000000164,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -24,8 +24,8 @@
       {
         "url": "https://icms.cern.ch/epr/show",
         "status": 200,
-        "duration": 131,
-        "load_time": 14972.07999999955,
+        "duration": 142,
+        "load_time": 10096.37499999917,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -33,8 +33,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/173",
         "status": 200,
-        "duration": 253,
-        "load_time": 10396.38500000001,
+        "duration": 255,
+        "load_time": 11772.315000000162,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -42,8 +42,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/180",
         "status": 200,
-        "duration": 253,
-        "load_time": 13844.21999999904,
+        "duration": 254,
+        "load_time": 10234.53999999947,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -51,8 +51,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/176",
         "status": 200,
-        "duration": 313,
-        "load_time": 10298.184999999648,
+        "duration": 254,
+        "load_time": 11351.599999999962,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -60,8 +60,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/174",
         "status": 200,
-        "duration": 254,
-        "load_time": 14542.130000001634,
+        "duration": 253,
+        "load_time": 11859.399999999368,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -69,8 +69,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/179",
         "status": 200,
-        "duration": 179,
-        "load_time": 13260.589999998047,
+        "duration": 130,
+        "load_time": 12222.620000000461,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -80,8 +80,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/172",
         "status": 200,
-        "duration": 350,
-        "load_time": 11364.645000001474,
+        "duration": 420,
+        "load_time": 11336.009999999078,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -89,8 +89,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/171",
         "status": 200,
-        "duration": 253,
-        "load_time": 12331.105000004754,
+        "duration": 252,
+        "load_time": 10633.665000001201,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -98,8 +98,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/170",
         "status": 200,
-        "duration": 410,
-        "load_time": 16267.634999996517,
+        "duration": 349,
+        "load_time": 9678.210000000036,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -107,8 +107,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/175",
         "status": 200,
-        "duration": 264,
-        "load_time": 10226.44500000024,
+        "duration": 292,
+        "load_time": 11430.974999999307,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -116,8 +116,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/178",
         "status": 200,
-        "duration": 351,
-        "load_time": 9503.720000000612,
+        "duration": 350,
+        "load_time": 12088.599999999162,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -125,8 +125,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/169",
         "status": 200,
-        "duration": 263,
-        "load_time": 10238.765000001877,
+        "duration": 292,
+        "load_time": 13943.870000000985,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -134,8 +134,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/177",
         "status": 200,
-        "duration": 350,
-        "load_time": 9605.264999998326,
+        "duration": 349,
+        "load_time": 10343.030000000028,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -143,8 +143,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/181",
         "status": 200,
-        "duration": 264,
-        "load_time": 10325.83500000328,
+        "duration": 131,
+        "load_time": 9717.135000000766,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -152,8 +152,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/168",
         "status": 200,
-        "duration": 275,
-        "load_time": 11238.339999996242,
+        "duration": 303,
+        "load_time": 10457.510000000184,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -161,8 +161,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProject/167",
         "status": 200,
-        "duration": 254,
-        "load_time": 10926.554999998189,
+        "duration": 143,
+        "load_time": 9760.134999998641,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -170,8 +170,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/173",
         "status": 200,
-        "duration": 260,
-        "load_time": 12817.22499999887,
+        "duration": 256,
+        "load_time": 12939.604999999574,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -181,8 +181,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/180",
         "status": 200,
-        "duration": 231,
-        "load_time": 16407.594999996945,
+        "duration": 216,
+        "load_time": 16094.710000001214,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -190,8 +190,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/176",
         "status": 200,
-        "duration": 221,
-        "load_time": 12650.125000000116,
+        "duration": 368,
+        "load_time": 12554.36499999999,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -201,17 +201,19 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/174",
         "status": 200,
-        "duration": 212,
-        "load_time": 13286.560000000463,
-        "warnings": [],
+        "duration": 346,
+        "load_time": 12483.05499999877,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/179",
         "status": 200,
-        "duration": 232,
-        "load_time": 12765.270000003511,
+        "duration": 349,
+        "load_time": 12522.430000000866,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -221,19 +223,17 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/172",
         "status": 200,
-        "duration": 297,
-        "load_time": 12730.579999995825,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 377,
+        "load_time": 12922.469999999506,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/171",
         "status": 200,
-        "duration": 358,
-        "load_time": 17417.69000000204,
+        "duration": 344,
+        "load_time": 12672.365000000398,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -241,8 +241,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/170",
         "status": 200,
-        "duration": 385,
-        "load_time": 12351.979999999458,
+        "duration": 346,
+        "load_time": 12532.290000001027,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -250,8 +250,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/175",
         "status": 200,
-        "duration": 379,
-        "load_time": 12787.124999995285,
+        "duration": 366,
+        "load_time": 12703.784999999683,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -261,8 +261,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/178",
         "status": 200,
-        "duration": 346,
-        "load_time": 14424.810000004072,
+        "duration": 365,
+        "load_time": 14700.629999999364,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -270,8 +270,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/169",
         "status": 200,
-        "duration": 247,
-        "load_time": 12876.020000003336,
+        "duration": 354,
+        "load_time": 12533.939999999362,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -281,8 +281,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/177",
         "status": 200,
-        "duration": 383,
-        "load_time": 16561.22999999934,
+        "duration": 355,
+        "load_time": 14634.149999999907,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -290,8 +290,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/181",
         "status": 200,
-        "duration": 361,
-        "load_time": 12558.329999999842,
+        "duration": 364,
+        "load_time": 12554.320000001055,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -301,8 +301,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/168",
         "status": 200,
-        "duration": 234,
-        "load_time": 18131.72499999928,
+        "duration": 359,
+        "load_time": 16485.310000000056,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -312,8 +312,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/167",
         "status": 200,
-        "duration": 243,
-        "load_time": 16356.57500000525,
+        "duration": 665,
+        "load_time": 13698.705000000715,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -323,8 +323,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/0",
         "status": 200,
-        "duration": 210,
-        "load_time": 12904.770000001008,
+        "duration": 197,
+        "load_time": 12381.94999999908,
         "warnings": [
           "Table warning: There is an empty table"
         ],

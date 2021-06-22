@@ -1,22 +1,88 @@
 [
   {
-    "date": "06-21-2021, 9:15",
+    "date": "06-22-2021, 12:11",
     "username": "arhayrap",
     "results": [
       {
+        "url": "https://icms-dev.cern.ch/tools/",
+        "status": 200,
+        "duration": 300,
+        "load_time": 10357.990000000427,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/units",
+        "status": 200,
+        "duration": 281,
+        "load_time": 7367.46999999923,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK",
+        "correct_unit_search": true,
+        "correct_arrow": true
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/institutes",
+        "status": 200,
+        "duration": 275,
+        "load_time": 7344.360000000961,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
         "url": "https://icms-dev.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 67,
-        "load_time": 8373.740000650287,
-        "warnings": [],
+        "duration": 406,
+        "load_time": 7661.330000000817,
+        "warnings": [
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Authorship statuses' 'false' table.",
+          "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+        ],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/voting",
         "status": 200,
-        "duration": 59,
-        "load_time": 6896.180000156164,
+        "duration": 663,
+        "load_time": 9103.750000000233,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -28,17 +94,306 @@
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 62,
-        "load_time": 6316.469999961555,
+        "duration": 262,
+        "load_time": 7014.530000000377,
         "warnings": [
           "The 'Official' option of 'mode' changed nothing.",
           "The 'Pre Approval' option of 'year' changed nothing."
         ],
         "errors": [],
         "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/applicants",
+        "status": 200,
+        "duration": 264,
+        "load_time": 7173.049999999406,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
+        "duration": 264,
+        "load_time": 8045.864999999991,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/statistics",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6781.564999999304,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/flags",
+        "status": 200,
+        "duration": 261,
+        "load_time": 6769.725000000151,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 260,
+        "load_time": 7484.394999999437,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/tenures",
+        "status": 200,
+        "duration": 261,
+        "load_time": 6830.699999998673,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/communications",
+        "status": 200,
+        "duration": 262,
+        "load_time": 7003.955000000191,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "status": 200,
+        "duration": 261,
+        "load_time": 6711.194999999891,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "status": 200,
+        "duration": 260,
+        "load_time": 6786.879999999655,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6772.554999999527,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/profile",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6927.090000001015,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/pending-authors",
+        "status": 200,
+        "duration": 264,
+        "load_time": 6712.609999998647,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/member-authors",
+        "status": 200,
+        "duration": 695,
+        "load_time": 7476.989999999234,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/suspensions",
+        "status": 200,
+        "duration": 263,
+        "load_time": 7002.840000001015,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6762.514999998559,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrector",
+        "status": 200,
+        "duration": 267,
+        "load_time": 6959.295000000508,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrections",
+        "status": 200,
+        "duration": 262,
+        "load_time": 7338.020000001008,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "GET request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6875.25500000082,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/arc-members",
+        "status": 200,
+        "duration": 264,
+        "load_time": 6769.82999999926,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/awgs",
+        "status": 200,
+        "duration": 265,
+        "load_time": 7054.674999999348,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/approved",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6922.785000000615,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/updated",
+        "status": 200,
+        "duration": 261,
+        "load_time": 6830.685000000754,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/dashboard",
+        "status": 200,
+        "duration": 264,
+        "load_time": 6818.080000001006,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6699.534999999683,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/open-author-lists",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6770.920000000857,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/files",
+        "status": 200,
+        "duration": 261,
+        "load_time": 6850.645000000484,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/author-data",
+        "status": 200,
+        "duration": 266,
+        "load_time": 6710.109999999986,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/notes/entries",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6789.604999999865,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/notes/pending",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6868.604999999632,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
       }
     ],
     "cons_failed_pages": 0,
-    "app_status": ""
+    "app_status": "",
+    "correct_name_search": true,
+    "correct_institute_search": true
   }
 ]

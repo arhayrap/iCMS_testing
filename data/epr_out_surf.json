@@ -1,6 +1,6 @@
 [
   {
-    "date": "06-14-2021, 7:33",
+    "date": "06-22-2021, 12:20",
     "username": "arhayrap",
     "results": [
       {
@@ -47,9 +47,7 @@
       },
       {
         "url": "https://icms.cern.ch/epr/showProject/179",
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
@@ -116,6 +114,7 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/173",
         "warnings": [
+          "Table warning: There is an empty table",
           "Table warning: There is an empty table"
         ],
         "errors": [],
