@@ -14,6 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import './epr'
+import './tools'
 import './commands'
 
 // Alternatively you can use CommonJS syntax:

@@ -15,7 +15,7 @@ describe("Checking epr", () => {
     var password = env["password"];
     var mode = env["mode"];
     if (mode == "light") {
-	var check_string = "Logs in and visits the page in light mode";
+        var check_string = "Logs in and visits the page in light mode";
         var site_state = [{
             date: "",
             username: "",
@@ -32,7 +32,7 @@ describe("Checking epr", () => {
             });
         }
     } else {
-	var check_string = "Logs in and visits the page entirely";
+        var check_string = "Logs in and visits the page entirely";
         var site_state = [{
             date: "",
             username: "",
@@ -90,7 +90,7 @@ describe("Checking epr", () => {
                     cy.get("body", {
                         timeout: 50000
                     }).wait(2000);
-		    cy.get_stat_dur_light(link, site_state, k, page_fail_limit);
+                    cy.get_stat_dur_light(link, site_state, k, page_fail_limit);
                 } else {
                     site_state[0].results[k].load_time = performance.now();
                     cy.select_year("@posts", site_state[0].results[k], y);
