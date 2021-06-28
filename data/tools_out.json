@@ -1,13 +1,13 @@
 [
   {
-    "date": "06-27-2021, 7:15",
+    "date": "06-28-2021, 2:46",
     "username": "arhayrap",
     "results": [
       {
         "url": "https://icms-dev.cern.ch/tools/",
         "status": 200,
-        "duration": 268,
-        "load_time": 5810.064999997849,
+        "duration": 269,
+        "load_time": 7398.789999999281,
         "warnings": [],
         "errors": [
           "GET request error : 400  400 (Bad Request)",
@@ -20,15 +20,10 @@
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/units",
         "status": 200,
-        "duration": 269,
-        "load_time": 3443.72999999905,
-        "warnings": [
-          "Table warning: There is an empty table after toggling",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "GET request error : 400  400 (Bad Request)"
-        ],
+        "duration": 274,
+        "load_time": 5698.199999998906,
+        "warnings": [],
+        "errors": [],
         "state": "OK",
         "correct_unit_search": true,
         "correct_arrow": true
@@ -36,304 +31,8 @@
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 259,
-        "load_time": 3350.124999997206,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/people",
-        "status": 200,
-        "duration": 402,
-        "load_time": 3160.309999999299,
-        "warnings": [
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Authorship statuses' 'false' table.",
-          "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/voting",
-        "status": 200,
-        "duration": 874,
-        "load_time": 10287.120000000868,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/mo-list",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2681.205000000773,
-        "warnings": [
-          "The 'Official' option of 'mode' changed nothing.",
-          "The 'Pre Approval' option of 'year' changed nothing."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/applicants",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2894.4750000009662,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/emeritus-nominations",
-        "status": 200,
-        "duration": 258,
-        "load_time": 2945.064999999886,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/statistics",
-        "status": 200,
-        "duration": 260,
-        "load_time": 3407.5149999989662,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/flags",
-        "status": 200,
-        "duration": 552,
-        "load_time": 3878.900000003341,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2930.7500000068103,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/tenures",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2939.8349999974016,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/communications",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2864.260000002105,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/bookings",
-        "status": 200,
-        "duration": 259,
-        "load_time": 2704.4649999952526,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/weeks",
-        "status": 200,
-        "duration": 256,
-        "load_time": 2830.98500000051,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/rooms",
-        "status": 200,
-        "duration": 256,
-        "load_time": 3613.73000000458,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/profile",
-        "status": 200,
-        "duration": 258,
-        "load_time": 3067.84499999776,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/pending-authors",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2788.7899999986985,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/member-authors",
-        "status": 200,
-        "duration": 637,
-        "load_time": 3278.919999997015,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/suspensions",
-        "status": 200,
-        "duration": 262,
-        "load_time": 2957.9500000036205,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
-        "status": 200,
-        "duration": 263,
-        "load_time": 2847.509999999602,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrector",
-        "status": 200,
-        "duration": 262,
-        "load_time": 2862.1150000035414,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrections",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2913.865000002261,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "GET request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines",
-        "status": 200,
-        "duration": 266,
-        "load_time": 2898.704999999609,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/arc-members",
-        "status": 200,
-        "duration": 260,
-        "load_time": 3046.4050000009593,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/awgs",
-        "status": 200,
-        "duration": 263,
-        "load_time": 2903.214999998454,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/approved",
-        "status": 200,
-        "duration": 263,
-        "load_time": 3080.5900000050315,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/updated",
-        "status": 200,
         "duration": 261,
-        "load_time": 2905.800000000454,
+        "load_time": 5232.504999999946,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -341,72 +40,290 @@
         "state": "OK"
       },
       {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/dashboard",
-        "status": 200,
-        "duration": 264,
-        "load_time": 2834.8799999948824,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build",
-        "status": 200,
-        "duration": 264,
-        "load_time": 3148.7750000014785,
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/open-author-lists",
-        "status": 200,
-        "duration": 261,
-        "load_time": 2796.555000000808,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/files",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2947.9599999976926,
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/author-data",
-        "status": 200,
-        "duration": 261,
-        "load_time": 2824.769999999262,
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms-dev.cern.ch/tools/publications/notes/entries",
-        "status": 200,
-        "duration": 264,
-        "load_time": 3081.6600000034086,
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms-dev.cern.ch/tools/publications/notes/pending",
-        "status": 200,
-        "duration": 260,
-        "load_time": 2947.4649999974063,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       }

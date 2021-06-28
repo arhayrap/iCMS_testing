@@ -5,9 +5,7 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
             let white_list = $obj[0]["links"].includes(site_state["url"]);
         });
         if ($body.find("table").length) {
-            console.log("found table");
             if ($body.find(".v-slide-group__wrapper").length) {
-                console.log("v slide group wrapper!")
                 cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
                     multiple: true
                 });
@@ -36,7 +34,6 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
                 });
             }
         } else if ($body.find("div.v-skeleton-loader__table-tbody").length) {
-            console.log("finding skeleton");
             cy.get("table", {
                 timeout: 60000
             });
@@ -139,10 +136,10 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
     cy.get("i.mdi-menu-down").eq(0).click();
     cy.get("i.mdi-checkbox-marked").click();
     cy.get(".menuable__content__active div[role='listbox'] div.v-list-item").as("outline").each((elem, index, arr) => {
-        console.log(elem)
+        //console.log(elem)
         cy.get("@outline").eq(index).click();
         let option = elem.get(0).innerText;
-        console.log(elem.get(0).innerText, elem.get(0), option);
+        //console.log(elem.get(0).innerText, elem.get(0), option);
         cy.wait(1000);
         cy.get("tbody tr[class='']").each((tr, index, trs) => {
             if (tr.get(0).children[3].innerText != key[option]) {
@@ -172,7 +169,6 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                     });
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
-                    console.log("-------------->", i)
                     menu_item = i.get(0).innerText;
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
@@ -212,7 +208,6 @@ Cypress.Commands.add("check_people", (site_state, k) => {
 })
 
 Cypress.Commands.add("check_mo_list", (site_state, k) => {
-    //cy.get(".v-data-table__wrapper thead");
     var initial = []
     var stop0 = false;
     var mode = "";
@@ -232,7 +227,8 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
     cy.wait(2000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
-        if (tr1.get(0).children[4].innerText != initial[index1] && !stop) {
+	if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
+	    //console.log(tr1.get(0).children[4].innerText == initial[index1])
             stop0 = true;
         }
     }).then(() => {
@@ -242,6 +238,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
             stop0 = false;
         }
     });
+    //cy.get("div.v-skeleton-loader__table-tbody", {timeout:10000});
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
     cy.get("div[role='listbox']").children().eq(1).as("lb").children().then((children) => {
@@ -251,9 +248,11 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
         });
         year = children[i].innerText;
     });
+    //cy.get("div.v-skeleton-loader__table-tbody", {timeout:10000});
     cy.wait(2000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
-        if (tr1.get(0).children[4].innerText != initial[index1] && !stop) {
+	console.log(tr1.get(0).children[4].innerText == initial[index1])
+        if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
             stop0 = true;
         }
     }).then(() => {
@@ -287,6 +286,7 @@ Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
     cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
         site_state.results[k].correct_arrow = true;
     });
+    cy.wait(1000);
 })
 
 Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {

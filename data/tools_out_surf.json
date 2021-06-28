@@ -1,11 +1,299 @@
 [
   {
-    "date": "06-27-2021, 7:51",
+    "date": "06-28-2021, 2:44",
     "username": "arhayrap",
     "results": [
       {
-        "url": "https://icms-dev.cern.ch/tools/collaboration/statistics",
+        "url": "https://icms-dev.cern.ch/tools/",
+        "warnings": [],
+        "errors": [
+          "GET request error : 400  400 (Bad Request)",
+          "GET request error : 400  400 (Bad Request)",
+          "GET request error : 400  400 (Bad Request)",
+          "GET request error : 400  400 (Bad Request)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/units",
         "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK",
+        "correct_unit_search": true,
+        "correct_arrow": true
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/institutes",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/people",
+        "warnings": [
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
+          "There is someting wrong in menu`s 'Authorship statuses' 'false' table.",
+          "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/voting",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/mo-list",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/applicants",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/emeritus-nominations",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/statistics",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/flags",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/tenures",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/communications",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/profile",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/pending-authors",
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "Fail! -> AssertionError: Timed out retrying after 60000ms: Expected to find element: `table`, but never found it."
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/member-authors",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/suspensions",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/institute/overdue-graduations",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrector",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrections",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "GET request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/arc-members",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/awgs",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/approved",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/lines/updated",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/dashboard",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/open-author-lists",
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/files",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/author-lists/author-data",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/notes/entries",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms-dev.cern.ch/tools/publications/notes/pending",
+        "warnings": [
+          "Table warning: There is an empty table",
           "Table warning: There is an empty table"
         ],
         "errors": [],
@@ -13,6 +301,8 @@
       }
     ],
     "cons_failed_pages": 0,
-    "app_status": ""
+    "app_status": "",
+    "correct_name_search": true,
+    "correct_institute_search": true
   }
 ]

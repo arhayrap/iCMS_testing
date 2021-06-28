@@ -22,8 +22,8 @@ describe("Checking tools", () => {
     var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var n = 1;
-    var start = 8;
+    var n = 35;
+    var start = 0;
 
     var env = Cypress.env()["flags"]
     var login = env["login"];
@@ -70,9 +70,19 @@ describe("Checking tools", () => {
         it("Logs in and tests the pages", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            //cy.listen_fails(site_state, k, base, links_path, out_path);
-            cy.route({
-                url: "https://icms-dev.cern.ch/tools-api/**",
+            cy.listen_fails(site_state, k, base, links_path, out_path);
+            //cy.route({
+            cy.intercept({
+		url: "https://auth.cern.ch/auth/**",
+                onResponse: (xhr) => {
+                    if (xhr.status <= 600 && xhr.status >= 400) {
+                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
+                    }
+                }
+            }).as("auth");
+	    cy.route({
+	    //cy.intercept({
+		url: "https://icms-dev.cern.ch/tools-api/**",
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
@@ -89,9 +99,9 @@ describe("Checking tools", () => {
                     cy.visit(link);
                     site_state[0].username = login;
                     cy.login(login, password);
-                    cy.get("div#app", {timeout:60000});
-                    cy.wait_for_requests("@gets");
-                    //cy.wait(6000);
+		    cy.wait_for_requests("@auth");
+		    cy.wait_for_requests("@gets");
+                    cy.wait(1000);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
                         cy.check_logo_reference(site_state[0], base);
@@ -101,11 +111,16 @@ describe("Checking tools", () => {
                         cy.check_units(site_state[0], k, unit_name, date);
                     } else if (link == base + "collaboration/institutes") {
                         cy.check_institutes(site_state[0], k);
+                        cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/people") {
                         cy.check_people(site_state[0], k);
+                        cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/mo-list") {
                         cy.check_mo_list(site_state[0], k);
-                    }
+                        cy.check_tables(site_state[0].results[k]);
+                    } else{
+                        cy.check_tables(site_state[0].results[k]);
+		    }
                     cy.check_tables(site_state[0].results[k]);
                 } else if (mode == "entire") {
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
@@ -113,9 +128,9 @@ describe("Checking tools", () => {
                     cy.visit(link);
                     site_state[0].username = login;
                     cy.login(login, password);
-		    cy.get("div#app", {timeout:60000});
+		    cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    //cy.wait(4000);
+                    cy.wait(1000);
                     cy.get_load_time(site_state[0].results[k]);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
@@ -126,12 +141,16 @@ describe("Checking tools", () => {
                         cy.check_units(site_state[0], k, unit_name, date);
                     } else if (link == base + "collaboration/institutes") {
                         cy.check_institutes(site_state[0], k);
+                	cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/people") {
                         cy.check_people(site_state[0], k);
+                        cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/mo-list") {
                         cy.check_mo_list(site_state[0], k);
-                    }
-                    cy.check_tables(site_state[0].results[k]);
+                        cy.check_tables(site_state[0].results[k]);
+                    }else{
+                        cy.check_tables(site_state[0].results[k]);
+		    }
                 }
             });
             if (mode == "light") {
