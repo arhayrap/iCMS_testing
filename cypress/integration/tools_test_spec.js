@@ -70,7 +70,7 @@ describe("Checking tools", () => {
         it("Logs in and tests the pages", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            cy.listen_fails(site_state, k, base, links_path, out_path);
+            //cy.listen_fails(site_state, k, base, links_path, out_path);
             //cy.route({
             cy.intercept({
 		url: "https://auth.cern.ch/auth/**",

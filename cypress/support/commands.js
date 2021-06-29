@@ -30,7 +30,7 @@ Cypress.Commands.add("get_stat_dur", (link, site_state, k, limit) => {
         if (expect(resp).to.have.property("duration")) {
             site_state[0].results[k].duration = resp.duration;
         }
-        if (resp.status != 200) {
+        if (resp.status != 200 && site_state[0].app_status != "Test failed") {
             site_state[0].results[k].errors.push("Responsed status : " + resp.status + " : " + resp.statusText);
             site_state[0].cons_failed_pages += 1;
             if (site_state[0].cons_failed_pages >= limit) {

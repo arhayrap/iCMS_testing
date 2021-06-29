@@ -1,13 +1,13 @@
 Cypress.Commands.add("check_tables_epr", (site_state) => {
-    let white_list = false;
+    var white_list = false;
     cy.readFile("cypress/fixtures/white_list.json").then(($obj) => {
-        let white_list = $obj[0]["links"].includes(site_state["url"]);
+	white_list = $obj[0]["links"].includes(site_state["url"]);
     });
     cy.get("body").then(($body, $site_state) => {
         var t = [];
         var site = site_state;
         if ($body.find("table:visible").length) {
-            cy.get("div.container table > tbody").as("table_body");
+            cy.get("div.container table.dataTable > tbody").as("table_body");
             if ($body.find("td.dataTables_empty").length) {
                 let td = cy.get("@table_body").find("td.dataTables_empty").then(($td) => {
                     if ($td.length != 0 && !white_list) {

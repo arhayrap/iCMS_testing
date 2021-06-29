@@ -1,7 +1,7 @@
 describe("Checking epr", () => {
-    var y = 1;
+    var y = 0;
     var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
-    var n = 34;
+    var n = 334;
     var start = 0;
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms-dev.cern.ch/epr/";
@@ -57,7 +57,7 @@ describe("Checking epr", () => {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            //cy.listen_fails(site_state, k, base, links_path, out_path);
+            cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/epr/**',

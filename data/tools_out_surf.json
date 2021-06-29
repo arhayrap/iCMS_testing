@@ -1,6 +1,6 @@
 [
   {
-    "date": "06-28-2021, 2:44",
+    "date": "06-29-2021, 5:03",
     "username": "arhayrap",
     "results": [
       {
@@ -16,9 +16,7 @@
       },
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/units",
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK",
         "correct_unit_search": true,
@@ -36,38 +34,7 @@
       {
         "url": "https://icms-dev.cern.ch/tools/collaboration/people",
         "warnings": [
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Projects' 'PPD' table.",
-          "There is someting wrong in menu`s 'Authorship statuses' 'false' table.",
-          "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table."
         ],
         "errors": [],
         "state": "OK"
@@ -169,7 +136,7 @@
         "errors": [
           "GET request error : 500  500 (Internal Server Error)"
         ],
-        "state": "Fail! -> AssertionError: Timed out retrying after 60000ms: Expected to find element: `table`, but never found it."
+        "state": "OK"
       },
       {
         "url": "https://icms-dev.cern.ch/tools/institute/member-authors",

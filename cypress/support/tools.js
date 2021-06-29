@@ -157,6 +157,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
     var menu_item = "";
     var n_thead;
     var option;
+    var stop = false;
     cy.get(".v-data-footer__select div[role='button'] .v-select__slot").click();
     cy.get("div.menuable__content__active div[role='option']").eq(2).click();
     cy.get(".v-card__title .row .v-input").as("menu_items").each((item0, index0, items0) => {
@@ -180,8 +181,13 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != option) {
-                                site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + option + "' table.");
-                                return false;
+                        	if (!stop){
+                            	    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + option + "' table.");
+                            	    stop = true;
+                            	    return false;
+                            	}else{
+                            	    return false;
+                            	}
                             }
                         });
                         cy.wait(2000);
