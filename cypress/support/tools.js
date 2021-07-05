@@ -377,7 +377,7 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
 	cy.get("div.menuable__content__active div.v-list-item__content").then((options) => {
 	    var n_options = options.length;
 	});
-	cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options).then((option) => {
+	cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options)).then((option) => {
 	    var selected = option.get(0).innerText.split(" ")[0];
 	}).click();
 	if(index0 == 0){

@@ -3,9 +3,10 @@ describe('Get tools links', () => {
     let base = "https://icms.cern.ch/tools/";
     it("Gets the links", () => {
         cy.visit(base);
-	let env = Cypress.env()["flags"];
+	let env = Cypress.env().flags;
         let login = env["login"];
         let password = env["password"];
+	console.log(login, password, JSON.parse(String(env)))
 	cy.login(login, password);
 	cy.wait(2000);
 	cy.get("button[aria-haspopup=true]").as("header_menu").each(($j, index0, $jdiv)=>{
