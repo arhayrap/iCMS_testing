@@ -270,6 +270,147 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
 })
 
+Cypress.Commands.add("check_em_nominations", (site_state, k) => {
+    //.each
+    cy.get("table tbody tr").then((tr) => {
+	var length = tr.length;
+    });
+    cy.get("table tbody tr").as("rows").eq(Math.floor(Math.random() * length)).then((tr) => {
+	var f_name    = tr.get(0).children().eq(1).innerText();
+	var l_name    = tr.get(0).children().eq(2).innerText();
+	var institute = tr.get(0).children().eq(3).innerText();
+	//checking names
+	cy.get("table tbody tr td a").eq(0).click();
+	cy.get(".v-card__text .v-list .v-list-item").then((item) => {
+	    if (item.get(2).innerText == f_name && item.get(3).innerText == l_name){
+		site_state.results[k].warnings.push("Reference to a wrong personal profile.");
+	    }
+	});
+	cy.wait(1000);
+	cy.go("back");
+	//checking institute
+	cy.get("table tbody tr td a").eq(1).click();
+	cy.get(".v-card .v-toolbar__title").then((title) => {
+	    var t_date = title.get(0).innerText.split(" CMS Emeritus Nominations")[0];
+	    if (title.get(0).innerText.split("Institute Profile of ")[0] != institute){
+		site_state.results[k].warnings.push("Reference to a wrong institute profile.");
+	    }
+	});
+	cy.wait(1000);
+	cy.go("back");
+	//switches
+	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
+	cy.get(".v-card .v-toolbar__title").then((title) => {
+	    if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
+		site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+	    }
+	});
+	cy.check_tables(site_state.results[k]);
+	cy.go("back");
+	
+	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
+	cy.get(".v-card .v-toolbar__title").then((title) => {
+	    if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
+		site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+	    }
+	});
+	cy.check_tables(site_state.results[k]);
+	cy.go("back");
+	cy.get("input[role='switch']").click();
+	cy.wait(500);
+	cy.check_tables(site_state.results[k], true);
+	cy.wait(500);
+	if (site_state.isAdmin){
+	    // Additional actions
+	    console.log("Admin's additional testing.")
+	}
+    });
+})
+
+Cypress.Commands.add("check_statistics", (site_state, k) => {
+    cy.get("div.menuable__content__active div[role='option']").eq(3).click();
+    cy.get(".v-card__title .col-4").as("title").each((d, index0, ds) => {
+	cy.get("@title").eq(index0).click();
+	cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
+	    var title = label.eq(0).innerText;
+	});
+	if(index0 == 0 || index0 == 1){
+	    cy.get("table tbody tr").as("rows").then((table_rows) => {
+		var n_initial = table_rows.length;
+	    });
+	    cy.get("div:visible.v-menu__content div[aria-selected='false']").as("options").each((option, index1, options) => {
+		var op = option.innerText;
+		cy.get("@options").eq(index1).click();
+		cy.wait(1000);
+		cy.get("table tbody tr").as("rows").then((table_rows) => {
+		    var n_final = table_rows.length;
+		});
+		if(n_initial >= n_final){
+		    site_state.results[k].warnigs.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
+	        }
+	    });
+	} else if (index0 == 2) {
+	    cy.get("div:visible.v-menu__content div[aria-selected='false']").as("options").each((option, index1, options) => {
+		var op = option.innerText;
+		cy.get("@options").eq(index1).click();
+		cy.wait(1000);
+		cy.get("table thead tr td").as("tds").eq(1).then((table_data) => {
+		    var td = table_data.innerText;
+		});
+		if(op != td){
+		    site_state.results[k].warnigs.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
+	        }
+	        cy.get("@options").eq(index1).click();
+	    });
+	}
+    });
+})
+
+Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
+    //div[role="listbox"] .v-list-item
+    cy.get("div.menuable__content__active div[role='option']").eq(2).click();
+    cy.get(".v-card__title .col-2").as("elems").each((elem, index0, elems) => {
+	var stop = false;
+	cy.get(".v-card__title .col-2 label").eq(index0).then((label) => {
+	    var title = label.get(0).innerText;
+	});
+	cy.get("div.menuable__content__active div.v-list-item__content").then((options) => {
+	    var n_options = options.length;
+	});
+	cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options).then((option) => {
+	    var selected = option.get(0).innerText.split(" ")[0];
+	}).click();
+	if(index0 == 0){
+	    cy.get(".v-card__title .col-2 input:visible").eq(index0).type(flags_name + "{enter}");
+	    cy.wait(1000);
+	    cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
+		if (tr.get(0).children[1] + tr.get(0).children[2] != selected){
+		    if(!stop){
+			stop = true;
+			site_state.results[k].warnigs.push("There is something wrong with '" + selected + "' option of '" + title + "'.");
+		    } else {
+			return false;
+		    }
+		}
+	    });
+	} else if (index0 == 1){
+	    cy.get(".v-card__title .col-2 input:visible").eq(index0).click();
+	    cy.wait(1000);
+	    cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
+		if (tr.get(0).children[4].split("_")[0] != selected){
+		    if(!stop){
+			stop = true;
+			site_state.results[k].warnigs.push("There is something wrong with '" + selected + "' option of '" + title + "'.");
+		    } else {
+			return false;
+		    }
+		}
+	    });
+	}
+	cy.get("button[aria-label='clear icon']").eq(index0).click();
+    });
+})
+
 Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
     cy.get("div.v-input--selection-controls__ripple").eq(1).as("checkbox").click();
     cy.check_tables(site_state.results[k], true);
