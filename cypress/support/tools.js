@@ -271,7 +271,6 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
 })
 
 Cypress.Commands.add("check_em_nominations", (site_state, k) => {
-    //.each
     cy.get("table tbody tr").then((tr) => {
 	var length = tr.length;
     });
@@ -320,10 +319,6 @@ Cypress.Commands.add("check_em_nominations", (site_state, k) => {
 	cy.wait(500);
 	cy.check_tables(site_state.results[k], true);
 	cy.wait(500);
-	if (site_state.isAdmin){
-	    // Additional actions
-	    console.log("Admin's additional testing.")
-	}
     });
 })
 
