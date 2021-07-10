@@ -151,7 +151,11 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         cy.get("@outline").eq(index).click();
     });
 })
-
+/*
+Cypress.Commands.add("check_over_graduation", (site_state, k) => {
+    
+})
+*/
 Cypress.Commands.add("check_people", (site_state, k) => {
     var key = [6, 8, 5];
     var menu_item = "";
@@ -270,7 +274,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
 })
 
-Cypress.Commands.add("check_em_nominations", (site_state, k) => {
+Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
     //.each
     cy.get("table tbody tr").then((tr) => {
 	var length = tr.length;
@@ -299,31 +303,39 @@ Cypress.Commands.add("check_em_nominations", (site_state, k) => {
 	cy.wait(1000);
 	cy.go("back");
 	//switches
-	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
-	cy.get(".v-card .v-toolbar__title").then((title) => {
-	    if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
-		site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-	    }
-	});
-	cy.check_tables(site_state.results[k]);
-	cy.go("back");
-	
-	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
-	cy.get(".v-card .v-toolbar__title").then((title) => {
-	    if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
-		site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-	    }
-	});
-	cy.check_tables(site_state.results[k]);
+	if (site_state.isAdmin){
+	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
+	    cy.get(".v-card .v-toolbar__title").then((title) => {
+		if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
+		    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+		}
+	    });
+	    cy.check_tables(site_state.results[k]);
+	    cy.go("back");
+	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click();
+	    cy.get(".v-card .v-toolbar__title").then((title) => {
+		if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
+		    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+		}
+	    });
+	    cy.check_tables(site_state.results[k]);
+	    // Additional actions
+	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(3).click();
+	    cy.get("body").then((body) => {
+		if(body.find(".v-card .v-card__actions button").length != 1){
+		    site_state.results[k].warnings.push("Info modal was not or was wrongly opened.");
+		}
+	    });
+	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
+	    cy.get(".v-card .v-card__text input").eq(0).type(data.criterion);
+	    cy.get(".v-card .v-card__text input").eq(1).type(data.year);
+	    cy.get(".v-card .v-card__actions button").eq(2).click();
+	    cy.wait_for_requests("@em_nom");
+	}
 	cy.go("back");
 	cy.get("input[role='switch']").click();
 	cy.wait(500);
 	cy.check_tables(site_state.results[k], true);
-	cy.wait(500);
-	if (site_state.isAdmin){
-	    // Additional actions
-	    console.log("Admin's additional testing.")
-	}
     });
 })
 
@@ -409,6 +421,59 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
 	}
 	cy.get("button[aria-label='clear icon']").eq(index0).click();
     });
+})
+
+Cypress.Commands.add("check_weeks", (site_state, k, data) => {
+    if(site_state.isAdmin){
+	/*create a new CMSWeek*/
+	cy.get(".v-card__title button").click();
+	cy.get(".v-card .v-card__text input").eq(0).type(data.title);
+	cy.get(".v-card .v-card__text input").eq(1).type(data.start_date);
+	cy.get(".v-card .v-card__text input").eq(2).type(data.end_date);
+	if(data.is_out_cern){
+	    cy.get(".v-card .v-card__text input").eq(3).click();
+	}
+	cy.get(".v-card .v-card__actions button").eq(1).click();
+	/*change the CMSWeek*/
+	cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
+	cy.get(".v-card .v-card__text input").eq(0).type(data.title);
+	cy.get(".v-card .v-card__text input").eq(1).type(data.start_date);
+	cy.get(".v-card .v-card__text input").eq(2).type(data.end_date);
+	if(data.is_out_cern){
+	    cy.get(".v-card .v-card__text input").eq(3).click();
+	}
+	cy.get(".v-card .v-card__actions button").eq(1).click();
+	cy.wait_for_requests("@puts");
+    }
+})
+
+Cypress.Commands.add("check_rooms", (site_state, k, data) => {
+    if(site_state.isAdmin){
+	/*create a new room*/
+	cy.get(".v-card__title button").click();
+	cy.get(".v-card .v-card__text input").eq(0).type(data.custom_name);
+	cy.get(".v-card .v-card__text input").eq(1).type(data.indico_id);
+	cy.get(".v-card .v-card__text input").eq(2).type(data.building);
+	cy.get(".v-card .v-card__text input").eq(3).type(data.floor);
+	cy.get(".v-card .v-card__text input").eq(4).type(data.room_nr);
+	if(data.at_cern){
+	    cy.get(".v-card .v-card__text input").eq(5).click();
+	}
+	cy.get(".v-card .v-card__actions button").eq(1).click();
+	/*change the room*/
+	cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
+	cy.get(".v-card__title button").click();
+	cy.get(".v-card .v-card__text input").eq(0).type(data.custom_name);
+	cy.get(".v-card .v-card__text input").eq(1).type(data.indico_id);
+	cy.get(".v-card .v-card__text input").eq(2).type(data.building);
+	cy.get(".v-card .v-card__text input").eq(3).type(data.floor);
+	cy.get(".v-card .v-card__text input").eq(4).type(data.room_nr);
+	if(data.at_cern){
+	    cy.get(".v-card .v-card__text input").eq(5).click();
+	}
+	cy.get(".v-card .v-card__actions button").eq(1).click();
+	cy.wait_for_requests("@puts");
+    }
 })
 
 Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {

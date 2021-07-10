@@ -18,6 +18,20 @@ describe("Checking tools", () => {
     var institute = "Yerevan Physics Institute";
     var unit_name = "MUON Subdetector";
     var date = "2012-12-10";
+    var rooms_data = {
+	custom_name:"Test name",
+	indico_id:None,
+	building:"Building name",
+	floor:None,
+	room_rm:None,
+	at_cern:true
+    };
+    var weeks_data = {
+	title:"Test title",
+	start_date:"2022-11-10",
+	end_date:"2022-11-17",
+	is_out_cern:false
+    };
 
     var user_index = 0;
     var page_fail_limit = 5;
@@ -26,15 +40,16 @@ describe("Checking tools", () => {
     var start = 0;
 
     var env = Cypress.env()["flags"]
-    var login = env["login"];
+    var login    = env["login"];
     var password = env["password"];
-    var mode = env["mode"];
+    var mode     = env["mode"];
+    var isadmin  = env["isAdmin"] == "true";
 
     if (mode == "light") {
         var site_state = [{
             date: "",
             username: "",
-            isAdmin: env["isAdmin"],
+            isAdmin: isadmin,
             results: [],
             cons_failed_pages: 0,
             app_status: ""
@@ -51,7 +66,7 @@ describe("Checking tools", () => {
         var site_state = [{
             date: "",
             username: "",
-            isAdmin: env["isAdmin"],
+            isAdmin: isadmin,
             results: [],
             cons_failed_pages: 0,
             app_status: ""
@@ -76,52 +91,33 @@ describe("Checking tools", () => {
             //cy.route({
             cy.intercept({
 		url: "https://auth.cern.ch/auth/**",
-                onResponse: (xhr) => {
-                    if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
-                    }
-                }
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);}}
             }).as("auth");
-
 	    cy.route({
 		url: "https://icms.cern.ch/tools-api/**",
-                onResponse: (xhr) => {
-                    if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
-                    }
-                }
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);}}
             }).as("gets");
-
             cy.route({
 		method: "POST",
 		url: "https://icms.cern.ch/tools-api/**",
-                onResponse: (xhr) => {
-                    if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
-                    }
-                }
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("POST request error : " + xhr.status + "  " + xhr.statusMessage);}}
             }).as("posts");
-
             cy.route({
+		method: "POST",
+		url: "**/restplus/relay/piggyback/people/statuses/requests/",
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("Em-nominations, POST request error : " + xhr.status + "  " + xhr.statusMessage);}}
+            }).as("em_nom");
+	    cy.route({
 		method: "PUT",
 		url: "https://icms.cern.ch/tools-api/**",
-                onResponse: (xhr) => {
-                    if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
-                    }
-                }
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);}}
             }).as("puts");
-
             cy.route({
 		method: "DELETE",
 		url: "https://icms.cern.ch/tools-api/**",
-                onResponse: (xhr) => {
-                    if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
-                    }
-                }
+                onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);}}
             }).as("deletes");
-            
+
             cy.readFile(links_path).then(($link_obj) => {
                 console.log(mode)
                 let links = $link_obj[0]["links"];
@@ -160,18 +156,18 @@ describe("Checking tools", () => {
                     } else if (link == base + "/collaboration/flags") {
                         cy.check_tables(site_state[0].results[k]);
                         cy.check_flags(site_state[0], k);
+                    } else if (link == base + "/collaboration/cms-week/rooms") {
+                        cy.check_rooms(site_state[0], k, rooms_data);
+                        cy.check_tables(site_state[0].results[k]);
+                    } else if (link == base + "/collaboration/cms-week/weeks") {
+                        cy.check_weeks(site_state[0], k, weeks_data);
+                        cy.check_tables(site_state[0].results[k]);
                     }
 		    /* else if (link == base + "/institute/overdue-graduations") {
                         cy.check_ov_graduations(site_state[0], k);
                         cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "/collaboration/tenures") {
                         cy.check_tenures(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else if (link == base + "/collaboration/cms-week/rooms") {
-                        cy.check_rooms(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else if (link == base + "/collaboration/cms-week/weeks") {
-                        cy.check_weeks(site_state[0], k);
                         cy.check_tables(site_state[0].results[k]);
                     } */
 		    else{
@@ -213,6 +209,12 @@ describe("Checking tools", () => {
                     } else if (link == base + "/collaboration/flags") {
                         cy.check_tables(site_state[0].results[k]);
 			cy.check_flags(site_state[0], k);
+                    } else if (link == base + "/collaboration/cms-week/rooms") {
+                        cy.check_rooms(site_state[0], k, rooms_data);
+                        cy.check_tables(site_state[0].results[k]);
+                    } else if (link == base + "/collaboration/cms-week/weeks") {
+                        cy.check_weeks(site_state[0], k, weeks_data);
+                        cy.check_tables(site_state[0].results[k]);
                     }
 		    /*
 		    else if (link == base + "/institute/overdue-graduations") {
@@ -220,12 +222,6 @@ describe("Checking tools", () => {
                         cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "/collaboration/tenures") {
                         cy.check_tenures(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else if (link == base + "/collaboration/cms-week/rooms") {
-                        cy.check_rooms(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else if (link == base + "/collaboration/cms-week/weeks") {
-                        cy.check_weeks(site_state[0], k);
                         cy.check_tables(site_state[0].results[k]);
                     }
 		    */

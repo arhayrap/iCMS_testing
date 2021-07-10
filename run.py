@@ -8,10 +8,10 @@ password = getpass("Type password: ")
 while (True):
     isAdmin  = input("Are you an admin? (y or n): ")
     if isAdmin == "y" or isAdmin == "yes":
-        isAdmin = True
+        isAdmin = "true"
         break
     elif isAdmin == "n" or isAdmin == "no":
-        isAdmin = False
+        isAdmin = "false"
         break
 
 mode = sys.argv[1]

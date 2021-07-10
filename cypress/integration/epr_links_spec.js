@@ -2,10 +2,11 @@ describe('Get epr links', () => {
     let links = [];
     let user_path = "cypress/fixtures/users.json";
     it("Gets the links", () => {
-        cy.visit("https://icms-dev.cern.ch/epr/");
+        cy.visit("https://icms.cern.ch/epr/");
 	let env = Cypress.env()["flags"]
         let login = env["login"];
         let password = env["password"];
+	console.log(env, typeof(env))
 	cy.login(login, password);
         cy.wait(1000);
         cy.get("div.navbar-collapse").first().get("ul.navbar-nav").first().as("header_menu");
@@ -13,7 +14,7 @@ describe('Get epr links', () => {
             cy.log("index is -> ", index0);
             cy.get("@header_menu").children().eq(index0).as("curr_opt").click();
             cy.wait(1000);
-            if (index0 == 3 || index0 == 1 || index0 == 2 || index0 == 3 || index0 == 4) {
+            if (index0 == 3 || index0 == 1 || index0 == 2 || index0 == 4) {
                 cy.get("@curr_opt").children().last().then(() => {
                     cy.get("@curr_opt").children().last().children("li").not(".required").children("a").each(($a, index1, $ah) => {
                         if ($a[0].href != "") {
