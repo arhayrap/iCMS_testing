@@ -3,10 +3,9 @@ describe('Get tools links', () => {
     let base = "https://icms.cern.ch/tools/";
     it("Gets the links", () => {
         cy.visit(base);
-	let env = Cypress.env().flags;
-        let login = env["login"];
-        let password = env["password"];
-	console.log(login, password, JSON.parse(String(env)))
+	let env      = JSON.stringify(Cypress.env().flags);
+        let login    = JSON.parse(env)["login"];//.login;
+        let password = JSON.parse(env)["password"];//password;
 	cy.login(login, password);
 	cy.wait(2000);
 	cy.get("button[aria-haspopup=true]").as("header_menu").each(($j, index0, $jdiv)=>{
@@ -17,8 +16,8 @@ describe('Get tools links', () => {
 		cy.get("#app > div[role='menu']").children().eq(0).get("div").as("drop").get("a[role='menuitem']").each(($a, index1, $ah)=>{
 		    console.log("dropdown pass");
 		    links.push($a[0].href);
-		})
-	    })
+		});
+	    });
 	}
 	cy.wait(1000)
 	if(index0 == 0 || index0 == 2 || index0 == 3){
@@ -38,8 +37,8 @@ describe('Get tools links', () => {
 		cy.get("#app > div[role='menu']").children().eq(0).get("div").as("drop").get("a[role='menuitem']").eq(0).then(($a)=>{
 		    console.log("profile dropdown");
 		    links.push($a[0].href);
-		})
-	    })
+		});
+	    });
 	}
 	cy.reload();
 	})

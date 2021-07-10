@@ -18,6 +18,7 @@ describe("Checking tools", () => {
     var institute = "Yerevan Physics Institute";
     var unit_name = "MUON Subdetector";
     var date = "2012-12-10";
+<<<<<<< HEAD
     var rooms_data = {
 	custom_name:"Test name",
 	indico_id:None,
@@ -32,12 +33,15 @@ describe("Checking tools", () => {
 	end_date:"2022-11-17",
 	is_out_cern:false
     };
+=======
+    var flag_name = "Aarnio Pertti A.";
+>>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
 
     var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var n = 35;
-    var start = 0;
+    var n = 31;
+    var start = 4;
 
     var env = Cypress.env()["flags"]
     var login    = env["login"];
@@ -49,7 +53,10 @@ describe("Checking tools", () => {
         var site_state = [{
             date: "",
             username: "",
+<<<<<<< HEAD
             isAdmin: isadmin,
+=======
+>>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
             results: [],
             cons_failed_pages: 0,
             app_status: ""
@@ -66,7 +73,10 @@ describe("Checking tools", () => {
         var site_state = [{
             date: "",
             username: "",
+<<<<<<< HEAD
             isAdmin: isadmin,
+=======
+>>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
             results: [],
             cons_failed_pages: 0,
             app_status: ""
@@ -84,11 +94,10 @@ describe("Checking tools", () => {
         }
     }
     for (let k = 0; k < n; k++) {
-        it("Logs in and tests the pages in '" + mode "' mode.", () => {
+        it("Logs in and tests the pages in '" + mode + "' mode.", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
             //cy.listen_fails(site_state, k, base, links_path, out_path);
-            //cy.route({
             cy.intercept({
 		url: "https://auth.cern.ch/auth/**",
                 onResponse: (xhr) => {if (xhr.status <= 600 && xhr.status >= 400) {site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);}}
@@ -119,7 +128,6 @@ describe("Checking tools", () => {
             }).as("deletes");
 
             cy.readFile(links_path).then(($link_obj) => {
-                console.log(mode)
                 let links = $link_obj[0]["links"];
                 let link = links[k + start];
                 site_state[0].results[k].url = link;
@@ -130,7 +138,7 @@ describe("Checking tools", () => {
                     cy.login(login, password);
 		    cy.wait_for_requests("@auth");
 		    cy.wait_for_requests("@gets");
-                    cy.wait(1000);
+                    cy.wait(2000);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
                         cy.check_logo_reference(site_state[0], base);
@@ -155,6 +163,7 @@ describe("Checking tools", () => {
                         cy.check_statistics(site_state[0], k);
                     } else if (link == base + "/collaboration/flags") {
                         cy.check_tables(site_state[0].results[k]);
+<<<<<<< HEAD
                         cy.check_flags(site_state[0], k);
                     } else if (link == base + "/collaboration/cms-week/rooms") {
                         cy.check_rooms(site_state[0], k, rooms_data);
@@ -162,6 +171,9 @@ describe("Checking tools", () => {
                     } else if (link == base + "/collaboration/cms-week/weeks") {
                         cy.check_weeks(site_state[0], k, weeks_data);
                         cy.check_tables(site_state[0].results[k]);
+=======
+                        cy.check_flags(site_state[0], k, flag_name);
+>>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
                     }
 		    /* else if (link == base + "/institute/overdue-graduations") {
                         cy.check_ov_graduations(site_state[0], k);
@@ -182,7 +194,7 @@ describe("Checking tools", () => {
                     cy.login(login, password);
 		    cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    cy.wait(1000);
+                    cy.wait(2000);
                     cy.get_load_time(site_state[0].results[k]);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
@@ -208,6 +220,7 @@ describe("Checking tools", () => {
 			cy.check_statistics(site_state[0], k);
                     } else if (link == base + "/collaboration/flags") {
                         cy.check_tables(site_state[0].results[k]);
+<<<<<<< HEAD
 			cy.check_flags(site_state[0], k);
                     } else if (link == base + "/collaboration/cms-week/rooms") {
                         cy.check_rooms(site_state[0], k, rooms_data);
@@ -215,6 +228,9 @@ describe("Checking tools", () => {
                     } else if (link == base + "/collaboration/cms-week/weeks") {
                         cy.check_weeks(site_state[0], k, weeks_data);
                         cy.check_tables(site_state[0].results[k]);
+=======
+			cy.check_flags(site_state[0], k, flag_name);
+>>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
                     }
 		    /*
 		    else if (link == base + "/institute/overdue-graduations") {
