@@ -61,7 +61,7 @@ describe("Checking epr", () => {
             //cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
-                url: 'https://icms.cern.ch/epr/**',
+                url: 'https://icms.cern.ch/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("POST request error : " + xhr.status + "  " + xhr.statusMessage);
@@ -90,14 +90,14 @@ describe("Checking epr", () => {
                     cy.select_year("@posts", site_state[0].results[k], y);
                     cy.get("body", {
                         timeout: 60000
-                    }).wait(2000);
+                    }).wait(1000);
                     cy.get_stat_dur_light(link, site_state, k, page_fail_limit);
                 } else {
                     site_state[0].results[k].load_time = performance.now();
                     cy.select_year("@posts", site_state[0].results[k], y);
                     cy.get("body", {
                         timeout: 60000
-                    }).wait(2000);
+                    }).wait(1000);
                     cy.get_load_time(site_state[0].results[k]);
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 }

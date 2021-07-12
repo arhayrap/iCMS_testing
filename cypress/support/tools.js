@@ -274,12 +274,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
 })
 
-<<<<<<< HEAD
 Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
-    //.each
-=======
-Cypress.Commands.add("check_em_nominations", (site_state, k) => {
->>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
     cy.get("table tbody tr").then((tr) => {
 	var length = tr.length;
     });
@@ -340,10 +335,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k) => {
 	cy.get("input[role='switch']").click();
 	cy.wait(500);
 	cy.check_tables(site_state.results[k], true);
-<<<<<<< HEAD
-=======
 	cy.wait(500);
->>>>>>> d7ea09be519581d90802012a904b4d78a677cba2
     });
 })
 

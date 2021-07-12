@@ -13,9 +13,9 @@ Cypress.Commands.add("check_tables_epr", (site_state) => {
             if ($body.find("td.dataTables_empty").length) {
                 cy.get("@table_body").find("td.dataTables_empty").then(($td) => {
                     if ($td.length != 0 && !white_list) {
-                        //for (let j = 0; j < $td.length; j++) {
-                        site.warnings.push("Table warning: There is an empty table");
-                        //}
+                        for (let j = 0; j < $td.length; j++) {
+                    	    site.warnings.push("Table warning: There is an empty table");
+                        }
                     }
                 });
             }

@@ -55,9 +55,8 @@ Cypress.Commands.add("get_stat_dur_light", (link, site_state, k, limit) => {
         url: link,
         failOnStatusCode: false
     }).then((resp) => {
-        if (resp.status != 200) {
+        if (resp.status != 200 && site_state[0].app_status != "Test failed") {
             site_state[0].results[k].errors.push("Responsed status : " + resp.status + " : " + resp.statusText);
-            site_state[0].results[k].test = "Error page";
             site_state[0].cons_failed_pages += 1;
             if (site_state[0].cons_failed_pages >= limit) {
                 site_state[0].app_status = "Test failed";
