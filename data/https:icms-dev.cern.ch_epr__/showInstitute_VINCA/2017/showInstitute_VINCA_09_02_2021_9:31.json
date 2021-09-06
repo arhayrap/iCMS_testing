@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/VINCA",
+  "status": 200,
+  "duration": 730,
+  "load_time": 7218.1449999988545,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

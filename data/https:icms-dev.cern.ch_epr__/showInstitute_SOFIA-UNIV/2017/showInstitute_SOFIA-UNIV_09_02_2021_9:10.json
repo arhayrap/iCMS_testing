@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SOFIA-UNIV",
+  "status": 200,
+  "duration": 825,
+  "load_time": 6891.485000000102,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

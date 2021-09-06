@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/PODGORICA-UCG",
+  "status": 200,
+  "duration": 619,
+  "load_time": 6092.179999999702,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

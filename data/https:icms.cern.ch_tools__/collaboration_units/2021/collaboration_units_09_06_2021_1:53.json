@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/units",
+  "status": 200,
+  "duration": 241,
+  "load_time": 5168.234999990091,
+  "warnings": [],
+  "errors": [],
+  "state": "OK",
+  "correct_unit_search": true,
+  "correct_arrow": true
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/PURDUE-CALUMET",
+  "status": 200,
+  "duration": 1164,
+  "load_time": 6501.270000000484,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

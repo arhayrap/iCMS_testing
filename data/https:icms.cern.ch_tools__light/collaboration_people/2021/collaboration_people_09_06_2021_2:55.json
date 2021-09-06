@@ -1,0 +1,9 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/people",
+  "warnings": [
+    "Table warning: There is an empty table",
+    "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

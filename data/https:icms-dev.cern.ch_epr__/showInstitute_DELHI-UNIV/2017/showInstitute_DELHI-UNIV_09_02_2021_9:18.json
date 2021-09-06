@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/DELHI-UNIV",
+  "status": 200,
+  "duration": 1356,
+  "load_time": 7655.4800000011455,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

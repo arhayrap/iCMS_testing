@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/flags",
+  "warnings": [
+    "There is something wrong with 'NEWS Flags' option of 'Flag Type'."
+  ],
+  "errors": [],
+  "state": "OK"
+}

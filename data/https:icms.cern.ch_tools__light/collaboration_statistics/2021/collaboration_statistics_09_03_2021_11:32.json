@@ -1,0 +1,18 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/statistics",
+  "warnings": [
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'Management level' option of 'Grouping column' did'nt create rows."
+  ],
+  "errors": [],
+  "state": "OK"
+}

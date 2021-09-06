@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/ZURICH-ETH",
+  "status": 200,
+  "duration": 3121,
+  "load_time": 9134.98000000231,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

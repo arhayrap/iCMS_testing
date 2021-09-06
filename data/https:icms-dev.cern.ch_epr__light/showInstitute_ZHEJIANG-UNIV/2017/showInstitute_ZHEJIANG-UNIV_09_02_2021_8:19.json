@@ -1,0 +1,13 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/ZHEJIANG-UNIV",
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [
+    "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+    "POST request error : 404  404 (Not Found)"
+  ],
+  "state": "OK"
+}

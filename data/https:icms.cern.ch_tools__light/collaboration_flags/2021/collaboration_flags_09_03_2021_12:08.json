@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/flags",
+  "warnings": [
+    "There is something wrong with 'Abati' option of 'Member'."
+  ],
+  "errors": [],
+  "state": "OK"
+}

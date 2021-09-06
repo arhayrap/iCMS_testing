@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/KHARKOV-KSU",
+  "status": 200,
+  "duration": 379,
+  "load_time": 5772.109999998007,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

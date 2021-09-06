@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/MOSCOW-MIPT",
+  "status": 200,
+  "duration": 466,
+  "load_time": 6650.470000000438,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

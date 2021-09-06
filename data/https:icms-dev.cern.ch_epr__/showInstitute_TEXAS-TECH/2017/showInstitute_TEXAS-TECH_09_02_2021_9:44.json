@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/TEXAS-TECH",
+  "status": 200,
+  "duration": 826,
+  "load_time": 6709.965000002179,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

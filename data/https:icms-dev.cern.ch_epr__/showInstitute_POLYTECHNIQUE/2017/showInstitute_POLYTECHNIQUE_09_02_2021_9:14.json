@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/POLYTECHNIQUE",
+  "status": 200,
+  "duration": 2481,
+  "load_time": 9070.030000002589,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

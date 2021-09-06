@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/MISSISSIPPI",
+  "status": 200,
+  "duration": 686,
+  "load_time": 6592.584999998566,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

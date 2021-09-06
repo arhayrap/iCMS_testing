@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SHANGHAI-IC",
+  "status": 200,
+  "duration": 432,
+  "load_time": 6189.8849999997765,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

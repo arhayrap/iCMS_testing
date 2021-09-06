@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SPLIT-FESB",
+  "status": 200,
+  "duration": 896,
+  "load_time": 7113.405000003637,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

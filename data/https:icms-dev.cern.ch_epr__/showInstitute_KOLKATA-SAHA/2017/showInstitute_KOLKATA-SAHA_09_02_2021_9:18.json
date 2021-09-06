@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/KOLKATA-SAHA",
+  "status": 200,
+  "duration": 1355,
+  "load_time": 8512.14999999525,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

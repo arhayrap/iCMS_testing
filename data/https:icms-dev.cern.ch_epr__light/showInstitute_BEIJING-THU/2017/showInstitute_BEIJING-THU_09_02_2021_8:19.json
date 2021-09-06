@@ -1,0 +1,9 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/BEIJING-THU",
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

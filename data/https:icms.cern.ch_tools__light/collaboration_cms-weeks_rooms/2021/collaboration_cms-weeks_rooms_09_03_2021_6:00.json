@@ -1,0 +1,9 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+  "warnings": [],
+  "errors": [
+    "POST request error : 403  403 (Forbidden)",
+    "POST request error : 403  403 (Forbidden)"
+  ],
+  "state": "OK"
+}

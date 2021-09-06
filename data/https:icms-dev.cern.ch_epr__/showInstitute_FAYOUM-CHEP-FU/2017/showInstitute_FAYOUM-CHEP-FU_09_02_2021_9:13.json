@@ -1,0 +1,16 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/FAYOUM-CHEP-FU",
+  "status": 200,
+  "duration": 296,
+  "load_time": 6497.195000003558,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [
+    "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+    "POST request error : 404  404 (Not Found)"
+  ],
+  "state": "OK"
+}

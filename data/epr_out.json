@@ -1,48 +1,15 @@
 [
   {
-    "date": "07-12-2021, 6:56",
+    "date": "09-06-2021, 2:47",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/epr/showCountry/UNITED%20KINGDOM",
-        "status": 500,
-        "duration": 423,
-        "load_time": 9507,
-        "warnings": [],
-        "errors": [
-          "Responsed status : 500 : Internal Server Error"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/USA",
-        "status": 500,
-        "duration": 226,
-        "load_time": 8159,
-        "warnings": [],
-        "errors": [
-          "Responsed status : 500 : Internal Server Error"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/UZBEKISTAN",
+        "url": "https://icms.cern.ch/epr/showProjectTasks/176",
         "status": 200,
-        "duration": 148,
-        "load_time": 7967,
+        "duration": 388,
+        "load_time": 22389,
         "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/ZZ",
-        "status": 200,
-        "duration": 146,
-        "load_time": 7813,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
         "errors": [],
         "state": "OK"
       }

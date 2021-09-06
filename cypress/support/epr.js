@@ -1,3 +1,13 @@
+/*
+Cypress.on('before:browser:launch', (browser = {}, args) => {
+    console.log('browser', browser)
+    if (browser.family === 'chrome') {
+      console.log('adding dark mode browser flags')
+      args.push('--force-dark-mode=true')
+      return args
+    }
+})
+*/
 Cypress.Commands.add("check_tables_epr", (site_state) => {
     var white_list = false;
     cy.readFile("cypress/fixtures/white_list.json").then(($obj) => {

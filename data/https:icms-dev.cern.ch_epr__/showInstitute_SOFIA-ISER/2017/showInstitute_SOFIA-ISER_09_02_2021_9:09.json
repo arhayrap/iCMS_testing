@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SOFIA-ISER",
+  "status": 200,
+  "duration": 876,
+  "load_time": 7141.839999996591,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

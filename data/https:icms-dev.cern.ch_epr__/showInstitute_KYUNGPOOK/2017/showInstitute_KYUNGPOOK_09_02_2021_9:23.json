@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/KYUNGPOOK",
+  "status": 200,
+  "duration": 1412,
+  "load_time": 7637.894999999786,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

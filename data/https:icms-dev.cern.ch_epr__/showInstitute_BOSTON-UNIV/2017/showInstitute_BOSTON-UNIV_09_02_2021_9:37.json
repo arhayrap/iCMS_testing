@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/BOSTON-UNIV",
+  "status": 200,
+  "duration": 1169,
+  "load_time": 7352.590000002179,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

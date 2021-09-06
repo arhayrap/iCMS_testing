@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/ALABAMA-UNIV",
+  "status": 200,
+  "duration": 850,
+  "load_time": 7441.8499999954365,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

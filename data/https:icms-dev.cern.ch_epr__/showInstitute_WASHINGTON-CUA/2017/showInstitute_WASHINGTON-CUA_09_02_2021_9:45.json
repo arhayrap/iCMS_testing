@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/WASHINGTON-CUA",
+  "status": 200,
+  "duration": 594,
+  "load_time": 6636.350000000559,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

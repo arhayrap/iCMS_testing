@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/institute/suspensions",
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

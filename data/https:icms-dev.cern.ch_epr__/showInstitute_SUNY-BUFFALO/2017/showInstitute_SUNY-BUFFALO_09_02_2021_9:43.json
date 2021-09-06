@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SUNY-BUFFALO",
+  "status": 200,
+  "duration": 969,
+  "load_time": 7596.344999997877,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

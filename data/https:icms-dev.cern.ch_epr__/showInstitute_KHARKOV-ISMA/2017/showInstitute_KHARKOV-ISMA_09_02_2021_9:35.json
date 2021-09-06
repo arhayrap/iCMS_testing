@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/KHARKOV-ISMA",
+  "status": 200,
+  "duration": 601,
+  "load_time": 6152.815000001341,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

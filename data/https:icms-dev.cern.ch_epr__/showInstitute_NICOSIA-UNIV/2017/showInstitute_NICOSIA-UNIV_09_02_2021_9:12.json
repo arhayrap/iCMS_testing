@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/NICOSIA-UNIV",
+  "status": 200,
+  "duration": 1634,
+  "load_time": 8441.080000004033,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

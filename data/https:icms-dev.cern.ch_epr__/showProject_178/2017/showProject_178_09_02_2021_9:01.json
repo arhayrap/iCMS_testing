@@ -1,0 +1,12 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showProject/178",
+  "status": 200,
+  "duration": 1701,
+  "load_time": 21418.225000001257,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

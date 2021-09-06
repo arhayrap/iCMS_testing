@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/VILNIUS-UNIV",
+  "status": 200,
+  "duration": 2280,
+  "load_time": 9619.435000000522,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

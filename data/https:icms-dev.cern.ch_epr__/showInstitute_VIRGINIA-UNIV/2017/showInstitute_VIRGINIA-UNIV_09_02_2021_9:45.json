@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/VIRGINIA-UNIV",
+  "status": 200,
+  "duration": 835,
+  "load_time": 6914.629999999423,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

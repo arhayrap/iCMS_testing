@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/BRUSSEL-VUB",
+  "status": 200,
+  "duration": 816,
+  "load_time": 7439.480000000913,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

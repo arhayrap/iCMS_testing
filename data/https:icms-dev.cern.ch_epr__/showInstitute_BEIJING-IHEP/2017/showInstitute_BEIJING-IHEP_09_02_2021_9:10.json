@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/BEIJING-IHEP",
+  "status": 200,
+  "duration": 1406,
+  "load_time": 8184.135000003036,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

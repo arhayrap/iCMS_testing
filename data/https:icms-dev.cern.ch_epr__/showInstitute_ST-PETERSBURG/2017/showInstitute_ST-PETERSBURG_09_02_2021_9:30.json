@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/ST-PETERSBURG",
+  "status": 200,
+  "duration": 1069,
+  "load_time": 7425.985000001732,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

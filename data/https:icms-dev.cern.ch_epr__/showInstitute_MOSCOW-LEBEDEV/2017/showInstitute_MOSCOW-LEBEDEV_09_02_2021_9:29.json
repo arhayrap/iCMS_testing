@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/MOSCOW-LEBEDEV",
+  "status": 200,
+  "duration": 1006,
+  "load_time": 8080.594999999274,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

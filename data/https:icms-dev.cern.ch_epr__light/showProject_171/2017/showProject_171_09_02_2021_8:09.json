@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showProject/171",
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [
+    "Error from API call ... <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>500 Internal Server Error</title>\n</head><body>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error or\nmisconfiguration and was unable to complete\nyour request.</p>\n<p>Please contact the server administrator at \n [no address given] to inform them of the time this error occurred,\n and the actions you performed just before this error.</p>\n<p>More information about this error may be available\nin the server error log.</p>\n<hr>\n<address>Apache Server at icms-dev.cern.ch Port 443</address>\n</body></html>\n | error",
+    "POST request error : 500  500 (Internal Server Error)"
+  ],
+  "state": "OK"
+}

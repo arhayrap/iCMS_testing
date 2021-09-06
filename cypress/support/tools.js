@@ -136,10 +136,8 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
     cy.get("i.mdi-menu-down").eq(0).click();
     cy.get("i.mdi-checkbox-marked").click();
     cy.get(".menuable__content__active div[role='listbox'] div.v-list-item").as("outline").each((elem, index, arr) => {
-        //console.log(elem)
         cy.get("@outline").eq(index).click();
         let option = elem.get(0).innerText;
-        //console.log(elem.get(0).innerText, elem.get(0), option);
         cy.wait(1000);
         cy.get("tbody tr[class='']").each((tr, index, trs) => {
             if (tr.get(0).children[3].innerText != key[option]) {
@@ -151,11 +149,7 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         cy.get("@outline").eq(index).click();
     });
 })
-/*
-Cypress.Commands.add("check_over_graduation", (site_state, k) => {
-    
-})
-*/
+
 Cypress.Commands.add("check_people", (site_state, k) => {
     var key = [6, 8, 5];
     var menu_item = "";
@@ -185,13 +179,13 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != option) {
-                        	if (!stop){
-                            	    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + option + "' table.");
-                            	    stop = true;
-                            	    return false;
-                            	}else{
-                            	    return false;
-                            	}
+                                if (!stop) {
+                                    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + option + "' table.");
+                                    stop = true;
+                                    return false;
+                                } else {
+                                    return false;
+                                }
                             }
                         });
                         cy.wait(2000);
@@ -237,8 +231,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
     cy.wait(2000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
-	if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
-	    //console.log(tr1.get(0).children[4].innerText == initial[index1])
+        if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
             stop0 = true;
         }
     }).then(() => {
@@ -248,7 +241,6 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
             stop0 = false;
         }
     });
-    //cy.get("div.v-skeleton-loader__table-tbody", {timeout:10000});
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
     cy.get("div[role='listbox']").children().eq(1).as("lb").children().then((children) => {
@@ -258,10 +250,9 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
         });
         year = children[i].innerText;
     });
-    //cy.get("div.v-skeleton-loader__table-tbody", {timeout:10000});
     cy.wait(2000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
-	console.log(tr1.get(0).children[4].innerText == initial[index1])
+        console.log(tr1.get(0).children[4].innerText == initial[index1])
         if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
             stop0 = true;
         }
@@ -276,203 +267,336 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
 
 Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
     cy.get("table tbody tr").then((tr) => {
-	var length = tr.length;
+        var length = tr.length;
     });
-    cy.get("table tbody tr").as("rows").eq(Math.floor(Math.random() * length)).then((tr) => {
-	var f_name    = tr.get(0).children().eq(1).innerText();
-	var l_name    = tr.get(0).children().eq(2).innerText();
-	var institute = tr.get(0).children().eq(3).innerText();
-	//checking names
-	cy.get("table tbody tr td a").eq(0).click();
-	cy.get(".v-card__text .v-list .v-list-item").then((item) => {
-	    if (item.get(2).innerText == f_name && item.get(3).innerText == l_name){
-		site_state.results[k].warnings.push("Reference to a wrong personal profile.");
-	    }
-	});
-	cy.wait(1000);
-	cy.go("back");
-	//checking institute
-	cy.get("table tbody tr td a").eq(1).click();
-	cy.get(".v-card .v-toolbar__title").then((title) => {
-	    var t_date = title.get(0).innerText.split(" CMS Emeritus Nominations")[0];
-	    if (title.get(0).innerText.split("Institute Profile of ")[0] != institute){
-		site_state.results[k].warnings.push("Reference to a wrong institute profile.");
-	    }
-	});
-	cy.wait(1000);
-	cy.go("back");
-	//switches
-	if (site_state.isAdmin){
-	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
-	    cy.get(".v-card .v-toolbar__title").then((title) => {
-		if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
-		    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-		}
-	    });
-	    cy.check_tables(site_state.results[k]);
-	    cy.go("back");
-	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click();
-	    cy.get(".v-card .v-toolbar__title").then((title) => {
-		if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date){
-		    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-		}
-	    });
-	    cy.check_tables(site_state.results[k]);
-	    // Additional actions
-	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(3).click();
-	    cy.get("body").then((body) => {
-		if(body.find(".v-card .v-card__actions button").length != 1){
-		    site_state.results[k].warnings.push("Info modal was not or was wrongly opened.");
-		}
-	    });
-	    cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
-	    cy.get(".v-card .v-card__text input").eq(0).type(data.criterion);
-	    cy.get(".v-card .v-card__text input").eq(1).type(data.year);
-	    cy.get(".v-card .v-card__actions button").eq(2).click();
-	    cy.wait_for_requests("@em_nom");
-	}
-	cy.go("back");
-	cy.get("input[role='switch']").click();
-	cy.wait(500);
-	cy.check_tables(site_state.results[k], true);
-	cy.wait(500);
+    cy.get("table tbody tr").as("rows").then((tr) => {
+        var index = Math.floor(Math.random() * length);
+        var f_name = tr.get(0).children[1].innerText;
+        var l_name = tr.get(0).children[2].innerText;
+        var institute = tr.get(0).children[3].innerText;
+        //checking names
+        cy.get("table tbody tr td a", {
+            timeout: 60000
+        }).eq(0).click();
+        cy.get(".v-card__text .v-list .v-list-item .v-list-item__title").contains(/\w+/, {
+            timeout: 60000
+        });
+        cy.get(".v-card__text .v-list .v-list-item").then((item) => {
+            if (item.get(2).innerText == f_name && item.get(3).innerText == l_name) {
+                site_state.results[k].warnings.push("Reference to a wrong personal profile.");
+            }
+        });
+        cy.wait(1000);
+        cy.go("back");
+        //checking institute
+        cy.get("table tbody tr td a", {
+            timeout: 60000
+        }).eq(1).click({
+            waitForAnimations: true
+        });
+        cy.get(".v-card .v-toolbar__title").then((title) => {
+            var t_date = title.get(0).innerText.split(" CMS Emeritus Nominations")[0];
+            if (title.get(0).innerText.split("Institute Profile of ")[1] != institute) {
+                site_state.results[k].warnings.push("Reference to a wrong institute profile.");
+            }
+        });
+        cy.wait(1000);
+        cy.go("back");
+        //switches
+        if (site_state.isAdmin) {
+            console.log("Is admin!");
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
+            cy.get(".v-card .v-toolbar__title").then((title) => {
+                if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date) {
+                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                }
+            });
+            cy.check_tables(site_state.results[k]);
+            cy.go("back");
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click();
+            cy.get(".v-card .v-toolbar__title").then((title) => {
+                if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date) {
+                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                }
+            });
+            cy.check_tables(site_state.results[k]);
+            // Additional actions
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(3).click();
+            cy.get("body").then((body) => {
+                if (body.find(".v-card .v-card__actions button").length != 1) {
+                    site_state.results[k].warnings.push("Info modal was not, or was wrongly opened.");
+                }
+            });
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
+            cy.get(".v-card .v-card__text input").eq(0).type(data.criterion);
+            cy.get(".v-card .v-card__text input").eq(1).type(data.year);
+            cy.get(".v-card .v-card__actions button").eq(2).click();
+            cy.wait_for_requests("@em_nom");
+        }
+        cy.go("back");
+        cy.get(".v-card__title .v-input__slot").click({
+            waitForAnimations: false
+        });
+        cy.wait(500);
+        cy.check_tables(site_state.results[k], true);
+        cy.wait(500);
+    });
+})
+
+Cypress.Commands.add("check_over_graduation", (site_state, k) => {
+    cy.Open_All();
+    cy.get("table tbody tr").then((table_rows) => {
+        cy.get(".v-card__title .col .v-input__slot label").each((label, index0, labels) => {
+            var label_name = label.get(0).innerText;
+            console.log(label_name)
+            if (label_name == "Institute") {
+                cy.get(".v-data-footer__pagination").then((rows_pagination) => {
+                    var rows = Number(rows_pagination.get(0).innerText.split("of ")[1]);
+                    var index_institute = Math.floor(Math.random() * rows);
+                    var institute = table_rows.get(index_institute).children[0].innerText;
+                    cy.get(".v-card__title .col .v-input__slot input").eq(index0).type(institute + " {enter}");
+                    cy.get("table tbody tr").each((tr, index1, trs) => {
+                        if (tr.get(0).innerText != institute) {
+                            site_state.results[k].warnings.push("Table returned wrong institute name.");
+                            return false;
+                        }
+                    });
+                });
+            } else if (label_name == "Years") {
+                cy.get(".v-card__title .col .v-input__slot").then((inputs) => {
+                    inputs.get(index0).click();
+                    var years = Number(inputs.get(index0).children[0].children[1]._value);
+                    cy.get("table tbody tr").each((tr, index1, trs) => {
+                        console.log(tr.get(0).children[7].innerText, inputs.get(index0).children[0].children[1]._value)
+                        if (Number(tr.get(0).children[7].innerText) < years) {
+                            site_state.results[k].warnings.push("Table returned wrong year.");
+                            return false;
+                        }
+                    });
+                });
+            }
+        });
     });
 })
 
 Cypress.Commands.add("check_statistics", (site_state, k) => {
-    cy.get("div.menuable__content__active div[role='option']").eq(3).click();
-    cy.get(".v-card__title .col-4").as("title").each((d, index0, ds) => {
-	cy.get("@title").eq(index0).click();
-	cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
-	    var title = label.eq(0).innerText;
-	});
-	if(index0 == 0 || index0 == 1){
-	    cy.get("table tbody tr").as("rows").then((table_rows) => {
-		var n_initial = table_rows.length;
-	    });
-	    cy.get("div:visible.v-menu__content div[aria-selected='false']").as("options").each((option, index1, options) => {
-		var op = option.innerText;
-		cy.get("@options").eq(index1).click();
-		cy.wait(1000);
-		cy.get("table tbody tr").as("rows").then((table_rows) => {
-		    var n_final = table_rows.length;
-		});
-		if(n_initial >= n_final){
-		    site_state.results[k].warnigs.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
-	        }
-	    });
-	} else if (index0 == 2) {
-	    cy.get("div:visible.v-menu__content div[aria-selected='false']").as("options").each((option, index1, options) => {
-		var op = option.innerText;
-		cy.get("@options").eq(index1).click();
-		cy.wait(1000);
-		cy.get("table thead tr td").as("tds").eq(1).then((table_data) => {
-		    var td = table_data.innerText;
-		});
-		if(op != td){
-		    site_state.results[k].warnigs.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
-	        }
-	        cy.get("@options").eq(index1).click();
-	    });
-	}
+    var table_rows = NaN;
+    var n_initial = NaN;
+    var n_final = NaN;
+    var th, op, title;
+    cy.get(".v-card__title .col-4 .v-input__slot").as("title").each((d, index0, ds) => {
+        cy.get("@title").eq(index0).click();
+        cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
+            title = label.get(0).innerText;
+        });
+        if (index0 == 0 || index0 == 1) {
+            cy.get("div.v-menu__content div[aria-selected='false']").should('be.visible').as("options").each((option, index1, options) => {
+                op = option.get(0).innerText;
+                cy.get(".v-data-footer__pagination").then((table_rows) => {
+                    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
+                });
+                cy.wait(2000);
+                cy.get("@options").eq(index1).click();
+                cy.wait(1000);
+                cy.get(".v-data-footer__pagination").then((table_rows) => {
+                    n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
+                    if (n_initial >= n_final) {
+                        site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
+                    }
+                });
+            });
+        } else if (index0 == 2) {
+            cy.get("div.v-menu__content div[aria-selected='false']").should('be.visible').as("options").each((option, index1, options) => {
+                cy.get(".v-data-footer__pagination").then((table_rows) => {
+                    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
+                });
+                cy.get("@options").eq(index1).click();
+                cy.wait(1000);
+                cy.get("table thead tr th").as("ths").eq(index1 + 1).then((table_header) => {
+                    th = table_header.get(0).innerText;
+                    op = options.get(index1).innerText;
+                    cy.get(".v-data-footer__pagination").then((table_rows) => {
+                        n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
+                        if (op != th) {
+                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
+                        } else if (n_initial >= n_final) {
+                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
+                        } else if (n_initial >= n_final && op != th) {
+                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
+                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
+                        }
+                    });
+                });
+            });
+        }
     });
 })
-
 Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
-    //div[role="listbox"] .v-list-item
-    cy.get("div.menuable__content__active div[role='option']").eq(2).click();
+    cy.Open_All();
     cy.get(".v-card__title .col-2").as("elems").each((elem, index0, elems) => {
-	var stop = false;
-	cy.get(".v-card__title .col-2 label").eq(index0).then((label) => {
-	    var title = label.get(0).innerText;
-	});
-	cy.get("div.menuable__content__active div.v-list-item__content").then((options) => {
-	    var n_options = options.length;
-	});
-	cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options)).then((option) => {
-	    var selected = option.get(0).innerText.split(" ")[0];
-	}).click();
-	if(index0 == 0){
-	    cy.get(".v-card__title .col-2 input:visible").eq(index0).type(flags_name + "{enter}");
-	    cy.wait(1000);
-	    cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
-		if (tr.get(0).children[1] + tr.get(0).children[2] != selected){
-		    if(!stop){
-			stop = true;
-			site_state.results[k].warnigs.push("There is something wrong with '" + selected + "' option of '" + title + "'.");
-		    } else {
-			return false;
-		    }
-		}
-	    });
-	} else if (index0 == 1){
-	    cy.get(".v-card__title .col-2 input:visible").eq(index0).click();
-	    cy.wait(1000);
-	    cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
-		if (tr.get(0).children[4].split("_")[0] != selected){
-		    if(!stop){
-			stop = true;
-			site_state.results[k].warnigs.push("There is something wrong with '" + selected + "' option of '" + title + "'.");
-		    } else {
-			return false;
-		    }
-		}
-	    });
-	}
-	cy.get("button[aria-label='clear icon']").eq(index0).click();
+        var stop = false;
+        var title, n_options = NaN,
+            selected;
+        cy.get(".v-card__title .col-2:visible").eq(index0).click();
+        cy.get(".v-card__title .col-2 label").eq(index0).then((label) => {
+            title = label.get(0).innerText;
+            cy.get("div.menuable__content__active div.v-list-item__content").then((options) => {
+                n_options = options.length;
+                cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options)).click().then((option) => {
+                    selected = option.get(0).innerText;
+                    if (index0 == 0) {
+                        cy.get(".v-card__title .col-2 input:visible").eq(index0).type(selected);
+                        cy.wait(1000);
+                        cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
+                            if (trs.children()[1].innerText + " " + trs.children()[2].innerText != selected) {
+                                if (!stop) {
+                                    stop = true;
+                                    site_state.results[k].warnings.push("Wrong first and last name were delivered in: '" + selected + "' option of '" + title + "'.");
+                                } else {
+                                    return false;
+                                }
+                            }
+                        });
+                    } else if (index0 == 1) {
+                        cy.get(".v-card__title .col-2").eq(index0).type(selected);
+                        cy.wait(1000);
+                        cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
+                            if (trs.children()[4].innerText.split("_")[0] != selected.split(" ")[0]) {
+                                if (!stop) {
+                                    stop = true;
+                                    site_state.results[k].warnings.push("Wrong Flag name was delivered in: '" + selected + "' option of '" + title + "'.");
+                                } else {
+                                    return false;
+                                }
+                            }
+                        });
+                    }
+                    cy.get("button[aria-label='clear icon']").eq(0).click({
+                        force: true
+                    });
+                });
+            });
+        });
     });
 })
 
 Cypress.Commands.add("check_weeks", (site_state, k, data) => {
-    if(site_state.isAdmin){
-	/*create a new CMSWeek*/
-	cy.get(".v-card__title button").click();
-	cy.get(".v-card .v-card__text input").eq(0).type(data.title);
-	cy.get(".v-card .v-card__text input").eq(1).type(data.start_date);
-	cy.get(".v-card .v-card__text input").eq(2).type(data.end_date);
-	if(data.is_out_cern){
-	    cy.get(".v-card .v-card__text input").eq(3).click();
+        /*create a new CMSWeek*/
+        cy.get(".v-card__title button").click();
+        cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.title);
+        cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.start_date, {force: true});
+        cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.end_date, {force: true});
+        if (data.is_out_cern) {
+            cy.get(".v-card .v-card__text input").eq(3).click({force:true});
+        }
+        cy.get(".v-card .v-card__actions button").eq(1).click({force:true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+        /*change the CMSWeek*/
+	if (site_state.isAdmin) {
+    	    cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
+    	    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.title);
+    	    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.start_date, {force: true});
+    	    cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.end_date, {force: true});
+    	    if (data.is_out_cern) {
+        	cy.get(".v-card .v-card__text input").eq(3).click({force: true});
+    	    }
+    	    cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+    	    cy.wait_for_requests("@puts");
 	}
-	cy.get(".v-card .v-card__actions button").eq(1).click();
-	/*change the CMSWeek*/
-	cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
-	cy.get(".v-card .v-card__text input").eq(0).type(data.title);
-	cy.get(".v-card .v-card__text input").eq(1).type(data.start_date);
-	cy.get(".v-card .v-card__text input").eq(2).type(data.end_date);
-	if(data.is_out_cern){
-	    cy.get(".v-card .v-card__text input").eq(3).click();
-	}
-	cy.get(".v-card .v-card__actions button").eq(1).click();
-	cy.wait_for_requests("@puts");
-    }
 })
 
 Cypress.Commands.add("check_rooms", (site_state, k, data) => {
-    if(site_state.isAdmin){
-	/*create a new room*/
-	cy.get(".v-card__title button").click();
-	cy.get(".v-card .v-card__text input").eq(0).type(data.custom_name);
-	cy.get(".v-card .v-card__text input").eq(1).type(data.indico_id);
-	cy.get(".v-card .v-card__text input").eq(2).type(data.building);
-	cy.get(".v-card .v-card__text input").eq(3).type(data.floor);
-	cy.get(".v-card .v-card__text input").eq(4).type(data.room_nr);
-	if(data.at_cern){
-	    cy.get(".v-card .v-card__text input").eq(5).click();
-	}
-	cy.get(".v-card .v-card__actions button").eq(1).click();
-	/*change the room*/
-	cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
-	cy.get(".v-card__title button").click();
-	cy.get(".v-card .v-card__text input").eq(0).type(data.custom_name);
-	cy.get(".v-card .v-card__text input").eq(1).type(data.indico_id);
-	cy.get(".v-card .v-card__text input").eq(2).type(data.building);
-	cy.get(".v-card .v-card__text input").eq(3).type(data.floor);
-	cy.get(".v-card .v-card__text input").eq(4).type(data.room_nr);
-	if(data.at_cern){
-	    cy.get(".v-card .v-card__text input").eq(5).click();
-	}
-	cy.get(".v-card .v-card__actions button").eq(1).click();
-	cy.wait_for_requests("@puts");
+        /*create a new room*/
+        cy.get(".v-card__title button").click();
+        cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.custom_name, {force: true});
+        cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.indico_id, {force: true});
+        cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.building, {force: true});
+        cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.floor, {force: true});
+        cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.room_nr, {force: true});
+	cy.get(".v-card .v-card__text input").eq(5).then((input) => {
+	    if (data.at_cern && !input.get(0).checked) {
+        	cy.get(".v-card .v-card__text input").eq(5).click({force: true});
+	    }
+	});
+        cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+        /*change the room*/
+     if (site_state.isAdmin) {
+        cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click({force: true});
+        cy.get(".v-card__title button").click({force: true});
+        cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.custom_name, {force: true});
+        cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.indico_id, {force: true});
+        cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.building, {force: true});
+        cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.floor, {force: true});
+        cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.room_nr, {force: true});
+        if (data.at_cern) {
+            cy.get(".v-card .v-card__text input").eq(5).click({force: true});
+        }
+        cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+        cy.wait_for_requests("@puts");
+	cy.get(".v-dialog--active").click().type("{esc}");
+    }
+})
+
+Cypress.Commands.add("check_tenures", (site_state, k, data) => {
+    cy.Open_All();
+    if (site_state.isAdmin) {
+	/*make a new tenure*/
+	cy.get("main .v-toolbar__content button").click();
+	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
+	cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.unit, {force: true});
+	cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.position, {force: true});
+	cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.start_date, {force: true});
+	cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.end_date, {force: true});
+	cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+	/*change the tenure*/
+	cy.get(".v-data-footer__pagination").then((table_rows) => {
+	    cy.get("table tbody tr button").then((buttons) => {
+		var tr_index = Math.floor(Math.random() * buttons.length/2);
+		if(tr_index % 2 == 0){
+		    /*change tenure*/
+		    buttons.get(0).children[tr_index].click();
+		    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.unit, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.position, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.start_date, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.end_date, {force: true});
+		    cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+		    cy.get(".v-dialog--active").click().type("{esc}");
+		    /*delete tenure*/
+		    buttons.get(0).children[tr_index+1].click();
+		    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.unit, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.position, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.start_date, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.end_date, {force: true});
+		    cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+		    cy.get(".v-dialog--active").click().type("{esc}");
+		    cy.wait_for_requests("@deletes");
+		} else {
+		    /*change tenure*/
+		    buttons.get(0).children[tr_index-1].click();
+		    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.unit, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.position, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.start_date, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.end_date, {force: true});
+		    cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+		    cy.get(".v-dialog--active").click().type("{esc}");
+		    /*delete tenure*/
+		    buttons.get(0).children[tr_index].click();
+		    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.unit, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.position, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.start_date, {force: true});
+		    cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.end_date, {force: true});
+		    cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
+		    cy.get(".v-dialog--active").click().type("{esc}");
+		    cy.wait_for_requests("@deletes");
+		}
+	    });
+	});
     }
 })
 
@@ -502,7 +626,7 @@ Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
 })
 
 Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
-    cy.get("button.v-btn--contained").eq(0).click();
+    cy.get(".v-main__wrap .v-card__actions button").eq(0).click();
     cy.go('back');
     cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000);
     cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
@@ -515,4 +639,9 @@ Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, inst
     cy.check_institute_dashboard(site_state, k, institute);
     cy.go('back');
     cy.get("header .d-flex .v-toolbar__title").click();
+})
+
+Cypress.Commands.add("Open_All", () => {
+    cy.get(".v-data-footer .v-input__control").click();
+    cy.get("div.menuable__content__active div[role='option']").eq(3).click();
 })

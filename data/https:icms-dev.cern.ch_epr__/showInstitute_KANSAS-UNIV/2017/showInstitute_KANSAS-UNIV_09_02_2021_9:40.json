@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/KANSAS-UNIV",
+  "status": 200,
+  "duration": 1601,
+  "load_time": 7738.805000001099,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/SKK-UNIV",
+  "status": 200,
+  "duration": 1012,
+  "load_time": 7658.149999995716,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

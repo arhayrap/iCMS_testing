@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/ASRT-ENHEP",
+  "status": 200,
+  "duration": 1255,
+  "load_time": 7617.425000004005,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

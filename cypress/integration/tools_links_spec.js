@@ -3,18 +3,16 @@ describe('Get tools links', () => {
     let base = "https://icms.cern.ch/tools/";
     it("Gets the links", () => {
         cy.visit(base);
-	let env      = JSON.stringify(Cypress.env().flags);
-        let login    = JSON.parse(env)["login"];//.login;
-        let password = JSON.parse(env)["password"];//password;
+	let env      = Cypress.env()["flags"];
+        let login    = env["login"];
+        let password = env["password"];
 	cy.login(login, password);
 	cy.wait(2000);
 	cy.get("button[aria-haspopup=true]").as("header_menu").each(($j, index0, $jdiv)=>{
-	cy.log("index is -> ", index0);
-	cy.get("@header_menu").eq(index0).click({ force: true }).trigger("mouseover");
+	cy.get("@header_menu").eq(index0).click();
 	if(index0 == 0 || index0 == 1){
 	    cy.get("#app > div[role='menu']").children().eq(0).get("div").then(()=>{
 		cy.get("#app > div[role='menu']").children().eq(0).get("div").as("drop").get("a[role='menuitem']").each(($a, index1, $ah)=>{
-		    console.log("dropdown pass");
 		    links.push($a[0].href);
 		});
 	    });
@@ -26,7 +24,6 @@ describe('Get tools links', () => {
 		.each(($d, index2, $divs)=>{
 		cy.get("@add_drop").eq(index2).children().first().click()
 		cy.get("@add_drop").eq(index2).children().last().children().each(($i, index3, $adiv)=>{
-		    console.log("additional drop pass for index:", index2);
 		    links.push($i[0].href);
 		})
 	    })
@@ -35,7 +32,6 @@ describe('Get tools links', () => {
 	if(index0 == 4){
 	    cy.get("#app > div[role='menu']").children().eq(0).get("div").then(()=>{
 		cy.get("#app > div[role='menu']").children().eq(0).get("div").as("drop").get("a[role='menuitem']").eq(0).then(($a)=>{
-		    console.log("profile dropdown");
 		    links.push($a[0].href);
 		});
 	    });

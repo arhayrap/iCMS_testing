@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/DEBRECEN-IEP",
+  "status": 200,
+  "duration": 675,
+  "load_time": 6295.01999999769,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

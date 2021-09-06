@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/MEXICO-CINVESTAV",
+  "status": 200,
+  "duration": 1381,
+  "load_time": 7599.15500000352,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

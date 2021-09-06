@@ -1,0 +1,9 @@
+{
+  "url": "https://icms-dev.cern.ch/tools/collaboration/emeritus-nominations",
+  "warnings": [
+    "Reference to a wrong institute profile.",
+    "Table warning: There is an empty table after toggling"
+  ],
+  "errors": [],
+  "state": "OK"
+}

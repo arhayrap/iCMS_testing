@@ -1,0 +1,11 @@
+{
+  "url": "https://icms-dev.cern.ch/epr/showInstitute/TBILISI-GTU",
+  "status": 200,
+  "duration": 1007,
+  "load_time": 7263.254999998026,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}
