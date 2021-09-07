@@ -73,10 +73,7 @@ Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
 })
 
 Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false) => {
-    cy.get("div.row div.v-card div.v-card__title")
-        .eq(2)
-        .siblings(".v-card__text").as("vcard")
-        .get("@vcard").find("div[role='list'] div.v-list-item__subtitle")
+    cy.get("div.row div.v-card div.v-card__text").eq(1).find("div.v-list-item__subtitle")
         .should(($title) => {
             expect($title).to.contain("Full Name");
         })
@@ -100,10 +97,7 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false) =>
 })
 
 Cypress.Commands.add("check_institute_dashboard", (site_state, k, name = false) => {
-    cy.get("div.v-card div.v-card__title")
-        .eq(1)
-        .siblings(".container").as("cont")
-        .get("@cont").find(".row div.col-9").eq(0).then(($elem) => {
+    cy.get("div.v-card .container").find(".row div.col-9").eq(0).then(($elem) => {
             console.log($elem.get(0).innerText == name);
             if ($elem.get(0).innerText == name) {
                 site_state.correct_institute_search = true;
@@ -172,7 +166,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
                     console.log(item1);
-                    cy.get("@outline").eq(index1).click();
+                    cy.get("@outline").eq(index1).click({force: true});
                     option = item1.get(0).innerText;
                     console.log(item1.get(0).innerText, item1.get(0), option);
                     cy.wait(2000);
@@ -189,7 +183,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                             }
                         });
                         cy.wait(2000);
-                        cy.get("@outline").eq(index1).click();
+                        cy.get("@outline").eq(index1).click({force: true});
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + option + "' table is empty.");
                         return false;
@@ -628,14 +622,12 @@ Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
 Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
     cy.get(".v-main__wrap .v-card__actions button").eq(0).click();
     cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000);
-    cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
-    cy.wait(2000);
+    cy.get("div.v-select__slot input:visible").eq(0).type(name_surname+"{enter}").wait(3000);
+//    cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
     cy.check_profile_dashboard(site_state, k, name_surname);
     cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(1).type(institute).wait(1000);
-    cy.get("div.v-select__slot input:visible").eq(1).type("{enter}");
-    cy.wait(2000);
+    cy.get("div.v-select__slot input:visible").eq(1).type(institute+"{enter}").wait(3000);
+//    cy.get("div.v-select__slot input:visible").eq(1).type("{enter}");
     cy.check_institute_dashboard(site_state, k, institute);
     cy.go('back');
     cy.get("header .d-flex .v-toolbar__title").click();

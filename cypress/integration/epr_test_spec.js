@@ -14,7 +14,7 @@ describe("Checking epr", () => {
     var y = 2;
     var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
     var n = 1; //334;
-    var start = 20;
+    var start = 90;
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms.cern.ch/epr/";
     var out_path = "data/epr_out.json";
@@ -69,7 +69,7 @@ describe("Checking epr", () => {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            //cy.listen_fails(site_state, k, base, links_path, out_path);
+            cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/**',
@@ -79,15 +79,16 @@ describe("Checking epr", () => {
                     }
                 }
             }).as('posts');
-            /*cy.route({
+            cy.route({
                 method: 'GET',
-                url: 'https://icms-dev.cern.ch/epr/**',
+                url: 'https://icms.cern.ch/epr/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
                     }
                 }
-            }).as('gets');*//*cursor: default'*/
+            }).as('gets');
+	    /*cursor: default'*/
             cy.find_popup_alerts(site_state[0].results[k]);
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
@@ -109,9 +110,6 @@ describe("Checking epr", () => {
 		    cy.get('body', { 
                         timeout: 60000
                     }).should('have.css', 'cursor').and('match', /default/).wait(1000);
-                    /*cy.get('body', {
-                        timeout: 60000
-                    }).wait(1000);*/
                     cy.get_load_time(site_state[0].results[k]);
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 }
