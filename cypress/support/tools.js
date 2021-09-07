@@ -268,6 +268,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
         var f_name = tr.get(0).children[1].innerText;
         var l_name = tr.get(0).children[2].innerText;
         var institute = tr.get(0).children[3].innerText;
+	var t_date = new Date().getFullYear();
         //checking names
         cy.get("table tbody tr td a", {
             timeout: 60000
@@ -301,23 +302,21 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             console.log("Is admin!");
             cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
             cy.get(".v-card .v-toolbar__title").then((title) => {
-                if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date) {
+                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
                     site_state.results[k].warnings.push("Reference to a page with a wrong date.");
                 }
             });
-            cy.check_tables(site_state.results[k]);
-            cy.go("back");
-            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click();
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click().click();
             cy.get(".v-card .v-toolbar__title").then((title) => {
-                if (title.get(0).innerText.split("Institute Profile of ")[0] != t_date) {
+                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
                     site_state.results[k].warnings.push("Reference to a page with a wrong date.");
                 }
             });
-            cy.check_tables(site_state.results[k]);
             // Additional actions
             cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(3).click();
             cy.get("body").then((body) => {
                 if (body.find(".v-card .v-card__actions button").length != 1) {
+		    cy.wait(2000);
                     site_state.results[k].warnings.push("Info modal was not, or was wrongly opened.");
                 }
             });
@@ -326,8 +325,23 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             cy.get(".v-card .v-card__text input").eq(1).type(data.year);
             cy.get(".v-card .v-card__actions button").eq(2).click();
             cy.wait_for_requests("@em_nom");
-        }
-        cy.go("back");
+        } else {
+	    console.log("Is not an admin.");
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
+            cy.get(".v-card .v-toolbar__title").then((title) => {
+		console.log(title.get(0).innerText.split(" CMS Emeritus Nominations")[0]);
+                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
+                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                }
+            });
+            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click().click();
+            cy.get(".v-card .v-toolbar__title").then((title) => {
+                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
+                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                }
+            });
+	}
+        cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
         cy.get(".v-card__title .v-input__slot").click({
             waitForAnimations: false
         });
@@ -622,11 +636,11 @@ Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
 Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
     cy.get(".v-main__wrap .v-card__actions button").eq(0).click();
     cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(0).type(name_surname+"{enter}").wait(3000);
+    cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000).type("{enter}").wait(2000);
 //    cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
     cy.check_profile_dashboard(site_state, k, name_surname);
     cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(1).type(institute+"{enter}").wait(3000);
+    cy.get("div.v-select__slot input:visible").eq(1).type(institute).wait(1000).type("{enter}").wait(2000);
 //    cy.get("div.v-select__slot input:visible").eq(1).type("{enter}");
     cy.check_institute_dashboard(site_state, k, institute);
     cy.go('back');

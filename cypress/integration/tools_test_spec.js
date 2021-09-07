@@ -159,7 +159,7 @@ describe("Checking tools", () => {
                     cy.login(login, password);
                     cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    //cy.wait(2000);
+                    cy.wait(2000);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
                         cy.check_logo_reference(site_state[0], base);
@@ -208,7 +208,7 @@ describe("Checking tools", () => {
                     cy.login(login, password);
                     cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    // cy.wait(2000);
+                    cy.wait(2000);
                     cy.get_load_time(site_state[0].results[k]);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
