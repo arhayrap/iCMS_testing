@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitutes",
+  "status": 200,
+  "duration": 118,
+  "load_time": 7397.335000045132,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

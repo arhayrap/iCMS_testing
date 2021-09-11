@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/LATVIA",
+  "status": 200,
+  "duration": 123,
+  "load_time": 7551.575000048615,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

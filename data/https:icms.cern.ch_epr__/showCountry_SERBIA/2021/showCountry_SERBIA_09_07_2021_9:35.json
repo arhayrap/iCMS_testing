@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/SERBIA",
+  "status": 200,
+  "duration": 121,
+  "load_time": 7588.6799999866635,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

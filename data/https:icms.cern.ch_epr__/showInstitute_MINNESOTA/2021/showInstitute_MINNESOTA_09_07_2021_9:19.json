@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/MINNESOTA",
+  "status": 200,
+  "duration": 2238,
+  "load_time": 13661.620000028051,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

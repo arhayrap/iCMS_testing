@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/UNIANDES",
+  "status": 200,
+  "duration": 1476,
+  "load_time": 11394.015000027139,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

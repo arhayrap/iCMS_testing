@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/ST-PAUL-BU",
+  "status": 200,
+  "duration": 1398,
+  "load_time": 11361.590000044554,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrections",
+  "warnings": [],
+  "errors": [
+    "GET request error : 403  403 (Forbidden)"
+  ],
+  "state": "OK"
+}

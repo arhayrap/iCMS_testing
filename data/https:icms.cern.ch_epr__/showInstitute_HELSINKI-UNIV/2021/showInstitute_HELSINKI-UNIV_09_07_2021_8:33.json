@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/HELSINKI-UNIV",
+  "status": 200,
+  "duration": 1253,
+  "load_time": 10850.664999976289,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

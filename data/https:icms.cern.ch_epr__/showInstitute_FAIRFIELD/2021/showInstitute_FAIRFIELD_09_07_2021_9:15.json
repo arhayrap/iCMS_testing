@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/FAIRFIELD",
+  "status": 200,
+  "duration": 1215,
+  "load_time": 10684.70000004163,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

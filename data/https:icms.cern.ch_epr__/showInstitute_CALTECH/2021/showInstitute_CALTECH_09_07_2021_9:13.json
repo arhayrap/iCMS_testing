@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/CALTECH",
+  "status": 200,
+  "duration": 2467,
+  "load_time": 14641.55000000028,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

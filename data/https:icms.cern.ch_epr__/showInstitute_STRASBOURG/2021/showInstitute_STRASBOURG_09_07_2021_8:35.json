@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/STRASBOURG",
+  "status": 200,
+  "duration": 2330,
+  "load_time": 14259.305000014137,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

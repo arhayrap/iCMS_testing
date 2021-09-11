@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/KRAKOW-IET",
+  "status": 200,
+  "duration": 1489,
+  "load_time": 11494.509999989532,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

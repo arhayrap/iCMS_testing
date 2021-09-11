@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-ITEP",
+  "status": 200,
+  "duration": 2068,
+  "load_time": 13193.024999985937,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

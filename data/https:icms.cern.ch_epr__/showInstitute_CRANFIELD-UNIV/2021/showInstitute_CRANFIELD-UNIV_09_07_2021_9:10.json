@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/CRANFIELD-UNIV",
+  "status": 200,
+  "duration": 1210,
+  "load_time": 10591.215000022203,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

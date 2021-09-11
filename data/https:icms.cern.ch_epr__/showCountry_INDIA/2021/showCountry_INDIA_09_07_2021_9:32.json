@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/INDIA",
+  "status": 200,
+  "duration": 122,
+  "load_time": 7210.84999997355,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/PORTUGAL",
+  "status": 200,
+  "duration": 123,
+  "load_time": 7305.519999993965,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

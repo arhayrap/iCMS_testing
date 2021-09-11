@@ -1,0 +1,37 @@
+{
+    "dashboard_data":{
+	"base": "https://icms.cern.ch/tools/",
+	"name_surname": "Aram Hayrapetyan",
+	"institute": "Yerevan Physics Institute",
+	"unit_name": "MUON Subdetector",
+	"date": "2012-12-10"
+    },
+    "units_data":{
+	"unit_name": "MUON Subdetector",
+	"date": "2012-12-10"
+    },
+    "flags_data":{
+	"flag_name": "Aarnio Pertti A."
+    },
+    "rooms_data": {
+        "custom_name": "Test name",
+        "indico_id": "none",
+        "building": "Building name",
+        "floor": "none",
+        "room_nr": "none",
+        "at_cern": true
+    },
+    "weeks_data":{
+        "title": "Test title",
+        "start_date": "2022-11-10",
+        "end_date": "2022-11-17",
+        "is_out_cern": false
+    },
+    "tenures_data":{
+        "member": "Test title",
+        "unit": "Test unit",
+	"position": "Test unit",
+        "start_date": "2022-11-10",
+        "end_date": "2022-11-17"
+    }
+}

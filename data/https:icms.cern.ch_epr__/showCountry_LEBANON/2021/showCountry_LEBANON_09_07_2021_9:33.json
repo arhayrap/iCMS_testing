@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/LEBANON",
+  "status": 200,
+  "duration": 124,
+  "load_time": 9325.175000006333,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

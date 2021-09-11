@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/people",
+  "status": 200,
+  "duration": 360,
+  "load_time": 5054.394999999204,
+  "warnings": [
+    "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

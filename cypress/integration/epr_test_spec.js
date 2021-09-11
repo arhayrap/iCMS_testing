@@ -11,10 +11,10 @@ describe("Checking epr", () => {
 	})
     }
 */
-    var y = 2;
+    var y = 6;
     var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
-    var n = 1; //334;
-    var start = 90;
+    var n = 334;
+    var start = 0;
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms.cern.ch/epr/";
     var out_path = "data/epr_out.json";
@@ -102,24 +102,24 @@ describe("Checking epr", () => {
                     cy.select_year("@posts", site_state[0].results[k], y);
                     cy.get('body', { 
                         timeout: 60000
-                    }).should('have.css', 'cursor').and('match', /default/).wait(1000);
+                    }).should('have.css', 'cursor').and('match', /default/);
                     cy.get_stat_dur_light(link, site_state, k, page_fail_limit);
                 } else {
                     site_state[0].results[k].load_time = performance.now();
                     cy.select_year("@posts", site_state[0].results[k], y);
 		    cy.get('body', { 
                         timeout: 60000
-                    }).should('have.css', 'cursor').and('match', /default/).wait(1000);
+                    }).should('have.css', 'cursor').and('match', /default/);
                     cy.get_load_time(site_state[0].results[k]);
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 }
                 cy.check_tables_epr(site_state[0].results[k]);
             });
             if (mode == "light") {
-                cy.writeFile(out_path_light, site_state);
+                cy.writeFile(out_path_light+"_{}".format(years[y]), site_state);
                 cy.save_data(site_state[0].results[k], base, mode, years[y]);
             } else {
-                cy.writeFile(out_path, site_state);
+                cy.writeFile(out_path+"_{}".format(years[y]), site_state);
                 cy.save_data(site_state[0].results[k], base, "", years[y]);
             }
             console.log(site_state);

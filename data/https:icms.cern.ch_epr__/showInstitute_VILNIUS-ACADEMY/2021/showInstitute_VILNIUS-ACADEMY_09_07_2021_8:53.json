@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/VILNIUS-ACADEMY",
+  "status": 200,
+  "duration": 1257,
+  "load_time": 10717.18499995768,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

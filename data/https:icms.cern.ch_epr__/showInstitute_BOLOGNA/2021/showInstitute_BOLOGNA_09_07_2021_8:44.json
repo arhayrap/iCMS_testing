@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/BOLOGNA",
+  "status": 200,
+  "duration": 2681,
+  "load_time": 15237.150000000838,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

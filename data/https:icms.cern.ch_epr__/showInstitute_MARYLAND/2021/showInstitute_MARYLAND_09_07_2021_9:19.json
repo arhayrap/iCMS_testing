@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/MARYLAND",
+  "status": 200,
+  "duration": 2533,
+  "load_time": 15074.465000012424,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

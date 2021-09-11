@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/TAIWAN",
+  "status": 200,
+  "duration": 126,
+  "load_time": 7271.9200000287965,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

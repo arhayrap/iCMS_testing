@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/LAPPEENRANTA-LUT",
+  "status": 200,
+  "duration": 1268,
+  "load_time": 11087.029999995138,
+  "warnings": [
+    "Table warning: There is an empty table",
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

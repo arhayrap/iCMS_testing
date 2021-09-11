@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/PUERTO_RICO",
+  "status": 200,
+  "duration": 1638,
+  "load_time": 11915.26999999769,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

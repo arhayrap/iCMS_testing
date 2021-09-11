@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/FAYOUM-CHEP-FU",
+  "status": 200,
+  "duration": 1513,
+  "load_time": 11603.884999989532,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

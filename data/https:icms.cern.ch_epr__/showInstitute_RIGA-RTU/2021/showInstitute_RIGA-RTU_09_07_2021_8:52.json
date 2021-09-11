@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/RIGA-RTU",
+  "status": 200,
+  "duration": 1493,
+  "load_time": 11508.414999989327,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

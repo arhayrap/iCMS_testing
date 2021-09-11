@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TAMU",
+  "status": 200,
+  "duration": 1953,
+  "load_time": 12975.344999984838,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

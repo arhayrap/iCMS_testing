@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/ADANA-CUKUROVA",
+  "status": 200,
+  "duration": 2435,
+  "load_time": 14408.880000002682,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

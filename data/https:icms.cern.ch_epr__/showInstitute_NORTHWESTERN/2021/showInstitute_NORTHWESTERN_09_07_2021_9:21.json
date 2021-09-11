@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/NORTHWESTERN",
+  "status": 200,
+  "duration": 1557,
+  "load_time": 11622.644999995828,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

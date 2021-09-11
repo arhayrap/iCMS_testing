@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/YEREVAN",
+  "status": 200,
+  "duration": 1298,
+  "load_time": 10933.300000033341,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

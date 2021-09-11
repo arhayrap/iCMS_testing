@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/ZHEJIANG-UNIV",
+  "status": 200,
+  "duration": 1379,
+  "load_time": 12244.93500002427,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

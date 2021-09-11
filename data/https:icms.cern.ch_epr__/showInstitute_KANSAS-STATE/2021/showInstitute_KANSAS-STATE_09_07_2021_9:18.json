@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-STATE",
+  "status": 200,
+  "duration": 1462,
+  "load_time": 11787.530000030529,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -24,6 +24,7 @@ Cypress.Commands.add("get_stat_dur", (link, site_state, k, limit) => {
         url: link,
         failOnStatusCode: false
     }).then((resp) => {
+	console.log(resp)
         if (expect(resp).to.have.property("status")) {
             site_state[0].results[k].status = resp.status;
         }

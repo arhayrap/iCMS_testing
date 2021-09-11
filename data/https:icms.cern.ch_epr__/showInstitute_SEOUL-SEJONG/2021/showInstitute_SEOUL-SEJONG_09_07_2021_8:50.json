@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-SEJONG",
+  "status": 200,
+  "duration": 1284,
+  "load_time": 10980.875000008382,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

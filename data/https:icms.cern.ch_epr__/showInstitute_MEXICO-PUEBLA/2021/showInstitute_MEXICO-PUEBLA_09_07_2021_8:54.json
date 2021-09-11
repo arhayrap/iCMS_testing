@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-PUEBLA",
+  "status": 200,
+  "duration": 1319,
+  "load_time": 11228.910000005271,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

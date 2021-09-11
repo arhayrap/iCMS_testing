@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-KYUNGHEE",
+  "status": 200,
+  "duration": 1320,
+  "load_time": 11008.445000043139,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

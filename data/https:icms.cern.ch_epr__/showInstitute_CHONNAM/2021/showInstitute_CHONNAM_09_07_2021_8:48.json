@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/CHONNAM",
+  "status": 200,
+  "duration": 1317,
+  "load_time": 10940.225000027567,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

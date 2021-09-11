@@ -1,118 +1,178 @@
-Cypress.Commands.add("check_tables", (site_state, toggled = false) => {
+Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
     let white_list = false;
+    site_state = site_state.results[k];
     cy.get("main").then(($body) => {
         cy.readFile("cypress/fixtures/white_list.json").then(($obj) => {
             let white_list = $obj[0]["links"].includes(site_state["url"]);
         });
         if ($body.find("table").length) {
-            if ($body.find(".v-slide-group__wrapper").length) {
-                cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
-                    multiple: true
-                });
-                cy.get("main table > tbody").each(($tab, index0, $tables) => {
-                    cy.get("main table > tbody").eq(index0).children().then((tr1) => {
-                        if (tr1.length <= 2 && !white_list) {
-                            if (!toggled) {
-                                site_state.warnings.push("Table warning: There is an empty table");
-                            } else {
-                                site_state.warnings.push("Table warning: There is an empty table after toggling");
-                            }
+	    if ($body.find(".v-slide-group__wrapper").length) {
+		cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
+		    multiple: true
+		});
+	    }
+	    if ($body.find(".v-data-footer__pagination").length){
+		cy.get(".v-data-footer__pagination").each((pagination, index0, paginations) => {
+		    console.log( pagination.get(0).innerText,  "–", "    ", Number(pagination.get(0).innerText.split(" of ")[1]) );
+                    if (pagination.get(0).innerText == "–" || Number(pagination.get(0).innerText.split(" of ")[1]) == 0) {
+                        if (!toggled) {
+                            site_state.warnings.push("Table warning: There is an empty table");
+                        } else {
+                            site_state.warnings.push("Table warning: There is an empty table after toggling");
                         }
-                    });
+                    }
                 });
-            } else {
-                cy.get("main table > tbody").each(($tab, index0, $tables) => {
-                    cy.get("main table > tbody").eq(index0).children().then((tr1) => {
-                        if (tr1.length <= 2 && !white_list) {
-                            if (!toggled) {
-                                site_state.warnings.push("Table warning: There is an empty table");
-                            } else {
-                                site_state.warnings.push("Table warning: There is an empty table after toggling");
-                            }
-                        }
-                    });
-                });
-            }
+	    }
         } else if ($body.find("div.v-skeleton-loader__table-tbody").length) {
             cy.get("table", {
                 timeout: 60000
             });
-            if ($body.find(".v-slide-group__wrapper").length) {
-                cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
-                    multiple: true
-                });
-                cy.get("main table > tbody").each(($tab, index0, $tables) => {
-                    cy.get("main table > tbody").children().then((tr1) => {
-                        if (tr1.length <= 2 && !white_list) {
-                            if (!toggled) {
-                                site_state.warnings.push("Table warning: There is an empty table");
-                            } else {
-                                site_state.warnings.push("Table warning: There is an empty table after toggling");
-                            }
+	    if ($body.find(".v-slide-group__wrapper").length) {
+		cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
+		    multiple: true
+		});
+	    }
+	    if ($body.find(".v-data-footer__pagination").length){
+		cy.get(".v-data-footer__pagination").each((pagination, index0, paginations) => {
+                    if (pagination.get(0).innerText == "–" || Number(pagination.get(0).innerText.split(" of ")[1]) == 0) {
+                        if (!toggled) {
+                            site_state.warnings.push("Table warning: There is an empty table");
+                        } else {
+                            site_state.warnings.push("Table warning: There is an empty table after toggling");
                         }
-                    });
+                    }
                 });
-            } else {
-                console.log("found only tables")
-                cy.get("main table > tbody").each(($tab, index0, $tables) => {
-                    cy.get("main table > tbody").children().then((tr1) => {
-                        if (tr1.length <= 2 && !white_list) {
-                            if (!toggled) {
-                                site_state.warnings.push("Table warning: There is an empty table");
-                            } else {
-                                site_state.warnings.push("Table warning: There is an empty table after toggling");
-                            }
-                        }
-                    });
-                });
-            }
-        } else {
-            site_state.warnings = [];
+	    }
         }
     });
 })
 
-Cypress.Commands.add("check_profile_dashboard", (site_state, k, name = false) => {
+Cypress.Commands.add("check_units", (site_state, k, data) => {
+    // Checking end date
+    cy.get("table thead th").eq(8).click(); // sort by increasement
+    cy.Open_All();
+    cy.get("table tbody tr").each((tr, index0, trs) => {
+	if (tr.get(0).children[8] != "") {
+	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var now  = new Date().getTime();
+	    if (time > now) {
+		site_state.warnings.push("Data with wrong date were prented.");
+	    }
+	    return false;
+	}
+    });
+    // Checking end date after toggle
+    cy.get("div.v-input--selection-controls__ripple").eq(1).as("checkbox").click();
+    cy.get("table thead th").eq(8).click(); // sort by decreasement
+    cy.get("table tbody tr").each((tr, index0, trs) => {
+	if (tr.get(0).children[8] != "") {
+	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var now  = new Date().getTime();
+	    if (time < now) {
+		site_state.results[k].warnings.push("Data with wrong date were prented (after the toggle).");
+	    }
+	    return false;
+	}
+    });
+    cy.get("@checkbox").click();
+    // Checking end date of new date
+    cy.get("input[type='date']").type(data["date"]);
+    cy.get("table thead th").eq(8).click(); // sort by increasement
+    cy.Open_All();
+    cy.get("table tbody tr").each((tr, index0, trs) => {
+	if (tr.get(0).children[8] != "") {
+	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var now  = new Date().getTime();
+	    if (time > now) {
+		site_state.results[k].warnings.push("Data with wrong date were prented (new date without toggling).");
+	    }
+	    return false;
+	}
+    });
+    // Checking units
+    cy.get("main header button.v-btn").eq(0).click();
+    cy.get("button.v-icon").click({
+        multiple: true,
+        force: true
+    });
+    cy.get("div.v-menu__content input").type(data["unit_name"]);
+    cy.get("div.v-treeview-node__children div.v-treeview-node__content span").click();
+    cy.get("main header div.v-toolbar__title").then(($elem) => {
+        if ($elem.get(0).innerText.split(": ")[1] != data["unit_name"]) {
+            site_state.results[k].warnings.push("Unit selection was not done correctly.");
+        }
+    });
+    cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
+	console.log(cy.url(), site_state.results[k].url);
+	if (cy.url() != site_state.results[k].url) {
+	    site_state.results[k].warnings.push("Reference back to executive boards was not done correctly.");
+	}
+    }).wait(1000);
+/*
+    // ------------------------------------------------------- Administrator -------------------------------------------------------------
+    if (site_state.results[k].isAdmin){
+	cy.get("main header button.v-btn").eq(1).click();
+	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.edit.unit_domain, {force: true});
+	cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.edit.unit_type,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.edit.superior,    {force: true});
+	cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.edit.enclosing,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.edit.outermost,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(5).then((input) => {
+	    if (data.edit.active && !input.get(0).checked) {
+		cy.get(".v-card .v-card__text input").eq(5).click({force: true});
+	    }
+	});
+	cy.get(".v-card button").eq(2).click({force: true});
+	
+
+    }
+*/
+})
+
+Cypress.Commands.add("check_dashboard", (site_state, k, data) => {
+    cy.get(".v-main__wrap .v-card__actions button").eq(0).click();
+    cy.go('back');
+    cy.get("div.v-select__slot input:visible").eq(0).type(data["name_surname"]).wait(1000).type("{enter}").wait(2000);
+    cy.check_profile_dashboard(site_state, k, data["name_surname"]);
+    cy.go('back');
+    cy.get("div.v-select__slot input:visible").eq(1).type(data["institute"]).wait(1000).type("{enter}").wait(2000);
+    cy.check_institute_dashboard(site_state, k, data["institute"]);
+    cy.go('back');
+    cy.get("header .d-flex .v-toolbar__title").click();
+})
+
+Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
     cy.get("div.row div.v-card div.v-card__text").eq(1).find("div.v-list-item__subtitle")
         .should(($title) => {
             expect($title).to.contain("Full Name");
         })
         .siblings("div.v-list-item__title").eq(0).then(($elem) => {
             if (!name) {
-                console.log($elem.get(0).innerText == name);
-                if ($elem.get(0).innerText == name) {
-                    site_state.correct_profile = true;
-                } else {
-                    site_state.correct_profile = false;
+                if ($elem.get(0).innerText != data) {
+		    site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
                 }
             } else {
-                console.log($elem.get(0).innerText, name);
-                if ($elem.get(0).innerText == name) {
-                    site_state.correct_name_search = true;
-                } else {
-                    site_state.correct_name_search = false;
+                if ($elem.get(0).innerText != data) {
+                    site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
                 }
             }
         });
 })
 
-Cypress.Commands.add("check_institute_dashboard", (site_state, k, name = false) => {
+Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
     cy.get("div.v-card .container").find(".row div.col-9").eq(0).then(($elem) => {
-            console.log($elem.get(0).innerText == name);
-            if ($elem.get(0).innerText == name) {
-                site_state.correct_institute_search = true;
-            } else {
-                site_state.correct_institute_search = false;
-            }
-        });
+        console.log($elem.get(0).innerText == data);
+        if ($elem.get(0).innerText != data) {
+            site_state.results[k].warnings.push("The reference to the institute was not done correctly.");
+        }
+    });
 })
 
-Cypress.Commands.add("check_logo_reference", (site_state, base) => {
+Cypress.Commands.add("check_logo_reference", (site_state, k, base) => {
+    site_state = site_state.results[k];
     cy.get("header .d-flex .v-toolbar__title").click();
-    if (cy.url().should('eq', base)) {
-        site_state.correct_dashboard_url = true;
-    } else {
-        site_state.correct_dashboard_url = false;
+    if (cy.url() != base) {
+        site_state.results[k].warnings.push("The logo reference was not done correctly.");
     }
 })
 
@@ -298,8 +358,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
         cy.wait(1000);
         cy.go("back");
         //switches
-        if (site_state.isAdmin) {
-            console.log("Is admin!");
+        if (site_state.results[k].isAdmin) {
             cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
             cy.get(".v-card .v-toolbar__title").then((title) => {
                 if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
@@ -326,7 +385,6 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             cy.get(".v-card .v-card__actions button").eq(2).click();
             cy.wait_for_requests("@em_nom");
         } else {
-	    console.log("Is not an admin.");
             cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
             cy.get(".v-card .v-toolbar__title").then((title) => {
 		console.log(title.get(0).innerText.split(" CMS Emeritus Nominations")[0]);
@@ -346,7 +404,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             waitForAnimations: false
         });
         cy.wait(500);
-        cy.check_tables(site_state.results[k], true);
+        cy.check_tables(site_state, k, true);
         cy.wait(500);
     });
 })
@@ -443,8 +501,7 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
     cy.Open_All();
     cy.get(".v-card__title .col-2").as("elems").each((elem, index0, elems) => {
         var stop = false;
-        var title, n_options = NaN,
-            selected;
+        var title, n_options = NaN, selected;
         cy.get(".v-card__title .col-2:visible").eq(index0).click();
         cy.get(".v-card__title .col-2 label").eq(index0).then((label) => {
             title = label.get(0).innerText;
@@ -500,7 +557,7 @@ Cypress.Commands.add("check_weeks", (site_state, k, data) => {
         cy.get(".v-card .v-card__actions button").eq(1).click({force:true});
 	cy.get(".v-dialog--active").click().type("{esc}");
         /*change the CMSWeek*/
-	if (site_state.isAdmin) {
+	if (site_state.results[k].isAdmin) {
     	    cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click();
     	    cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.title);
     	    cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.start_date, {force: true});
@@ -529,7 +586,7 @@ Cypress.Commands.add("check_rooms", (site_state, k, data) => {
         cy.get(".v-card .v-card__actions button").eq(1).click({force: true});
 	cy.get(".v-dialog--active").click().type("{esc}");
         /*change the room*/
-     if (site_state.isAdmin) {
+     if (site_state.results[k].isAdmin) {
         cy.get("table tbody tr button").eq(Math.floor(Math.random() * 25)).click({force: true});
         cy.get(".v-card__title button").click({force: true});
         cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.custom_name, {force: true});
@@ -548,7 +605,7 @@ Cypress.Commands.add("check_rooms", (site_state, k, data) => {
 
 Cypress.Commands.add("check_tenures", (site_state, k, data) => {
     cy.Open_All();
-    if (site_state.isAdmin) {
+    if (site_state.results[k].isAdmin) {
 	/*make a new tenure*/
 	cy.get("main .v-toolbar__content button").click();
 	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.member, {force: true});
@@ -608,43 +665,116 @@ Cypress.Commands.add("check_tenures", (site_state, k, data) => {
     }
 })
 
-Cypress.Commands.add("check_units", (site_state, k, unit_name, date) => {
-    cy.get("div.v-input--selection-controls__ripple").eq(1).as("checkbox").click();
-    cy.check_tables(site_state.results[k], true);
-    cy.get("@checkbox").click();
-    cy.get("input[type='date']").type(date);
-    cy.get("main header button.v-btn").click();
-    cy.get("button.v-icon").click({
-        multiple: true,
-        force: true
-    });
-    cy.get("div.v-menu__content  div.v-card div.v-card__title div.v-input__control div.v-input__slot div.v-text-field__slot input").type(unit_name);
-    cy.get("div.v-treeview-node__children div.v-treeview-node__content span").click();
-    cy.get("main header div.v-toolbar__title").then(($elem) => {
-        if ($elem.get(0).innerText.split(": ")[1] == unit_name) {
-            site_state.results[k].correct_unit_search = true;
-        } else {
-            site_state.results[k].correct_unit_search = false;
-        }
-    });
-    cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
-        site_state.results[k].correct_arrow = true;
-    });
-    cy.wait(1000);
-})
+Cypress.Commands.add("room_booking", (site_state, k, data) => {
+    /*Create a booking*/
+    cy.get("button.mr-2").click();
+    cy.get(".v-dialog--active form input[type='text']").eq(0).click({force: true}).type(data.create.title,     {force: true});
+    cy.get(".v-dialog--active form input[type='text']").eq(3).click({force: true}).type(data.create.starts_at, {force: true});
+    cy.get(".v-dialog--active form input[type='text']").eq(4).click({force: true}).type(data.create.ends_at,   {force: true});
+    cy.get(".v-dialog--active form input[type='text']").eq(7).click({force: true}).type(data.create.project,   {force: true});
+    cy.get(".v-dialog--active button").eq(1).click({force: true});
+    cy.get(".v-dialog--active").click().type("{esc}");
+    cy.get(".v-select__selections input:visible").click({force:true}).type(data.cmsWeek).type("{enter}");
+    if (site_state.results[k].isAdmin) {
+	/*(+) button*/
+	cy.get("button.mr-2").contains("+").click();
+	cy.get(".v-dialog--active form input[type='text']").eq(0).click({force: true}).type(data.create.title,     {force: true});
+	cy.get(".v-dialog--active form input[type='text']").eq(3).click({force: true}).type(data.create.starts_at, {force: true});
+	cy.get(".v-dialog--active form input[type='text']").eq(4).click({force: true}).type(data.create.ends_at,   {force: true});
+	cy.get(".v-dialog--active form input[type='text']").eq(7).click({force: true}).type(data.create.project,   {force: true});
+	cy.get(".v-dialog--active button").eq(1).click({force: true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+	/*Checking modals of approved and pendings*/
+	// Approved
+	cy.get(".booking").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;").as("approved").then((divs) => {
+	    cy.get(".booking .booking-title").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;")
+		.eq(Math.round(Math.random()*divs.length))
+		.as("chosen_approved")
+		.then((chosen_approved) => {
+		    cy.get("body").then((body) => {
+			if (!body.find(".v-dialog--active").length) {
+			    site_state.results[k].append("The modal was not opened.");
+			    return false;
+			}
+		    });
+		    cy.get("@chosen_approved").click({force:true});
+		    cy.get(".v-dialog--active").then((dialog) => {
+			if (dialog.innerText.split(" (")[0] != chosen_approved.innerText) {
+			    site_state.results[k].append("A wrong modal was opened.");
+			    return false;
+			}
+		    });
+		    cy.get(".v-dialog--active button").then((buttons) => {
+			if (buttons.length != 1) {
+			    site_state.results[k].append("An 'approved' modal was not opened.");
+			    return false;
+			}
+		    });
+		});
+	    });
+	// Pending
+	cy.get(".booking").should("have.css", "background: rgb(241, 151, 51) none repeat scroll 0% 0%;").as("pending").then((divs) => {
+	    cy.get(".booking .booking-title").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;")
+		.eq(Math.round(Math.random()*divs.length))
+		.as("chosen_pending")
+		.then((chosen_approved) => {
+		    cy.get("body").then((body) => {
+			if (!body.find(".v-dialog--active").length) {
+			    site_state.results[k].append("The modal was not opened.");
+			    return false;
+			}
+		    });
+		    // Checking pending approval
+		    cy.get("@chosen_pending").click({force:true});
+		    cy.get(".v-dialog--active").then((dialog) => {
+			if (dialog.innerText.split(" (")[0] != chosen_approved.innerText) {
+			    site_state.results[k].append("A wrong modal was opened.");
+			    return false;
+			}
+		    });
+		    cy.get(".v-dialog--active button").then((buttons) => {
+			if (buttons.length != 3) {
+			    site_state.results[k].append("A 'pending' modal was not opened.");
+			    return false;
+			}
+			cy.wait_for_requests("@puts");
+			cy.get(".v-dialog--active button").eq(0).click().wait(1000);
+			if (!body.find(".v-dialog--active").length) {
+			    site_state.results[k].append("The confirmation modal was not opened.");
+			    return false;
+			}
+			cy.get(".v-dialog--active button").eq(1).click().wait(1000);
+		    // Checking pending removal
+			cy.get("@chosen_pending").click({force:true});
+			cy.get(".v-dialog--active button").then((buttons) => {
+			    cy.wait_for_requests("@puts");
+			    cy.get(".v-dialog--active button").eq(1).click().wait(1000);
+			    if (!body.find(".v-dialog--active").length) {
+				site_state.results[k].append("The removal modal was not opened.");
+				return false;
+			    }
+			    cy.get(".v-dialog--active button").eq(1).click().wait(1000);
+			});
+		    });
+		});
+	});
 
-Cypress.Commands.add("check_dashboard", (site_state, k, base, name_surname, institute) => {
-    cy.get(".v-main__wrap .v-card__actions button").eq(0).click();
-    cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(0).type(name_surname).wait(1000).type("{enter}").wait(2000);
-//    cy.get("div.v-select__slot input:visible").eq(0).type("{enter}");
-    cy.check_profile_dashboard(site_state, k, name_surname);
-    cy.go('back');
-    cy.get("div.v-select__slot input:visible").eq(1).type(institute).wait(1000).type("{enter}").wait(2000);
-//    cy.get("div.v-select__slot input:visible").eq(1).type("{enter}");
-    cy.check_institute_dashboard(site_state, k, institute);
-    cy.go('back');
-    cy.get("header .d-flex .v-toolbar__title").click();
+	// Checking the arrows
+	cy.get(".day-picker .day").then((date0) => {
+	    cy.get(".day-picker button").eq(0).click().wait(500);
+	    cy.get(".day-picker .day").then((date1) => {
+		if ((Number(date0.get(0).innerText.split(" ")[1]) - Number(date1.get(0).innerText.split(" ")[1])) != 1) {
+		    site_state.results[k].append("A passing to a wrong date (<-).");
+		}
+	    });
+	    cy.get(".day-picker button").eq(1).click().click().wait(500);
+	    cy.get(".day-picker .day").then((date2) => {
+		if ((Number(date1.get(0).innerText.split(" ")[1]) - Number(date0.get(0).innerText.split(" ")[1])) != 1) {
+		    site_state.results[k].append("A passing to a wrong date (->).");
+		}
+	    });
+	});
+    }
 })
 
 Cypress.Commands.add("Open_All", () => {

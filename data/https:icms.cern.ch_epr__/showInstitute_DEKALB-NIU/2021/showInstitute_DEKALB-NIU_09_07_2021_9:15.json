@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/DEKALB-NIU",
+  "status": 200,
+  "duration": 1374,
+  "load_time": 11009.405000018887,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

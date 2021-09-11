@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-KIPT",
+  "status": 200,
+  "duration": 1312,
+  "load_time": 11128.105000010692,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

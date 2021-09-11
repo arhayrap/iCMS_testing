@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/OHIO-STATE",
+  "status": 200,
+  "duration": 1383,
+  "load_time": 11697.719999996945,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

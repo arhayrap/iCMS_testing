@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/TRIESTE",
+  "status": 200,
+  "duration": 1402,
+  "load_time": 11280.160000023898,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
+  "status": 200,
+  "duration": 234,
+  "load_time": 4361.774999999441,
+  "warnings": [],
+  "errors": [],
+  "state": "OK"
+}

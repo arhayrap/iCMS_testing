@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showCountry/NETHERLANDS",
+  "status": 200,
+  "duration": 123,
+  "load_time": 7361.544999992475,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

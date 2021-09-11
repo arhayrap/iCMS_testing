@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/CHUNGLI-NCU",
+  "status": 200,
+  "duration": 2301,
+  "load_time": 14202.049999963492,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

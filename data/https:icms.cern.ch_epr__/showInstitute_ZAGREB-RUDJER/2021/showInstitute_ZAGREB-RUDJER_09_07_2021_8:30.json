@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/ZAGREB-RUDJER",
+  "status": 200,
+  "duration": 1490,
+  "load_time": 11564.165000047069,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

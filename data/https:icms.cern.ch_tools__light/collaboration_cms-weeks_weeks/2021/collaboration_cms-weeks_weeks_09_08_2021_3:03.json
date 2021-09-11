@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+  "warnings": [],
+  "errors": [
+    "POST request error : 403  403 (Forbidden)"
+  ],
+  "state": "OK"
+}

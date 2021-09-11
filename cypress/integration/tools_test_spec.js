@@ -1,48 +1,18 @@
+import configData from "../fixtures/tools_page_data.json";
+
 describe("Checking tools", () => {
     /*|------------------------------------<|       Paths       |>---------------------------------------------|*/
-    var links_path = "cypress/fixtures/tools_links.json";
-    var base = "https://icms.cern.ch/tools/";
-    var profile = "https://icms.cern.ch/tools/user/profile";
-    var user_path = "cypress/fixtures/users.json";
-    var out_path = "data/tools_out.json";
-    var out_path_light = "data/tools_out_surf.json";
-    /*|------------------------------------<| Data for dashboard |>---------------------------------------------|*/
-    var name_surname = "Aram Hayrapetyan";
-    var institute = "Yerevan Physics Institute";
-    var unit_name = "MUON Subdetector";
-    var date = "2012-12-10";
-    /*|------------------------------------<|   Data for rooms   |>---------------------------------------------|*/
-    var rooms_data = {
-        custom_name: "Test name",
-        indico_id: "none",
-        building: "Building name",
-        floor: "none",
-        room_nr: "none",
-        at_cern: true,
-    };
-    /*|------------------------------------<|    Data for weeks  |>---------------------------------------------|*/
-    var weeks_data = {
-        title: "Test title",
-        start_date: "2022-11-10",
-        end_date: "2022-11-17",
-        is_out_cern: false,
-    };
-    /*|------------------------------------<|   Data for tenures  |>---------------------------------------------|*/
-    var tenures_data = {
-        member: "Test title",
-        unit: "Test unit",
-	position: "Test unit",
-        start_date: "2022-11-10",
-        end_date: "2022-11-17",
-    };
+    var links_path      = "cypress/fixtures/tools_links.json";
+    var base            = "https://icms.cern.ch/tools/";
+    var profile         = "https://icms.cern.ch/tools/user/profile";
+    var out_path_light  = "data/tools_out_surf.json";
+    var out_path        = "data/tools_out.json";
+    var INPUT_DATA = configData;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    var flag_name = "Aarnio Pertti A.";
-    var user_index = 0;
     var page_fail_limit = 5;
     var page_fails = 0;
-    var start = 0;
-    var n = 35;
-    var end = n + start;
+    var start = 1;
+    var n = 1;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env = Cypress.env()["flags"]
     var login = env["login"];
@@ -52,7 +22,6 @@ describe("Checking tools", () => {
     /*|-----------------------------------------------------------------------------------------------------------|*/
 
     if (mode == "light") {
-        console.log("light");
         var site_state = [{
             date: "",
             username: "",
@@ -61,7 +30,7 @@ describe("Checking tools", () => {
             cons_failed_pages: 0,
             app_status: "",
         }];
-        for (var j = start; j < end; j++) {
+        for (var j = 0; j < n; j++) {
             site_state[0].results.push({
                 url: "",
                 warnings: [],
@@ -95,6 +64,7 @@ describe("Checking tools", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
             // cy.listen_fails(site_state, k, base, links_path, out_path);
+	    // ############################################### Requests #####################################################
             cy.intercept({
                 url: "https://auth.cern.ch/auth/**",
                 onResponse: (xhr) => {
@@ -148,6 +118,8 @@ describe("Checking tools", () => {
                 }
             }).as("deletes");
 
+	    // ##############################################################################################################
+
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
                 let link = links[k + start];
@@ -160,45 +132,34 @@ describe("Checking tools", () => {
                     cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
                     cy.wait(2000);
+                    cy.check_tables(site_state[0], k);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
                         cy.check_logo_reference(site_state[0], base);
                     } else if (link == base) {
-                        cy.check_dashboard(site_state[0], k, base, name_surname, institute);
+                        cy.check_dashboard(site_state[0], k, INPUT_DATA["dashboard_data"]);
                     } else if (link == base + "collaboration/units") {
-                        cy.check_units(site_state[0], k, unit_name, date);
+                        cy.check_units(site_state[0], k, INPUT_DATA["units_data"]);
                     } else if (link == base + "collaboration/institutes") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_institutes(site_state[0], k);
                     } else if (link == base + "collaboration/people") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_people(site_state[0], k);
                     } else if (link == base + "collaboration/mo-list") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_mo_list(site_state[0], k);
                     } else if (link == base + "collaboration/emeritus-nominations") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_em_nominations(site_state[0], k);
                     } else if (link == base + "collaboration/statistics") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_statistics(site_state[0], k);
                     } else if (link == base + "collaboration/flags") {
-                        cy.check_tables(site_state[0].results[k]);
-                        cy.check_flags(site_state[0], k);
+                        cy.check_flags(site_state[0], k, INPUT_DATA["flags_data"]);
                     } else if (link == base + "collaboration/cms-weeks/rooms") {
-                        cy.check_rooms(site_state[0], k, rooms_data);
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_rooms(site_state[0], k, INPUT_DATA["rooms_data"]);
                     } else if (link == base + "collaboration/cms-weeks/weeks") {
-                        cy.check_weeks(site_state[0], k, weeks_data);
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_weeks(site_state[0], k, INPUT_DATA["weeks_data"]);
                     } else if (link == base + "institute/overdue-graduations") {
                         cy.check_over_graduation(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/tenures") {
-                        cy.check_tenures(site_state[0], k, tenures_data);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else {
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_tenures(site_state[0], k, INPUT_DATA["tenures_data"]);
                     }
                 } else if (mode == "entire") {
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
@@ -210,45 +171,34 @@ describe("Checking tools", () => {
                     cy.wait_for_requests("@gets");
                     cy.wait(2000);
                     cy.get_load_time(site_state[0].results[k]);
+                    cy.check_tables(site_state[0], k);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
                         cy.check_logo_reference(site_state[0], base);
                     } else if (link == base) {
-                        cy.check_dashboard(site_state[0], k, base, name_surname, institute);
+                        cy.check_dashboard(site_state[0], k, INPUT_DATA["dashboard_data"]);
                     } else if (link == base + "collaboration/units") {
-                        cy.check_units(site_state[0], k, unit_name, date);
+                        cy.check_units(site_state[0], k, INPUT_DATA["units_data"]);
                     } else if (link == base + "collaboration/institutes") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_institutes(site_state[0], k);
                     } else if (link == base + "collaboration/people") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_people(site_state[0], k);
                     } else if (link == base + "collaboration/mo-list") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_mo_list(site_state[0], k);
                     } else if (link == base + "collaboration/emeritus-nominations") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_em_nominations(site_state[0], k);
                     } else if (link == base + "collaboration/statistics") {
-                        cy.check_tables(site_state[0].results[k]);
                         cy.check_statistics(site_state[0], k);
                     } else if (link == base + "collaboration/flags") {
-                        cy.check_tables(site_state[0].results[k]);
-                        cy.check_flags(site_state[0], k);
+                        cy.check_flags(site_state[0], k, INPUT_DATA["flags_data"]);
                     } else if (link == base + "collaboration/cms-weeks/rooms") {
-                        cy.check_rooms(site_state[0], k, rooms_data);
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_rooms(site_state[0], k, INPUT_DATA["rooms_data"]);
                     } else if (link == base + "collaboration/cms-weeks/weeks") {
-                        cy.check_weeks(site_state[0], k, weeks_data);
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_weeks(site_state[0], k, INPUT_DATA["weeks_data"]);
                     } else if (link == base + "institute/overdue-graduations") {
                         cy.check_over_graduation(site_state[0], k);
-                        cy.check_tables(site_state[0].results[k]);
                     } else if (link == base + "collaboration/tenures") {
-                        cy.check_tenures(site_state[0], k, tenures_data);
-                        cy.check_tables(site_state[0].results[k]);
-                    } else {
-                        cy.check_tables(site_state[0].results[k]);
+                        cy.check_tenures(site_state[0], k, INPUT_DATA["tenures_data"]);
                     }
                 }
             });

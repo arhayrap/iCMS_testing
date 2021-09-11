@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/PROTVINO",
+  "status": 200,
+  "duration": 2289,
+  "load_time": 13875.720000010915,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

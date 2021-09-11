@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-IBEROAM",
+  "status": 200,
+  "duration": 1615,
+  "load_time": 11652.980000013486,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

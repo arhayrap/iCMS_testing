@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/KUWAIT-AUM",
+  "status": 200,
+  "duration": 1191,
+  "load_time": 10983.269999967888,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}

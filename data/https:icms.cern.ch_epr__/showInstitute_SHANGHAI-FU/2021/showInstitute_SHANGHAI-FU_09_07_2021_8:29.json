@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/epr/showInstitute/SHANGHAI-FU",
+  "status": 200,
+  "duration": 1293,
+  "load_time": 10882.869999972172,
+  "warnings": [
+    "Table warning: There is an empty table"
+  ],
+  "errors": [],
+  "state": "OK"
+}
