@@ -108,9 +108,9 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
 	    site_state.results[k].warnings.push("Reference back to executive boards was not done correctly.");
 	}
     }).wait(1000);
-/*
     // ------------------------------------------------------- Administrator -------------------------------------------------------------
     if (site_state.results[k].isAdmin){
+	/* EDIT */
 	cy.get("main header button.v-btn").eq(1).click();
 	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.edit.unit_domain, {force: true});
 	cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.edit.unit_type,   {force: true});
@@ -123,10 +123,68 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
 	    }
 	});
 	cy.get(".v-card button").eq(2).click({force: true});
-	
-
+	cy.get(".v-dialog--active").click().type("{esc}");
+	cy.wait(1000);
+	/* CREATE A NEW TENURE */
+	cy.get("main header button.v-btn").eq(2).click();
+	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.add_tenure.unit_domain, {force: true});
+	cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.add_tenure.unit_type,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.add_tenure.superior,    {force: true});
+	cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.add_tenure.enclosing,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.add_tenure.outermost,   {force: true});
+	cy.get(".v-card button").eq(2).click({force: true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+	cy.wait(1000);
+	/* CREATE A NEW UNIT */
+	cy.get("main header button.v-btn").eq(3).click();
+	cy.get(".v-card .v-card__text input").eq(0).click({force: true}).type(data.add_unit.unit_domain, {force: true});
+	cy.get(".v-card .v-card__text input").eq(1).click({force: true}).type(data.add_unit.unit_type,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(2).click({force: true}).type(data.add_unit.superior,    {force: true});
+	cy.get(".v-card .v-card__text input").eq(3).click({force: true}).type(data.add_unit.enclosing,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(4).click({force: true}).type(data.add_unit.outermost,   {force: true});
+	cy.get(".v-card .v-card__text input").eq(5).then((input) => {
+	    if (data.add_unit.active && !input.get(0).checked) {
+		cy.get(".v-card .v-card__text input").eq(5).click({force: true});
+	    }
+	});
+	cy.get(".v-card button").eq(2).click({force: true});
+	cy.get(".v-dialog--active").click().type("{esc}");
+	cy.wait(1000);
+	/* ROW ACTIONS */
+	cy.OpenAll();
+	cy.get(".v-data-footer__pagination").then((rows_pagination) => {
+	    var rows = Number(rows_pagination.get(0).innerText.split("of ")[1]);
+	    var index = Math.round(Math.random() * rows);
+	    cy.get("table tbody tr").eq(index).then((tr) => {
+		tr.find("button")[0].click();
+		cy.get(".v-dialog .v-card__title").then((title) => {
+		    if (title.get(0).innerText != "Edit unit: Executive Board") {
+			site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
+		    }
+		});
+		cy.get(".v-dialog--active").click().type("{esc}");
+	    });
+	    cy.get("table tbody tr").eq(index).then((tr) => {
+		tr.find("button")[1].click();
+		cy.get(".v-dialog .v-card__title").then((title) => {
+		    if (title.get(0).innerText != "Remove unit: Executive Board") {
+			site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
+		    }
+		});
+		cy.get(".v-dialog--active").click().type("{esc}");
+	    });
+	    cy.get("table tbody tr").eq(index).then((tr) => {
+		tr.find("button")[2].click();
+		cy.get(".v-dialog .v-card__title").then((title) => {
+		    if (title.get(0).innerText != "Create a new unit") {
+			site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
+		    }
+		});
+		cy.get(".v-dialog--active").click().type("{esc}");
+	    });
+	});
     }
-*/
+
 })
 
 Cypress.Commands.add("check_dashboard", (site_state, k, data) => {
