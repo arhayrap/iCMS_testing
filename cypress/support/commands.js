@@ -135,8 +135,8 @@ Cypress.Commands.add("save_data", (obj, base, mode = "", year = 2021) => {
     suburl = suburl.replaceAll("/", "_")
     var path = "data/" + base;
     var json_path = path + "/" + suburl + "/" + String(year) + "/" + suburl + "_" + Cypress.moment().format("MM_DD_YYYY_h:mm") + ".json";
-    cy.exec("mkdir -p " + path);
-    cy.exec("mkdir -p " + path + "/" + suburl + "/");
-    cy.exec("mkdir -p " + path + "/" + suburl + "/" + String(year) + "/");
-    cy.writeFile(json_path, obj);
+    cy.exec("mkdir -p " + path, {timeout: 600000});
+    cy.exec("mkdir -p " + path + "/" + suburl + "/", {timeout: 600000});
+    cy.exec("mkdir -p " + path + "/" + suburl + "/" + String(year) + "/", {timeout: 600000});
+    cy.writeFile(json_path, obj, {timeout: 600000});
 })

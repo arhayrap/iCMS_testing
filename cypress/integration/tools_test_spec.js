@@ -5,13 +5,13 @@ describe("Checking tools", () => {
     var links_path      = "cypress/fixtures/tools_links.json";
     var base            = "https://icms.cern.ch/tools/";
     var profile         = "https://icms.cern.ch/tools/user/profile";
-    var out_path_light  = "data/tools_out_surf.json";
+    var out_path_lite  = "data/tools_out_surf.json";
     var out_path        = "data/tools_out.json";
     var INPUT_DATA = configData;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var page_fail_limit = 5;
     var page_fails = 0;
-    var start = 1;
+    var start = 8;
     var n = 1;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env = Cypress.env()["flags"]
@@ -21,7 +21,7 @@ describe("Checking tools", () => {
     var isadmin = env["isAdmin"] == "true";
     /*|-----------------------------------------------------------------------------------------------------------|*/
 
-    if (mode == "light") {
+    if (mode == "lite") {
         var site_state = [{
             date: "",
             username: "",
@@ -124,14 +124,14 @@ describe("Checking tools", () => {
                 let links = $link_obj[0]["links"];
                 let link = links[k + start];
                 site_state[0].results[k].url = link;
-                if (mode == "light") {
-                    console.log("light")
+                if (mode == "lite") {
+                    console.log("lite")
                     cy.visit(link);
                     site_state[0].username = login;
                     cy.login(login, password);
                     cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    cy.wait(2000);
+                    cy.wait(5000);
                     cy.check_tables(site_state[0], k);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
@@ -169,7 +169,7 @@ describe("Checking tools", () => {
                     cy.login(login, password);
                     cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    cy.wait(2000);
+                    cy.wait(3000);
                     cy.get_load_time(site_state[0].results[k]);
                     cy.check_tables(site_state[0], k);
                     if (link == profile) {
@@ -202,8 +202,8 @@ describe("Checking tools", () => {
                     }
                 }
             });
-            if (mode == "light") {
-                cy.writeFile(out_path_light, site_state);
+            if (mode == "lite") {
+                cy.writeFile(out_path_lite, site_state);
                 cy.save_data(site_state[0].results[k], base, mode = mode);
             } else {
                 cy.writeFile(out_path, site_state);

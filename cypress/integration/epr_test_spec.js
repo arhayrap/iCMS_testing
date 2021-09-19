@@ -18,15 +18,15 @@ describe("Checking epr", () => {
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms.cern.ch/epr/";
     var out_path = "data/epr_out.json";
-    var out_path_light = "data/epr_out_surf.json";
+    var out_path_lite = "data/epr_out_surf.json";
     var page_fail_limit = 10;
     var env = Cypress.env()["flags"];
     var login    = env["login"];
     var password = env["password"];
     var mode     = env["mode"];
     var isadmin  = env["isAdmin"] == "true";
-    if (mode == "light") {
-        var check_string = "Logs in and visits the page in 'light' mode";
+    if (mode == "lite") {
+        var check_string = "Logs in and visits the page in 'lite' mode";
         var site_state = [{
             date: "",
             username: "",
@@ -98,12 +98,12 @@ describe("Checking epr", () => {
                 site_state[0].username = login;
                 cy.login(login, password);
                 cy.wait_for_requests("@posts");
-                if (mode == "light") {
+                if (mode == "lite") {
                     cy.select_year("@posts", site_state[0].results[k], y);
                     cy.get('body', { 
                         timeout: 60000
                     }).should('have.css', 'cursor').and('match', /default/);
-                    cy.get_stat_dur_light(link, site_state, k, page_fail_limit);
+                    cy.get_stat_dur_lite(link, site_state, k, page_fail_limit);
                 } else {
                     site_state[0].results[k].load_time = performance.now();
                     cy.select_year("@posts", site_state[0].results[k], y);
@@ -115,8 +115,8 @@ describe("Checking epr", () => {
                 }
                 cy.check_tables_epr(site_state[0].results[k]);
             });
-            if (mode == "light") {
-                cy.writeFile(out_path_light+"_{}".format(years[y]), site_state);
+            if (mode == "lite") {
+                cy.writeFile(out_path_lite+"_{}".format(years[y]), site_state);
                 cy.save_data(site_state[0].results[k], base, mode, years[y]);
             } else {
                 cy.writeFile(out_path+"_{}".format(years[y]), site_state);

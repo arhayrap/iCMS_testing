@@ -1,8 +1,0 @@
-{
-  "url": "https://icms.cern.ch/tools/collaboration/people",
-  "warnings": [
-    "There is someting wrong in menu`s 'CMS Statuses' 'CMSAFFILIATE' table."
-  ],
-  "errors": [],
-  "state": "OK"
-}

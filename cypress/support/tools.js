@@ -16,9 +16,9 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
 		    console.log( pagination.get(0).innerText,  "–", "    ", Number(pagination.get(0).innerText.split(" of ")[1]) );
                     if (pagination.get(0).innerText == "–" || Number(pagination.get(0).innerText.split(" of ")[1]) == 0) {
                         if (!toggled) {
-                            site_state.warnings.push("Table warning: There is an empty table");
+                            site_state.warnings.push("Table warning: There is an empty table.");
                         } else {
-                            site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            site_state.warnings.push("Table warning: There is an empty table after toggling.");
                         }
                     }
                 });
@@ -36,9 +36,9 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
 		cy.get(".v-data-footer__pagination").each((pagination, index0, paginations) => {
                     if (pagination.get(0).innerText == "–" || Number(pagination.get(0).innerText.split(" of ")[1]) == 0) {
                         if (!toggled) {
-                            site_state.warnings.push("Table warning: There is an empty table");
+                            site_state.warnings.push("Table warning: There is an empty table.");
                         } else {
-                            site_state.warnings.push("Table warning: There is an empty table after toggling");
+                            site_state.warnings.push("Table warning: There is an empty table after toggling.");
                         }
                     }
                 });
@@ -263,11 +263,10 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
 })
 
 Cypress.Commands.add("check_people", (site_state, k) => {
-    var key = [6, 8, 5];
-    var menu_item = "";
-    var n_thead;
-    var option;
-    var stop = false;
+    let key = [6, 8, 5];
+    let menu_item = "";
+    let n_thead;
+    let stop = false;
     cy.get(".v-data-footer__select div[role='button'] .v-select__slot").click();
     cy.get("div.menuable__content__active div[role='option']").eq(2).click();
     cy.get(".v-card__title .row .v-input").as("menu_items").each((item0, index0, items0) => {
@@ -283,16 +282,13 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                     menu_item = i.get(0).innerText;
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
-                    console.log(item1);
                     cy.get("@outline").eq(index1).click({force: true});
-                    option = item1.get(0).innerText;
-                    console.log(item1.get(0).innerText, item1.get(0), option);
-                    cy.wait(2000);
+                    if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
-                            if (tr.get(0).children[key[index0]].innerText != option) {
+                            if (tr.get(0).children[key[index0]].innerText != item1.get(0).innerText) {
                                 if (!stop) {
-                                    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + option + "' table.");
+                                    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + item1.get(0).innerText + "' table.");
                                     stop = true;
                                     return false;
                                 } else {
@@ -300,10 +296,10 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                        cy.wait(2000);
-                        cy.get("@outline").eq(index1).click({force: true});
+                        cy.get("@outline").eq(index1).click({force: true}).wait(4000);
+			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
                     } else {
-                        site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + option + "' table is empty.");
+                        site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
                         return false;
                     }
                 });
@@ -312,7 +308,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead = elems.length;
             });
-            cy.get("@menu_items").eq(index0).click().wait(2000);
+            cy.get("@menu_items").eq(index0).click().wait(4000);
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead -= elems.length;
                 if (Math.abs(n_thead) != 3) {
@@ -504,43 +500,46 @@ Cypress.Commands.add("check_over_graduation", (site_state, k) => {
 })
 
 Cypress.Commands.add("check_statistics", (site_state, k) => {
-    var table_rows = NaN;
-    var n_initial = NaN;
-    var n_final = NaN;
-    var th, op, title;
+    let table_rows = NaN;
+    let n_initial = NaN;
+    let n_final = NaN;
+    let th, op, title;
     cy.get(".v-card__title .col-4 .v-input__slot").as("title").each((d, index0, ds) => {
         cy.get("@title").eq(index0).click();
         cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
             title = label.get(0).innerText;
         });
         if (index0 == 0 || index0 == 1) {
-            cy.get("div.v-menu__content div[aria-selected='false']").should('be.visible').as("options").each((option, index1, options) => {
+            cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options1").each((option, index1, options) => {
+		console.log(options);
                 op = option.get(0).innerText;
                 cy.get(".v-data-footer__pagination").then((table_rows) => {
                     n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
                 });
+                cy.get("@options1").eq(index1).click();
                 cy.wait(2000);
-                cy.get("@options").eq(index1).click();
-                cy.wait(1000);
                 cy.get(".v-data-footer__pagination").then((table_rows) => {
                     n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
                     if (n_initial >= n_final) {
                         site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
                     }
                 });
+		cy.get("@options1").eq(index1).click();
             });
         } else if (index0 == 2) {
-            cy.get("div.v-menu__content div[aria-selected='false']").should('be.visible').as("options").each((option, index1, options) => {
+            cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options2").each((option, index1, options) => {
+		console.log(options);
                 cy.get(".v-data-footer__pagination").then((table_rows) => {
                     n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
                 });
-                cy.get("@options").eq(index1).click();
-                cy.wait(1000);
-                cy.get("table thead tr th").as("ths").eq(index1 + 1).then((table_header) => {
+                cy.get("@options2").eq(index1).click({force:true});
+                cy.wait(2000);
+                cy.get("table thead tr th").as("ths").eq(1).then((table_header) => {
                     th = table_header.get(0).innerText;
                     op = options.get(index1).innerText;
                     cy.get(".v-data-footer__pagination").then((table_rows) => {
                         n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
+			console.log(n_final, n_initial)
                         if (op != th) {
                             site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
                         } else if (n_initial >= n_final) {
@@ -551,6 +550,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
                         }
                     });
                 });
+		cy.get("@options2").eq(index1).click({force:true});
             });
         }
     });
