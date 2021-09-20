@@ -1,27 +1,324 @@
 [
   {
-    "date": "09-19-2021, 7:20",
+    "date": "09-20-2021, 12:04",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 261,
-        "load_time": 8263,
+        "duration": 258,
+        "load_time": 8539.314999999988,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
+        "status": 200,
+        "duration": 259,
+        "load_time": 6368.71499999984,
         "warnings": [
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'CMSAFFILIATE' option of 'Membership statuses' dropdown changed nothing.",
-          "The 'Management level' option of 'Grouping column' did'nt create rows."
+          "Data with wrong date were prented (after the toggle).",
+          "Reference back to executive boards was not done correctly."
         ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "status": 200,
+        "duration": 257,
+        "load_time": 5973.134999999951,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       }

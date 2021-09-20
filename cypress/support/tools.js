@@ -505,26 +505,33 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
     let n_final = NaN;
     let th, op, title;
     cy.get(".v-card__title .col-4 .v-input__slot").as("title").each((d, index0, ds) => {
-        cy.get("@title").eq(index0).click();
+        cy.get("@title").eq(index0).click().wait(1000);
         cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
             title = label.get(0).innerText;
         });
-        if (index0 == 0 || index0 == 1) {
+        if (index0 == 0  || index0 == 1) {
+	    // cy.get("div.v-menu__content div[aria-selected='true']").click({multiple:true, force:true});
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options1").each((option, index1, options) => {
-		console.log(options);
-                op = option.get(0).innerText;
-                cy.get(".v-data-footer__pagination").then((table_rows) => {
-                    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
-                });
-                cy.get("@options1").eq(index1).click();
-                cy.wait(2000);
-                cy.get(".v-data-footer__pagination").then((table_rows) => {
-                    n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
-                    if (n_initial >= n_final) {
-                        site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
-                    }
-                });
-		cy.get("@options1").eq(index1).click();
+                if (cy.get("body").find("tbody tr[class='']").length != 0) {
+			console.log(options);
+        		op = option.get(0).innerText;
+        		cy.get(".v-data-footer__pagination").then((table_rows) => {
+			    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
+        		});
+			cy.get("@options1").eq(index1).click({force: true});
+        		if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
+        		cy.get(".v-data-footer__pagination").then((table_rows) => {
+			    n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
+        		    if (n_initial >= n_final) {
+        			site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
+        		    }
+        		});
+        		cy.get("@options1").eq(index1).click({force: true}).wait(4000);
+			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
+                } else {
+                    site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
+                    return false;
+                }
             });
         } else if (index0 == 2) {
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options2").each((option, index1, options) => {
@@ -539,12 +546,13 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
                     op = options.get(index1).innerText;
                     cy.get(".v-data-footer__pagination").then((table_rows) => {
                         n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
-			console.log(n_final, n_initial)
+			console.log(th       , op     );
+			console.log(n_initial, n_final);
                         if (op != th) {
                             site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
-                        } else if (n_initial >= n_final) {
+                        } else if (n_initial == n_final) {
                             site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
-                        } else if (n_initial >= n_final && op != th) {
+                        } else if (n_initial == n_final && op != th) {
                             site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
                             site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
                         }
