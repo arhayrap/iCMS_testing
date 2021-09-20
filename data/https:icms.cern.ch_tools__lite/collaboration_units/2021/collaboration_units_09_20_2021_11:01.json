@@ -1,0 +1,9 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/units",
+  "warnings": [
+    "Data with wrong date were prented (after the toggle).",
+    "Reference back to executive boards was not done correctly."
+  ],
+  "errors": [],
+  "state": "OK"
+}
