@@ -1,6 +1,10 @@
 [
   {
+<<<<<<< HEAD
     "date": "09-20-2021, 11:01",
+=======
+    "date": "09-20-2021, 7:36",
+>>>>>>> c2c3114194522d8100ada9129961f568fdc9e120
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
