@@ -53,10 +53,10 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
     cy.Open_All();
     cy.get("table tbody tr").each((tr, index0, trs) => {
 	if (tr.get(0).children[8] != "") {
-	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var time = new Date(tr.get(0).children[8].innerText.split("-")[0], tr.get(0).children[8].innerText.split("-")[1], tr.get(0).children[8].innerText.split("-")[2]).getTime();
 	    var now  = new Date().getTime();
 	    if (time > now) {
-		site_state.warnings.push("Data with wrong date were prented.");
+		site_state.warnings.push("Data with wrong date were returned.");
 	    }
 	    return false;
 	}
@@ -66,10 +66,11 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
     cy.get("table thead th").eq(8).click(); // sort by decreasement
     cy.get("table tbody tr").each((tr, index0, trs) => {
 	if (tr.get(0).children[8] != "") {
-	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var time = new Date(tr.get(0).children[8].innerText.split("-")[0], tr.get(0).children[8].innerText.split("-")[1], tr.get(0).children[8].innerText.split("-")[2]).getTime();
 	    var now  = new Date().getTime();
+	    console.log(time, now);
 	    if (time < now) {
-		site_state.results[k].warnings.push("Data with wrong date were prented (after the toggle).");
+		site_state.results[k].warnings.push("Data with wrong date were returned (after the toggle).");
 	    }
 	    return false;
 	}
@@ -81,10 +82,10 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
     cy.Open_All();
     cy.get("table tbody tr").each((tr, index0, trs) => {
 	if (tr.get(0).children[8] != "") {
-	    var time = new Date(tr.get(0).children[8].innerText[0], tr.get(0).children[8].innerText[1], tr.get(0).children[8].innerText[2]).getTime();
+	    var time = new Date(tr.get(0).children[8].innerText.split("-")[0], tr.get(0).children[8].innerText.split("-")[1], tr.get(0).children[8].innerText.split("-")[2]).getTime();
 	    var now  = new Date().getTime();
 	    if (time > now) {
-		site_state.results[k].warnings.push("Data with wrong date were prented (new date without toggling).");
+		site_state.results[k].warnings.push("Data with wrong date were returned (new date without toggling).");
 	    }
 	    return false;
 	}
@@ -103,10 +104,12 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
         }
     });
     cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
-	console.log(cy.url(), site_state.results[k].url);
-	if (cy.url() != site_state.results[k].url) {
-	    site_state.results[k].warnings.push("Reference back to executive boards was not done correctly.");
-	}
+	cy.url().then((url) => {
+	    console.log(url, site_state.results[k].url);
+	    if (url != site_state.results[k].url) {
+		site_state.results[k].warnings.push("Reference back to executive boards was not done correctly (wrong url in the result).");
+	    }
+	});
     }).wait(1000);
     // ------------------------------------------------------- Administrator -------------------------------------------------------------
     if (site_state.results[k].isAdmin){
@@ -276,13 +279,15 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                 if (body.find("div:visible.v-menu__content div[aria-selected='true']").length != 0) {
                     cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
                         multiple: true
-                    });
+                    }).wait(5000);
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
-                    cy.get("@outline").eq(index1).click({force: true});
+		    if (index0 == 0){
+        		cy.get("@outline").eq(index1).click({force: true}).get("table tbody tr td").eq(key[index0]).contains(item1.get(0).innerText, {timeout:60000});
+		    } else { cy.get("@outline").eq(index1).click({force: true}); }
                     //if (index0 == 2) { cy.wait(5000); } else { cy.wait(3000); };
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
@@ -296,7 +301,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                        cy.get("@outline").eq(index1).click({force: true}).wait(1000);
+                    cy.get("@outline").eq(index1).click({force: true}).wait(1000);
 			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
