@@ -276,19 +276,27 @@ Cypress.Commands.add("check_people", (site_state, k) => {
         if (index0 == 0 || index0 == 1 || index0 == 2) {
             cy.get("@menu_items").eq(index0).click().wait(1000);
             cy.get("body").then((body) => {
-                if (body.find("div:visible.v-menu__content div[aria-selected='true']").length != 0) {
-                    cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
-                        multiple: true
-                    }).wait(5000);
+        	if (index0 == 0 || index0 == 1){
+                cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
+                    multiple: true
+                }).wait(5000);
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
                 });
-                cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
-		    if (index0 == 0){
-        		cy.get("@outline").eq(index1).click({force: true}).get("table tbody tr td").eq(key[index0]).contains(item1.get(0).innerText, {timeout:60000});
-		    } else { cy.get("@outline").eq(index1).click({force: true}); }
-                    //if (index0 == 2) { cy.wait(5000); } else { cy.wait(3000); };
+                
+                cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").eq(index0).then((item1) => {
+		    let element = Math.round(items0.length * Math.random());
+        	    if (index0 == 0) { element = 1; }
+
+        	    /*cy.get(".v-data-footer__pagination").then((elem) => {
+        		let pagination = elem.get(0).innerText
+        		if (index0 == 0){
+        		    cy.get("@outline").eq(element).click({force: true}).get("table tbody tr td").eq(key[index0]).contains(item1.get(0).innerText, {timeout:60000});
+			} else { cy.get("@outline").eq(element).click({force: true}); }
+        	    })*/
+
+        	    cy.get("@outline").eq(element).click({force: true}).get("table tbody tr td").eq(key[index0]).contains(item1.get(0).innerText, {timeout:60000});
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.get(0).innerText) {
@@ -301,8 +309,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                    cy.get("@outline").eq(index1).click({force: true}).wait(1000);
-			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
+                	cy.get("@outline").eq(element).click({force: true}).wait(1000);
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
                         return false;
