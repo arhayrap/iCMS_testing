@@ -1,13 +1,13 @@
 [
   {
-    "date": "09-21-2021, 10:10",
+    "date": "09-25-2021, 1:14",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/tools/collaboration/units",
+        "url": "https://icms.cern.ch/tools/collaboration/people",
         "warnings": [
-          "Reference back to executive boards was not done correctly."
+          "There is someting wrong in menu`s 'CMS Statuses\nCMS' 'EXMEMBER' table."
         ],
         "errors": [],
         "state": "OK"
