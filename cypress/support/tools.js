@@ -157,7 +157,7 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
 	cy.OpenAll();
 	cy.get(".v-data-footer__pagination").then((rows_pagination) => {
 	    var rows = Number(rows_pagination.get(0).innerText.split("of ")[1]);
-	    var index = Math.round(Math.random() * rows);
+	    var index = Math.round(Math.random() * (rows-1));
 	    cy.get("table tbody tr").eq(index).then((tr) => {
 		tr.find("button")[0].click();
 		cy.get(".v-dialog .v-card__title").then((title) => {
@@ -276,25 +276,24 @@ Cypress.Commands.add("check_people", (site_state, k) => {
         if (index0 == 0 || index0 == 1 || index0 == 2) {
             cy.get("@menu_items").eq(index0).click().wait(1000);
             cy.get("body").then((body) => {
-                if (body.find("div:visible.v-menu__content div[aria-selected='true']").length != 0 && index0 != 0) {
-                    cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
-                        multiple: true
-                    }).wait(5000);
-                } else {cy.wait(5000);}
+        	if (index0 == 0){
+                cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
+                    multiple: true
+                }).wait(10000);
+                }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
                 });
-                cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").each((item1, index1, items1) => {
-		    //if (index0 == 0 && index1 == 0){
-		    //cy.get("@outline").eq(index1).click({force: true}).get("table tbody tr td").eq(key[index0]).contains(item1.get(0).innerText, {timeout:60000});
-		    //} else {
-		    cy.get("@outline").eq(index1).click({force: true}).wait(5000);
-		    //}
+                cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").then((items1) => {
+		    let element = Math.round((items1.length - 1) * Math.random());
+		    let item1 = items1.get(element);
+        	    cy.get("@outline").eq(element).click({force: true}).wait(5000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
-                            if (tr.get(0).children[key[index0]].innerText != item1.get(0).innerText) {
+                            if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
+				console.log(tr.get(0).children[key[index0]].innerText, " <====> ", item1.innerText);
                                 if (!stop) {
-                                    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + item1.get(0).innerText + "' table.");
+                                    site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + item1.innerText + "' table.");
                                     stop = true;
                                     return false;
                                 } else {
@@ -302,10 +301,9 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                    cy.get("@outline").eq(index1).click({force: true}).wait(1000);
-			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
+                	cy.get("@outline").eq(element).click({force: true}).wait(5000);
                     } else {
-                        site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
+                        site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.innerText + "' table is empty.");
                         return false;
                     }
                 });
@@ -314,7 +312,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead = elems.length;
             });
-            cy.get("@menu_items").eq(index0).click().wait(4000);
+            cy.get("@menu_items").eq(index0).click().wait(5000);
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead -= elems.length;
                 if (Math.abs(n_thead) != 3) {
@@ -511,7 +509,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
     let n_final = NaN;
     let th, op, title;
     cy.get(".v-card__title .col-4 .v-input__slot").as("title").each((d, index0, ds) => {
-        cy.get("@title").eq(index0).click().wait(1000);
+        cy.get("@title").eq(index0).click().wait(500);
         cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
             title = label.get(0).innerText;
         });
@@ -760,7 +758,7 @@ Cypress.Commands.add("room_booking", (site_state, k, data) => {
 	// Approved
 	cy.get(".booking").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;").as("approved").then((divs) => {
 	    cy.get(".booking .booking-title").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;")
-		.eq(Math.round(Math.random()*divs.length))
+		.eq(Math.round(Math.random()*(divs.length-1)))
 		.as("chosen_approved")
 		.then((chosen_approved) => {
 		    cy.get("body").then((body) => {
@@ -787,7 +785,7 @@ Cypress.Commands.add("room_booking", (site_state, k, data) => {
 	// Pending
 	cy.get(".booking").should("have.css", "background: rgb(241, 151, 51) none repeat scroll 0% 0%;").as("pending").then((divs) => {
 	    cy.get(".booking .booking-title").should("have.css", "background: rgb(85, 189, 213) none repeat scroll 0% 0%;")
-		.eq(Math.round(Math.random()*divs.length))
+		.eq(Math.round(Math.random()*(divs.length-1)))
 		.as("chosen_pending")
 		.then((chosen_approved) => {
 		    cy.get("body").then((body) => {

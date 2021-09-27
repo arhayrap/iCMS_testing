@@ -1,14 +1,44 @@
 [
   {
-    "date": "09-25-2021, 1:14",
+    "date": "09-28-2021, 12:00",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "url": "https://icms.cern.ch/tools/",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
         "warnings": [
-          "There is someting wrong in menu`s 'CMS Statuses\nCMS' 'EXMEMBER' table."
+          "Reference back to executive boards was not done correctly (wrong url in the result)."
         ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "warnings": [],
         "errors": [],
         "state": "OK"
       }
