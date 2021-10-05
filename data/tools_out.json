@@ -1,14 +1,14 @@
 [
   {
-    "date": "09-28-2021, 12:02",
+    "date": "10-05-2021, 8:12",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 262,
-        "load_time": 8258.07499999064,
+        "duration": 266,
+        "load_time": 8052.865000005113,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -17,7 +17,7 @@
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "status": 200,
         "duration": 261,
-        "load_time": 6233.120000018971,
+        "load_time": 6098.330000007991,
         "warnings": [
           "Reference back to executive boards was not done correctly (wrong url in the result)."
         ],
@@ -27,8 +27,271 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
+        "duration": 262,
+        "load_time": 6285.125000023982,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "status": 200,
+        "duration": 404,
+        "load_time": 6688.930000003893,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "status": 200,
+        "duration": 262,
+        "load_time": 6130.934999993769,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "status": 200,
+        "duration": 261,
+        "load_time": 7052.579999988666,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/applicants",
+        "status": 200,
+        "duration": 263,
+        "load_time": 6101.9999999844,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
         "duration": 258,
-        "load_time": 6265.875000011874,
+        "load_time": 5617.709999991348,
+        "warnings": [
+          "Table warning: There is an empty table after toggling."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"

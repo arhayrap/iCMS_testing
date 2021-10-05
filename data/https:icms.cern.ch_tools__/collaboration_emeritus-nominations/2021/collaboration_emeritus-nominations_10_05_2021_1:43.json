@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+  "status": 200,
+  "duration": 262,
+  "load_time": 5573.180000006687,
+  "warnings": [
+    "Table warning: There is an empty table after toggling."
+  ],
+  "errors": [],
+  "state": "OK"
+}

@@ -279,7 +279,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
         	if (index0 == 0){
                 cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
                     multiple: true
-                }).wait(10000);
+                }).wait(9000);
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
@@ -287,11 +287,11 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").then((items1) => {
 		    let element = Math.round((items1.length - 1) * Math.random());
 		    let item1 = items1.get(element);
-        	    cy.get("@outline").eq(element).click({force: true}).wait(5000);
+        	    cy.get("@outline").eq(element).click({force: true}).wait(4000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
-				console.log(tr.get(0).children[key[index0]].innerText, " <====> ", item1.innerText);
+				// console.log(tr.get(0).children[key[index0]].innerText, " <====> ", item1.innerText);
                                 if (!stop) {
                                     site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + item1.innerText + "' table.");
                                     stop = true;
@@ -301,7 +301,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                	cy.get("@outline").eq(element).click({force: true}).wait(5000);
+                	cy.get("@outline").eq(element).click({force: true}).wait(4000);
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.innerText + "' table is empty.");
                         return false;
@@ -512,34 +512,35 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         cy.get("@title").eq(index0).click().wait(500);
         cy.get(".v-card__title .col-4 label").eq(index0).then((label) => {
             title = label.get(0).innerText;
-        });
         if (index0 == 0  || index0 == 1) {
-	    // cy.get("div.v-menu__content div[aria-selected='true']").click({multiple:true, force:true});
+	    cy.get("div.v-menu__content div[aria-selected='true']").click({multiple:true, force:true});
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options1").each((option, index1, options) => {
                 if (cy.get("body").find("tbody tr[class='']").length != 0) {
-			console.log(options);
-        		op = option.get(0).innerText;
+			//console.log(options);
+        		op = options.get(index1).innerText;
         		cy.get(".v-data-footer__pagination").then((table_rows) => {
 			    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
-        		});
-			cy.get("@options1").eq(index1).click({force: true});
-        		if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
-        		cy.get(".v-data-footer__pagination").then((table_rows) => {
-			    n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
-        		    if (n_initial >= n_final) {
-        			site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' dropdown changed nothing.");
-        		    }
-        		});
+			    cy.get("@options1").eq(index1).click({force: true}).wait(4000);
+        		    cy.get(".v-data-footer__pagination").then((table_rows) => {
+				n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
+                        	console.log(label.get(0).innerText, options.get(index1).innerText);
+                	        console.log(n_initial, n_final);
+        			if (n_initial == n_final && index1 != 0) {
+        			    site_state.results[k].warnings.push("The '" + options.get(index1).innerText + "' option of '" + label.get(0).innerText + "' dropdown changed nothing.");
+        			} else if (n_final == 0 && index1 == 0) {
+				    site_state.results[k].warnings.push("The menu`s '" + options.get(index1).innerText + "', '" + label.get(0).innerText + "' table is empty.");
+        			}
+        		    });
+                        });
         		cy.get("@options1").eq(index1).click({force: true}).wait(4000);
-			// if (index0 == 2) { cy.wait(6000); } else { cy.wait(4000); };
                 } else {
-                    site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.get(0).innerText + "' table is empty.");
-                    return false;
+                    site_state.results[k].warnings.push("The menu`s '" + options.get(index1).innerText + "', '" + label.get(0).innerText + "' table is empty.");
+                    // return false;
                 }
             });
         } else if (index0 == 2) {
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options2").each((option, index1, options) => {
-		console.log(options);
+		//console.log(options);
                 cy.get(".v-data-footer__pagination").then((table_rows) => {
                     n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
                 });
@@ -550,21 +551,23 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
                     op = options.get(index1).innerText;
                     cy.get(".v-data-footer__pagination").then((table_rows) => {
                         n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
-			console.log(th       , op     );
+			console.log(options.get(index1).innerText, label.get(0).innerText);
 			console.log(n_initial, n_final);
                         if (op != th) {
-                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
+                            site_state.results[k].warnings.push("The '" + options.get(index1).innerText + "' option of '" + label.get(0).innerText + "' did'nt create a column.");
                         } else if (n_initial == n_final) {
-                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
+                            site_state.results[k].warnings.push("The '" + options.get(index1).innerText + "' option of '" + label.get(0).innerText + "' did'nt create rows.");
                         } else if (n_initial == n_final && op != th) {
-                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create a column.");
-                            site_state.results[k].warnings.push("The '" + op + "' option of '" + title + "' did'nt create rows.");
+                            site_state.results[k].warnings.push("The '" + options.get(index1).innerText + "' option of '" + label.get(0).innerText + "' did'nt create a column.");
+                            site_state.results[k].warnings.push("The '" + options.get(index1).innerText + "' option of '" + label.get(0).innerText + "' did'nt create rows.");
                         }
                     });
                 });
 		cy.get("@options2").eq(index1).click({force:true});
             });
         }
+        });
+
     });
 })
 Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {

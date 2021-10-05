@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/people",
+  "status": 200,
+  "duration": 402,
+  "load_time": 6450.555000003078,
+  "warnings": [
+    "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

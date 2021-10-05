@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/institute/suspensions",
+  "status": 200,
+  "duration": 258,
+  "load_time": 5542.669999995269,
+  "warnings": [
+    "Table warning: There is an empty table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

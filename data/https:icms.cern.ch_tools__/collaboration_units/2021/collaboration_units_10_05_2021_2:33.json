@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/units",
+  "status": 200,
+  "duration": 263,
+  "load_time": 6779.054999991786,
+  "warnings": [
+    "Reference back to executive boards was not done correctly (wrong url in the result)."
+  ],
+  "errors": [],
+  "state": "OK"
+}

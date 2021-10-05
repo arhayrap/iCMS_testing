@@ -1,0 +1,16 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/statistics",
+  "warnings": [
+    "The 'false' option of 'Authorship statuses' dropdown changed nothing.",
+    "The 'false' option of 'Authorship statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing.",
+    "The 'CMSEXTENDED' option of 'Membership statuses' dropdown changed nothing."
+  ],
+  "errors": [],
+  "state": "OK"
+}

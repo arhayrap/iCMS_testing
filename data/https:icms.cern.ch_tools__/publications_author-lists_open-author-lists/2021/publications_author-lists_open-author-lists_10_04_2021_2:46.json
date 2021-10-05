@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
+  "status": 200,
+  "duration": 260,
+  "load_time": 5566.569999995409,
+  "warnings": [
+    "Table warning: There is an empty table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

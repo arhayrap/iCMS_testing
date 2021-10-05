@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/units",
+  "warnings": [
+    "Reference back to executive boards was not done correctly (wrong url in the result)."
+  ],
+  "errors": [],
+  "state": "OK"
+}

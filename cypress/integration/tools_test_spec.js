@@ -12,7 +12,7 @@ describe("Checking tools", () => {
     var page_fail_limit = 5;
     var page_fails = 0;
     var start = 0;
-    var n = 6;
+    var n = 35;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env = Cypress.env()["flags"]
     var login = env["login"];

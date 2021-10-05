@@ -1,0 +1,8 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/people",
+  "warnings": [
+    "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+  ],
+  "errors": [],
+  "state": "OK"
+}

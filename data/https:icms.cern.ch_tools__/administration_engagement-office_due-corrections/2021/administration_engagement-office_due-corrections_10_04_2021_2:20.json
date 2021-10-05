@@ -1,0 +1,13 @@
+{
+  "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrections",
+  "status": 200,
+  "duration": 261,
+  "load_time": 5642.400000011548,
+  "warnings": [
+    "Table warning: There is an empty table."
+  ],
+  "errors": [
+    "GET request error : 403  403 (Forbidden)"
+  ],
+  "state": "OK"
+}
