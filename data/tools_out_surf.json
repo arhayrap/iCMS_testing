@@ -1,6 +1,6 @@
 [
   {
-    "date": "10-05-2021, 8:09",
+    "date": "10-10-2021, 8:00",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
@@ -26,9 +26,7 @@
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
-        "warnings": [
-          "There is someting wrong in menu`s 'Projects' 'CMSVO' table."
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
@@ -184,9 +182,7 @@
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },

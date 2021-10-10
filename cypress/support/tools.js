@@ -286,8 +286,9 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").then((items1) => {
 		    let element = Math.round((items1.length - 1) * Math.random());
+		    if (index0 == 0) { element = 8; }
 		    let item1 = items1.get(element);
-        	    cy.get("@outline").eq(element).click({force: true}).wait(4000);
+        	    cy.get("@outline").eq(element).click({force: true}).wait(6000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
@@ -301,7 +302,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                	cy.get("@outline").eq(element).click({force: true}).wait(4000);
+                	cy.get("@outline").eq(element).click({force: true}).wait(6000);
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.innerText + "' table is empty.");
                         return false;

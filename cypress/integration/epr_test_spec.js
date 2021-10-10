@@ -1,16 +1,4 @@
 describe("Checking epr", () => {
-/*
-    module.exports = (on, config) => {
-	    on('before:browser:launch', (browser = {}, args) => {
-	    console.log('browser', browser)
-//	    if (browser.family === 'chrome') {
-	    console.log('adding dark mode browser flags')
-	    args.push('style="cursor:default"')
-	    return args
-//	    }
-	})
-    }
-*/
     var y = 6;
     var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
     var n = 334;
