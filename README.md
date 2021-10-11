@@ -6,14 +6,15 @@ cd iCMS_testing
 npm install
 ```
 
-For specific scripts and "light" mode:
+For specific scripts and "lite" mode:
 ```terminal
-python run.py light --spec ["cypress/integration/tools_test_spec.js","cypress/integration/epr_test_spec.js"]
+python run.py input.json
 Type login: 
 Type password: 
+Are you an admin? (y or n): 
 ```
 
-Mode: "light", "entire", "both".
+Mode: "lite", "entire", "both".
 
 ```terminal
 python ./data/visualization.py ./data/tools_out.json
