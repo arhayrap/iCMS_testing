@@ -51,7 +51,7 @@ Cypress.Commands.add("get_stat_dur", (link, site_state, k, limit) => {
     });
 })
 
-Cypress.Commands.add("get_stat_dur_light", (link, site_state, k, limit) => {
+Cypress.Commands.add("get_stat_dur_lite", (link, site_state, k, limit) => {
     cy.request({
         url: link,
         failOnStatusCode: false

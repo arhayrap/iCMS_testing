@@ -33,5 +33,10 @@
 	"position": "Test unit",
         "start_date": "2022-11-10",
         "end_date": "2022-11-17"
+    },
+    "CADI_lines":{
+        "year": "2020",
+        "start_date": "2020-11-10",
+        "end_date": "2015-11-17"
     }
 }

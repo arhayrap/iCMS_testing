@@ -5,8 +5,8 @@ describe("Checking epr", () => {
     var start = 0;
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms.cern.ch/epr/";
-    var out_path = "data/epr_out.json";
-    var out_path_lite = "data/epr_out_surf.json";
+    var out_path = "data/epr_out";
+    var out_path_lite = "data/epr_out_surf";
     var page_fail_limit = 10;
     var env = Cypress.env()["flags"];
     var login    = env["login"];
@@ -104,10 +104,10 @@ describe("Checking epr", () => {
                 cy.check_tables_epr(site_state[0].results[k]);
             });
             if (mode == "lite") {
-                cy.writeFile(out_path_lite+"_{}".format(years[y]), site_state);
+                cy.writeFile(out_path_lite+"_"+String(years[y])+"_.json", site_state);
                 cy.save_data(site_state[0].results[k], base, mode, years[y]);
             } else {
-                cy.writeFile(out_path+"_{}".format(years[y]), site_state);
+                cy.writeFile(out_path+"_"+String(years[y])+"_.json", site_state);
                 cy.save_data(site_state[0].results[k], base, "", years[y]);
             }
             console.log(site_state);

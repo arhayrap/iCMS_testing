@@ -468,6 +468,71 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
     });
 })
 
+Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
+    // Checking options
+    cy.get("div.v-input--selection-controls__ripple").click({multiple:true});
+    cy.get("div.v-input--selection-controls__ripple").each((elem, index0, elems) => {
+	elem.get(0).click();
+	cy.get("i.mdi-refresh").as("run").click();
+	if (index0 == 0){ // Year
+	    cy.get("div.v-card__title div.no-gutters input[type='number']").eq(0).clear().type(data["year"], {force:true}).get("@run").click().wait(2000);
+	    //cy.get("div.v-card__title div.no-gutters input[type='number']").eq(0).then((input) => {
+		cy.get("body table tr").each((tr, index1, trs) => {
+		    cy.get("body table tr td").eq(index1*9 + 5).then((td) => {
+			if (Number(td.get(0).innerText.split("-")[0]) > Number(data["year"])) {
+			    site_state.results[k].warnings.push("'Year' has filtered a wrong option.");
+			    return false;
+			}
+		    });
+		});
+	    //});
+	} else if (index0 == 1){ // AWG
+	    cy.get("div.v-card__title div.no-gutters input[type='text']").eq(0).click();
+	    cy.get("div:visible.v-list-item__content").then((options) => {
+		let n = Math.round(options.length * Math.random());
+		options.get(n).click().get("@run").click().wait(2000);
+		cy.get("body table tr").each((tr, index1, trs) => {
+		    cy.get("body table tr td").eq(index1*9 + 0).then((td) => {
+			if (Number(td.get(0).innerText.split("-")[0]) != Number(input.get(0).innerText).split(" ")[0]) {
+			    site_state.results[k].warnings.push("'AWG' has filtered a wrong option.");
+			    return false;
+			}
+		    });
+		});
+	    });
+	} else if (index0 == 2){ // Activity type and date
+	    cy.get("div.v-card__title div.no-gutters input[type='text']").eq(1).click();
+	    cy.get("div:visible.v-list-item__content").then((options) => {
+		let n = Math.round(options.length * Math.random());
+		options.get(n).click();
+		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(0).type(data["start_date"], {force: true});
+		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(1).type(data["end_date"], {force: true});
+		cy.get("@run").click().wait(2000);
+		cy.get("body table th").then((ths) => {
+		    if (ths.get(7).innerText != "Event date") {
+			site_state.results[k].warnings.push("'Activity type' did not change the 'Updated' column into 'Event date'.");
+		    }
+		});
+		cy.get("body table tr").each((tr, index1, trs) => {
+		    cy.get("body table tr td").eq(index1*9 + 4).then((td_start) => {
+			cy.get("body table tr td").eq(index1*9 + 7).then((td_event) => {
+			    let start = new Date(td_start.get(0).innerText.split("-")[0], td_start.get(0).innerText.split("-")[1], td_start.get(0).innerText.split("-")[2]).getTime();
+			    let end   = new Date(td_event.get(0).innerText.split("-")[0], td_event.get(0).innerText.split("-")[1], td_event.get(0).innerText.split("-")[2]).getTime();
+			    let start_selected = new Date(data["start_date"].split("-")[0], data["start_date"].split("-")[1], data["start_date"].split("-")[2]).getTime();
+			    let end_selected   = new Date(data["end_date"].split("-")[0], data["end_date"].split("-")[1], data["end_date"].split("-")[2]).getTime();
+			    if (start < start_selected || end > end_selected) {
+				site_state.results[k].warnings.push("Data with wrong date were returned.");
+				return false;
+			    }
+			});
+		    });
+		});
+	    });
+	}
+	elem.get(0).click();
+    });
+})
+
 Cypress.Commands.add("check_over_graduation", (site_state, k) => {
     cy.Open_All();
     cy.get("table tbody tr").then((table_rows) => {
