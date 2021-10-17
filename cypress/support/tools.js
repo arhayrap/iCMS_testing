@@ -586,7 +586,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         		op = options.get(index1).innerText;
         		cy.get(".v-data-footer__pagination").then((table_rows) => {
 			    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
-			    cy.get("@options1").eq(index1).click({force: true}).wait(4000);
+			    cy.get("@options1").eq(index1).click({force: true}).wait(6000);
         		    cy.get(".v-data-footer__pagination").then((table_rows) => {
 				n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
                         	console.log(label.get(0).innerText, options.get(index1).innerText);
@@ -598,7 +598,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         			}
         		    });
                         });
-        		cy.get("@options1").eq(index1).click({force: true}).wait(4000);
+        		cy.get("@options1").eq(index1).click({force: true}).wait(6000);
                 } else {
                     site_state.results[k].warnings.push("The menu`s '" + options.get(index1).innerText + "', '" + label.get(0).innerText + "' table is empty.");
                     // return false;
@@ -636,6 +636,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
 
     });
 })
+
 Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
     cy.Open_All();
     cy.get(".v-card__title .col-2").as("elems").each((elem, index0, elems) => {

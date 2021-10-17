@@ -1,7 +1,7 @@
 import configData from "../fixtures/tools_page_data.json";
 
 describe("Checking tools", () => {
-    /*|------------------------------------<|       Paths       |>---------------------------------------------|*/
+    /*|------------------------------------<|       Paths       |>------------------------------------------------|*/
     var links_path      = "cypress/fixtures/tools_links.json";
     var base            = "https://icms.cern.ch/tools/";
     var profile         = "https://icms.cern.ch/tools/user/profile";
@@ -12,7 +12,7 @@ describe("Checking tools", () => {
     var page_fail_limit = 5;
     var page_fails = 0;
     var start = 0;
-    var n = 3;
+    var n = 35;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env = Cypress.env()["flags"]
     var login = env["login"];
@@ -60,9 +60,18 @@ describe("Checking tools", () => {
         }
     }
 
+    Cypress.Cookies.defaults({
+	preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
+    })
+
     before(() => {
 	cy.visit(base);
 	cy.login(login, password);
+	/*Cypress.Cookies.defaults({
+	    preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY']
+	})*/
+	//cy.setCookie('session', 'eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMzdkM2VjYjdjZjNhY2YyZGIxYWFjMmIyM2E5N2NmODdhOTkzMDk0YiJ9.YWrX9w.KDfzRqrLE2NNcqGpKhM3JGeEIwQ');
+	//cy.setCookie('AUTH_SESSION_ID_LEGACY', 'c39e33e3-1cc1-45ad-8a30-f49cd1d4e720.keycloak-ffcc480b12');
         //Cypress.Cookies.preserveOnce('session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_shibstate_1634481350_5b0d', 'KC_RESTART');
     })
 
@@ -71,9 +80,12 @@ describe("Checking tools", () => {
 	//Cypress.Cookies.defaults({
 	//    preserve: 'session'
 	//});
-	//cy.getCookies().should('be.empty');
+	//cy.getCookies().should('be.empty');', '_shibstate_1634481350_5b0d', 'KC_RESTART'
 	Cypress.Cookies.debug(true);
-        Cypress.Cookies.preserveOnce('session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_shibstate_1634481350_5b0d', 'KC_RESTART');
+        //Cypress.Cookies.preserveOnce('session'); // , 'eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMzdkM2VjYjdjZjNhY2YyZGIxYWFjMmIyM2E5N2NmODdhOTkzMDk0YiJ9.YWrX9w.KDfzRqrLE2NNcqGpKhM3JGeEIwQ'); // '_saml_idp', 'AUTH_SESSION_ID_LEGACY','AUTH_SESSION_ID', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION');
+	//Cypress.Cookies.preserveOnce('AUTH_SESSION_ID_LEGACY'); //, 'c39e33e3-1cc1-45ad-8a30-f49cd1d4e720.keycloak-ffcc480b12');
+	cy.getCookies();
+	//cy.wait(6000);
     })
 
     for (let k = 0; k < n; k++) {
