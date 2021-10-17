@@ -104,6 +104,8 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
 })
 
+Cypress.Cookies.debug(true)
+
 Cypress.Commands.add("listen_fails", (site_state, k, base, link_path, out_path) => {
     cy.on("fail", (error) => {
         console.log(error);
