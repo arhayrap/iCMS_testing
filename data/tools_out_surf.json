@@ -1,6 +1,6 @@
 [
   {
-    "date": "10-18-2021, 2:18",
+    "date": "11-01-2021, 1:44",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
@@ -11,227 +11,205 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/units",
-        "warnings": [
-          "Reference back to executive boards was not done correctly (wrong url in the result)."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/applicants",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
-        "warnings": [
-          "Table warning: There is an empty table after toggling."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/flags",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/tenures",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
-        "warnings": [],
-        "errors": [
-          "POST request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
-        "warnings": [],
-        "errors": [
-          "POST request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/profile",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/pending-authors",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/member-authors",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/suspensions",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrector",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrections",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [
-          "GET request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/author-lists/files",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/author-lists/author-data",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/notes/entries",
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/notes/pending",
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
         "warnings": [],
         "errors": [],
         "state": "OK"

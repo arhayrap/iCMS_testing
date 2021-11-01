@@ -53,11 +53,27 @@ describe("Checking epr", () => {
             });
         }
     }
+    
+    Cypress.Cookies.defaults({
+	preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
+    })
+
+    before(() => {
+	cy.visit(base);
+	cy.login(login, password);
+    })
+/*
+    beforeEach(() => {
+	//console.log("BEFORE EACH!!!")
+	//Cypress.Cookies.debug(true);
+	cy.getCookies();
+    })
+*/
     for (let k = 0; k < n; k++) {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            cy.listen_fails(site_state, k, base, links_path, out_path);
+            // cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/**',
@@ -84,7 +100,7 @@ describe("Checking epr", () => {
                 site_state[0].results[k].url = link;
                 cy.visit(link);
                 site_state[0].username = login;
-                cy.login(login, password);
+                // cy.login(login, password);
                 cy.wait_for_requests("@posts");
                 if (mode == "lite") {
                     cy.select_year("@posts", site_state[0].results[k], y);

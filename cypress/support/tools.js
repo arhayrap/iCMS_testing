@@ -49,6 +49,7 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
 
 Cypress.Commands.add("check_units", (site_state, k, data) => {
     // Checking end date
+    // cy.wait(2000);
     cy.get("table thead th").eq(8).click(); // sort by increasement
     cy.Open_All();
     cy.get("table tbody tr").each((tr, index0, trs) => {
@@ -203,7 +204,7 @@ Cypress.Commands.add("check_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
-    cy.get("div.row div.v-card div.v-card__text").eq(1).find("div.v-list-item__subtitle")
+    cy.get("div.row div.v-card div.v-card__text", {timeout:60000}).eq(1).find("div.v-list-item__subtitle")
         .should(($title) => {
             expect($title).to.contain("Full Name");
         })
@@ -313,7 +314,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead = elems.length;
             });
-            cy.get("@menu_items").eq(index0).click().wait(5000);
+            cy.get("@menu_items").eq(index0).click().wait(6000);
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead -= elems.length;
                 if (Math.abs(n_thead) != 3) {
@@ -586,7 +587,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         		op = options.get(index1).innerText;
         		cy.get(".v-data-footer__pagination").then((table_rows) => {
 			    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
-			    cy.get("@options1").eq(index1).click({force: true}).wait(6000);
+			    cy.get("@options1").eq(index1).click({force: true}).wait(5000);
         		    cy.get(".v-data-footer__pagination").then((table_rows) => {
 				n_final = Number(table_rows.get(0).innerText.split("of ")[1]);
                         	console.log(label.get(0).innerText, options.get(index1).innerText);
@@ -598,7 +599,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         			}
         		    });
                         });
-        		cy.get("@options1").eq(index1).click({force: true}).wait(6000);
+        		cy.get("@options1").eq(index1).click({force: true}).wait(5000);
                 } else {
                     site_state.results[k].warnings.push("The menu`s '" + options.get(index1).innerText + "', '" + label.get(0).innerText + "' table is empty.");
                     // return false;

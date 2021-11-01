@@ -11,8 +11,8 @@ describe("Checking tools", () => {
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var page_fail_limit = 5;
     var page_fails = 0;
-    var start = 0;
-    var n = 35;
+    var start = 3;
+    var n = 5;//35;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env = Cypress.env()["flags"]
     var login = env["login"];
@@ -67,27 +67,12 @@ describe("Checking tools", () => {
     before(() => {
 	cy.visit(base);
 	cy.login(login, password);
-	/*Cypress.Cookies.defaults({
-	    preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY']
-	})*/
-	//cy.setCookie('session', 'eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMzdkM2VjYjdjZjNhY2YyZGIxYWFjMmIyM2E5N2NmODdhOTkzMDk0YiJ9.YWrX9w.KDfzRqrLE2NNcqGpKhM3JGeEIwQ');
-	//cy.setCookie('AUTH_SESSION_ID_LEGACY', 'c39e33e3-1cc1-45ad-8a30-f49cd1d4e720.keycloak-ffcc480b12');
-        //Cypress.Cookies.preserveOnce('session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_shibstate_1634481350_5b0d', 'KC_RESTART');
     })
-
+/*
     beforeEach(() => {
-	console.log("BEFORE EACH!!!")
-	//Cypress.Cookies.defaults({
-	//    preserve: 'session'
-	//});
-	//cy.getCookies().should('be.empty');', '_shibstate_1634481350_5b0d', 'KC_RESTART'
-	Cypress.Cookies.debug(true);
-        //Cypress.Cookies.preserveOnce('session'); // , 'eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMzdkM2VjYjdjZjNhY2YyZGIxYWFjMmIyM2E5N2NmODdhOTkzMDk0YiJ9.YWrX9w.KDfzRqrLE2NNcqGpKhM3JGeEIwQ'); // '_saml_idp', 'AUTH_SESSION_ID_LEGACY','AUTH_SESSION_ID', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION');
-	//Cypress.Cookies.preserveOnce('AUTH_SESSION_ID_LEGACY'); //, 'c39e33e3-1cc1-45ad-8a30-f49cd1d4e720.keycloak-ffcc480b12');
 	cy.getCookies();
-	//cy.wait(6000);
     })
-
+*/
     for (let k = 0; k < n; k++) {
         it("Logs in and tests the pages in '" + mode + "' mode.", () => {
             cy.server();
@@ -146,13 +131,7 @@ describe("Checking tools", () => {
                     }
                 }
             }).as("deletes");
-	    /*if (k == 0) {
-		cy.visit(base);
-		cy.login(login, password);
-		cy.setCookie('login', login);
-		cy.setCookie('password', password);
-                cy.wait_for_requests("@auth");
-            }*/
+
 	    // ##############################################################################################################
 
             cy.readFile(links_path).then(($link_obj) => {
@@ -165,7 +144,7 @@ describe("Checking tools", () => {
                     //cy.login(login, password);
                     //cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    cy.wait(4000);
+                    cy.wait(3000);
                     cy.check_tables(site_state[0], k);
                     if (link == profile) {
                         cy.check_profile_dashboard(site_state[0], k, base);
@@ -194,9 +173,9 @@ describe("Checking tools", () => {
                         cy.check_over_graduation(site_state[0], k);
                     } else if (link == base + "collaboration/tenures") {
                         cy.check_tenures(site_state[0], k, INPUT_DATA["tenures_data"]);
-                    } else if (link == base + "publications/cadi/lines") {
+                    } /*else if (link == base + "publications/cadi/lines") {
                         cy.check_CADI_lines(site_state[0], k, INPUT_DATA["CADI_lines"]);
-                    }
+                    }*/
                 } else if (mode == "entire") {
                     cy.get_stat_dur(link, site_state, k, page_fail_limit);
                     site_state[0].results[k].load_time = performance.now();
@@ -205,7 +184,7 @@ describe("Checking tools", () => {
                     //cy.login(login, password);
                     //cy.wait_for_requests("@auth");
                     cy.wait_for_requests("@gets");
-                    cy.wait(4000);
+                    cy.wait(3000);
                     cy.get_load_time(site_state[0].results[k]);
                     cy.check_tables(site_state[0], k);
                     if (link == profile) {
@@ -235,16 +214,18 @@ describe("Checking tools", () => {
                         cy.check_over_graduation(site_state[0], k);
                     } else if (link == base + "collaboration/tenures") {
                         cy.check_tenures(site_state[0], k, INPUT_DATA["tenures_data"]);
-                    } else if (link == base + "publications/cadi/lines") {
+                    } /*else if (link == base + "publications/cadi/lines") {
                         cy.check_CADI_lines(site_state[0], k, INPUT_DATA["CADI_lines"]);
-                    }
+                    }*/
                 }
             });
             if (mode == "lite") {
-                cy.writeFile(out_path_lite, site_state);
+                // cy.writeFile(out_path_lite, site_state);
+                cy.task("writeFile", {path: out_path_lite, data: site_state});
                 cy.save_data(site_state[0].results[k], base, mode = mode);
             } else {
-                cy.writeFile(out_path, site_state);
+                // cy.writeFile(out_path, site_state);
+                cy.task("writeFile", {path: out_path, data: site_state});
                 cy.save_data(site_state[0].results[k], base);
             }
             console.log(site_state);
