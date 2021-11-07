@@ -222,7 +222,7 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
-    cy.get("div.v-card .container").find(".row div.col-9").eq(0).then(($elem) => {
+    cy.get("div.v-card .container").find(".row div.col-9", {timeout:60000}).eq(0).then(($elem) => {
         console.log($elem.get(0).innerText == data);
         if ($elem.get(0).innerText != data) {
             site_state.results[k].warnings.push("The reference to the institute was not done correctly.");
@@ -289,7 +289,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
 		    let element = Math.round((items1.length - 1) * Math.random());
 		    if (index0 == 0) { element = 8; }
 		    let item1 = items1.get(element);
-        	    cy.get("@outline").eq(element).click({force: true}).wait(6000);
+        	    cy.get("@outline").eq(element).click({force: true}).wait(5000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
@@ -303,7 +303,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                	cy.get("@outline").eq(element).click({force: true}).wait(6000);
+                	cy.get("@outline").eq(element).click({force: true}).wait(5000);
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.innerText + "' table is empty.");
                         return false;
@@ -314,7 +314,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead = elems.length;
             });
-            cy.get("@menu_items").eq(index0).click().wait(6000);
+            cy.get("@menu_items").eq(index0).click().wait(5000);
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead -= elems.length;
                 if (Math.abs(n_thead) != 3) {
@@ -612,7 +612,7 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
                     n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
                 });
                 cy.get("@options2").eq(index1).click({force:true});
-                cy.wait(2000);
+                cy.wait(4000);
                 cy.get("table thead tr th").as("ths").eq(1).then((table_header) => {
                     th = table_header.get(0).innerText;
                     op = options.get(index1).innerText;
