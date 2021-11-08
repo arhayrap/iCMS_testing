@@ -1,0 +1,3464 @@
+[
+  {
+    "date": "11-08-2021, 12:54",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/epr/showMine",
+        "status": 200,
+        "duration": 598,
+        "load_time": 4220.295000006445,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showMyInstPledges",
+        "status": 200,
+        "duration": 76,
+        "load_time": 2889.7050000960007,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/show",
+        "status": 200,
+        "duration": 101,
+        "load_time": 63661.89500002656,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "Error from API call ... <!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>500 Internal Server Error</title>\n</head><body>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error or\nmisconfiguration and was unable to complete\nyour request.</p>\n<p>Please contact the server administrator at \n [no address given] to inform them of the time this error occurred,\n and the actions you performed just before this error.</p>\n<p>More information about this error may be available\nin the server error log.</p>\n<hr>\n<address>Apache Server at icms.cern.ch Port 443</address>\n</body></html>\n | error",
+          "POST request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/173",
+        "status": 200,
+        "duration": 62,
+        "load_time": 9771.394999930635,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/180",
+        "status": 200,
+        "duration": 60,
+        "load_time": 6016.729999915697,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/176",
+        "status": 200,
+        "duration": 72,
+        "load_time": 19961.694999947213,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/174",
+        "status": 200,
+        "duration": 59,
+        "load_time": 4335.685000056401,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/179",
+        "status": 200,
+        "duration": 75,
+        "load_time": 18004.294999991544,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/172",
+        "status": 200,
+        "duration": 118,
+        "load_time": 36970.1650000643,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/171",
+        "status": 200,
+        "duration": 61,
+        "load_time": 3153.9099999936298,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "Error from API call ... <!DOCTYPE html>\n<html>\n  <head>\n    \n    <title>iCMS-EPR - Internal Server Error</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- Bootstrap -->\n    <link href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <meta charset=\"utf-8\">\n\n    <link rel=\"shortcut icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n\n    <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\"> -->\n    <link rel=\"stylesheet\" href=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.css\">\n\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- DataTables CSS -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css\"/>\n<!--\n     <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js\"></script>\n-->\n\n    <link rel=\"stylesheet\" href=\"/epr/static/bootstrap-submenu-2.0.0/css/bootstrap-submenu.min.css\">\n\n    <!-- This should be last to allow overwriting of other styles -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/epr/static/styles.css\">\n\n    \n\n    <script type=\"text/javascript\">\n        var $SCRIPT_ROOT = '/epr';\n        var $CSP_PER_AUTHOR =   -1. ;\n    </script>\n\n\n  </head>\n  <body>\n    \n<div class=\"navbar navbar-default navbar-static-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"/epr/\">\n               &nbsp; iCMS - EPR\n            </a>\n        </div>\n        <div class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Year (2021)<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                            <li><a href=\"/epr/setYear/2015\">\n                                \n                                2015\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2016\">\n                                \n                                2016\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2017\">\n                                \n                                2017\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2018\">\n                                \n                                2018\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2019\">\n                                \n                                2019\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2020\">\n                                \n                                2020\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2021\">\n                                 <b> \n                                2021\n                                 </b> \n                            </a></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"pledges-dropdown\">Pledges<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMine\">My Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showMyInstPledges\">My Institute's Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/show\">All Pledges of all CMS members (takes some time)</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"tasks-dropdown\">Tasks<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" data-submenu  id=\"institutes-dropdown\">Institutes<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyInst\">My Institute</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showInstitutes\">Overview Of All Institutes</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"countries-dropdown\">Countries<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyCountry\">My Country</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showCountries\">Overview Of All Countries</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a href=\"/epr/makeNewPledge\">New Pledge</a></li>\n                <!-- Manage - if user is allowed -->\n                \n                <!-- end of manage links -->\n\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Documentation<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/faq\">Frequently Asked Questions - FAQ</a></li>\n                        <li class=\"divider\"></li>\n                        <li>External links:</li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> EPR User Guide: \n                                <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">docDB version</a> \n                                <!-- -- <a href=\"https://icms.cern.ch/docs/iCMS-EPR/userGuide/\" target=\"_blank\">online version</a>  -->\n                            </span>\n                        </li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021\" target=\"_blank\">Information on Central Shifts in 2021</a> </span></li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021#Central_credit_accounting\" target=\"_blank\">Shift accounting in EPR 2021</a></span> </li>\n\n                        <li class=\"divider\"></li>\n                        <li><a href=\"https://icms.cern.ch/icms/EPR-EngagementOffice-latest.pdf\">The 2021 updates on EPR in CMS by the Engagement Office</a></li>\n                        <li><a href=\"https://indico.cern.ch/event/464425/contribution/4/attachments/1197295/1753466/EPR_recommendations_v9.pdf\" target=\"_blank\">Recommendations and Guidelines from the EPR Review Group</a></li>\n                        <li><a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12575\" target=\"_blank\">CMS authorship and EPR decision workflow</a></li>\n                    </ul>\n                </li>\n\n                \n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        Account arhayrap <b class=\"caret\"></b>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showFavourites\">Favourites</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/auth/logout\">Log Out</a></li>\n                        \n                    </ul>\n                </li>\n                \n            </ul>\n        </div>\n    </div>\n</div>\n\n    \n<div class=\"container\">\n    \n    \n    \n\n    <div id=\"news\" class=\"news\">\n        \n\n        \n\n        <h4>\n            The iCMS-EPR User Guide is available <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">here</a>.\n        </h4>\n        <p>If you want to get informed about updates/outages of this service, please subscribe to the\n            <a href=\"https://e-groups.cern.ch/e-groups/EgroupsSearch.do?searchValue=icms-announce\">icms-announce eGroup</a>\n            (just click on the link, then click on the \"subscribe\" button - subscription will need approval, so it's not immediate, sorry).\n        </p>\n    </div>\n\n    <div id=\"info\" class=\"info\">\n        \n    </div>\n\n    \n<div class=\"page-header\">\n    <h1>Internal Server Error</h1>\n</div>\n\n    <div id=\"loading-time\"> </div>\n\n</div>\n\n<div class=\"col-md-12\">\n    <footer>\n        <hr />\n        <div align=\"left\" class=\"footer-left\">\n            Contact information: <a href=\"mailto:icms-support@cern.ch\">icms-support@cern.ch</a>.\n        </div>\n        \n        <div align=\"right\" class=\"footer-right\">\n            <button id=\"reportIssue\" name=\"reportIssue\">Report an issue</button>\n        </div>\n        <div class=\"page-footer\">\n        \n        \n        </div>\n\n    </footer>\n</div>\n\n\n\n    \n\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js\" integrity=\"sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==\" crossorigin=\"anonymous\"></script>\n<script>\nmoment.locale(\"en\");\nfunction flask_moment_render(elem) {\n    const timestamp = moment(elem.dataset.timestamp);\n    const func = elem.dataset.function;\n    const format = elem.dataset.format;\n    const timestamp2 = elem.dataset.timestamp2;\n    const no_suffix = elem.dataset.nosuffix;\n    const units = elem.dataset.units;\n    let args = [];\n    if (format)\n        args.push(format);\n    if (timestamp2)\n        args.push(moment(timestamp2));\n    if (no_suffix)\n        args.push(no_suffix);\n    if (units)\n        args.push(units);\n    elem.textContent = timestamp[func].apply(timestamp, args);\n    elem.classList.remove('flask-moment');\n    elem.style.display = \"\";\n}\nfunction flask_moment_render_all() {\n    const moments = document.querySelectorAll('.flask-moment');\n    moments.forEach(function(moment) {\n        flask_moment_render(moment);\n        const refresh = moment.dataset.refresh;\n        if (refresh) {\n            (function(elem, interval) {\n                setInterval(function() {\n                    flask_moment_render(elem);\n                }, interval);\n            })(moment, refresh);\n        }\n    })\n}\ndocument.addEventListener(\"DOMContentLoaded\", flask_moment_render_all);\n</script>\n\n<script src=\"/epr/static/jquery.confirm.min.js\"></script>\n\n<!-- jquery 1.11.3 already included in parent -->\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.js\"></script>\n\n<!-- DataTables -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/select/1.1.0/js/dataTables.select.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.0/js/dataTables.fixedHeader.min.js\"></script>\n\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.flash.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.colVis.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/plug-ins/1.10.11/api/sum().js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/bootstrap-submenu-2.0.0/js/bootstrap-submenu.min.js\"></script>\n\n<!--<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>-->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.min.js\"></script>\n\n<!-- CMS EPR scripts -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/icmsepr.js\"></script>\n\n<script type=\"text/javascript\">\n    var csrftoken = \"IjE4Mjg3MmZjMmU5M2E4Y2Y4ZTE0OWUzMzQ4MDVjZGQzZWJmYmQwOTci.YYha_Q.GzhKbwEzHEums_aNNhYU_hkbXTc\";\n</script>\n\n\n<script language=\"JavaScript\">\n\n// default settings for all DataTables:\n$.extend( true, $.fn.dataTable.defaults, {\n        fixedHeader: {\n            header: true,\n            // footer: true\n        }\n} );\n\n$(document).ready(function() {\n\n\n    // issue collector for iCMS-EPR from JIRA:\n    // Requires jQuery!\n    jQuery.ajax({\n        url: \"https://its.cern.ch/jira/s/32b7cc9fc9e5ae832380d32ba40f253f-T/-ed8qqe/710003/1d55dbd34e10bce6df51d8250ee754f7/2.0.30/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=bb8c58ee\",\n        type: \"get\",\n        cache: true,\n        dataType: \"script\"\n    });\n\n     window.ATL_JQ_PAGE_PROPS =  {\n        \"triggerFunction\": function(showCollectorDialog) {\n            //Requires that jQuery is available!\n            jQuery(\"#reportIssue\").click(function(e) {\n                e.preventDefault();\n                showCollectorDialog();\n            });\n        }};\n\n\n\n\n    // enable sub-menus for the country-institute lists in the menubar\n    $('[data-submenu]').submenupicker();\n\n    $.ajaxSetup({\n        beforeSend: function(xhr, settings) {\n          if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {\n                xhr.setRequestHeader(\"X-CSRFToken\", csrftoken)\n          }\n        }\n    });\n\n    $(document).ajaxStart(function() {\n        $(document.body).css({'cursor' : 'wait'});\n    }).ajaxStop(function() {\n        $(document.body).css({'cursor' : 'default'});\n    });\n\n});\n</script>\n\n\n  </body>\n</html>\n | error",
+          "POST request error : 500  500 (Internal Server Error)",
+          "Error from API call ... <!DOCTYPE html>\n<html>\n  <head>\n    \n    <title>iCMS-EPR - Internal Server Error</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- Bootstrap -->\n    <link href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <meta charset=\"utf-8\">\n\n    <link rel=\"shortcut icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n\n    <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\"> -->\n    <link rel=\"stylesheet\" href=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.css\">\n\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- DataTables CSS -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css\"/>\n<!--\n     <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js\"></script>\n-->\n\n    <link rel=\"stylesheet\" href=\"/epr/static/bootstrap-submenu-2.0.0/css/bootstrap-submenu.min.css\">\n\n    <!-- This should be last to allow overwriting of other styles -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/epr/static/styles.css\">\n\n    \n\n    <script type=\"text/javascript\">\n        var $SCRIPT_ROOT = '/epr';\n        var $CSP_PER_AUTHOR =   -1. ;\n    </script>\n\n\n  </head>\n  <body>\n    \n<div class=\"navbar navbar-default navbar-static-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"/epr/\">\n               &nbsp; iCMS - EPR\n            </a>\n        </div>\n        <div class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Year (2021)<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                            <li><a href=\"/epr/setYear/2015\">\n                                \n                                2015\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2016\">\n                                \n                                2016\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2017\">\n                                \n                                2017\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2018\">\n                                \n                                2018\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2019\">\n                                \n                                2019\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2020\">\n                                \n                                2020\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2021\">\n                                 <b> \n                                2021\n                                 </b> \n                            </a></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"pledges-dropdown\">Pledges<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMine\">My Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showMyInstPledges\">My Institute's Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/show\">All Pledges of all CMS members (takes some time)</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"tasks-dropdown\">Tasks<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" data-submenu  id=\"institutes-dropdown\">Institutes<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyInst\">My Institute</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showInstitutes\">Overview Of All Institutes</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"countries-dropdown\">Countries<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyCountry\">My Country</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showCountries\">Overview Of All Countries</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a href=\"/epr/makeNewPledge\">New Pledge</a></li>\n                <!-- Manage - if user is allowed -->\n                \n                <!-- end of manage links -->\n\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Documentation<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/faq\">Frequently Asked Questions - FAQ</a></li>\n                        <li class=\"divider\"></li>\n                        <li>External links:</li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> EPR User Guide: \n                                <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">docDB version</a> \n                                <!-- -- <a href=\"https://icms.cern.ch/docs/iCMS-EPR/userGuide/\" target=\"_blank\">online version</a>  -->\n                            </span>\n                        </li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021\" target=\"_blank\">Information on Central Shifts in 2021</a> </span></li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021#Central_credit_accounting\" target=\"_blank\">Shift accounting in EPR 2021</a></span> </li>\n\n                        <li class=\"divider\"></li>\n                        <li><a href=\"https://icms.cern.ch/icms/EPR-EngagementOffice-latest.pdf\">The 2021 updates on EPR in CMS by the Engagement Office</a></li>\n                        <li><a href=\"https://indico.cern.ch/event/464425/contribution/4/attachments/1197295/1753466/EPR_recommendations_v9.pdf\" target=\"_blank\">Recommendations and Guidelines from the EPR Review Group</a></li>\n                        <li><a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12575\" target=\"_blank\">CMS authorship and EPR decision workflow</a></li>\n                    </ul>\n                </li>\n\n                \n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        Account arhayrap <b class=\"caret\"></b>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showFavourites\">Favourites</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/auth/logout\">Log Out</a></li>\n                        \n                    </ul>\n                </li>\n                \n            </ul>\n        </div>\n    </div>\n</div>\n\n    \n<div class=\"container\">\n    \n    \n    \n\n    <div id=\"news\" class=\"news\">\n        \n\n        \n\n        <h4>\n            The iCMS-EPR User Guide is available <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">here</a>.\n        </h4>\n        <p>If you want to get informed about updates/outages of this service, please subscribe to the\n            <a href=\"https://e-groups.cern.ch/e-groups/EgroupsSearch.do?searchValue=icms-announce\">icms-announce eGroup</a>\n            (just click on the link, then click on the \"subscribe\" button - subscription will need approval, so it's not immediate, sorry).\n        </p>\n    </div>\n\n    <div id=\"info\" class=\"info\">\n        \n    </div>\n\n    \n<div class=\"page-header\">\n    <h1>Internal Server Error</h1>\n</div>\n\n    <div id=\"loading-time\"> </div>\n\n</div>\n\n<div class=\"col-md-12\">\n    <footer>\n        <hr />\n        <div align=\"left\" class=\"footer-left\">\n            Contact information: <a href=\"mailto:icms-support@cern.ch\">icms-support@cern.ch</a>.\n        </div>\n        \n        <div align=\"right\" class=\"footer-right\">\n            <button id=\"reportIssue\" name=\"reportIssue\">Report an issue</button>\n        </div>\n        <div class=\"page-footer\">\n        \n        \n        </div>\n\n    </footer>\n</div>\n\n\n\n    \n\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js\" integrity=\"sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==\" crossorigin=\"anonymous\"></script>\n<script>\nmoment.locale(\"en\");\nfunction flask_moment_render(elem) {\n    const timestamp = moment(elem.dataset.timestamp);\n    const func = elem.dataset.function;\n    const format = elem.dataset.format;\n    const timestamp2 = elem.dataset.timestamp2;\n    const no_suffix = elem.dataset.nosuffix;\n    const units = elem.dataset.units;\n    let args = [];\n    if (format)\n        args.push(format);\n    if (timestamp2)\n        args.push(moment(timestamp2));\n    if (no_suffix)\n        args.push(no_suffix);\n    if (units)\n        args.push(units);\n    elem.textContent = timestamp[func].apply(timestamp, args);\n    elem.classList.remove('flask-moment');\n    elem.style.display = \"\";\n}\nfunction flask_moment_render_all() {\n    const moments = document.querySelectorAll('.flask-moment');\n    moments.forEach(function(moment) {\n        flask_moment_render(moment);\n        const refresh = moment.dataset.refresh;\n        if (refresh) {\n            (function(elem, interval) {\n                setInterval(function() {\n                    flask_moment_render(elem);\n                }, interval);\n            })(moment, refresh);\n        }\n    })\n}\ndocument.addEventListener(\"DOMContentLoaded\", flask_moment_render_all);\n</script>\n\n<script src=\"/epr/static/jquery.confirm.min.js\"></script>\n\n<!-- jquery 1.11.3 already included in parent -->\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.js\"></script>\n\n<!-- DataTables -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/select/1.1.0/js/dataTables.select.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.0/js/dataTables.fixedHeader.min.js\"></script>\n\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.flash.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.colVis.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/plug-ins/1.10.11/api/sum().js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/bootstrap-submenu-2.0.0/js/bootstrap-submenu.min.js\"></script>\n\n<!--<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>-->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.min.js\"></script>\n\n<!-- CMS EPR scripts -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/icmsepr.js\"></script>\n\n<script type=\"text/javascript\">\n    var csrftoken = \"IjE4Mjg3MmZjMmU5M2E4Y2Y4ZTE0OWUzMzQ4MDVjZGQzZWJmYmQwOTci.YYha_g.kGPAaERVXOZ8E-dw21YOJcFkl1Q\";\n</script>\n\n\n<script language=\"JavaScript\">\n\n// default settings for all DataTables:\n$.extend( true, $.fn.dataTable.defaults, {\n        fixedHeader: {\n            header: true,\n            // footer: true\n        }\n} );\n\n$(document).ready(function() {\n\n\n    // issue collector for iCMS-EPR from JIRA:\n    // Requires jQuery!\n    jQuery.ajax({\n        url: \"https://its.cern.ch/jira/s/32b7cc9fc9e5ae832380d32ba40f253f-T/-ed8qqe/710003/1d55dbd34e10bce6df51d8250ee754f7/2.0.30/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=bb8c58ee\",\n        type: \"get\",\n        cache: true,\n        dataType: \"script\"\n    });\n\n     window.ATL_JQ_PAGE_PROPS =  {\n        \"triggerFunction\": function(showCollectorDialog) {\n            //Requires that jQuery is available!\n            jQuery(\"#reportIssue\").click(function(e) {\n                e.preventDefault();\n                showCollectorDialog();\n            });\n        }};\n\n\n\n\n    // enable sub-menus for the country-institute lists in the menubar\n    $('[data-submenu]').submenupicker();\n\n    $.ajaxSetup({\n        beforeSend: function(xhr, settings) {\n          if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {\n                xhr.setRequestHeader(\"X-CSRFToken\", csrftoken)\n          }\n        }\n    });\n\n    $(document).ajaxStart(function() {\n        $(document.body).css({'cursor' : 'wait'});\n    }).ajaxStop(function() {\n        $(document.body).css({'cursor' : 'default'});\n    });\n\n});\n</script>\n\n\n  </body>\n</html>\n | error",
+          "POST request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/170",
+        "status": 200,
+        "duration": 64,
+        "load_time": 8906.180000049062,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/175",
+        "status": 200,
+        "duration": 71,
+        "load_time": 29133.659999934025,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/178",
+        "status": 200,
+        "duration": 103,
+        "load_time": 26539.86000001896,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/169",
+        "status": 200,
+        "duration": 75,
+        "load_time": 21937.260000035167,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/177",
+        "status": 200,
+        "duration": 62,
+        "load_time": 8269.459999981336,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/181",
+        "status": 200,
+        "duration": 61,
+        "load_time": 2612.0200000004843,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "Error from API call ... <!DOCTYPE html>\n<html>\n  <head>\n    \n    <title>iCMS-EPR - Internal Server Error</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- Bootstrap -->\n    <link href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <meta charset=\"utf-8\">\n\n    <link rel=\"shortcut icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n\n    <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\"> -->\n    <link rel=\"stylesheet\" href=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.css\">\n\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- DataTables CSS -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css\"/>\n<!--\n     <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js\"></script>\n-->\n\n    <link rel=\"stylesheet\" href=\"/epr/static/bootstrap-submenu-2.0.0/css/bootstrap-submenu.min.css\">\n\n    <!-- This should be last to allow overwriting of other styles -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/epr/static/styles.css\">\n\n    \n\n    <script type=\"text/javascript\">\n        var $SCRIPT_ROOT = '/epr';\n        var $CSP_PER_AUTHOR =   -1. ;\n    </script>\n\n\n  </head>\n  <body>\n    \n<div class=\"navbar navbar-default navbar-static-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"/epr/\">\n               &nbsp; iCMS - EPR\n            </a>\n        </div>\n        <div class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Year (2021)<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                            <li><a href=\"/epr/setYear/2015\">\n                                \n                                2015\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2016\">\n                                \n                                2016\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2017\">\n                                \n                                2017\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2018\">\n                                \n                                2018\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2019\">\n                                \n                                2019\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2020\">\n                                \n                                2020\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2021\">\n                                 <b> \n                                2021\n                                 </b> \n                            </a></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"pledges-dropdown\">Pledges<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMine\">My Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showMyInstPledges\">My Institute's Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/show\">All Pledges of all CMS members (takes some time)</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"tasks-dropdown\">Tasks<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" data-submenu  id=\"institutes-dropdown\">Institutes<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyInst\">My Institute</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showInstitutes\">Overview Of All Institutes</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"countries-dropdown\">Countries<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyCountry\">My Country</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showCountries\">Overview Of All Countries</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a href=\"/epr/makeNewPledge\">New Pledge</a></li>\n                <!-- Manage - if user is allowed -->\n                \n                <!-- end of manage links -->\n\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Documentation<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/faq\">Frequently Asked Questions - FAQ</a></li>\n                        <li class=\"divider\"></li>\n                        <li>External links:</li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> EPR User Guide: \n                                <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">docDB version</a> \n                                <!-- -- <a href=\"https://icms.cern.ch/docs/iCMS-EPR/userGuide/\" target=\"_blank\">online version</a>  -->\n                            </span>\n                        </li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021\" target=\"_blank\">Information on Central Shifts in 2021</a> </span></li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021#Central_credit_accounting\" target=\"_blank\">Shift accounting in EPR 2021</a></span> </li>\n\n                        <li class=\"divider\"></li>\n                        <li><a href=\"https://icms.cern.ch/icms/EPR-EngagementOffice-latest.pdf\">The 2021 updates on EPR in CMS by the Engagement Office</a></li>\n                        <li><a href=\"https://indico.cern.ch/event/464425/contribution/4/attachments/1197295/1753466/EPR_recommendations_v9.pdf\" target=\"_blank\">Recommendations and Guidelines from the EPR Review Group</a></li>\n                        <li><a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12575\" target=\"_blank\">CMS authorship and EPR decision workflow</a></li>\n                    </ul>\n                </li>\n\n                \n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        Account arhayrap <b class=\"caret\"></b>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showFavourites\">Favourites</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/auth/logout\">Log Out</a></li>\n                        \n                    </ul>\n                </li>\n                \n            </ul>\n        </div>\n    </div>\n</div>\n\n    \n<div class=\"container\">\n    \n    \n    \n\n    <div id=\"news\" class=\"news\">\n        \n\n        \n\n        <h4>\n            The iCMS-EPR User Guide is available <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">here</a>.\n        </h4>\n        <p>If you want to get informed about updates/outages of this service, please subscribe to the\n            <a href=\"https://e-groups.cern.ch/e-groups/EgroupsSearch.do?searchValue=icms-announce\">icms-announce eGroup</a>\n            (just click on the link, then click on the \"subscribe\" button - subscription will need approval, so it's not immediate, sorry).\n        </p>\n    </div>\n\n    <div id=\"info\" class=\"info\">\n        \n    </div>\n\n    \n<div class=\"page-header\">\n    <h1>Internal Server Error</h1>\n</div>\n\n    <div id=\"loading-time\"> </div>\n\n</div>\n\n<div class=\"col-md-12\">\n    <footer>\n        <hr />\n        <div align=\"left\" class=\"footer-left\">\n            Contact information: <a href=\"mailto:icms-support@cern.ch\">icms-support@cern.ch</a>.\n        </div>\n        \n        <div align=\"right\" class=\"footer-right\">\n            <button id=\"reportIssue\" name=\"reportIssue\">Report an issue</button>\n        </div>\n        <div class=\"page-footer\">\n        \n        \n        </div>\n\n    </footer>\n</div>\n\n\n\n    \n\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js\" integrity=\"sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==\" crossorigin=\"anonymous\"></script>\n<script>\nmoment.locale(\"en\");\nfunction flask_moment_render(elem) {\n    const timestamp = moment(elem.dataset.timestamp);\n    const func = elem.dataset.function;\n    const format = elem.dataset.format;\n    const timestamp2 = elem.dataset.timestamp2;\n    const no_suffix = elem.dataset.nosuffix;\n    const units = elem.dataset.units;\n    let args = [];\n    if (format)\n        args.push(format);\n    if (timestamp2)\n        args.push(moment(timestamp2));\n    if (no_suffix)\n        args.push(no_suffix);\n    if (units)\n        args.push(units);\n    elem.textContent = timestamp[func].apply(timestamp, args);\n    elem.classList.remove('flask-moment');\n    elem.style.display = \"\";\n}\nfunction flask_moment_render_all() {\n    const moments = document.querySelectorAll('.flask-moment');\n    moments.forEach(function(moment) {\n        flask_moment_render(moment);\n        const refresh = moment.dataset.refresh;\n        if (refresh) {\n            (function(elem, interval) {\n                setInterval(function() {\n                    flask_moment_render(elem);\n                }, interval);\n            })(moment, refresh);\n        }\n    })\n}\ndocument.addEventListener(\"DOMContentLoaded\", flask_moment_render_all);\n</script>\n\n<script src=\"/epr/static/jquery.confirm.min.js\"></script>\n\n<!-- jquery 1.11.3 already included in parent -->\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.js\"></script>\n\n<!-- DataTables -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/select/1.1.0/js/dataTables.select.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.0/js/dataTables.fixedHeader.min.js\"></script>\n\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.flash.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.colVis.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/plug-ins/1.10.11/api/sum().js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/bootstrap-submenu-2.0.0/js/bootstrap-submenu.min.js\"></script>\n\n<!--<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>-->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.min.js\"></script>\n\n<!-- CMS EPR scripts -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/icmsepr.js\"></script>\n\n<script type=\"text/javascript\">\n    var csrftoken = \"IjE4Mjg3MmZjMmU5M2E4Y2Y4ZTE0OWUzMzQ4MDVjZGQzZWJmYmQwOTci.YYhbZQ.h6KO7RUwX8ZlxoR59GitvfILseU\";\n</script>\n\n\n<script language=\"JavaScript\">\n\n// default settings for all DataTables:\n$.extend( true, $.fn.dataTable.defaults, {\n        fixedHeader: {\n            header: true,\n            // footer: true\n        }\n} );\n\n$(document).ready(function() {\n\n\n    // issue collector for iCMS-EPR from JIRA:\n    // Requires jQuery!\n    jQuery.ajax({\n        url: \"https://its.cern.ch/jira/s/32b7cc9fc9e5ae832380d32ba40f253f-T/-ed8qqe/710003/1d55dbd34e10bce6df51d8250ee754f7/2.0.30/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=bb8c58ee\",\n        type: \"get\",\n        cache: true,\n        dataType: \"script\"\n    });\n\n     window.ATL_JQ_PAGE_PROPS =  {\n        \"triggerFunction\": function(showCollectorDialog) {\n            //Requires that jQuery is available!\n            jQuery(\"#reportIssue\").click(function(e) {\n                e.preventDefault();\n                showCollectorDialog();\n            });\n        }};\n\n\n\n\n    // enable sub-menus for the country-institute lists in the menubar\n    $('[data-submenu]').submenupicker();\n\n    $.ajaxSetup({\n        beforeSend: function(xhr, settings) {\n          if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {\n                xhr.setRequestHeader(\"X-CSRFToken\", csrftoken)\n          }\n        }\n    });\n\n    $(document).ajaxStart(function() {\n        $(document.body).css({'cursor' : 'wait'});\n    }).ajaxStop(function() {\n        $(document.body).css({'cursor' : 'default'});\n    });\n\n});\n</script>\n\n\n  </body>\n</html>\n | error",
+          "POST request error : 500  500 (Internal Server Error)",
+          "Error from API call ... <!DOCTYPE html>\n<html>\n  <head>\n    \n    <title>iCMS-EPR - Internal Server Error</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- Bootstrap -->\n    <link href=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <meta charset=\"utf-8\">\n\n    <link rel=\"shortcut icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"icon\" href=\"/epr/static/favicon.ico\" type=\"image/x-icon\">\n\n    <!-- <link rel=\"stylesheet\" type=\"text/css\" href=\"https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css\"> -->\n    <link rel=\"stylesheet\" href=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.css\">\n\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">\n\n    <!-- DataTables CSS -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css\"/>\n<!--\n     <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js\"></script>\n    <script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/jq-3.3.1/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js\"></script>\n-->\n\n    <link rel=\"stylesheet\" href=\"/epr/static/bootstrap-submenu-2.0.0/css/bootstrap-submenu.min.css\">\n\n    <!-- This should be last to allow overwriting of other styles -->\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/epr/static/styles.css\">\n\n    \n\n    <script type=\"text/javascript\">\n        var $SCRIPT_ROOT = '/epr';\n        var $CSP_PER_AUTHOR =   -1. ;\n    </script>\n\n\n  </head>\n  <body>\n    \n<div class=\"navbar navbar-default navbar-static-top\" role=\"navigation\">\n    <div class=\"container\">\n        <div class=\"navbar-header\">\n            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n                <span class=\"sr-only\">Toggle navigation</span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n                <span class=\"icon-bar\"></span>\n            </button>\n            <a class=\"navbar-brand\" href=\"/epr/\">\n               &nbsp; iCMS - EPR\n            </a>\n        </div>\n        <div class=\"navbar-collapse collapse\">\n            <ul class=\"nav navbar-nav\">\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Year (2021)<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                            <li><a href=\"/epr/setYear/2015\">\n                                \n                                2015\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2016\">\n                                \n                                2016\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2017\">\n                                \n                                2017\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2018\">\n                                \n                                2018\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2019\">\n                                \n                                2019\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2020\">\n                                \n                                2020\n                                \n                            </a></li>\n                        \n                            <li><a href=\"/epr/setYear/2021\">\n                                 <b> \n                                2021\n                                 </b> \n                            </a></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"pledges-dropdown\">Pledges<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMine\">My Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showMyInstPledges\">My Institute's Pledges</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/show\">All Pledges of all CMS members (takes some time)</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"tasks-dropdown\">Tasks<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" data-submenu  id=\"institutes-dropdown\">Institutes<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyInst\">My Institute</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showInstitutes\">Overview Of All Institutes</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\" id=\"countries-dropdown\">Countries<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showMyCountry\">My Country</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/showCountries\">Overview Of All Countries</a></li>\n                        <li class=\"divider\"></li>\n                        \n                    </ul>\n                </li>\n            </ul>\n            <ul class=\"nav navbar-nav navbar-right\">\n                <li><a href=\"/epr/makeNewPledge\">New Pledge</a></li>\n                <!-- Manage - if user is allowed -->\n                \n                <!-- end of manage links -->\n\n                <li class=\"dropdown\">\n                    <a href=\"#\" data-toggle=\"dropdown\" class=\"dropdown-toggle\">Documentation<b class=\"caret\"></b></a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/faq\">Frequently Asked Questions - FAQ</a></li>\n                        <li class=\"divider\"></li>\n                        <li>External links:</li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> EPR User Guide: \n                                <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">docDB version</a> \n                                <!-- -- <a href=\"https://icms.cern.ch/docs/iCMS-EPR/userGuide/\" target=\"_blank\">online version</a>  -->\n                            </span>\n                        </li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021\" target=\"_blank\">Information on Central Shifts in 2021</a> </span></li>\n                        <li> &nbsp;&nbsp;&nbsp; <span> <a href=\"https://twiki.cern.ch/twiki/bin/viewauth/CMS/CentralShifts2021#Central_credit_accounting\" target=\"_blank\">Shift accounting in EPR 2021</a></span> </li>\n\n                        <li class=\"divider\"></li>\n                        <li><a href=\"https://icms.cern.ch/icms/EPR-EngagementOffice-latest.pdf\">The 2021 updates on EPR in CMS by the Engagement Office</a></li>\n                        <li><a href=\"https://indico.cern.ch/event/464425/contribution/4/attachments/1197295/1753466/EPR_recommendations_v9.pdf\" target=\"_blank\">Recommendations and Guidelines from the EPR Review Group</a></li>\n                        <li><a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12575\" target=\"_blank\">CMS authorship and EPR decision workflow</a></li>\n                    </ul>\n                </li>\n\n                \n                <li class=\"dropdown\">\n                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n                        Account arhayrap <b class=\"caret\"></b>\n                    </a>\n                    <ul class=\"dropdown-menu\">\n                        <li><a href=\"/epr/showFavourites\">Favourites</a></li>\n                        <li class=\"divider\"></li>\n                        <li><a href=\"/epr/auth/logout\">Log Out</a></li>\n                        \n                    </ul>\n                </li>\n                \n            </ul>\n        </div>\n    </div>\n</div>\n\n    \n<div class=\"container\">\n    \n    \n    \n\n    <div id=\"news\" class=\"news\">\n        \n\n        \n\n        <h4>\n            The iCMS-EPR User Guide is available <a href=\"https://cms-docdb.cern.ch/cgi-bin/DocDB/ShowDocument?docid=12808\" target=\"_blank\">here</a>.\n        </h4>\n        <p>If you want to get informed about updates/outages of this service, please subscribe to the\n            <a href=\"https://e-groups.cern.ch/e-groups/EgroupsSearch.do?searchValue=icms-announce\">icms-announce eGroup</a>\n            (just click on the link, then click on the \"subscribe\" button - subscription will need approval, so it's not immediate, sorry).\n        </p>\n    </div>\n\n    <div id=\"info\" class=\"info\">\n        \n    </div>\n\n    \n<div class=\"page-header\">\n    <h1>Internal Server Error</h1>\n</div>\n\n    <div id=\"loading-time\"> </div>\n\n</div>\n\n<div class=\"col-md-12\">\n    <footer>\n        <hr />\n        <div align=\"left\" class=\"footer-left\">\n            Contact information: <a href=\"mailto:icms-support@cern.ch\">icms-support@cern.ch</a>.\n        </div>\n        \n        <div align=\"right\" class=\"footer-right\">\n            <button id=\"reportIssue\" name=\"reportIssue\">Report an issue</button>\n        </div>\n        <div class=\"page-footer\">\n        \n        \n        </div>\n\n    </footer>\n</div>\n\n\n\n    \n\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js\"></script>\n    <script src=\"//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js\" integrity=\"sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==\" crossorigin=\"anonymous\"></script>\n<script>\nmoment.locale(\"en\");\nfunction flask_moment_render(elem) {\n    const timestamp = moment(elem.dataset.timestamp);\n    const func = elem.dataset.function;\n    const format = elem.dataset.format;\n    const timestamp2 = elem.dataset.timestamp2;\n    const no_suffix = elem.dataset.nosuffix;\n    const units = elem.dataset.units;\n    let args = [];\n    if (format)\n        args.push(format);\n    if (timestamp2)\n        args.push(moment(timestamp2));\n    if (no_suffix)\n        args.push(no_suffix);\n    if (units)\n        args.push(units);\n    elem.textContent = timestamp[func].apply(timestamp, args);\n    elem.classList.remove('flask-moment');\n    elem.style.display = \"\";\n}\nfunction flask_moment_render_all() {\n    const moments = document.querySelectorAll('.flask-moment');\n    moments.forEach(function(moment) {\n        flask_moment_render(moment);\n        const refresh = moment.dataset.refresh;\n        if (refresh) {\n            (function(elem, interval) {\n                setInterval(function() {\n                    flask_moment_render(elem);\n                }, interval);\n            })(moment, refresh);\n        }\n    })\n}\ndocument.addEventListener(\"DOMContentLoaded\", flask_moment_render_all);\n</script>\n\n<script src=\"/epr/static/jquery.confirm.min.js\"></script>\n\n<!-- jquery 1.11.3 already included in parent -->\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.js\"></script>\n\n<!-- DataTables -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/select/1.1.0/js/dataTables.select.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.0/js/dataTables.fixedHeader.min.js\"></script>\n\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.flash.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/buttons/1.1.2/js/buttons.colVis.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/plug-ins/1.10.11/api/sum().js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js\"></script>\n<script type=\"text/javascript\" charset=\"utf8\" src=\"https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js\"></script>\n\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/bootstrap-submenu-2.0.0/js/bootstrap-submenu.min.js\"></script>\n\n<!--<script src=\"//code.jquery.com/ui/1.11.4/jquery-ui.js\"></script>-->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/jquery-ui-1.11.4.custom/jquery-ui.min.js\"></script>\n\n<!-- CMS EPR scripts -->\n<script type=\"text/javascript\" charset=\"utf8\" src=\"/epr/static/icmsepr.js\"></script>\n\n<script type=\"text/javascript\">\n    var csrftoken = \"IjE4Mjg3MmZjMmU5M2E4Y2Y4ZTE0OWUzMzQ4MDVjZGQzZWJmYmQwOTci.YYhbZw.S2xGse1HIrBmRYQmgv4uUkjwiNg\";\n</script>\n\n\n<script language=\"JavaScript\">\n\n// default settings for all DataTables:\n$.extend( true, $.fn.dataTable.defaults, {\n        fixedHeader: {\n            header: true,\n            // footer: true\n        }\n} );\n\n$(document).ready(function() {\n\n\n    // issue collector for iCMS-EPR from JIRA:\n    // Requires jQuery!\n    jQuery.ajax({\n        url: \"https://its.cern.ch/jira/s/32b7cc9fc9e5ae832380d32ba40f253f-T/-ed8qqe/710003/1d55dbd34e10bce6df51d8250ee754f7/2.0.30/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=bb8c58ee\",\n        type: \"get\",\n        cache: true,\n        dataType: \"script\"\n    });\n\n     window.ATL_JQ_PAGE_PROPS =  {\n        \"triggerFunction\": function(showCollectorDialog) {\n            //Requires that jQuery is available!\n            jQuery(\"#reportIssue\").click(function(e) {\n                e.preventDefault();\n                showCollectorDialog();\n            });\n        }};\n\n\n\n\n    // enable sub-menus for the country-institute lists in the menubar\n    $('[data-submenu]').submenupicker();\n\n    $.ajaxSetup({\n        beforeSend: function(xhr, settings) {\n          if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {\n                xhr.setRequestHeader(\"X-CSRFToken\", csrftoken)\n          }\n        }\n    });\n\n    $(document).ajaxStart(function() {\n        $(document.body).css({'cursor' : 'wait'});\n    }).ajaxStop(function() {\n        $(document.body).css({'cursor' : 'default'});\n    });\n\n});\n</script>\n\n\n  </body>\n</html>\n | error",
+          "POST request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/168",
+        "status": 200,
+        "duration": 100,
+        "load_time": 27426.160000031814,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/167",
+        "status": 200,
+        "duration": 71,
+        "load_time": 8949.039999977686,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/173",
+        "status": 200,
+        "duration": 116,
+        "load_time": 7368.079999927431,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/180",
+        "status": 200,
+        "duration": 80,
+        "load_time": 3735.415000002831,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/176",
+        "status": 200,
+        "duration": 92,
+        "load_time": 12036.869999952614,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/174",
+        "status": 200,
+        "duration": 77,
+        "load_time": 3838.8750000158325,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/179",
+        "status": 200,
+        "duration": 95,
+        "load_time": 7984.644999960437,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/172",
+        "status": 200,
+        "duration": 114,
+        "load_time": 7480.480000027455,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/171",
+        "status": 200,
+        "duration": 84,
+        "load_time": 7920.574999996461,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/170",
+        "status": 200,
+        "duration": 85,
+        "load_time": 4069.2099999869242,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/175",
+        "status": 200,
+        "duration": 108,
+        "load_time": 19968.164999969304,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/178",
+        "status": 200,
+        "duration": 111,
+        "load_time": 14317.990000010468,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/169",
+        "status": 200,
+        "duration": 89,
+        "load_time": 12630.419999943115,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/177",
+        "status": 200,
+        "duration": 103,
+        "load_time": 7699.3299999739975,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/181",
+        "status": 200,
+        "duration": 121,
+        "load_time": 7125.699999975041,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/168",
+        "status": 200,
+        "duration": 107,
+        "load_time": 6665.73500004597,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/167",
+        "status": 200,
+        "duration": 164,
+        "load_time": 10700.825000065379,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/0",
+        "status": 200,
+        "duration": 61,
+        "load_time": 5112.34999995213,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showShifts",
+        "status": 200,
+        "duration": 58,
+        "load_time": 3847.734999959357,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showMyInst",
+        "status": 200,
+        "duration": 681,
+        "load_time": 4583.609999972396,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitutes",
+        "status": 200,
+        "duration": 60,
+        "load_time": 1763.024999992922,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/YEREVAN",
+        "status": 200,
+        "duration": 624,
+        "load_time": 4686.024999944493,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/HEPHY",
+        "status": 200,
+        "duration": 2554,
+        "load_time": 10459.150000009686,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BAHRAIN-UNIV",
+        "status": 200,
+        "duration": 591,
+        "load_time": 4419.479999924079,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MINSK-INP",
+        "status": 200,
+        "duration": 1020,
+        "load_time": 6102.354999980889,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MINSK-RIAPP",
+        "status": 200,
+        "duration": 557,
+        "load_time": 4370.6350000575185,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MINSK-UNIV",
+        "status": 200,
+        "duration": 576,
+        "load_time": 4635.9449999872595,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ANTWERPEN",
+        "status": 200,
+        "duration": 997,
+        "load_time": 5971.63000004366,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BRUSSEL-VUB",
+        "status": 200,
+        "duration": 866,
+        "load_time": 5465.909999911673,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BRUXELLES-ULB",
+        "status": 200,
+        "duration": 1842,
+        "load_time": 8252.464999910444,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/GHENT",
+        "status": 200,
+        "duration": 1660,
+        "load_time": 8005.119999987073,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LEUVEN-KU",
+        "status": 200,
+        "duration": 604,
+        "load_time": 4756.169999949634,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LOUVAIN",
+        "status": 200,
+        "duration": 1390,
+        "load_time": 7429.434999939986,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MONS",
+        "status": 200,
+        "duration": 561,
+        "load_time": 4517.354999901727,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RIO-CBPF",
+        "status": 200,
+        "duration": 748,
+        "load_time": 5559.615000034682,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RIO-UERJ",
+        "status": 0,
+        "duration": 0,
+        "load_time": 629626.6349999933,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SAO_PAULO",
+        "status": 200,
+        "duration": 1026,
+        "load_time": 6620.340000023134,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SOFIA-INRNE",
+        "status": 200,
+        "duration": 873,
+        "load_time": 6273.1950000161305,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SOFIA-ISER",
+        "status": 200,
+        "duration": 832,
+        "load_time": 5577.530000009574,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SOFIA-UNIV",
+        "status": 200,
+        "duration": 782,
+        "load_time": 5742.690000100993,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIJING-BUAA",
+        "status": 200,
+        "duration": 664,
+        "load_time": 4921.834999928251,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIJING-IHEP",
+        "status": 200,
+        "duration": 2506,
+        "load_time": 10635.10000007227,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIJING-THU",
+        "status": 200,
+        "duration": 1552,
+        "load_time": 7786.639999947511,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/GUANGZHOU-SYSU",
+        "status": 200,
+        "duration": 764,
+        "load_time": 5328.620000043884,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/HEFEI-USTC",
+        "status": 200,
+        "duration": 113,
+        "load_time": 1858.0799999181181,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PEKING-UNIV",
+        "status": 200,
+        "duration": 2024,
+        "load_time": 9099.369999952614,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SHANGHAI-FU",
+        "status": 200,
+        "duration": 653,
+        "load_time": 4808.854999952018,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SHANGHAI-IC",
+        "status": 200,
+        "duration": 111,
+        "load_time": 2010.3900000685826,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ZHEJIANG-UNIV",
+        "status": 200,
+        "duration": 728,
+        "load_time": 5167.094999924302,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ANTIOQUIA",
+        "status": 200,
+        "duration": 802,
+        "load_time": 5273.125000065193,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UNIANDES",
+        "status": 200,
+        "duration": 762,
+        "load_time": 5191.749999998137,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SPLIT-FESB",
+        "status": 200,
+        "duration": 795,
+        "load_time": 5680.790000013076,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SPLIT-UNIV",
+        "status": 200,
+        "duration": 610,
+        "load_time": 4915.719999931753,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ZAGREB-RUDJER",
+        "status": 200,
+        "duration": 808,
+        "load_time": 5584.384999936447,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NICOSIA-UNIV",
+        "status": 200,
+        "duration": 835,
+        "load_time": 5483.170000021346,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHARLES-UNIV",
+        "status": 200,
+        "duration": 665,
+        "load_time": 5249.45000000298,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/QUITO-EPN",
+        "status": 200,
+        "duration": 619,
+        "load_time": 4663.665000000037,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/QUITO-USFQ",
+        "status": 200,
+        "duration": 729,
+        "load_time": 5097.685000044294,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ASRT-ENHEP",
+        "status": 200,
+        "duration": 1347,
+        "load_time": 7300.919999950565,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FAYOUM-CHEP-FU",
+        "status": 200,
+        "duration": 846,
+        "load_time": 5756.104999920353,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TALLINN",
+        "status": 200,
+        "duration": 1183,
+        "load_time": 6250.080000027083,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/HELSINKI-HIP",
+        "status": 200,
+        "duration": 2441,
+        "load_time": 10826.25000004191,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/HELSINKI-UNIV",
+        "status": 200,
+        "duration": 643,
+        "load_time": 5072.395000024699,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LAPPEENRANTA-LUT",
+        "status": 200,
+        "duration": 632,
+        "load_time": 4866.5700000710785,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LYON",
+        "status": 200,
+        "duration": 2363,
+        "load_time": 10020.275000017136,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LYON_CC",
+        "status": 200,
+        "duration": 565,
+        "load_time": 4670.494999969378,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/OMEGA",
+        "status": 200,
+        "duration": 678,
+        "load_time": 4937.035000068136,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/POLYTECHNIQUE",
+        "status": 200,
+        "duration": 2623,
+        "load_time": 11227.799999993294,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SACLAY",
+        "status": 200,
+        "duration": 1599,
+        "load_time": 8178.294999990612,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/STRASBOURG",
+        "status": 200,
+        "duration": 1734,
+        "load_time": 8273.350000032224,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TBILISI-GTU",
+        "status": 200,
+        "duration": 802,
+        "load_time": 5242.090000072494,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TBILISI-TSU",
+        "status": 200,
+        "duration": 576,
+        "load_time": 4761.7349999491125,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AACHEN-1",
+        "status": 200,
+        "duration": 1495,
+        "load_time": 7823.590000043623,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AACHEN-3A",
+        "status": 200,
+        "duration": 2983,
+        "load_time": 11886.939999996684,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AACHEN-3B",
+        "status": 200,
+        "duration": 1180,
+        "load_time": 6693.290000082925,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DESY",
+        "status": 200,
+        "duration": 5134,
+        "load_time": 18407.83999999985,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/HAMBURG-UNIV",
+        "status": 200,
+        "duration": 3571,
+        "load_time": 13330.149999936111,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KARLSRUHE-IEKP",
+        "status": 200,
+        "duration": 4464,
+        "load_time": 16647.839999990538,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ATHENS",
+        "status": 200,
+        "duration": 1283,
+        "load_time": 6984.030000050552,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ATHENS-NTUA",
+        "status": 200,
+        "duration": 715,
+        "load_time": 5402.020000037737,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DEMOKRITOS",
+        "status": 200,
+        "duration": 765,
+        "load_time": 5225.804999936372,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IOANNINA",
+        "status": 200,
+        "duration": 821,
+        "load_time": 5465.195000055246,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ATOMKI",
+        "status": 200,
+        "duration": 783,
+        "load_time": 5155.380000011064,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BUDAPEST",
+        "status": 200,
+        "duration": 737,
+        "load_time": 5158.529999898747,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BUDAPEST-ELU",
+        "status": 200,
+        "duration": 1069,
+        "load_time": 6234.0649999678135,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DEBRECEN-IEP",
+        "status": 200,
+        "duration": 600,
+        "load_time": 4925.2550000092015,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/GYONGYOS-UNIV",
+        "status": 200,
+        "duration": 591,
+        "load_time": 4697.705000056885,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHANDIGARH",
+        "status": 200,
+        "duration": 944,
+        "load_time": 6273.3899999875575,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DELHI-UNIV",
+        "status": 200,
+        "duration": 1103,
+        "load_time": 5921.575000043958,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IIT-MADRAS",
+        "status": 200,
+        "duration": 1048,
+        "load_time": 6054.194999975152,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KOLKATA-SAHA",
+        "status": 200,
+        "duration": 1062,
+        "load_time": 6219.485000008717,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MUMBAI-BARC",
+        "status": 200,
+        "duration": 551,
+        "load_time": 4825.279999990016,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NISER",
+        "status": 200,
+        "duration": 1136,
+        "load_time": 6127.9799999902025,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PUNE-IISER",
+        "status": 200,
+        "duration": 1061,
+        "load_time": 6138.055000104941,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TIFR-A",
+        "status": 200,
+        "duration": 870,
+        "load_time": 5919.95999997016,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TIFR-B",
+        "status": 200,
+        "duration": 956,
+        "load_time": 5987.564999959432,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IPM",
+        "status": 200,
+        "duration": 983,
+        "load_time": 6206.359999952838,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ISFAHAN-IUT",
+        "status": 0,
+        "duration": 0,
+        "load_time": 1278006.170000066,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DUBLIN-UCD",
+        "status": 200,
+        "duration": 565,
+        "load_time": 5389.749999972992,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BARI",
+        "status": 200,
+        "duration": 2376,
+        "load_time": 10583.035000017844,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BOLOGNA",
+        "status": 200,
+        "duration": 2056,
+        "load_time": 9592.92500000447,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CATANIA",
+        "status": 200,
+        "duration": 722,
+        "load_time": 5399.764999980107,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FIRENZE",
+        "status": 200,
+        "duration": 1676,
+        "load_time": 8332.924999995157,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FRASCATI",
+        "status": 200,
+        "duration": 725,
+        "load_time": 5435.174999991432,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/GENOVA",
+        "status": 200,
+        "duration": 766,
+        "load_time": 5502.905000001192,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MILANO-BICOCCA",
+        "status": 200,
+        "duration": 2341,
+        "load_time": 10679.359999950975,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NAPOLI",
+        "status": 200,
+        "duration": 968,
+        "load_time": 6398.069999995641,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PADOVA",
+        "status": 200,
+        "duration": 3192,
+        "load_time": 12748.410000000149,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PAVIA",
+        "status": 200,
+        "duration": 927,
+        "load_time": 6308.25499992352,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PERUGIA",
+        "status": 200,
+        "duration": 2039,
+        "load_time": 9639.220000011846,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PISA",
+        "status": 200,
+        "duration": 2900,
+        "load_time": 11543.174999998882,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ROMA-1",
+        "status": 200,
+        "duration": 2144,
+        "load_time": 9525.719999917783,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TORINO",
+        "status": 200,
+        "duration": 2955,
+        "load_time": 13371.13500002306,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TRIESTE",
+        "status": 200,
+        "duration": 686,
+        "load_time": 5279.209999949671,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/JORDAN-PSUT",
+        "status": 200,
+        "duration": 601,
+        "load_time": 5090.1499999454245,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHONNAM",
+        "status": 200,
+        "duration": 645,
+        "load_time": 5264.794999966398,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KISTI",
+        "status": 200,
+        "duration": 646,
+        "load_time": 5287.810000008903,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KOREA-UNIV",
+        "status": 200,
+        "duration": 885,
+        "load_time": 6134.589999914169,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KYUNGPOOK",
+        "status": 200,
+        "duration": 1312,
+        "load_time": 7273.464999976568,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-HANYANG",
+        "status": 200,
+        "duration": 721,
+        "load_time": 5129.399999976158,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-KYUNGHEE",
+        "status": 200,
+        "duration": 674,
+        "load_time": 5174.1750000510365,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-SEJONG",
+        "status": 200,
+        "duration": 646,
+        "load_time": 5494.139999966137,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-SNU",
+        "status": 200,
+        "duration": 1008,
+        "load_time": 6415.7150000100955,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-UNIV",
+        "status": 200,
+        "duration": 1140,
+        "load_time": 6682.080000056885,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SKK-UNIV",
+        "status": 200,
+        "duration": 699,
+        "load_time": 5262.8249999834225,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/YONSEI-UNIV",
+        "status": 200,
+        "duration": 665,
+        "load_time": 5020.250000059605,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KUWAIT-AUM",
+        "status": 200,
+        "duration": 568,
+        "load_time": 5188.345000031404,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KUWAIT-UNIV",
+        "status": 200,
+        "duration": 570,
+        "load_time": 4842.569999978878,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LATVIA-UNIV",
+        "status": 200,
+        "duration": 653,
+        "load_time": 5136.21000002604,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RIGA-RTU",
+        "status": 200,
+        "duration": 829,
+        "load_time": 5796.819999930449,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-AUB",
+        "status": 200,
+        "duration": 685,
+        "load_time": 5238.675000029616,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-LAU",
+        "status": 200,
+        "duration": 635,
+        "load_time": 4980.439999955706,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-LU",
+        "status": 200,
+        "duration": 769,
+        "load_time": 5572.000000043772,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-USJ",
+        "status": 200,
+        "duration": 632,
+        "load_time": 5035.990000003949,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VILNIUS-ACADEMY",
+        "status": 200,
+        "duration": 559,
+        "load_time": 4944.825000013225,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VILNIUS-UNIV",
+        "status": 200,
+        "duration": 1762,
+        "load_time": 8016.940000001341,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MALAYA",
+        "status": 200,
+        "duration": 944,
+        "load_time": 6157.285000081174,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-CINVESTAV",
+        "status": 200,
+        "duration": 763,
+        "load_time": 5457.055000006221,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-IBEROAM",
+        "status": 200,
+        "duration": 898,
+        "load_time": 5954.450000077486,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-PUEBLA",
+        "status": 200,
+        "duration": 711,
+        "load_time": 5109.844999969937,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-UASLP",
+        "status": 200,
+        "duration": 122,
+        "load_time": 1774.5049999793991,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SONORA-UNISON",
+        "status": 200,
+        "duration": 856,
+        "load_time": 5889.25999996718,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PODGORICA-UCG",
+        "status": 200,
+        "duration": 652,
+        "load_time": 5090.0649999966845,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/EINDHOVEN",
+        "status": 200,
+        "duration": 1073,
+        "load_time": 6241.649999981746,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AUCKLAND",
+        "status": 200,
+        "duration": 539,
+        "load_time": 4856.614999938756,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CANTERBURY",
+        "status": 200,
+        "duration": 725,
+        "load_time": 5421.25000001397,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AGDER-UNIV",
+        "status": 200,
+        "duration": 559,
+        "load_time": 5060.689999954775,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MUSCAT-QABOOS",
+        "status": 200,
+        "duration": 670,
+        "load_time": 5362.514999927953,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ISLAMABAD-NCP",
+        "status": 200,
+        "duration": 2837,
+        "load_time": 11441.43999996595,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NUST",
+        "status": 200,
+        "duration": 860,
+        "load_time": 6010.924999951385,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KRAKOW-AGH",
+        "status": 200,
+        "duration": 584,
+        "load_time": 4796.154999989085,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KRAKOW-IET",
+        "status": 200,
+        "duration": 813,
+        "load_time": 5627.725000027567,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WARSAW-IEP",
+        "status": 200,
+        "duration": 922,
+        "load_time": 5978.370000026189,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WARSAW-INS",
+        "status": 200,
+        "duration": 765,
+        "load_time": 5657.660000026226,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WARSAW-ISE",
+        "status": 200,
+        "duration": 554,
+        "load_time": 5345.8199999295175,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LIP",
+        "status": 200,
+        "duration": 1173,
+        "load_time": 6939.394999993965,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DUBNA",
+        "status": 200,
+        "duration": 3816,
+        "load_time": 14661.109999986365,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEPHI",
+        "status": 200,
+        "duration": 978,
+        "load_time": 6274.964999989606,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-INR",
+        "status": 200,
+        "duration": 1147,
+        "load_time": 6827.289999928325,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-ITEP",
+        "status": 200,
+        "duration": 1413,
+        "load_time": 7424.29999995511,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-LEBEDEV",
+        "status": 200,
+        "duration": 749,
+        "load_time": 5257.22000002861,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-MIPT",
+        "status": 200,
+        "duration": 756,
+        "load_time": 5491.799999959767,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-MSU",
+        "status": 200,
+        "duration": 1786,
+        "load_time": 8867.169999983162,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-NIKIET",
+        "status": 200,
+        "duration": 855,
+        "load_time": 5719.920000061393,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MYASISHCHEV",
+        "status": 200,
+        "duration": 112,
+        "load_time": 1747.3799999570474,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NOVOSIBIRSK-NSU",
+        "status": 200,
+        "duration": 733,
+        "load_time": 5260.81999996677,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PROTVINO",
+        "status": 200,
+        "duration": 1579,
+        "load_time": 7966.530000092462,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ST-PETERSBURG",
+        "status": 200,
+        "duration": 1826,
+        "load_time": 8951.740000047721,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TOMSK-POLYTEC",
+        "status": 200,
+        "duration": 627,
+        "load_time": 5191.48999999743,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TOMSK-TSU",
+        "status": 200,
+        "duration": 682,
+        "load_time": 5261.054999893531,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/JAZAN-UNIV",
+        "status": 200,
+        "duration": 566,
+        "load_time": 5089.479999965988,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VINCA",
+        "status": 200,
+        "duration": 883,
+        "load_time": 6101.370000047609,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MADRID-CIEMAT",
+        "status": 200,
+        "duration": 2189,
+        "load_time": 9714.394999900833,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MADRID-UNIV",
+        "status": 200,
+        "duration": 608,
+        "load_time": 4840.244999970309,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/OVIEDO",
+        "status": 200,
+        "duration": 809,
+        "load_time": 6731.849999981932,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SANTANDER",
+        "status": 200,
+        "duration": 2037,
+        "load_time": 9240.809999988414,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEVILLA-GIE",
+        "status": 200,
+        "duration": 713,
+        "load_time": 5542.73500002455,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/Zaragoza-ITA",
+        "status": 200,
+        "duration": 593,
+        "load_time": 4903.530000010505,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/COLOMBO",
+        "status": 200,
+        "duration": 610,
+        "load_time": 5277.53500000108,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MATARA",
+        "status": 200,
+        "duration": 619,
+        "load_time": 5215.849999920465,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CERN",
+        "status": 0,
+        "duration": 0,
+        "load_time": 2109707.150000031,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PSI",
+        "status": 200,
+        "duration": 895,
+        "load_time": 6756.820000009611,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ZURICH-ETH",
+        "status": 200,
+        "duration": 3277,
+        "load_time": 13037.024999968708,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ZURICH-UNIV",
+        "status": 200,
+        "duration": 1700,
+        "load_time": 8887.080000014976,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHUNGLI-NCU",
+        "status": 200,
+        "duration": 1629,
+        "load_time": 8463.540000026114,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TAIPEI-NTU",
+        "status": 200,
+        "duration": 1877,
+        "load_time": 9100.944999954663,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BANGKOK",
+        "status": 200,
+        "duration": 983,
+        "load_time": 6229.355000075884,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ADANA-CUKUROVA",
+        "status": 200,
+        "duration": 1840,
+        "load_time": 8843.419999931939,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ANKARA-METU",
+        "status": 200,
+        "duration": 1028,
+        "load_time": 6637.095000012778,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BOGAZICI",
+        "status": 200,
+        "duration": 1030,
+        "load_time": 7010.780000011437,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ISTANBUL-TECH",
+        "status": 200,
+        "duration": 842,
+        "load_time": 6402.879999950528,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ISTANBUL-UNIV",
+        "status": 200,
+        "duration": 831,
+        "load_time": 6208.464999916032,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-ISMA",
+        "status": 200,
+        "duration": 590,
+        "load_time": 5352.42000001017,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-KIPT",
+        "status": 200,
+        "duration": 681,
+        "load_time": 5578.905000002123,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-KSU",
+        "status": 200,
+        "duration": 112,
+        "load_time": 1888.219999964349,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BATH-UNIV",
+        "status": 200,
+        "duration": 591,
+        "load_time": 5512.594999978319,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BRISTOL",
+        "status": 200,
+        "duration": 1556,
+        "load_time": 8106.524999951944,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BRUNEL",
+        "status": 200,
+        "duration": 813,
+        "load_time": 5822.384999948554,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CCCS-UWE",
+        "status": 200,
+        "duration": 555,
+        "load_time": 4277.499999967404,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CRANFIELD-UNIV",
+        "status": 200,
+        "duration": 560,
+        "load_time": 5367.534999968484,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DUNDEE-UNIV",
+        "status": 200,
+        "duration": 624,
+        "load_time": 5231.529999990016,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LONDON-IC",
+        "status": 200,
+        "duration": 2674,
+        "load_time": 11566.340000019409,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RAL",
+        "status": 200,
+        "duration": 1741,
+        "load_time": 8970.26500001084,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ALABAMA-UNIV",
+        "status": 200,
+        "duration": 826,
+        "load_time": 6400.1749999588355,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BAYLOR-UNIV",
+        "status": 200,
+        "duration": 920,
+        "load_time": 6583.759999950416,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BOSTON-UNIV",
+        "status": 200,
+        "duration": 1844,
+        "load_time": 9148.664999986067,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BROWN-UNIV",
+        "status": 200,
+        "duration": 2233,
+        "load_time": 10422.930000000633,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CALTECH",
+        "status": 200,
+        "duration": 1645,
+        "load_time": 8592.145000002347,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CARNEGIE-MELLON",
+        "status": 200,
+        "duration": 927,
+        "load_time": 6790.955000091344,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHICAGO",
+        "status": 200,
+        "duration": 1828,
+        "load_time": 9020.159999956377,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/COLORADO",
+        "status": 0,
+        "duration": 0,
+        "load_time": 2492600.545000052,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CORNELL",
+        "status": 200,
+        "duration": 2112,
+        "load_time": 10855.11000000406,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DEKALB-NIU",
+        "status": 200,
+        "duration": 686,
+        "load_time": 5999.400000087917,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FAIRFIELD",
+        "status": 200,
+        "duration": 567,
+        "load_time": 5193.654999951832,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FERMILAB",
+        "status": 200,
+        "duration": 8385,
+        "load_time": 28836.2850000849,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-FIU",
+        "status": 200,
+        "duration": 567,
+        "load_time": 4932.124999933876,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-STATE",
+        "status": 200,
+        "duration": 1228,
+        "load_time": 8020.475000026636,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-TECH",
+        "status": 200,
+        "duration": 854,
+        "load_time": 6590.895000030287,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-UNIV",
+        "status": 200,
+        "duration": 1771,
+        "load_time": 9220.005000010133,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IOWA",
+        "status": 200,
+        "duration": 2069,
+        "load_time": 11027.99000008963,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/JOHNS-HOPKINS",
+        "status": 200,
+        "duration": 1318,
+        "load_time": 7950.274999951944,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-STATE",
+        "status": 200,
+        "duration": 842,
+        "load_time": 6445.040000020526,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-UNIV",
+        "status": 200,
+        "duration": 2059,
+        "load_time": 10082.470000023022,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LIVERMORE",
+        "status": 200,
+        "duration": 579,
+        "load_time": 5491.830000071786,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MARYLAND",
+        "status": 200,
+        "duration": 1875,
+        "load_time": 9310.714999912307,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MINNESOTA",
+        "status": 200,
+        "duration": 1595,
+        "load_time": 8380.190000054426,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MISSISSIPPI",
+        "status": 200,
+        "duration": 670,
+        "load_time": 6062.624999904074,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MIT",
+        "status": 0,
+        "duration": 0,
+        "load_time": 2764172.0250000944,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NEBRASKA",
+        "status": 200,
+        "duration": 1138,
+        "load_time": 7901.430000085384,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NEWYORK-SIMONS",
+        "status": 200,
+        "duration": 531,
+        "load_time": 5335.619999910705,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NORTHEASTERN",
+        "status": 200,
+        "duration": 1991,
+        "load_time": 9925.080000073649,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NORTHWESTERN",
+        "status": 200,
+        "duration": 887,
+        "load_time": 6613.935000030324,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NOTRE_DAME",
+        "status": 200,
+        "duration": 2399,
+        "load_time": 11336.934999912046,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/OHIO-STATE",
+        "status": 200,
+        "duration": 747,
+        "load_time": 6249.659999972209,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PRINCETON",
+        "status": 200,
+        "duration": 1878,
+        "load_time": 9893.414999940433,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PUERTO_RICO",
+        "status": 200,
+        "duration": 931,
+        "load_time": 7125.185000011697,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PURDUE",
+        "status": 200,
+        "duration": 1841,
+        "load_time": 9595.500000054017,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PURDUE-CALUMET",
+        "status": 200,
+        "duration": 633,
+        "load_time": 5975.050000008196,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RICE",
+        "status": 200,
+        "duration": 1862,
+        "load_time": 9870.19499996677,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ROCHESTER",
+        "status": 200,
+        "duration": 904,
+        "load_time": 7166.75000009127,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ROCKEFELLER",
+        "status": 200,
+        "duration": 607,
+        "load_time": 5442.10500002373,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RUTGERS",
+        "status": 200,
+        "duration": 3063,
+        "load_time": 13141.969999996945,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ST-PAUL-BU",
+        "status": 200,
+        "duration": 781,
+        "load_time": 6259.334999951534,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SUNY-BUFFALO",
+        "status": 200,
+        "duration": 831,
+        "load_time": 6754.479999886826,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TENNESSEE",
+        "status": 200,
+        "duration": 870,
+        "load_time": 6665.985000086948,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TAMU",
+        "status": 200,
+        "duration": 1456,
+        "load_time": 8489.219999988563,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TECH",
+        "status": 200,
+        "duration": 918,
+        "load_time": 7721.595000009984,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCDAVIS",
+        "status": 200,
+        "duration": 1626,
+        "load_time": 9162.170000025071,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCLA",
+        "status": 200,
+        "duration": 1520,
+        "load_time": 8716.249999939464,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCRIVERSIDE",
+        "status": 200,
+        "duration": 1107,
+        "load_time": 7312.654999899678,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCSB",
+        "status": 200,
+        "duration": 2093,
+        "load_time": 10585.485000046901,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCSD",
+        "status": 200,
+        "duration": 2141,
+        "load_time": 10381.440000026487,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VANDERBILT",
+        "status": 200,
+        "duration": 1951,
+        "load_time": 10187.580000027083,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VIRGINIA-UNIV",
+        "status": 200,
+        "duration": 1105,
+        "load_time": 7646.294999984093,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WASHINGTON-CUA",
+        "status": 200,
+        "duration": 685,
+        "load_time": 6035.110000055283,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WAYNE",
+        "status": 200,
+        "duration": 583,
+        "load_time": 5726.899999892339,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WISCONSIN",
+        "status": 200,
+        "duration": 2359,
+        "load_time": 11046.860000002198,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WISCONSIN-CHTC",
+        "status": 200,
+        "duration": 112,
+        "load_time": 1947.2700000042096,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TASHKENT",
+        "status": 200,
+        "duration": 625,
+        "load_time": 5685.440000030212,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/JORDAN-UNIV",
+        "status": 200,
+        "duration": 679,
+        "load_time": 6086.639999994077,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showMyCountry",
+        "status": 200,
+        "duration": 112,
+        "load_time": 1621.984999976121,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountries",
+        "status": 200,
+        "duration": 59,
+        "load_time": 1366.3899999810383,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/ARMENIA",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1297.8100000182167,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/AUSTRIA",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1255.1349999848753,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BAHRAIN",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1296.1200000718236,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BELARUS",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1270.6600000383332,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BELGIUM",
+        "status": 200,
+        "duration": 103,
+        "load_time": 1291.9649999821559,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BRAZIL",
+        "status": 200,
+        "duration": 64,
+        "load_time": 1453.029999975115,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BULGARIA",
+        "status": 200,
+        "duration": 64,
+        "load_time": 1323.8699999637902,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/CHINA",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1312.7849999582395,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/COLOMBIA",
+        "status": 200,
+        "duration": 60,
+        "load_time": 1270.4399999929592,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/CROATIA",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1296.9499999890104,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/CYPRUS",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1297.359999967739,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/CZECH%20REPUBLIC",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1285.0199999520555,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/ECUADOR",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1292.6500000758097,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/EGYPT",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1284.1849999967963,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/ESTONIA",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1282.6449999120086,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/FINLAND",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1301.714999950491,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/FRANCE",
+        "status": 200,
+        "duration": 64,
+        "load_time": 1325.1800000434741,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/GEORGIA",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1297.9099999647588,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/GERMANY",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1379.6200000215322,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/GREECE",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1313.815000001341,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/HUNGARY",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1339.14499997627,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/INDIA",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1305.5699999677017,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/IRAN",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1358.8999999919906,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/IRELAND",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1291.0649999976158,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/ITALY",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1332.4449999490753,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/JORDAN",
+        "status": 200,
+        "duration": 59,
+        "load_time": 1786.3999999826774,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/KOREA",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1393.9549999777228,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/KUWAIT",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1383.7950000306591,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/LATVIA",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1390.7749999780208,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/LEBANON",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1352.8599999845028,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/LITHUANIA",
+        "status": 200,
+        "duration": 90,
+        "load_time": 1387.9650000017136,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/MALAYSIA",
+        "status": 200,
+        "duration": 60,
+        "load_time": 1365.919999894686,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/MEXICO",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1382.645000005141,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/MONTENEGRO",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1341.260000015609,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/NETHERLANDS",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1346.9849999528378,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/NEW%20ZEALAND",
+        "status": 200,
+        "duration": 60,
+        "load_time": 1365.8399999840185,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/NORWAY",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1377.779999980703,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/OMAN",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1335.2249999297783,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/PAKISTAN",
+        "status": 200,
+        "duration": 61,
+        "load_time": 3636.0449999338016,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/POLAND",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1428.8800000213087,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/PORTUGAL",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1380.1250000251457,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/RUSSIA",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1407.039999961853,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SAUDI%20ARABIA",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1393.0349999573082,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SERBIA",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1353.859999915585,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SPAIN",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1365.739999921061,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SRI%20LANKA",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1369.319999939762,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SWITZERLAND",
+        "status": 200,
+        "duration": 64,
+        "load_time": 1418.7499999534339,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/TAIWAN",
+        "status": 200,
+        "duration": 63,
+        "load_time": 1387.7599999541417,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/THAILAND",
+        "status": 200,
+        "duration": 62,
+        "load_time": 1367.3799999523908,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/TURKEY",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1381.3699999591336,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/UKRAINE",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1361.7700000759214,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/UNITED%20KINGDOM",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1421.4550000615418,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/USA",
+        "status": 200,
+        "duration": 66,
+        "load_time": 1439.6300000371411,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/UZBEKISTAN",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1373.7399999517947,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/ZZ",
+        "status": 200,
+        "duration": 61,
+        "load_time": 1353.1750000547618,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

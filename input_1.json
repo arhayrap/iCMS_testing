@@ -1,4 +1,4 @@
 {
-    "input_string":"['cypress/integration/tools_test_spec.js']",
-    "mode": "lite"
+    "input_string":"['cypress/integration/epr_test_spec.js']",
+    "mode": "both"
 }
