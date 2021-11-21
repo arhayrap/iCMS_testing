@@ -6,54 +6,33 @@ describe("Checking epr", () => {
     var links_path = "cypress/fixtures/epr_links.json";
     var base = "https://icms.cern.ch/epr/";
     var out_path = "data/epr_out";
-    var out_path_lite = "data/epr_out_surf";
     var page_fail_limit = 10;
     var env = Cypress.env()["flags"];
     var login    = env["login"];
     var password = env["password"];
-    var mode     = env["mode"];
     var isadmin  = env["isAdmin"] == "true";
-    if (mode == "lite") {
-        var check_string = "Logs in and visits the page in 'lite' mode";
-        var site_state = [{
-            date: "",
-            username: "",
-	    isAdmin: isadmin,
-            results: [],
-            cons_failed_pages: 0,
-            app_status: ""
-        }];
-        for (var j = 0; j < n; j++) {
-            site_state[0].results.push({
-                url: "",
-                warnings: [],
-                errors: [],
-                state: "OK"
-            });
-        }
-    } else {
-        var check_string = "Logs in and visits the page in 'entire' mode";
-        var site_state = [{
-            date: "",
-            username: "",
-	    isAdmin: isadmin,
-            results: [],
-            cons_failed_pages: 0,
-            app_status: ""
-        }];
-        for (var j = 0; j < n; j++) {
-            site_state[0].results.push({
-                url: "",
-                status: 0,
-                duration: 0,
-                load_time: 0,
-                warnings: [],
-                errors: [],
-                state: "OK"
-            });
-        }
+
+    var check_string = "Logs in and tests the 'epr' pages.";
+    var site_state = [{
+        date: "",
+        username: "",
+        isAdmin: isadmin,
+        results: [],
+        cons_failed_pages: 0,
+        app_status: ""
+    }];
+    for (var j = 0; j < n; j++) {
+        site_state[0].results.push({
+            url: "",
+            status: 0,
+            duration: 0,
+            load_time: 0,
+            warnings: [],
+            errors: [],
+            state: "OK"
+        });
     }
-    
+
     Cypress.Cookies.defaults({
 	preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
     })
@@ -62,18 +41,12 @@ describe("Checking epr", () => {
 	cy.visit(base);
 	cy.login(login, password);
     })
-/*
-    beforeEach(() => {
-	//console.log("BEFORE EACH!!!")
-	//Cypress.Cookies.debug(true);
-	cy.getCookies();
-    })
-*/
+
     for (let k = 0; k < n; k++) {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            // cy.listen_fails(site_state, k, base, links_path, out_path);
+            cy.listen_fails(site_state, k, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/**',
@@ -100,32 +73,18 @@ describe("Checking epr", () => {
                 site_state[0].results[k].url = link;
                 cy.visit(link);
                 site_state[0].username = login;
-                // cy.login(login, password);
                 cy.wait_for_requests("@posts");
-                if (mode == "lite") {
-                    cy.select_year("@posts", site_state[0].results[k], y);
-                    cy.get('body', { 
-                        timeout: 60000
-                    }).should('have.css', 'cursor').and('match', /default/);
-                    cy.get_stat_dur_lite(link, site_state, k, page_fail_limit);
-                } else {
-                    site_state[0].results[k].load_time = performance.now();
-                    cy.select_year("@posts", site_state[0].results[k], y);
-		    cy.get('body', { 
-                        timeout: 60000
-                    }).should('have.css', 'cursor').and('match', /default/);
-                    cy.get_load_time(site_state[0].results[k]);
-                    cy.get_stat_dur(link, site_state, k, page_fail_limit);
-                }
+                site_state[0].results[k].load_time = performance.now();
+                cy.select_year("@posts", site_state[0].results[k], y);
+		cy.get('body', { 
+                    timeout: 60000
+                }).should('have.css', 'cursor').and('match', /default/);
+                cy.get_load_time(site_state[0].results[k]);
+                cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 cy.check_tables_epr(site_state[0].results[k]);
             });
-            if (mode == "lite") {
-                cy.writeFile(out_path_lite+"_"+String(years[y])+"_.json", site_state);
-                cy.save_data(site_state[0].results[k], base, mode, years[y]);
-            } else {
-                cy.writeFile(out_path+"_"+String(years[y])+"_.json", site_state);
-                cy.save_data(site_state[0].results[k], base, "", years[y]);
-            }
+            cy.writeFile(out_path+"_"+String(years[y])+"_.json", site_state);
+            cy.save_data(site_state[0].results[k], base, "", years[y]);
             console.log(site_state);
         });
     }

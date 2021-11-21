@@ -1,6 +1,6 @@
 [
   {
-    "date": "11-07-2021, 10:05",
+    "date": "11-15-2021, 11:29",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
@@ -13,6 +13,7 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "warnings": [
+          "Table warning: There is an empty table.",
           "Reference back to executive boards was not done correctly (wrong url in the result)."
         ],
         "errors": [],
@@ -26,13 +27,17 @@
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
-        "warnings": [],
+        "warnings": [
+          "There is someting wrong in menu`s 'Authorship statuses' 'false' table."
+        ],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/voting",
-        "warnings": [],
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
@@ -44,7 +49,9 @@
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
-        "warnings": [],
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
@@ -60,7 +67,9 @@
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
-        "warnings": [],
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
@@ -120,17 +129,13 @@
       },
       {
         "url": "https://icms.cern.ch/tools/institute/pending-authors",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/institute/member-authors",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
@@ -159,9 +164,7 @@
         "warnings": [
           "Table warning: There is an empty table."
         ],
-        "errors": [
-          "GET request error : 403  403 (Forbidden)"
-        ],
+        "errors": [],
         "state": "OK"
       },
       {
@@ -178,7 +181,9 @@
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
-        "warnings": [],
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
@@ -210,9 +215,7 @@
       },
       {
         "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
-        "warnings": [
-          "Table warning: There is an empty table."
-        ],
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
@@ -237,6 +240,15 @@
       {
         "url": "https://icms.cern.ch/tools/publications/notes/pending",
         "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/user/profile",
+        "warnings": [
+          "The reference to the profile was not done correctly.",
+          "The logo reference was not done correctly."
+        ],
         "errors": [],
         "state": "OK"
       }

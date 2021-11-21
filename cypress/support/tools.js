@@ -49,7 +49,6 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
 
 Cypress.Commands.add("check_units", (site_state, k, data) => {
     // Checking end date
-    // cy.wait(2000);
     cy.get("table thead th").eq(8).click(); // sort by increasement
     cy.Open_All();
     cy.get("table tbody tr").each((tr, index0, trs) => {
@@ -231,7 +230,6 @@ Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_logo_reference", (site_state, k, base) => {
-    site_state = site_state.results[k];
     cy.get("header .d-flex .v-toolbar__title").click();
     if (cy.url() != base) {
         site_state.results[k].warnings.push("The logo reference was not done correctly.");
@@ -410,27 +408,35 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             waitForAnimations: true
         });
         cy.get(".v-card .v-toolbar__title").then((title) => {
-            var t_date = title.get(0).innerText.split(" CMS Emeritus Nominations")[0];
+            let t_date = title.get(0).innerText.split(" CMS Emeritus Nominations")[0];
+	    console.log("EMERITUS NOMINATION YEAR: ", t_date)
             if (title.get(0).innerText.split("Institute Profile of ")[1] != institute) {
                 site_state.results[k].warnings.push("Reference to a wrong institute profile.");
             }
-        });
+	})
         cy.wait(1000);
         cy.go("back");
-        //switches
+        cy.wait(1000);
+        
+        // Admin
         if (site_state.results[k].isAdmin) {
-            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
-            cy.get(".v-card .v-toolbar__title").then((title) => {
-                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
-                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-                }
-            });
-            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click().click();
-            cy.get(".v-card .v-toolbar__title").then((title) => {
-                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
-                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-                }
-            });
+	    cy.get(".v-card .v-toolbar__title").then((title) => {
+		let t_date = Number(title.get(0).innerText.split(" CMS Emeritus Nominations")[0]);
+        	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click();
+                cy.get(".v-card .v-toolbar__title").then((title) => {
+		    console.log(title.get(0).innerText.split(" CMS Emeritus Nominations")[0], (t_date-1))
+                    if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
+                        site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                    }
+                });
+                cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(2).click().click();
+                cy.get(".v-card .v-toolbar__title").then((title) => {
+	            console.log(title.get(0).innerText.split(" CMS Emeritus Nominations")[0], (t_date+1))
+                    if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
+                        site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                    }
+                });
+	    });
             // Additional actions
             cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(3).click();
             cy.get("body").then((body) => {
@@ -445,19 +451,23 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
             cy.get(".v-card .v-card__actions button").eq(2).click();
             cy.wait_for_requests("@em_nom");
         } else {
-            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
-            cy.get(".v-card .v-toolbar__title").then((title) => {
-		console.log(title.get(0).innerText.split(" CMS Emeritus Nominations")[0]);
-                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
-                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-                }
-            });
-            cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click().click();
-            cy.get(".v-card .v-toolbar__title").then((title) => {
-                if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
-                    site_state.results[k].warnings.push("Reference to a page with a wrong date.");
-                }
-            });
+	    cy.get(".v-card .v-toolbar__title").then((title) => {
+		let t_date = Number(title.get(0).innerText.split(" CMS Emeritus Nominations")[0]);
+        	cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
+                cy.get(".v-card .v-toolbar__title").then((title) => {
+		    console.log(">>>>>>>>>>>> ", title.get(0).innerText.split(" CMS Emeritus Nominations")[0], (t_date-1))
+                    if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date-1)) {
+                        site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                    }
+                });
+                cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(1).click().click();
+                cy.get(".v-card .v-toolbar__title").then((title) => {
+	            console.log(">>>>>>>>>>>> ", title.get(0).innerText.split(" CMS Emeritus Nominations")[0], (t_date+1))
+                    if (title.get(0).innerText.split(" CMS Emeritus Nominations")[0] != (t_date+1)) {
+                        site_state.results[k].warnings.push("Reference to a page with a wrong date.");
+                    }
+                });
+	    });
 	}
         cy.get(".v-card .v-toolbar__content .v-btn__content .v-icon").eq(0).click();
         cy.get(".v-card__title .v-input__slot").click({
