@@ -16,8 +16,12 @@ def Run_process(name, process_id, n_jobs, obj):
     flags["process_id"] = process_id
     flags["process_jobs"] = n_jobs
     print(process_id)
-    os.system("./node_modules/.bin/cypress run --env flags='{}' --spec {}".format(str(flags).replace("'", '"'), path_array))
-    # os.system("./node_modules/.bin/cypress open --env flags='{}'".format(str(flags).replace("'", '"'), path_array))
+    os.system("./node_modules/.bin/cypress run --record --key vqffbq --ci-build-id gitlab --parallel")
+    # os.system("./node_modules/.bin/cypress open --record --key=abc123 --ci-build-id --parallel")
+
+
+    # os.system("./node_modules/.bin/cypress run --record --parallel --key ci-key --ci-build-id --env flags='{}' --spec {}".format(str(flags).replace("'", '"'), path_array))
+    # os.system("./node_modules/.bin/cypress open --record --parallel --key ci-key --ci-build-id --env flags='{}'".format(str(flags).replace("'", '"'), path_array))
 
 LOG_LEVEL = "DEBUG"
 
@@ -94,7 +98,7 @@ if __name__ == '__main__':
         path_array = 'cypress/integration'
     # processes_names = json.loads(open("./cypress/fixtures/tools_links.json", "r").read())[0]["links"]
     # print(processes_names)
-    n_jobs = 2
+    n_jobs = 1
     processes_names = ["process_"+str(i) for i in range(n_jobs)]
     #len(processes_names) # Number of jobs to run in parallel.
     # Run_process(processes_names[0], 0, 36, obj = {"login":username, "password":password, "isAdmin":isAdmin})

@@ -1,5 +1,6 @@
 {
-    "video": false,
-    "screenshotOnRunFailure": false,
-    "pluginsFile": "cypress/plugins/plugins.js"
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "pluginsFile": "cypress/plugins/plugins.js",
+  "projectId": "vqffbq"
 }

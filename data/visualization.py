@@ -11,8 +11,16 @@ import numpy as np
 import pandas as pd
 import sys
 
-data = pd.read_json(sys.argv[1])
-dataf = pd.DataFrame(data.iloc[0]["results"])
+name = sys.argv[1::]
+number_of_jobs = 2
+all_data = []
+for i in name:
+    data = pd.read_json(i)
+    all_data.append(pd.DataFrame(data.iloc[0]["results"]))
+data_c = pd.concat(all_data)
+
+dataf = pd.DataFrame(data_c)
+
 dataf["warnings"] = dataf["warnings"].apply(lambda a: "\n".join(a) if a != [] else "")
 dataf["errors"] = dataf["errors"].apply(lambda a: "\n".join(a) if a != [] else "")
 

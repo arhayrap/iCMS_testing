@@ -1,14 +1,14 @@
 [
   {
-    "date": "02-06-2022, 5:21",
+    "date": "02-06-2022, 5:34",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 1278,
-        "load_time": 3710.660000000644,
+        "duration": 263,
+        "load_time": 2650.2399999999398,
         "warnings": [
           "The reference to the institute was not done correctly."
         ],
@@ -18,9 +18,10 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "status": 200,
-        "duration": 573,
-        "load_time": 4417.324999999437,
+        "duration": 621,
+        "load_time": 3944.4499999999607,
         "warnings": [
+          "Table warning: There is an empty table.",
           "Reference back to executive boards was not done correctly (wrong url in the result)."
         ],
         "errors": [],
@@ -29,8 +30,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 445,
-        "load_time": 4534.614999999576,
+        "duration": 513,
+        "load_time": 4547.520000000077,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -38,8 +39,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 713,
-        "load_time": 6959.834999999657,
+        "duration": 813,
+        "load_time": 7430.005000000165,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -47,8 +48,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/voting",
         "status": 200,
-        "duration": 597,
-        "load_time": 4905.279999999955,
+        "duration": 595,
+        "load_time": 6565.094999999914,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -56,8 +57,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 468,
-        "load_time": 3541.805000000735,
+        "duration": 547,
+        "load_time": 4653.620000000054,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -67,8 +68,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "status": 200,
-        "duration": 505,
-        "load_time": 3422.554999999207,
+        "duration": 528,
+        "load_time": 4203.949999999168,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -76,8 +77,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
         "status": 200,
-        "duration": 438,
-        "load_time": 6015.1850000002305,
+        "duration": 573,
+        "load_time": 8192.160000000527,
         "warnings": [
           "Table warning: There is an empty table after toggling."
         ],
@@ -87,8 +88,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
         "status": 200,
-        "duration": 714,
-        "load_time": 4684.835000000021,
+        "duration": 816,
+        "load_time": 4886.300000000134,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -96,8 +97,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "status": 200,
-        "duration": 723,
-        "load_time": 6110.654999999504,
+        "duration": 753,
+        "load_time": 6064.829999999376,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -105,8 +106,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "status": 200,
-        "duration": 720,
-        "load_time": 5057.705000000133,
+        "duration": 715,
+        "load_time": 4705.295000000624,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -114,8 +115,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/tenures",
         "status": 200,
-        "duration": 432,
-        "load_time": 3364.6200000002864,
+        "duration": 446,
+        "load_time": 3313.4899999995832,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -123,8 +124,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/communications",
         "status": 200,
-        "duration": 427,
-        "load_time": 4723.0149999996065,
+        "duration": 436,
+        "load_time": 4705.050000000512,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -132,8 +133,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
         "status": 200,
-        "duration": 442,
-        "load_time": 4898.909999999916,
+        "duration": 427,
+        "load_time": 4816.52500000014,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -141,8 +142,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
         "status": 200,
-        "duration": 471,
-        "load_time": 3716.440000000177,
+        "duration": 432,
+        "load_time": 3736.0900000003166,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -152,8 +153,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "status": 200,
-        "duration": 442,
-        "load_time": 4166.819999999483,
+        "duration": 430,
+        "load_time": 4927.52999999997,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -163,8 +164,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "status": 200,
-        "duration": 437,
-        "load_time": 4865.890000000072,
+        "duration": 507,
+        "load_time": 4959.199999999313,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -174,8 +175,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/pending-authors",
         "status": 200,
-        "duration": 471,
-        "load_time": 4719.584999999788,
+        "duration": 527,
+        "load_time": 4414.780000000028,
         "warnings": [
           "Table warning: There is an empty table."
         ],

@@ -1,19 +1,27 @@
 describe("Checking epr", () => {
-    var y = 6;
-    var years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
-    var n = 334;
-    var start = 0;
-    var links_path = "cypress/fixtures/epr_links.json";
-    var base = "https://icms.cern.ch/epr/";
-    var out_path = "data/epr_out";
-    var page_fail_limit = 10;
-    var env = Cypress.env()["flags"];
-    var login    = env["login"];
-    var password = env["password"];
-    var isadmin  = env["isAdmin"] == "true";
+    let y = 2;
+    let years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
+    // let n = 3; //334;
+    let links_path = "cypress/fixtures/epr_links.json";
+    let base = "https://icms.cern.ch/epr/";
+    let page_fail_limit = 10;
+    let env = Cypress.env()["flags"];
+    let login    = env["login"];
+    let password = env["password"];
+    let isadmin  = env["isAdmin"] == "true";
+    let total = 15;
+    let id = Number(env["process_id"]);
+    let n_jobs = Number(env["process_jobs"]);
+    // let n_pages = Number(env["process_pages"]);
+    /*|-----------------------------------------------------------------------------------------------------------|*/
+    let start = (id - 1) * Math.floor(total / n_jobs);
+    let end   = id       * Math.floor(total / n_jobs);
+    let n = end - start;
 
-    var check_string = "Logs in and tests the 'epr' pages.";
-    var site_state = [{
+    let out_path = "data/epr_out_" + String(id) + ".json";
+    let check_string = "Logs in and tests the 'epr' pages.";
+
+    let site_state = [{
         date: "",
         username: "",
         isAdmin: isadmin,
@@ -21,7 +29,7 @@ describe("Checking epr", () => {
         cons_failed_pages: 0,
         app_status: ""
     }];
-    for (var j = 0; j < n; j++) {
+    for (let j = 0; j < n; j++) {
         site_state[0].results.push({
             url: "",
             status: 0,

@@ -1,0 +1,74 @@
+[
+  {
+    "date": "02-06-2022, 10:33",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showMyInstPledges",
+        "status": 200,
+        "duration": 1136,
+        "load_time": 6372.624999999971,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/show",
+        "status": 0,
+        "duration": 0,
+        "load_time": 16618.039999997563,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out retrying after 40000ms: `cy.wait()` timed out waiting `40000ms` for the 1st response to the route: `posts`. No response ever occurred.\n\nhttps://on.cypress.io/wait"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/173",
+        "status": 0,
+        "duration": 0,
+        "load_time": 59535.20999999819,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/180",
+        "status": 200,
+        "duration": 255,
+        "load_time": 28508.969999998953,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/176",
+        "status": 0,
+        "duration": 0,
+        "load_time": 93129.7799999993,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/174",
+        "status": 200,
+        "duration": 256,
+        "load_time": 14013.86000000275,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

@@ -221,7 +221,7 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
-    cy.get("div.v-card .container").find(".row div.col-9", {timeout:60000}).eq(0).then(($elem) => {
+    cy.get("div.v-card .container").find(".row", {timeout:60000}).eq(0).then(($elem) => {
         console.log($elem.get(0).innerText == data);
         if ($elem.get(0).innerText != data) {
             site_state.results[k].warnings.push("The reference to the institute was not done correctly.");
@@ -278,20 +278,23 @@ Cypress.Commands.add("check_people", (site_state, k) => {
         	if (index0 == 0){
                 cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
                     multiple: true
-                }).wait(9000);
+                }).wait(10000);
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").then((items1) => {
-		    let element = Math.round((items1.length - 1) * Math.random());
-		    if (index0 == 0) { element = 8; }
+		    //let element = Math.round((items1.length - 1) * Math.random());
+		    // if (index0 == 0) { element = 8; }
+		    let element = 0;
+		    if (index0 == 0) { element = 0; }
+		    if (index0 == 1) { element = 0; }
+		    if (index0 == 2) { element = 0; }
 		    let item1 = items1.get(element);
         	    cy.get("@outline").eq(element).click({force: true}).wait(5000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
-				// console.log(tr.get(0).children[key[index0]].innerText, " <====> ", item1.innerText);
                                 if (!stop) {
                                     site_state.results[k].warnings.push("There is someting wrong in menu`s '" + menu_item + "' '" + item1.innerText + "' table.");
                                     stop = true;
@@ -335,7 +338,8 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(0).as("mode").click();
     cy.get("div[role='listbox']").children().eq(0).as("lb").children().then((children) => {
-        var i = Math.floor(Math.random() * children.length);
+        // var i = Math.floor(Math.random() * children.length);
+        var i = 0;
         cy.get("@lb").children().eq(i).click({
             force: true
         });
@@ -356,7 +360,8 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
     cy.get("div[role='listbox']").children().eq(1).as("lb").children().then((children) => {
-        i = Math.floor(Math.random() * children.length);
+        // i = Math.floor(Math.random() * children.length);
+        i = 0;
         cy.get("@lb").children().eq(i).click({
             force: true
         });
@@ -500,7 +505,8 @@ Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
 	    cy.get("div.v-card__title div.no-gutters input[type='text']").eq(0).click({force:true});
 	    cy.get("div[role='listbox'] div.v-list-item__content").then((options) => {
 		console.log("Number of options:",options.length);
-		let n = Math.round(options.length * Math.random());
+		// let n = Math.round(options.length * Math.random());
+		let n = 0;
 		options.get(n).click({force:true})
 		cy.get("@run").click().wait(4000);
 		cy.get("body table tbody tr[class='']").each((tr, index1, trs) => {
@@ -517,7 +523,8 @@ Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
 	} else if (index0 == 2){ // Activity type and date
 	    cy.get("div.v-card__title div.no-gutters input[type='text']").eq(1).click({force:true});
 	    cy.get("div:visible.v-list-item__content").then((options) => {
-		let n = Math.round(options.length * Math.random());
+		// let n = Math.round(options.length * Math.random());
+		let n = 0;
 		options.get(n).click();
 		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(0).type(data["start_date"], {force: true});
 		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(1).type(data["end_date"], {force: true});
@@ -658,7 +665,8 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
             title = label.get(0).innerText;
             cy.get("div.menuable__content__active div.v-list-item__content").then((options) => {
                 n_options = options.length;
-                cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options)).click().then((option) => {
+                // cy.get("div.menuable__content__active div.v-list-item__content").eq(Math.floor(Math.random() * n_options)).click().then((option) => {
+                cy.get("div.menuable__content__active div.v-list-item__content").eq(0).click().then((option) => {
                     selected = option.get(0).innerText;
                     if (index0 == 0) {
                         cy.get(".v-card__title .col-2 input:visible").eq(index0).type(selected);

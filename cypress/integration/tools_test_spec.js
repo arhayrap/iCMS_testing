@@ -3,24 +3,29 @@ import requestData from "../fixtures/tools_requests.json";
 
 describe("Checking tools", () => {
     /*|------------------------------------<|       Paths       |>------------------------------------------------|*/
-    var links_path      = "cypress/fixtures/tools_links.json";
-    var base            = "https://icms.cern.ch/tools/";
-    var profile         = "https://icms.cern.ch/tools/user/profile";
-    var out_path        = "data/tools_out.json";
-    var INPUT_DATA = configData;
+    let links_path      = "cypress/fixtures/tools_links.json";
+    let base            = "https://icms.cern.ch/tools/";
+    let profile         = "https://icms.cern.ch/tools/user/profile";
+    let INPUT_DATA = configData;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    var page_fail_limit = 5;
-    var page_fails = 0;
-    var start = 0;
-    var n = 36;
+    let page_fail_limit = 5;
+    let page_fails = 0;
+    let total = 36;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    var env = Cypress.env()["flags"]
-    var login = env["login"];
-    var password = env["password"];
-    var isadmin = env["isAdmin"] == "true";
+    let env = Cypress.env()["flags"]
+    let login = env["login"];
+    let password = env["password"];
+    let isadmin = env["isAdmin"] == "true";
+    let id = Number(env["process_id"]);
+    let n_jobs = Number(env["process_jobs"]);
+    // let n_pages = Number(env["process_pages"]);
     /*|-----------------------------------------------------------------------------------------------------------|*/
+    let start = (id - 1) * Math.floor(total / n_jobs);
+    let end   = id       * Math.floor(total / n_jobs);
+    let n = end - start;
+    let out_path = "data/tools_out_" + String(id) + ".json";
 
-    var site_state = [{
+    let site_state = [{
         date: "",
         username: "",
         isAdmin: isadmin,
@@ -28,7 +33,8 @@ describe("Checking tools", () => {
         cons_failed_pages: 0,
         app_status: "",
     }];
-    for (var j = 0; j < n; j++) {
+
+    for (let j = 0; j < n; j++) {
         site_state[0].results.push({
             url: "",
             status: 0,
@@ -50,10 +56,11 @@ describe("Checking tools", () => {
     })
 
     for (let k = 0; k < n; k++) {
+        console.log("REQUEST DATA LENGTH: /////////////********* ", requestData[0].results.length, k, (start + k), requestData[0].results[(start + k)]);
         it("Logs in and tests the 'tools' pages.", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            // cy.listen_fails(site_state, k, base, links_path, out_path);
+            //cy.listen_fails(site_state, k, base, links_path, out_path);
             // ############################################### Requests #####################################################
             cy.intercept({
                 url: "https://auth.cern.ch/auth/**",
@@ -72,7 +79,7 @@ describe("Checking tools", () => {
                 }
             }).as("gets");
             cy.route({
-                url: requestData[0].results[k+start].link,
+                url: requestData[0].results[(start + k)].link,
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error (main) : " + xhr.status + "  " + xhr.statusMessage);
@@ -117,13 +124,12 @@ describe("Checking tools", () => {
             }).as("deletes");
 
 	    // ##############################################################################################################
-	    console.log(requestData[0].results[k+start].url)
-	    console.log(requestData[0].results[k+start].link)
-	    console.log(requestData[0].results[k+start].dur)
-	    console.log(k)
+	    //console.log(requestData[0].results[k+start].url)
+	    //console.log(requestData[0].results[k+start].dur)
+	    //console.log(k)
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
-                let link = links[k + start];
+                let link = links[start + k];
                 site_state[0].results[k].url = link;
                 cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 site_state[0].results[k].load_time = performance.now();
@@ -158,16 +164,18 @@ describe("Checking tools", () => {
                 } else if (link == base + "collaboration/cms-weeks/weeks") {
                     cy.check_weeks(site_state[0], k, INPUT_DATA["weeks_data"]);
                 } else if (link == base + "institute/overdue-graduations") {
-                        cy.check_over_graduation(site_state[0], k);
+                    cy.check_over_graduation(site_state[0], k);
                 } else if (link == base + "collaboration/tenures") {
                     cy.check_tenures(site_state[0], k, INPUT_DATA["tenures_data"]);
                 } else if (link == base + "publications/cadi/lines") {
-            	    cy.check_CADI_lines(site_state[0], k, INPUT_DATA["CADI_lines"]);
+                    cy.check_CADI_lines(site_state[0], k, INPUT_DATA["CADI_lines"]);
                 }
-            });
-            cy.task("writeFile", {path: out_path, data: site_state});
+            cy.task("writeFile", {path: out_path, data: site_state, index: k});
+            // cy.writeFile(out_path, site_state);
             cy.save_data(site_state[0].results[k], base);
+	    // done();
             console.log(site_state);
+            });
         })
     }
 });

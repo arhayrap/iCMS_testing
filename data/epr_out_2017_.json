@@ -1,14 +1,14 @@
 [
   {
-    "date": "02-06-2022, 7:43",
+    "date": "02-06-2022, 7:47",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/epr/showMine",
         "status": 200,
-        "duration": 1156,
-        "load_time": 4797.799999998882,
+        "duration": 1381,
+        "load_time": 8131,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -19,11 +19,9 @@
       {
         "url": "https://icms.cern.ch/epr/showMyInstPledges",
         "status": 200,
-        "duration": 135,
-        "load_time": 2404.5999999996275,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 130,
+        "load_time": 4142,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
