@@ -1,23 +1,25 @@
 [
   {
-    "date": "02-06-2022, 6:45",
+    "date": "03-14-2022, 8:19",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "",
-        "status": 0,
-        "duration": 0,
-        "load_time": 0,
-        "warnings": [],
+        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "status": 200,
+        "duration": 47,
+        "load_time": 6113.214999902993,
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
         "status": 200,
-        "duration": 445,
-        "load_time": 5242.705000000569,
+        "duration": 299,
+        "load_time": 5197.83000042662,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -25,8 +27,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
         "status": 200,
-        "duration": 438,
-        "load_time": 4074.2299999983516,
+        "duration": 335,
+        "load_time": 3121.449999976903,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -36,8 +38,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "status": 200,
-        "duration": 434,
-        "load_time": 5465.874999999869,
+        "duration": 339,
+        "load_time": 4832.015000283718,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -47,8 +49,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "status": 200,
-        "duration": 426,
-        "load_time": 6193.020000000615,
+        "duration": 283,
+        "load_time": 7041.840000078082,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -58,17 +60,19 @@
       {
         "url": "https://icms.cern.ch/tools/institute/pending-authors",
         "status": 200,
-        "duration": 416,
-        "load_time": 5237.904999999955,
-        "warnings": [],
+        "duration": 318,
+        "load_time": 2658.0000002868474,
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/institute/member-authors",
         "status": 200,
-        "duration": 420,
-        "load_time": 4420.125000000553,
+        "duration": 424,
+        "load_time": 2805.9450001455843,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -78,8 +82,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/suspensions",
         "status": 200,
-        "duration": 433,
-        "load_time": 5024.170000000595,
+        "duration": 320,
+        "load_time": 2636.295000091195,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -89,8 +93,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "status": 200,
-        "duration": 447,
-        "load_time": 3400.630000000092,
+        "duration": 320,
+        "load_time": 2874.4650003500283,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -98,8 +102,8 @@
       {
         "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrector",
         "status": 200,
-        "duration": 453,
-        "load_time": 3318.279999999504,
+        "duration": 286,
+        "load_time": 2592.8050000220537,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -107,9 +111,11 @@
       {
         "url": "https://icms.cern.ch/tools/administration/engagement-office/due-corrections",
         "status": 200,
-        "duration": 422,
-        "load_time": 61419.15499999959,
-        "warnings": [],
+        "duration": 307,
+        "load_time": 2620.9700000472367,
+        "warnings": [
+          "Table warning: There is an empty table."
+        ],
         "errors": [
           "GET request error : 403  403 (Forbidden)"
         ],
@@ -118,8 +124,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines",
         "status": 200,
-        "duration": 445,
-        "load_time": 5599.005000000034,
+        "duration": 294,
+        "load_time": 2598.6399999819696,
         "warnings": [
           "'Year' has filtered a wrong option."
         ],

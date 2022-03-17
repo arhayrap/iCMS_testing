@@ -1,14 +1,11 @@
-import configData from "../fixtures/tools_page_data.json";
-
-describe("Checking tools longest requests", () => {
+describe("Checking epr longest requests", () => {
     /*|------------------------------------<|       Paths       |>------------------------------------------------|*/
-    var links_path      = "cypress/fixtures/tools_links.json";
-    var base            = "https://icms.cern.ch/tools/";
-    var out_path        = "cypress/fixtures/tools_requests.json";
-    var INPUT_DATA = configData;
+    var links_path = "cypress/fixtures/epr_links.json";
+    var base       = "https://icms.cern.ch/epr/";
+    var out_path   = "cypress/fixtures/epr_requests.json";
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var start = 0;
-    var n = 36;
+    var n = 1;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env      = Cypress.env()["flags"]
     var isadmin  = env["isAdmin"];
@@ -47,11 +44,12 @@ describe("Checking tools longest requests", () => {
         it("Logs in selects the longest request url.", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            cy.listen_fails(site_state, k, base, links_path, out_path);
+            // cy.listen_fails(site_state, k, base, links_path, out_path);
             // ############################################### Requests #####################################################
-            cy.intercept({url: "https://auth.cern.ch/auth/**"}).as("auth");
+            // cy.intercept({url: "https://auth.cern.ch/auth/**"}).as("auth");
             cy.route({
-                url: "**/tools-api/**",
+                method: 'POST',
+                url: 'https://icms.cern.ch/**',
                 onResponse: (xhr) => {
 		    if (xhr.duration > duration){
 			duration = xhr.duration;
@@ -65,7 +63,7 @@ describe("Checking tools longest requests", () => {
 			site_state[0].results[k].dur  = xhr.duration;
 		    }
                 }
-            }).as("gets");
+            }).as("posts");
 	    // ##############################################################################################################
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
@@ -73,7 +71,7 @@ describe("Checking tools longest requests", () => {
                 site_state[0].results[k].url = link;
                 cy.visit(link);
                 site_state[0].username = login;
-                cy.wait_for_requests("@gets", {timeout: 60000});
+                cy.wait_for_requests("@posts", {timeout: 60000});
 		cy.wait(4000);
             });
             cy.writeFile(out_path, site_state);

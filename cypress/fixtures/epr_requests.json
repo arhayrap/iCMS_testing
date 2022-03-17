@@ -1,0 +1,16 @@
+[
+  {
+    "date": "03-17-2022, 9:32",
+    "username": "arhayrap",
+    "isAdmin": "false",
+    "results": [
+      {
+        "url": "https://icms.cern.ch/epr/showMine",
+        "link": "https://icms.cern.ch/epr/api/v1.0/shiftInfoUser/arhayrap",
+        "dur": 1132
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

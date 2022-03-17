@@ -1,0 +1,12 @@
+describe("Checking epr", () => {
+    let y = 2;
+    let years = [2015, 2016, 2017, 2018, 2019, 2020, 2021];
+    let links_path = "cypress/fixtures/epr_links.json";
+    let base = "https://icms.cern.ch/epr/";
+    let page_fail_limit = 10;
+    let env = Cypress.env()["flags"];
+    let login    = env["login"];
+    let password = env["password"];
+    let isadmin  = env["isAdmin"] == "true";
+    let total = 15;
+    /*|-----------------------------------------------------------------------------------------------------------|*/

@@ -12,11 +12,15 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 Cypress.Commands.add("login", (login, password) => {
-    cy.get("#kc-form-login").within(() => {
-        cy.get("input[tabindex=1]").type(login);
-        cy.get("input[tabindex=2]").type(password);
-        cy.get("input[tabindex=4]").click();
-    })
+    cy.get("body").then((body) => {
+        if (body.find("#kc-form-login").length > 0) {
+            cy.get("#kc-form-login").within(() => {
+                cy.get("input[tabindex=1]").type(login);
+                cy.get("input[tabindex=2]").type(password);
+                cy.get("input[tabindex=4]").click();
+            });
+        }
+    });
 })
 
 Cypress.Commands.add("get_stat_dur", (link, site_state, k, limit) => {
@@ -24,7 +28,7 @@ Cypress.Commands.add("get_stat_dur", (link, site_state, k, limit) => {
         url: link,
         failOnStatusCode: false
     }).then((resp) => {
-	console.log(resp)
+        console.log(resp)
         if (expect(resp).to.have.property("status")) {
             site_state[0].results[k].status = resp.status;
         }
@@ -141,5 +145,4 @@ Cypress.Commands.add("save_data", (obj, base, mode = "", year = 2021) => {
     cy.exec("mkdir -p " + path + "/" + suburl + "/", {timeout: 600000});
     cy.exec("mkdir -p " + path + "/" + suburl + "/" + String(year) + "/", {timeout: 600000});
     cy.writeFile(json_path, obj, {timeout: 600000});
-    //, {timeout: 600000}
 })
