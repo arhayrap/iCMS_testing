@@ -4,9 +4,8 @@ import sys
 import json
 import time
 
-website = "epr" # tools or epr
 suite_path = "cypress/integration/"
-path_array = [suite_path + website + "_request_url.js"]
+path_array = [suite_path + "*.js"]
 
 def Run_process(path, obj):
     print(path)
