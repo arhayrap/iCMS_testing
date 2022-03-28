@@ -10,7 +10,7 @@ from datetime import datetime
 import coloredlogs
 import logging
 
-website = "epr" # tools, epr
+website = "tools" # tools, epr
 n_web = {"tools": 36, "epr": 334}
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
@@ -18,19 +18,24 @@ path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/int
 def Run_process(obj, n_jobs):
     flags = obj
     n_1 = math.floor(n_web[website] / n_jobs)
-    REMOVE_OLD_RESULTS = "rm -r -f data/{website}_out/*.json".format(website = website)
+    REMOVE_OLD_RESULTS = "rm -r -f data/{website}_output/*.json".format(website = website)
     KILL_CYPRESS_PROCESSES = '''
     killall -9 Cypress
     killall -9 node
+    killall -9 top
     '''
-    # killall -9 `npm run cy:run`
 
     CREATE_FILES = '''
 rm -f {path}/*.js
+rm -r runner-results
+rm multi-reporter-config.json
 for i in {{1..{n}}}
 do
 echo "$(cat {path}/gen_{website}_part_1.txt)"                       >> "{path}/{website}_test_spec_$i.js"
 echo "    let n = {n_1};"                                           >> "{path}/{website}_test_spec_$i.js"
+echo "    it('Wait for its turn.', () => {bracket_sign_open}"       >> "{path}/{website}_test_spec_$i.js"
+echo "        cy.wait(2000 * $((i)))"                               >> "{path}/{website}_test_spec_$i.js"
+echo "    {bracket_sign_close});"                                   >> "{path}/{website}_test_spec_$i.js"
 if [ $i == {n} ];
 then
 echo "    let start = n*$((i-1));"                                  >> "{path}/{website}_test_spec_$i.js"
@@ -39,10 +44,10 @@ else
 echo "    let start = n*$((i-1));"                                  >> "{path}/{website}_test_spec_$i.js"
 echo "    let end = start+n;"                                       >> "{path}/{website}_test_spec_$i.js"
 fi
-echo "    let out_path = 'data/{website}_out/{website}_out_' + $i + '.json';"     >> "{path}/{website}_test_spec_$i.js"
+echo "    let out_path = 'data/{website}_output/{website}_out_' + $i + '.json';"     >> "{path}/{website}_test_spec_$i.js"
 echo "$(cat {path}/gen_{website}_part_2.txt)"                       >> "{path}/{website}_test_spec_$i.js"
 done
-'''.format(path = path_web[website], website = website, n = n_jobs, n_1 = n_1, n_all_pages = n_web[website])
+'''.format(path = path_web[website], website = website, n = n_jobs, n_1 = n_1, n_all_pages = n_web[website], bracket_sign_open = "{", bracket_sign_close = "}")
     RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
     print(CREATE_FILES)
     os.system(KILL_CYPRESS_PROCESSES)

@@ -5,7 +5,8 @@ import json
 import time
 
 suite_path = "cypress/integration/"
-path_array = [suite_path + "*.js"]
+path_array = [suite_path + "tools_*.js"]
+# path_array = [suite_path + "epr_*.js"]
 
 def Run_process(path, obj):
     print(path)

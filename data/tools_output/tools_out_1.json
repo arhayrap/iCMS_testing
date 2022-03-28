@@ -1,25 +1,27 @@
 [
   {
-    "date": "03-14-2022, 8:23",
+    "date": "03-28-2022, 9:43",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 47,
-        "load_time": 1691.2349998019636,
-        "warnings": [],
+        "duration": 409,
+        "load_time": 2798.220000229776,
+        "warnings": [
+          "The reference to the profile was not done correctly.",
+          "The reference to the institute was not done correctly."
+        ],
         "errors": [],
-        "state": "Fail! -> AssertionError: Timed out retrying after 4000ms: Expected to find element: `div.v-list-item__subtitle`, but never found it. Queried from element: <div.v-card__text>"
+        "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "status": 200,
-        "duration": 303,
-        "load_time": 2673.994999844581,
+        "duration": 358,
+        "load_time": 3226.1250000447035,
         "warnings": [
-          "Table warning: There is an empty table.",
           "Reference back to executive boards was not done correctly (wrong url in the result)."
         ],
         "errors": [],
@@ -28,8 +30,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 314,
-        "load_time": 2969.169999938458,
+        "duration": 517,
+        "load_time": 3482.1200002916157,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -37,8 +39,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 369,
-        "load_time": 4714.129999745637,
+        "duration": 480,
+        "load_time": 5257.574999704957,
         "warnings": [
           "There is someting wrong in menu`s 'CMS Statuses' 'CMS' table."
         ],
@@ -49,8 +51,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/voting",
         "status": 200,
-        "duration": 325,
-        "load_time": 3261.7750000208616,
+        "duration": 403,
+        "load_time": 4020.500000100583,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -58,8 +60,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 319,
-        "load_time": 2624.274999834597,
+        "duration": 369,
+        "load_time": 2983.914999756962,
         "warnings": [
           "Table warning: There is an empty table."
         ],
@@ -69,8 +71,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "status": 200,
-        "duration": 318,
-        "load_time": 2697.6749999448657,
+        "duration": 357,
+        "load_time": 3020.2850000932813,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -78,8 +80,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
         "status": 200,
-        "duration": 381,
-        "load_time": 3670.555000193417,
+        "duration": 372,
+        "load_time": 4057.9650001600385,
         "warnings": [
           "Table warning: There is an empty table after toggling."
         ],
@@ -89,8 +91,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
         "status": 200,
-        "duration": 320,
-        "load_time": 2768.5100003145635,
+        "duration": 382,
+        "load_time": 3523.5049999319017,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -98,8 +100,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "status": 200,
-        "duration": 339,
-        "load_time": 3977.8050002641976,
+        "duration": 361,
+        "load_time": 4429.494999814779,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -107,8 +109,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "status": 200,
-        "duration": 304,
-        "load_time": 3043.5600001364946,
+        "duration": 391,
+        "load_time": 4042.030000127852,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -116,8 +118,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/tenures",
         "status": 200,
-        "duration": 293,
-        "load_time": 2853.799999691546,
+        "duration": 407,
+        "load_time": 3096.0200000554323,
         "warnings": [],
         "errors": [],
         "state": "OK"

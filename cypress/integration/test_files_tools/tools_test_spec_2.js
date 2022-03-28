@@ -13,9 +13,12 @@ describe("Checking tools", () => {
     let password = env["password"];
     let isadmin = env["isAdmin"] == "true";
     let n = 12;
+    it('Wait for its turn.', () => {
+        cy.wait(2000 * 2)
+    });
     let start = n*1;
     let end = start+n;
-    let out_path = 'data/tools_out_' + 2 + '.json';
+    let out_path = 'data/tools_output/tools_out_' + 2 + '.json';
     let site_state = [{
         date: "",
         username: "",
@@ -38,12 +41,10 @@ describe("Checking tools", () => {
     Cypress.Cookies.defaults({
         preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
     })
-    
     before(() => {
         cy.visit(base);
         cy.login(login, password);
     })
-    
     for (let k = 0; k < n; k++) {
         it("Logs in and tests the 'tools' pages.", () => {
             cy.server();
@@ -116,7 +117,6 @@ describe("Checking tools", () => {
                 cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 site_state[0].results[k].load_time = performance.now();
                 cy.visit(link);
-                // cy.login(login, password);
                 site_state[0].username = login;
                 cy.wait_for_requests("@main", {timeout: 60000});
                 cy.wait_for_requests("@gets", {timeout: 60000});

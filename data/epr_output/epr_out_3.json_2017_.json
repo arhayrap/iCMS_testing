@@ -1,23 +1,34 @@
 [
   {
-    "date": "03-14-2022, 10:07",
+    "date": "03-27-2022, 7:16",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "",
-        "status": 0,
-        "duration": 0,
-        "load_time": 0,
-        "warnings": [],
+        "url": "https://icms.cern.ch/epr/showInstitute/BOSTON-UNIV",
+        "status": 200,
+        "duration": 1480,
+        "load_time": 9893.10499979183,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
         "errors": [],
         "state": "OK"
       },
       {
+        "url": "https://icms.cern.ch/epr/showInstitute/BROWN-UNIV",
+        "status": 0,
+        "duration": 0,
+        "load_time": 20027.48000016436,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
         "url": "https://icms.cern.ch/epr/showInstitute/CALTECH",
         "status": 200,
-        "duration": 1677,
-        "load_time": 11728.825000114739,
+        "duration": 1611,
+        "load_time": 12691.174999810755,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -27,8 +38,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/CARNEGIE-MELLON",
         "status": 200,
-        "duration": 343,
-        "load_time": 4192.47499993071,
+        "duration": 358,
+        "load_time": 10561.805000063032,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -38,8 +49,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/CHICAGO",
         "status": 200,
-        "duration": 1215,
-        "load_time": 9530.855000019073,
+        "duration": 2267,
+        "load_time": 8788.480000104755,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -49,8 +60,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/COLORADO",
         "status": 200,
-        "duration": 540,
-        "load_time": 4442.884999793023,
+        "duration": 561,
+        "load_time": 23209.28499987349,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -60,8 +71,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/CORNELL",
         "status": 200,
-        "duration": 2682,
-        "load_time": 12674.254999961704,
+        "duration": 2704,
+        "load_time": 11659.274999983609,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -70,18 +81,21 @@
       },
       {
         "url": "https://icms.cern.ch/epr/showInstitute/DEKALB-NIU",
-        "status": 0,
-        "duration": 0,
-        "load_time": 60873.560000211,
-        "warnings": [],
+        "status": 200,
+        "duration": 290,
+        "load_time": 7699.5500000193715,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
         "errors": [],
-        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+        "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FAIRFIELD",
         "status": 200,
-        "duration": 3240,
-        "load_time": 3420.9400000981987,
+        "duration": 236,
+        "load_time": 3281.56999964267,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -91,8 +105,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FERMILAB",
         "status": 200,
-        "duration": 9087,
-        "load_time": 43077.44499994442,
+        "duration": 7992,
+        "load_time": 51020.16999991611,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -102,8 +116,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-FIU",
         "status": 200,
-        "duration": 2050,
-        "load_time": 4019.8149997740984,
+        "duration": 255,
+        "load_time": 2550.194999668747,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -113,8 +127,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-STATE",
         "status": 200,
-        "duration": 1012,
-        "load_time": 18210.999999661,
+        "duration": 990,
+        "load_time": 7153.770000208169,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -124,8 +138,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-TECH",
         "status": 200,
-        "duration": 1636,
-        "load_time": 14699.449999723583,
+        "duration": 405,
+        "load_time": 3961.499999742955,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -135,8 +149,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-UNIV",
         "status": 200,
-        "duration": 2065,
-        "load_time": 10268.894999753684,
+        "duration": 1718,
+        "load_time": 8597.175000235438,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -146,8 +160,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/IOWA",
         "status": 200,
-        "duration": 1832,
-        "load_time": 24501.995000056922,
+        "duration": 1317,
+        "load_time": 9176.684999838471,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -157,8 +171,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/JOHNS-HOPKINS",
         "status": 200,
-        "duration": 3058,
-        "load_time": 8627.545000053942,
+        "duration": 959,
+        "load_time": 7427.720000036061,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -168,8 +182,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-STATE",
         "status": 200,
-        "duration": 2563,
-        "load_time": 10357.909999787807,
+        "duration": 397,
+        "load_time": 4230.779999867082,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -179,8 +193,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-UNIV",
         "status": 200,
-        "duration": 2650,
-        "load_time": 9365.19500007853,
+        "duration": 2760,
+        "load_time": 9309.495000168681,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -190,8 +204,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/LIVERMORE",
         "status": 200,
-        "duration": 220,
-        "load_time": 5410.605000331998,
+        "duration": 233,
+        "load_time": 2497.3150002770126,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -201,8 +215,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/MARYLAND",
         "status": 200,
-        "duration": 2371,
-        "load_time": 12269.505000207573,
+        "duration": 2490,
+        "load_time": 11763.659999705851,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -212,8 +226,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/MINNESOTA",
         "status": 200,
-        "duration": 1345,
-        "load_time": 8285.03999998793,
+        "duration": 1542,
+        "load_time": 7637.5850001350045,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -223,8 +237,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/MISSISSIPPI",
         "status": 200,
-        "duration": 314,
-        "load_time": 3849.770000204444,
+        "duration": 324,
+        "load_time": 2757.129999808967,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -235,8 +249,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/MIT",
         "status": 200,
-        "duration": 2585,
-        "load_time": 12152.970000170171,
+        "duration": 2659,
+        "load_time": 10301.909999921918,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -246,8 +260,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/NEBRASKA",
         "status": 200,
-        "duration": 591,
-        "load_time": 35414.880000054836,
+        "duration": 609,
+        "load_time": 5081.34499983862,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -257,8 +271,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/NEWYORK-SIMONS",
         "status": 200,
-        "duration": 200,
-        "load_time": 6397.409999743104,
+        "duration": 228,
+        "load_time": 1984.750000294298,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -269,8 +283,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/NORTHEASTERN",
         "status": 200,
-        "duration": 2250,
-        "load_time": 8153.849999886006,
+        "duration": 1358,
+        "load_time": 7114.730000030249,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -280,8 +294,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/NORTHWESTERN",
         "status": 200,
-        "duration": 425,
-        "load_time": 13351.615000050515,
+        "duration": 444,
+        "load_time": 5639.179999940097,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -291,8 +305,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/NOTRE_DAME",
         "status": 200,
-        "duration": 1450,
-        "load_time": 13763.469999656081,
+        "duration": 1465,
+        "load_time": 7066.39500008896,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -302,8 +316,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/OHIO-STATE",
         "status": 200,
-        "duration": 421,
-        "load_time": 5192.910000216216,
+        "duration": 436,
+        "load_time": 5403.5600000061095,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -313,8 +327,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/PRINCETON",
         "status": 200,
-        "duration": 1693,
-        "load_time": 9681.575000286102,
+        "duration": 1722,
+        "load_time": 10150.665000081062,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -324,8 +338,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/PUERTO_RICO",
         "status": 200,
-        "duration": 292,
-        "load_time": 10858.500000089407,
+        "duration": 303,
+        "load_time": 2529.765000101179,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -336,7 +350,7 @@
         "url": "https://icms.cern.ch/epr/showInstitute/PURDUE",
         "status": 0,
         "duration": 0,
-        "load_time": 415566.64500012994,
+        "load_time": 384449.34999989346,
         "warnings": [],
         "errors": [],
         "state": "Fail! -> AssertionError: Timed out retrying after 60000ms: expected 'wait' to match /default/"
@@ -344,8 +358,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/PURDUE-CALUMET",
         "status": 200,
-        "duration": 397,
-        "load_time": 8483.93000010401,
+        "duration": 396,
+        "load_time": 3656.7449998110533,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -356,7 +370,7 @@
         "url": "https://icms.cern.ch/epr/showInstitute/RICE",
         "status": 200,
         "duration": 1135,
-        "load_time": 8356.87500005588,
+        "load_time": 6758.555000182241,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -366,8 +380,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/ROCHESTER",
         "status": 200,
-        "duration": 474,
-        "load_time": 5360.705000348389,
+        "duration": 473,
+        "load_time": 5257.730000186712,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -377,8 +391,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/ROCKEFELLER",
         "status": 200,
-        "duration": 237,
-        "load_time": 9236.19499988854,
+        "duration": 254,
+        "load_time": 3414.120000321418,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -389,8 +403,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/RUTGERS",
         "status": 200,
-        "duration": 3000,
-        "load_time": 14987.174999900162,
+        "duration": 2543,
+        "load_time": 11655.575000215322,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -401,7 +415,7 @@
         "url": "https://icms.cern.ch/epr/showInstitute/ST-PAUL-BU",
         "status": 200,
         "duration": 75,
-        "load_time": 1683.68999985978,
+        "load_time": 2857.8250003047287,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table",
@@ -418,8 +432,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/SUNY-BUFFALO",
         "status": 200,
-        "duration": 426,
-        "load_time": 6259.254999924451,
+        "duration": 425,
+        "load_time": 4013.6549999006093,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -429,8 +443,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/TENNESSEE",
         "status": 200,
-        "duration": 331,
-        "load_time": 3760.7100000604987,
+        "duration": 346,
+        "load_time": 2932.3450000956655,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -440,8 +454,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TAMU",
         "status": 200,
-        "duration": 1569,
-        "load_time": 10468.830000143498,
+        "duration": 1614,
+        "load_time": 7978.525000158697,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -451,8 +465,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TECH",
         "status": 200,
-        "duration": 530,
-        "load_time": 4660.714999772608,
+        "duration": 533,
+        "load_time": 4160.500000230968,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -462,8 +476,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/UCDAVIS",
         "status": 200,
-        "duration": 1855,
-        "load_time": 9671.194999944419,
+        "duration": 1891,
+        "load_time": 7845.739999786019,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -473,8 +487,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/UCLA",
         "status": 200,
-        "duration": 925,
-        "load_time": 6392.204999923706,
+        "duration": 956,
+        "load_time": 6271.599999628961,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -484,8 +498,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/UCRIVERSIDE",
         "status": 200,
-        "duration": 1079,
-        "load_time": 8477.330000139773,
+        "duration": 1112,
+        "load_time": 5952.289999928325,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -495,8 +509,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/UCSB",
         "status": 200,
-        "duration": 1352,
-        "load_time": 8165.490000043064,
+        "duration": 1344,
+        "load_time": 9153.334999922663,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -506,8 +520,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/UCSD",
         "status": 200,
-        "duration": 1536,
-        "load_time": 7093.714999966323,
+        "duration": 1615,
+        "load_time": 6993.375000078231,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -517,8 +531,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/VANDERBILT",
         "status": 200,
-        "duration": 2441,
-        "load_time": 6953.854999970645,
+        "duration": 1406,
+        "load_time": 7577.565000392497,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -528,8 +542,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/VIRGINIA-UNIV",
         "status": 200,
-        "duration": 557,
-        "load_time": 5277.10000006482,
+        "duration": 582,
+        "load_time": 4070.4049998894334,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -539,8 +553,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/WASHINGTON-CUA",
         "status": 200,
-        "duration": 267,
-        "load_time": 5593.79000030458,
+        "duration": 266,
+        "load_time": 2870.314999949187,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -550,8 +564,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/WAYNE",
         "status": 200,
-        "duration": 316,
-        "load_time": 5495.610000099987,
+        "duration": 318,
+        "load_time": 4483.599999919534,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -561,8 +575,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/WISCONSIN",
         "status": 200,
-        "duration": 1779,
-        "load_time": 9788.885000161827,
+        "duration": 1784,
+        "load_time": 8507.610000204295,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -572,8 +586,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/WISCONSIN-CHTC",
         "status": 200,
-        "duration": 75,
-        "load_time": 8538.729999680072,
+        "duration": 76,
+        "load_time": 1843.8099999912083,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table",
@@ -590,8 +604,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/TASHKENT",
         "status": 200,
-        "duration": 255,
-        "load_time": 6102.59999986738,
+        "duration": 258,
+        "load_time": 3454.4850001111627,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -602,8 +616,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/JORDAN-UNIV",
         "status": 200,
-        "duration": 75,
-        "load_time": 3969.4900000467896,
+        "duration": 1075,
+        "load_time": 1778.954999987036,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table",
@@ -620,8 +634,8 @@
       {
         "url": "https://icms.cern.ch/epr/showMyCountry",
         "status": 200,
-        "duration": 1139,
-        "load_time": 1463.8249999843538,
+        "duration": 1118,
+        "load_time": 4570.220000110567,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -629,8 +643,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountries",
         "status": 200,
-        "duration": 59,
-        "load_time": 1503.5149999894202,
+        "duration": 67,
+        "load_time": 1919.3100002594292,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -639,7 +653,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/ARMENIA",
         "status": 200,
         "duration": 66,
-        "load_time": 2588.8299997895956,
+        "load_time": 2858.5600000806153,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -648,7 +662,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/AUSTRIA",
         "status": 200,
         "duration": 64,
-        "load_time": 19566.174999810755,
+        "load_time": 3115.2550000697374,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -656,8 +670,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/BAHRAIN",
         "status": 200,
-        "duration": 3069,
-        "load_time": 2552.604999858886,
+        "duration": 1065,
+        "load_time": 1697.0949997194111,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -667,8 +681,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/BELARUS",
         "status": 200,
-        "duration": 63,
-        "load_time": 6026.61499986425,
+        "duration": 67,
+        "load_time": 1852.760000154376,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -676,8 +690,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/BELGIUM",
         "status": 200,
-        "duration": 64,
-        "load_time": 2513.914999552071,
+        "duration": 63,
+        "load_time": 3136.235000099987,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -686,7 +700,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/BRAZIL",
         "status": 200,
         "duration": 64,
-        "load_time": 1424.5050000026822,
+        "load_time": 3235.00999994576,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -695,7 +709,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/BULGARIA",
         "status": 200,
         "duration": 64,
-        "load_time": 3151.9649997353554,
+        "load_time": 3730.214999988675,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -703,8 +717,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/CHINA",
         "status": 200,
-        "duration": 78,
-        "load_time": 18183.789999689907,
+        "duration": 1066,
+        "load_time": 1752.474999986589,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -713,7 +727,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/COLOMBIA",
         "status": 200,
         "duration": 64,
-        "load_time": 1459.925000090152,
+        "load_time": 1607.9299999400973,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -721,8 +735,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/CROATIA",
         "status": 200,
-        "duration": 64,
-        "load_time": 2568.1150001473725,
+        "duration": 1067,
+        "load_time": 2880.4650004021823,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -730,8 +744,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/CYPRUS",
         "status": 200,
-        "duration": 63,
-        "load_time": 5398.659999947995,
+        "duration": 65,
+        "load_time": 1481.1850003898144,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -739,8 +753,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/CZECH%20REPUBLIC",
         "status": 200,
-        "duration": 64,
-        "load_time": 4601.635000202805,
+        "duration": 62,
+        "load_time": 1757.250000257045,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -748,8 +762,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/ECUADOR",
         "status": 200,
-        "duration": 63,
-        "load_time": 2521.7750002630055,
+        "duration": 66,
+        "load_time": 3218.075000215322,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -757,8 +771,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/EGYPT",
         "status": 200,
-        "duration": 62,
-        "load_time": 3026.629999745637,
+        "duration": 66,
+        "load_time": 2013.679999858141,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -766,8 +780,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/ESTONIA",
         "status": 200,
-        "duration": 1137,
-        "load_time": 2486.639999784529,
+        "duration": 69,
+        "load_time": 3131.619999650866,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -775,8 +789,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/FINLAND",
         "status": 200,
-        "duration": 61,
-        "load_time": 2562.4449998140335,
+        "duration": 1089,
+        "load_time": 1551.5099996700883,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -784,8 +798,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/FRANCE",
         "status": 200,
-        "duration": 66,
-        "load_time": 1492.0749999582767,
+        "duration": 64,
+        "load_time": 1864.1650001518428,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -793,8 +807,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/GEORGIA",
         "status": 200,
-        "duration": 62,
-        "load_time": 2642.0849999412894,
+        "duration": 1069,
+        "load_time": 1607.8200000338256,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -802,8 +816,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/GERMANY",
         "status": 200,
-        "duration": 1071,
-        "load_time": 2687.9850002005696,
+        "duration": 66,
+        "load_time": 2544.8499997146428,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -811,8 +825,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/GREECE",
         "status": 200,
-        "duration": 1064,
-        "load_time": 1460.6949998997152,
+        "duration": 1066,
+        "load_time": 1658.5950003936887,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -820,8 +834,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/HUNGARY",
         "status": 200,
-        "duration": 1363,
-        "load_time": 1755.3250002674758,
+        "duration": 63,
+        "load_time": 1707.3300001211464,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -830,7 +844,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/INDIA",
         "status": 200,
         "duration": 64,
-        "load_time": 5506.100000347942,
+        "load_time": 2843.8799995929003,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -838,8 +852,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/IRAN",
         "status": 200,
-        "duration": 62,
-        "load_time": 4527.474999893457,
+        "duration": 68,
+        "load_time": 1674.1050002165139,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -848,7 +862,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/IRELAND",
         "status": 200,
         "duration": 65,
-        "load_time": 3696.659999899566,
+        "load_time": 2910.4499998502433,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -856,8 +870,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/ITALY",
         "status": 200,
-        "duration": 1066,
-        "load_time": 3112.884999718517,
+        "duration": 67,
+        "load_time": 1665.6050002202392,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -865,8 +879,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/JORDAN",
         "status": 200,
-        "duration": 63,
-        "load_time": 2497.709999792278,
+        "duration": 67,
+        "load_time": 1545.6800004467368,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -876,8 +890,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/KOREA",
         "status": 200,
-        "duration": 65,
-        "load_time": 3514.400000218302,
+        "duration": 67,
+        "load_time": 2683.2900000736117,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -885,8 +899,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/KUWAIT",
         "status": 200,
-        "duration": 66,
-        "load_time": 2515.334999654442,
+        "duration": 63,
+        "load_time": 1596.9000002369285,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -896,8 +910,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/LATVIA",
         "status": 200,
-        "duration": 1065,
-        "load_time": 1543.7449999153614,
+        "duration": 63,
+        "load_time": 1685.645000077784,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -907,8 +921,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/LEBANON",
         "status": 200,
-        "duration": 1064,
-        "load_time": 3014.719999860972,
+        "duration": 63,
+        "load_time": 1781.9000002928078,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -916,8 +930,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/LITHUANIA",
         "status": 200,
-        "duration": 1066,
-        "load_time": 1479.059999808669,
+        "duration": 63,
+        "load_time": 3289.1349997371435,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -925,8 +939,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/MALAYSIA",
         "status": 200,
-        "duration": 66,
-        "load_time": 1716.8199997395277,
+        "duration": 64,
+        "load_time": 1661.3799999468029,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -935,7 +949,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/MEXICO",
         "status": 200,
         "duration": 64,
-        "load_time": 4238.235000055283,
+        "load_time": 2613.4200002998114,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -943,8 +957,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/MONTENEGRO",
         "status": 200,
-        "duration": 65,
-        "load_time": 1866.090000141412,
+        "duration": 64,
+        "load_time": 1870.3100001439452,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -952,8 +966,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/NETHERLANDS",
         "status": 200,
-        "duration": 1621,
-        "load_time": 1797.505000140518,
+        "duration": 65,
+        "load_time": 1793.3950000442564,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -961,8 +975,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/NEW%20ZEALAND",
         "status": 200,
-        "duration": 65,
-        "load_time": 1488.890000153333,
+        "duration": 63,
+        "load_time": 1763.234999962151,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -970,8 +984,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/NORWAY",
         "status": 200,
-        "duration": 62,
-        "load_time": 1469.550000037998,
+        "duration": 63,
+        "load_time": 1803.330000024289,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -981,8 +995,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/OMAN",
         "status": 200,
-        "duration": 3068,
-        "load_time": 2565.9749996848404,
+        "duration": 62,
+        "load_time": 1871.6549999080598,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -990,8 +1004,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/PAKISTAN",
         "status": 200,
-        "duration": 63,
-        "load_time": 2597.5099997594953,
+        "duration": 64,
+        "load_time": 1753.2099997624755,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -999,8 +1013,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/POLAND",
         "status": 200,
-        "duration": 1216,
-        "load_time": 4512.9500003531575,
+        "duration": 65,
+        "load_time": 1774.7500003315508,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1008,8 +1022,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/PORTUGAL",
         "status": 200,
-        "duration": 69,
-        "load_time": 1614.9749998003244,
+        "duration": 68,
+        "load_time": 2937.7450002357364,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1017,8 +1031,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/RUSSIA",
         "status": 200,
-        "duration": 1070,
-        "load_time": 4241.715000011027,
+        "duration": 86,
+        "load_time": 4854.255000129342,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1026,8 +1040,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/SAUDI%20ARABIA",
         "status": 200,
-        "duration": 62,
-        "load_time": 1519.41499998793,
+        "duration": 87,
+        "load_time": 1873.6049998551607,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1036,7 +1050,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/SERBIA",
         "status": 200,
         "duration": 63,
-        "load_time": 5977.054999675602,
+        "load_time": 3083.6500003933907,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1044,8 +1058,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/SPAIN",
         "status": 200,
-        "duration": 64,
-        "load_time": 4031.239999923855,
+        "duration": 63,
+        "load_time": 1527.4699996225536,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1053,8 +1067,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/SRI%20LANKA",
         "status": 200,
-        "duration": 63,
-        "load_time": 3488.6650000698864,
+        "duration": 62,
+        "load_time": 1498.850000090897,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -1064,8 +1078,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/SWITZERLAND",
         "status": 200,
-        "duration": 1071,
-        "load_time": 3937.9099998623133,
+        "duration": 1064,
+        "load_time": 1475.5200003273785,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1073,8 +1087,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/TAIWAN",
         "status": 200,
-        "duration": 1065,
-        "load_time": 1485.175000037998,
+        "duration": 64,
+        "load_time": 1690.9300000406802,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1082,8 +1096,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/THAILAND",
         "status": 200,
-        "duration": 64,
-        "load_time": 4077.8299998492002,
+        "duration": 63,
+        "load_time": 3367.3499999567866,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1092,7 +1106,7 @@
         "url": "https://icms.cern.ch/epr/showCountry/TURKEY",
         "status": 200,
         "duration": 64,
-        "load_time": 2620.4450000077486,
+        "load_time": 1749.91500005126,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1100,8 +1114,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/UKRAINE",
         "status": 200,
-        "duration": 1066,
-        "load_time": 3514.9499997496605,
+        "duration": 63,
+        "load_time": 1550.844999961555,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1109,8 +1123,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/UNITED%20KINGDOM",
         "status": 200,
-        "duration": 66,
-        "load_time": 3978.649999946356,
+        "duration": 62,
+        "load_time": 1396.6549998149276,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1118,8 +1132,8 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/USA",
         "status": 200,
-        "duration": 1069,
-        "load_time": 1460.2500000037253,
+        "duration": 69,
+        "load_time": 2773.8549998030066,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -1127,20 +1141,9 @@
       {
         "url": "https://icms.cern.ch/epr/showCountry/UZBEKISTAN",
         "status": 200,
-        "duration": 133,
-        "load_time": 2553.5200000740588,
+        "duration": 64,
+        "load_time": 1472.5299999117851,
         "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/ZZ",
-        "status": 200,
-        "duration": 1064,
-        "load_time": 7051.719999872148,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
         "errors": [],
         "state": "OK"
       }

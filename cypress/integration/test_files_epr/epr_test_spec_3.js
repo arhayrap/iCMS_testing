@@ -11,9 +11,12 @@ describe("Checking epr", () => {
     let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     let n = 111;
+    it('Wait for its turn.', () => {
+        cy.wait(2000 * 3)
+    });
     let start = n*2;
     let end = 334-start;
-    let out_path = 'data/epr_out/epr_out_' + 3 + '.json';
+    let out_path = 'data/epr_output/epr_out_' + 3 + '.json';
     // let out_path = "data/epr_out/epr_out_" + String(id) + ".json";
     let check_string = "Logs in and tests the 'epr' pages.";
 
