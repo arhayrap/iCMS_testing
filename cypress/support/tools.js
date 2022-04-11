@@ -5,6 +5,7 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
         cy.readFile("cypress/fixtures/white_list.json").then(($obj) => {
             let white_list = $obj[0]["links"].includes(site_state["url"]);
         });
+        if (white_list) {
         if ($body.find("table").length) {
 	    if ($body.find(".v-slide-group__wrapper").length) {
 		cy.get(".v-slide-group__wrapper .v-tab").as("tab_buttons").click({
@@ -43,6 +44,7 @@ Cypress.Commands.add("check_tables", (site_state, k, toggled = false) => {
                     }
                 });
 	    }
+        }
         }
     });
 })

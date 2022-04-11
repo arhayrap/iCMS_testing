@@ -1,26 +1,3 @@
-import configData from "../../fixtures/tools_page_data.json";
-import requestData from "../../fixtures/tools_requests.json";
-describe("Checking tools", () => {
-    let links_path = "cypress/fixtures/tools_links.json";
-    let base       = "https://icms.cern.ch/tools/";
-    let profile    = "https://icms.cern.ch/tools/user/profile";
-    let INPUT_DATA = configData;
-    let page_fail_limit = 5;
-    let page_fails = 0;
-    let total = 36;
-    let env = Cypress.env()["flags"]
-    let login = env["login"];
-    let password = env["password"];
-    let isadmin = env["isAdmin"] == "true";
-    let n = 36;
-    let job = 2;
-    it('Wait for its turn.', () => {
-        cy.wait(2000 * 3)
-    });
-    let start = 3;
-    let end = n;
-    let step = 3;
-    let out_path = 'data/tools_output/tools_out_' + 3 + '.json';
     let site_state = [{
         date: "",
         username: "",
@@ -47,7 +24,7 @@ describe("Checking tools", () => {
         cy.visit(base);
         cy.login(login, password);
     })
-    for (let k = job; k < n; k+=step) {
+    for (let k = 0; k < n; k++) {
         it("Logs in and tests the 'tools' pages.", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
@@ -69,7 +46,7 @@ describe("Checking tools", () => {
                 }
             }).as("gets");
             cy.route({
-                url: requestData[0].results[k].link,
+                url: requestData[0].results[(start + k)].link,
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error (main) : " + xhr.status + "  " + xhr.statusMessage);
@@ -114,7 +91,7 @@ describe("Checking tools", () => {
             }).as("deletes");
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
-                let link = links[k];
+                let link = links[(start + k)];
                 site_state[0].results[k].url = link;
                 cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 site_state[0].results[k].load_time = performance.now();

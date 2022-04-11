@@ -1,14 +1,124 @@
 [
   {
-    "date": "03-28-2022, 9:39",
+    "date": "04-11-2022, 8:30",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
         "status": 200,
-        "duration": 369,
-        "load_time": 4084.2900001443923,
+        "duration": 383,
+        "load_time": 3911.83999995701,
+        "warnings": [
+          "Reference back to executive boards was not done correctly (wrong url in the result)."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "status": 200,
+        "duration": 398,
+        "load_time": 4607.735000085086,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
+        "duration": 408,
+        "load_time": 4926.465000025928,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 462,
+        "load_time": 4051.000000210479,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -16,31 +126,95 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
         "status": 200,
-        "duration": 386,
-        "load_time": 4931.624999735504,
+        "duration": 430,
+        "load_time": 4580.549999838695,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
         "status": 200,
-        "duration": 376,
-        "load_time": 3457.5150003656745,
+        "duration": 423,
+        "load_time": 3723.3150000683963,
         "warnings": [],
         "errors": [
-          "POST request error : 403  403 (Forbidden)"
+          "GET request error : 500  500 (Internal Server Error)"
         ],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
         "status": 200,
-        "duration": 385,
-        "load_time": 3682.275000028312,
+        "duration": 434,
+        "load_time": 3249.2799998726696,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
+        "status": 200,
+        "duration": 462,
+        "load_time": 5562.644999939948,
         "warnings": [],
         "errors": [
-          "POST request error : 403  403 (Forbidden)"
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error (main) : 500  500 (Internal Server Error)"
         ],
         "state": "OK"
       },
@@ -63,10 +237,10 @@
         "state": "OK"
       },
       {
-        "url": "",
-        "status": 0,
-        "duration": 0,
-        "load_time": 0,
+        "url": "https://icms.cern.ch/tools/institute/pending-authors",
+        "status": 200,
+        "duration": 392,
+        "load_time": 3362.999999895692,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -90,6 +264,15 @@
         "state": "OK"
       },
       {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 446,
+        "load_time": 3542.5600002054125,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
         "url": "",
         "status": 0,
         "duration": 0,
@@ -103,6 +286,42 @@
         "status": 0,
         "duration": 0,
         "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
+        "status": 200,
+        "duration": 409,
+        "load_time": 3056.980000110343,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "",
+        "status": 0,
+        "duration": 0,
+        "load_time": 0,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
+        "status": 200,
+        "duration": 377,
+        "load_time": 6624.839999945834,
         "warnings": [],
         "errors": [],
         "state": "OK"

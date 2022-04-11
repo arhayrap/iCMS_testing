@@ -5,7 +5,15 @@
       "https://icms-dev.cern.ch/tools/institute/member-authors",
       "https://icms-dev.cern.ch/tools/institute/suspensions",
       "https://icms-dev.cern.ch/tools/administration/engagement-office/due-corrector",
-      "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build"
+      "https://icms-dev.cern.ch/tools/publications/cadi/check-latex-build",
+      "https://icms.cern.ch/tools/collaboration/awards/nominations",
+      "https://icms.cern.ch/tools/collaboration/awards",
+      "https://icms.cern.ch/tools/collaboration/awardees",
+      "https://icms.cern.ch/tools/collaboration/awards/nominees",
+      "https://icms.cern.ch/tools/collaboration/job-openings",
+      "https://icms.cern.ch/tools/collaboration/job-nominations",
+      "https://icms.cern.ch/tools/collaboration/nominee-selection",
+      "https://icms.cern.ch/tools/collaboration/questionnaires"
     ]
   }
 ]

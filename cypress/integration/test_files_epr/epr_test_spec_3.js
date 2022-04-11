@@ -10,12 +10,14 @@ describe("Checking epr", () => {
     let isadmin  = env["isAdmin"] == "true";
     let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    let n = 111;
+    let n = 334;
+    let job = 2;
     it('Wait for its turn.', () => {
         cy.wait(2000 * 3)
     });
-    let start = n*2;
-    let end = 334-start;
+    let start = 3;
+    let end = n;
+    let step = 3;
     let out_path = 'data/epr_output/epr_out_' + 3 + '.json';
     // let out_path = "data/epr_out/epr_out_" + String(id) + ".json";
     let check_string = "Logs in and tests the 'epr' pages.";
