@@ -76,7 +76,7 @@ done
     print(CREATE_FILES_OLD)
     # os.system(KILL_CYPRESS_PROCESSES)
     os.system(REMOVE_OLD_RESULTS)
-    os.system(CREATE_FILES_OLD)
+    os.system(CREATE_FILES)
     os.system(RUN_COMMAND)
 
 if __name__ == '__main__':
