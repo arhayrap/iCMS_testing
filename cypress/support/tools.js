@@ -223,7 +223,7 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
-    cy.get("div.v-card .container").find(".row", {timeout:60000}).eq(0).then(($elem) => {
+    cy.get(".text-left .container .row").eq(0).find(".col-9").then(($elem) => {
         console.log($elem.get(0).innerText == data);
         if ($elem.get(0).innerText != data) {
             site_state.results[k].warnings.push("The reference to the institute was not done correctly.");
@@ -339,7 +339,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(0).as("mode").click();
-    cy.get("div[role='listbox']").children().eq(0).as("lb").children().then((children) => {
+    cy.get("div:visible[role='listbox']").children().eq(0).as("lb").children().then((children) => {
         // var i = Math.floor(Math.random() * children.length);
         var i = 0;
         cy.get("@lb").children().eq(i).click({
@@ -361,7 +361,7 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     });
     cy.wait(2000);
     cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
-    cy.get("div[role='listbox']").children().eq(1).as("lb").children().then((children) => {
+    cy.get("div:visible[role='listbox']").children().eq(1).as("lb").children().then((children) => {
         // i = Math.floor(Math.random() * children.length);
         i = 0;
         cy.get("@lb").children().eq(i).click({
@@ -672,7 +672,7 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
                     selected = option.get(0).innerText;
                     if (index0 == 0) {
                         cy.get(".v-card__title .col-2 input:visible").eq(index0).type(selected);
-                        cy.wait(1000);
+                        cy.wait(2000);
                         cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
                             if (trs.children()[1].innerText + " " + trs.children()[2].innerText != selected) {
                                 if (!stop) {
@@ -685,7 +685,7 @@ Cypress.Commands.add("check_flags", (site_state, k, flags_name) => {
                         });
                     } else if (index0 == 1) {
                         cy.get(".v-card__title .col-2").eq(index0).type(selected);
-                        cy.wait(1000);
+                        cy.wait(2000);
                         cy.get("table tbody tr").as("rows").each((tr, index1, trs) => {
                             if (trs.children()[4].innerText.split("_")[0] != selected.split(" ")[0]) {
                                 if (!stop) {

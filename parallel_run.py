@@ -74,9 +74,9 @@ done
 
     RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
     print(CREATE_FILES_OLD)
-    os.system(KILL_CYPRESS_PROCESSES)
+    # os.system(KILL_CYPRESS_PROCESSES)
     os.system(REMOVE_OLD_RESULTS)
-    os.system(CREATE_FILES)
+    os.system(CREATE_FILES_OLD)
     os.system(RUN_COMMAND)
 
 if __name__ == '__main__':
