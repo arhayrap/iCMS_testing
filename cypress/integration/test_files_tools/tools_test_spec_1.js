@@ -12,14 +12,12 @@ describe("Checking tools", () => {
     let login = env["login"];
     let password = env["password"];
     let isadmin = env["isAdmin"] == "true";
-    let n = 36;
-    let job = 0;
+    let n = 12;
     it('Wait for its turn.', () => {
         cy.wait(2000 * 1)
     });
-    let start = 1;
-    let end = n;
-    let step = 3;
+    let start = n*0;
+    let end = start+n;
     let out_path = 'data/tools_output/tools_out_' + 1 + '.json';
     let site_state = [{
         date: "",
@@ -29,7 +27,7 @@ describe("Checking tools", () => {
         cons_failed_pages: 0,
         app_status: "",
     }];
-    for (let j = job; j < n; j+=step) {
+    for (let j = 0; j < n; j++) {
         site_state[0].results.push({
             url: "",
             status: 0,
@@ -47,7 +45,7 @@ describe("Checking tools", () => {
         cy.visit(base);
         cy.login(login, password);
     })
-    for (let k = job; k < n; k+=step) {
+    for (let k = 0; k < n; k++) {
         it("Logs in and tests the 'tools' pages.", () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
@@ -69,7 +67,7 @@ describe("Checking tools", () => {
                 }
             }).as("gets");
             cy.route({
-                url: requestData[0].results[k].link,
+                url: requestData[0].results[(start + k)].link,
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
                         site_state[0].results[k].errors.push("GET request error (main) : " + xhr.status + "  " + xhr.statusMessage);
@@ -114,7 +112,7 @@ describe("Checking tools", () => {
             }).as("deletes");
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
-                let link = links[k];
+                let link = links[(start + k)];
                 site_state[0].results[k].url = link;
                 cy.get_stat_dur(link, site_state, k, page_fail_limit);
                 site_state[0].results[k].load_time = performance.now();

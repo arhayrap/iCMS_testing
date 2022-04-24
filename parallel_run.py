@@ -10,7 +10,7 @@ from datetime import datetime
 import coloredlogs
 import logging
 
-website = "tools" # tools, epr
+website = "epr" # tools, epr
 n_web = {"tools": 36, "epr": 334}
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
@@ -74,7 +74,7 @@ done
 
     RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
     print(CREATE_FILES_OLD)
-    # os.system(KILL_CYPRESS_PROCESSES)
+    os.system(KILL_CYPRESS_PROCESSES)
     os.system(REMOVE_OLD_RESULTS)
     os.system(CREATE_FILES)
     os.system(RUN_COMMAND)

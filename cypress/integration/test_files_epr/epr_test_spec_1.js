@@ -30,7 +30,7 @@ describe("Checking epr", () => {
         cons_failed_pages: 0,
         app_status: ""
     }];
-    for (let j = 0; j < n; j++) {
+    for (let j = job; j < n; j+=step) {
         site_state[0].results.push({
             url: "",
             status: 0,
@@ -51,7 +51,7 @@ describe("Checking epr", () => {
 	cy.login(login, password);
     })
 
-    for (let k = 0; k < n; k++) {
+    for (let k = job; k < n; k+=step) {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");

@@ -1,0 +1,138 @@
+[
+  {
+    "date": "04-24-2022, 5:13",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "status": 200,
+        "duration": 660,
+        "load_time": 10929.814999981318,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "status": 200,
+        "duration": 428,
+        "load_time": 4688.29999997979,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "status": 200,
+        "duration": 436,
+        "load_time": 3683.405000017956,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "status": 200,
+        "duration": 353,
+        "load_time": 4858.020000043325,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
+        "status": 200,
+        "duration": 470,
+        "load_time": 3493.2949999929406,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards",
+        "status": 200,
+        "duration": 320,
+        "load_time": 3279.0599999716505,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awardees",
+        "status": 200,
+        "duration": 329,
+        "load_time": 2963.805000006687,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
+        "status": 200,
+        "duration": 462,
+        "load_time": 3318.7049999833107,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
+        "status": 200,
+        "duration": 356,
+        "load_time": 2895.219999947585,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
+        "status": 200,
+        "duration": 351,
+        "load_time": 2843.410000030417,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
+        "status": 200,
+        "duration": 426,
+        "load_time": 61327.4800000363,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
+        "status": 200,
+        "duration": 345,
+        "load_time": 3183.484999986831,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

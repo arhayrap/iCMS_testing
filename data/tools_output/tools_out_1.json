@@ -1,0 +1,126 @@
+[
+  {
+    "date": "04-24-2022, 5:17",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/",
+        "status": 200,
+        "duration": 422,
+        "load_time": 3255.829999980051,
+        "warnings": [
+          "The reference to the profile was not done correctly."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
+        "status": 200,
+        "duration": 358,
+        "load_time": 3575.5750000244007,
+        "warnings": [
+          "Reference back to executive boards was not done correctly (wrong url in the result)."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "status": 200,
+        "duration": 467,
+        "load_time": 3532.164999982342,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "status": 200,
+        "duration": 400,
+        "load_time": 5566.565000044648,
+        "warnings": [
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMS' table."
+        ],
+        "errors": [],
+        "state": "OK",
+        "additional": "There are 0 extended colmuns instead of 3."
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "status": 200,
+        "duration": 358,
+        "load_time": 4927.5999999954365,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "status": 200,
+        "duration": 741,
+        "load_time": 3794.815000030212,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> TypeError: Cannot read property 'innerText' of undefined"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/applicants",
+        "status": 200,
+        "duration": 366,
+        "load_time": 2907.884999993257,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
+        "duration": 413,
+        "load_time": 4274.269999994431,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "status": 200,
+        "duration": 332,
+        "load_time": 3397.7750000194646,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/flags",
+        "status": 200,
+        "duration": 399,
+        "load_time": 4700.85999998264,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 372,
+        "load_time": 3742.2500000102445,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/tenures",
+        "status": 200,
+        "duration": 331,
+        "load_time": 3092.530000023544,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]
