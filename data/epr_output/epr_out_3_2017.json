@@ -1,0 +1,31 @@
+[
+  {
+    "date": "04-25-2022, 10:50",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/epr/show",
+        "status": 0,
+        "duration": 0,
+        "load_time": 11184.50999999186,
+        "warnings": [],
+        "errors": [
+          "POST request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "Fail! -> AssertionError: Timed out retrying after 60000ms: expected 'wait' to match /default/"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/176",
+        "status": 200,
+        "duration": 148,
+        "load_time": 15688.21500003105,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

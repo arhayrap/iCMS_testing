@@ -1,50 +1,95 @@
 [
   {
-    "date": "04-24-2022, 5:13",
+    "date": "04-25-2022, 10:23",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "https://icms.cern.ch/tools/institute/profile",
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 330,
-        "load_time": 11665.160000033211,
+        "duration": 1015,
+        "load_time": 5163.439999974798,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/institute/pending-authors",
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 483,
-        "load_time": 3263.214999984484,
+        "duration": 526,
+        "load_time": 3891.7449999717064,
         "warnings": [],
         "errors": [],
+        "state": "Fail! -> TypeError: Cannot read property 'innerText' of undefined"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "status": 200,
+        "duration": 490,
+        "load_time": 4245.590000005905,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/tenures",
+        "status": 200,
+        "duration": 474,
+        "load_time": 4675.685000023805,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "status": 200,
+        "duration": 518,
+        "load_time": 4489.0899999882095,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards",
+        "status": 200,
+        "duration": 508,
+        "load_time": 3450.524999992922,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
+        "status": 200,
+        "duration": 495,
+        "load_time": 3527.490000007674,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
+        "status": 200,
+        "duration": 454,
+        "load_time": 3323.1249999953434,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/institute/member-authors",
         "status": 200,
-        "duration": 331,
-        "load_time": 3569.45499998983,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/suspensions",
-        "status": 200,
-        "duration": 450,
-        "load_time": 3510.2049999986775,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
-        "status": 200,
-        "duration": 415,
-        "load_time": 2920.415000000503,
+        "duration": 536,
+        "load_time": 3299.720000009984,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -52,28 +97,8 @@
       {
         "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
         "status": 200,
-        "duration": 335,
-        "load_time": 3476.5149999875575,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines",
-        "status": 200,
-        "duration": 338,
-        "load_time": 3394.3149999831803,
-        "warnings": [
-          "'Year' has filtered a wrong option."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
-        "status": 200,
-        "duration": 342,
-        "load_time": 3551.080000004731,
+        "duration": 557,
+        "load_time": 3562.2500000172295,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -81,26 +106,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
         "status": 200,
-        "duration": 442,
-        "load_time": 2950.5299999727868,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
-        "status": 200,
-        "duration": 335,
-        "load_time": 2961.8350000237115,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
-        "status": 200,
-        "duration": 324,
-        "load_time": 4419.070000003558,
+        "duration": 625,
+        "load_time": 3264.3450000323355,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -108,8 +115,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
         "status": 200,
-        "duration": 455,
-        "load_time": 3839.14499997627,
+        "duration": 481,
+        "load_time": 4032.680000003893,
         "warnings": [],
         "errors": [],
         "state": "OK"

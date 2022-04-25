@@ -22,25 +22,25 @@
     }
 
     Cypress.Cookies.defaults({
-	preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
+        preserve: ['session', '_saml_idp', 'AUTH_SESSION_ID_LEGACY', 'KC_RESTART', 'AUTH_SESSION_ID', 'KEYCLOAK_IDENTITY', 'KEYCLOAK_IDENTITY_LEGACY', 'KEYCLOAK_SESSION_LEGACY', 'KEYCLOAK_SESSION', '_ga']
     })
 
     before(() => {
-	cy.visit(base);
-	cy.login(login, password);
+        cy.visit(base);
+        cy.login(login, password);
     })
 
-    for (let k = job; k < n; k+=step) {
+    for (let k = job, j = 0; k < n; k+=step, j++) {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            cy.listen_fails(site_state, k, base, links_path, out_path);
+            cy.listen_fails(site_state, j, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("POST request error : " + xhr.status + "  " + xhr.statusMessage);
+                        site_state[0].results[j].errors.push("POST request error : " + xhr.status + "  " + xhr.statusMessage);
                     }
                 }
             }).as('posts');
@@ -49,30 +49,30 @@
                 url: 'https://icms.cern.ch/epr/**',
                 onResponse: (xhr) => {
                     if (xhr.status <= 600 && xhr.status >= 400) {
-                        site_state[0].results[k].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
+                        site_state[0].results[j].errors.push("GET request error : " + xhr.status + "  " + xhr.statusMessage);
                     }
                 }
             }).as('gets');
-	    /*cursor: default'*/
-            cy.find_popup_alerts(site_state[0].results[k]);
+            /*cursor: default'*/
+            cy.find_popup_alerts(site_state[0].results[j]);
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
-                let link = links[k + start];
-                site_state[0].results[k].url = link;
+                let link = links[k];
+                site_state[0].results[j].url = link;
                 cy.visit(link);
                 site_state[0].username = login;
                 cy.wait_for_requests("@posts");
-                site_state[0].results[k].load_time = performance.now();
-                cy.select_year("@posts", site_state[0].results[k], y);
-		cy.get('body', { 
+                site_state[0].results[j].load_time = performance.now();
+                cy.select_year("@posts", site_state[0].results[j], y);
+                cy.get('body', {
                     timeout: 60000
                 }).should('have.css', 'cursor').and('match', /default/);
-                cy.get_load_time(site_state[0].results[k]);
-                cy.get_stat_dur(link, site_state, k, page_fail_limit);
-                cy.check_tables_epr(site_state[0].results[k]);
+                cy.get_load_time(site_state[0].results[j]);
+                cy.get_stat_dur(link, site_state, j, page_fail_limit);
+                cy.check_tables_epr(site_state[0].results[j]);
             });
-            cy.writeFile(out_path+"_"+String(years[y])+"_.json", site_state);
-            cy.save_data(site_state[0].results[k], base, "", years[y]);
+            cy.writeFile(out_path.split(".json")[0]+"_"+String(years[y])+".json", site_state);
+            cy.save_data(site_state[0].results[j], base, "", years[y]);
             console.log(site_state);
             if (k == (n - 1)) {
                cy.clearCookies();

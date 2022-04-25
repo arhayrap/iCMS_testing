@@ -1,0 +1,32 @@
+[
+  {
+    "date": "04-25-2022, 10:46",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/epr/showMine",
+        "status": 200,
+        "duration": 1310,
+        "load_time": 5834.08000000054,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/173",
+        "status": 200,
+        "duration": 138,
+        "load_time": 8222.550000005867,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

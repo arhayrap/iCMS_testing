@@ -1,23 +1,23 @@
 [
   {
-    "date": "04-25-2022, 7:41",
+    "date": "04-25-2022, 10:42",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
-        "url": "",
-        "status": 0,
-        "duration": 0,
-        "load_time": 0,
+        "url": "https://icms.cern.ch/epr/showMyInstPledges",
+        "status": 200,
+        "duration": 72,
+        "load_time": 3788.430000015069,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProject/173",
+        "url": "https://icms.cern.ch/epr/showProject/180",
         "status": 200,
-        "duration": 279,
-        "load_time": 15727.859999984503,
+        "duration": 121,
+        "load_time": 5239.865000010468,
         "warnings": [],
         "errors": [],
         "state": "OK"
