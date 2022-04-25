@@ -11,7 +11,7 @@ import coloredlogs
 import logging
 
 website = "epr" # tools, epr
-n_web = {"tools": 36, "epr": 334}
+n_web = {"tools": 36, "epr": 6} # 334
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
 
@@ -71,6 +71,8 @@ echo "    let out_path = 'data/{website}_output/{website}_out_' + $i + '.json';"
 echo "$(cat {path}/gen_{website}_part_2.txt)"                       >> "{path}/{website}_test_spec_$i.js"
 done
 '''.format(path = path_web[website], website = website, n = n_jobs, n_1 = n_1, n_all_pages = n_web[website], step = n_jobs, bracket_sign_open = "{", bracket_sign_close = "}")
+
+    # echo "        cy.task('terminal_log', {{start: site_state[0].results.length}});"                               >> "{path}/{website}_test_spec_$i.js"
 
     RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
     print(CREATE_FILES_OLD)

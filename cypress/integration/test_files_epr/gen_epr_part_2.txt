@@ -57,7 +57,7 @@
             cy.find_popup_alerts(site_state[0].results[k]);
             cy.readFile(links_path).then(($link_obj) => {
                 let links = $link_obj[0]["links"];
-                let link = links[k];
+                let link = links[k + start];
                 site_state[0].results[k].url = link;
                 cy.visit(link);
                 site_state[0].username = login;

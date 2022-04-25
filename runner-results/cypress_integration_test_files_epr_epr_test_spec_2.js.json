@@ -1,10 +1,10 @@
 {
   "suites": 1,
-  "tests": 1,
-  "passes": 0,
+  "tests": 3,
+  "passes": 1,
   "pending": 0,
-  "failures": 1,
-  "start": "2022-04-24T17:15:37.879Z",
-  "duration": 306,
+  "failures": 2,
+  "start": "2022-04-25T05:41:00.560Z",
+  "duration": 40083,
   "file": "cypress/integration/test_files_epr/epr_test_spec_2.js"
 }
