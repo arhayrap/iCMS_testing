@@ -10,7 +10,7 @@ describe("Checking epr", () => {
     let isadmin  = env["isAdmin"] == "true";
     let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    let n = 6;
+    let n = 334;
     let job = 0;
     it('Wait for its turn.', () => {
         cy.wait(2000 * 1)
@@ -55,7 +55,7 @@ describe("Checking epr", () => {
         it(check_string, () => {
             cy.server();
             site_state[0].date = Cypress.moment().format("MM-DD-YYYY, h:mm");
-            // cy.listen_fails(site_state, j, base, links_path, out_path);
+            cy.listen_fails(site_state, j, base, links_path, out_path);
             cy.route({
                 method: 'POST',
                 url: 'https://icms.cern.ch/**',

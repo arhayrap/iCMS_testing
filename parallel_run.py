@@ -10,8 +10,8 @@ from datetime import datetime
 import coloredlogs
 import logging
 
-website = "epr" # tools, epr
-n_web = {"tools": 36, "epr": 6} # 334
+website = "tools" # tools, epr
+n_web = {"tools": 36, "epr": 334} # 334
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
 

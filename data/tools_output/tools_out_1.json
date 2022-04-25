@@ -1,0 +1,129 @@
+[
+  {
+    "date": "04-25-2022, 11:35",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/",
+        "status": 200,
+        "duration": 574,
+        "load_time": 3544.4550001993775,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "status": 200,
+        "duration": 583,
+        "load_time": 6173.375000245869,
+        "warnings": [
+          "There is someting wrong in menu`s 'CMS Statuses' 'CMS' table."
+        ],
+        "errors": [],
+        "state": "OK",
+        "additional": "There are 0 extended colmuns instead of 3."
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/applicants",
+        "status": 200,
+        "duration": 493,
+        "load_time": 5124.2399998009205,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/flags",
+        "status": 200,
+        "duration": 731,
+        "load_time": 5807.789999991655,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "status": 200,
+        "duration": 612,
+        "load_time": 5974.764999933541,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "status": 200,
+        "duration": 676,
+        "load_time": 4256.409999914467,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awardees",
+        "status": 200,
+        "duration": 478,
+        "load_time": 3343.9699998125434,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
+        "status": 200,
+        "duration": 705,
+        "load_time": 3742.3499999567866,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/profile",
+        "status": 200,
+        "duration": 552,
+        "load_time": 3782.855000346899,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/suspensions",
+        "status": 200,
+        "duration": 760,
+        "load_time": 3630.845000036061,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines",
+        "status": 200,
+        "duration": 495,
+        "load_time": 3752.7700001373887,
+        "warnings": [
+          "'Year' has filtered a wrong option."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
+        "status": 200,
+        "duration": 563,
+        "load_time": 3771.554999984801,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

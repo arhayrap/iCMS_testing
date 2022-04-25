@@ -1,0 +1,126 @@
+[
+  {
+    "date": "04-25-2022, 11:33",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
+        "status": 200,
+        "duration": 438,
+        "load_time": 4501.114999875426,
+        "warnings": [
+          "Reference back to executive boards was not done correctly (wrong url in the result)."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "status": 200,
+        "duration": 494,
+        "load_time": 4528.105000033975,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
+        "duration": 1013,
+        "load_time": 7839.369999244809,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 631,
+        "load_time": 3902.704999782145,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "status": 200,
+        "duration": 526,
+        "load_time": 4323.125000111759,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
+        "status": 200,
+        "duration": 445,
+        "load_time": 3697.5650005042553,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
+        "status": 200,
+        "duration": 401,
+        "load_time": 3193.9799999818206,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
+        "status": 200,
+        "duration": 482,
+        "load_time": 3361.360000446439,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/pending-authors",
+        "status": 200,
+        "duration": 432,
+        "load_time": 3389.6550005301833,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 468,
+        "load_time": 3423.964999616146,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
+        "status": 200,
+        "duration": 673,
+        "load_time": 3514.8649998009205,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
+        "status": 200,
+        "duration": 591,
+        "load_time": 5640.979999676347,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

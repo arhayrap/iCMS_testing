@@ -10,7 +10,7 @@ describe("Checking epr", () => {
     let isadmin  = env["isAdmin"] == "true";
     let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    let n = 6;
+    let n = 334;
     let job = 1;
     it('Wait for its turn.', () => {
         cy.wait(2000 * 2)
