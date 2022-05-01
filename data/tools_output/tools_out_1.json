@@ -1,14 +1,14 @@
 [
   {
-    "date": "04-25-2022, 11:35",
+    "date": "05-01-2022, 6:57",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 574,
-        "load_time": 3544.4550001993775,
+        "duration": 524,
+        "load_time": 2741.3349999987986,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -16,20 +16,17 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 583,
-        "load_time": 6173.375000245869,
-        "warnings": [
-          "There is someting wrong in menu`s 'CMS Statuses' 'CMS' table."
-        ],
+        "duration": 438,
+        "load_time": 7841.940000012983,
+        "warnings": [],
         "errors": [],
-        "state": "OK",
-        "additional": "There are 0 extended colmuns instead of 3."
+        "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "status": 200,
-        "duration": 493,
-        "load_time": 5124.2399998009205,
+        "duration": 323,
+        "load_time": 2906.5449999907287,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -37,8 +34,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "status": 200,
-        "duration": 731,
-        "load_time": 5807.789999991655,
+        "duration": 325,
+        "load_time": 3541.1049999966053,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -46,8 +43,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/communications",
         "status": 200,
-        "duration": 612,
-        "load_time": 5974.764999933541,
+        "duration": 351,
+        "load_time": 4284.769999998389,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -55,8 +52,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "status": 200,
-        "duration": 676,
-        "load_time": 4256.409999914467,
+        "duration": 318,
+        "load_time": 3241.3800000067567,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -66,8 +63,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/awardees",
         "status": 200,
-        "duration": 478,
-        "load_time": 3343.9699998125434,
+        "duration": 442,
+        "load_time": 2654.514999987441,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -75,8 +72,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
         "status": 200,
-        "duration": 705,
-        "load_time": 3742.3499999567866,
+        "duration": 444,
+        "load_time": 2646.6250000084983,
         "warnings": [],
         "errors": [
           "GET request error (main) : 500  500 (Internal Server Error)",
@@ -87,8 +84,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "status": 200,
-        "duration": 552,
-        "load_time": 3782.855000346899,
+        "duration": 388,
+        "load_time": 2952.9699999984587,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -96,8 +93,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/suspensions",
         "status": 200,
-        "duration": 760,
-        "load_time": 3630.845000036061,
+        "duration": 316,
+        "load_time": 2476.4149999973597,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -105,8 +102,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines",
         "status": 200,
-        "duration": 495,
-        "load_time": 3752.7700001373887,
+        "duration": 347,
+        "load_time": 3466.664999999921,
         "warnings": [
           "'Year' has filtered a wrong option."
         ],
@@ -116,8 +113,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
         "status": 200,
-        "duration": 563,
-        "load_time": 3771.554999984801,
+        "duration": 325,
+        "load_time": 2899.2699999944307,
         "warnings": [],
         "errors": [],
         "state": "OK"

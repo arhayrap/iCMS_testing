@@ -1,0 +1,9 @@
+{
+  "url": "https://icms.cern.ch/tools/institute/suspensions",
+  "status": 200,
+  "duration": 359,
+  "load_time": 2707.5499999991735,
+  "warnings": [],
+  "errors": [],
+  "state": "OK"
+}

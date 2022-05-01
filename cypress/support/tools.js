@@ -105,6 +105,7 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
             site_state.results[k].warnings.push("Unit selection was not done correctly.");
         }
     });
+    /*
     cy.get("main div.v-toolbar__content button.v-btn").eq(1).click().then(() => {
 	cy.url().then((url) => {
 	    console.log(url, site_state.results[k].url);
@@ -113,6 +114,7 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
 	    }
 	});
     }).wait(1000);
+    */
     // ------------------------------------------------------- Administrator -------------------------------------------------------------
     if (site_state.results[k].isAdmin){
 	/* EDIT */
@@ -275,25 +277,28 @@ Cypress.Commands.add("check_people", (site_state, k) => {
     cy.get("div.menuable__content__active div[role='option']").eq(2).click();
     cy.get(".v-card__title .row .v-input").as("menu_items").each((item0, index0, items0) => {
         if (index0 == 0 || index0 == 1 || index0 == 2) {
-            cy.get("@menu_items").eq(index0).click().wait(1000);
+            cy.get("@menu_items").eq(index0).click();
             cy.get("body").then((body) => {
-        	if (index0 == 0){
-                cy.get("div:visible.v-menu__content div[aria-selected='true']").click({
-                    multiple: true
-                }).wait(10000);
+                if (index0 == 0){
+                    cy.get(".v-list-item .primary--text").click({
+                        multiple: true
+                    });
+                    cy.get(".v-btn--bottom").click(); // .wait(10000);
+                    cy.get("@menu_items").eq(index0).click();
                 }
                 cy.get(".v-card__title .row .v-input").eq(index0).then((i) => {
                     menu_item = i.get(0).innerText;
                 });
                 cy.get("div:visible.v-menu__content div[role='listbox'] div[aria-selected='false']").as("outline").then((items1) => {
-		    //let element = Math.round((items1.length - 1) * Math.random());
-		    // if (index0 == 0) { element = 8; }
-		    let element = 0;
-		    if (index0 == 0) { element = 0; }
-		    if (index0 == 1) { element = 0; }
-		    if (index0 == 2) { element = 0; }
-		    let item1 = items1.get(element);
-        	    cy.get("@outline").eq(element).click({force: true}).wait(5000);
+                    // let element = Math.round((items1.length - 1) * Math.random());
+                    // if (index0 == 0) { element = 8; }
+                    let element = 0;
+                    if (index0 == 0) { element = 0; }
+                    if (index0 == 1) { element = 0; }
+                    if (index0 == 2) { element = 0; }
+                    let item1 = items1.get(element);
+                    cy.get("@outline").eq(element).click({force: true}).wait(5000);
+                    cy.get(".v-btn--bottom").click().wait(5000);
                     if (cy.get("body").find("tbody tr[class='']").length != 0) {
                         cy.get("tbody tr[class='']").each((tr, index, trs) => {
                             if (tr.get(0).children[key[index0]].innerText != item1.innerText) {
@@ -306,14 +311,14 @@ Cypress.Commands.add("check_people", (site_state, k) => {
                                 }
                             }
                         });
-                	cy.get("@outline").eq(element).click({force: true}).wait(5000);
+                        cy.get("@outline").eq(element).click({force: true});
                     } else {
                         site_state.results[k].warnings.push("The menu`s '" + menu_item + "', '" + item1.innerText + "' table is empty.");
                         return false;
                     }
                 });
             });
-        } else if (index0 == 4) {
+        } else if (index0 == 3) {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead = elems.length;
             });
@@ -321,7 +326,7 @@ Cypress.Commands.add("check_people", (site_state, k) => {
             cy.get(".v-data-table__wrapper thead tr").children().then((elems) => {
                 n_thead -= elems.length;
                 if (Math.abs(n_thead) != 3) {
-                    site_state.results[k].additional = "There are " + n_thead + " extended colmuns instead of 3.";
+                    site_state.results[k].warnings.push("There are " + n_thead + " extended colmuns instead of 3.");
                 }
             });
         }

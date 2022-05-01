@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+  "status": 200,
+  "duration": 369,
+  "load_time": 3387.4199999991106,
+  "warnings": [],
+  "errors": [
+    "POST request error : 403  403 (Forbidden)"
+  ],
+  "state": "OK"
+}

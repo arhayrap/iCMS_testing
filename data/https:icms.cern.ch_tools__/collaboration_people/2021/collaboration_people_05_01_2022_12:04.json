@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/people",
+  "status": 200,
+  "duration": 355,
+  "load_time": 4826.540000001842,
+  "warnings": [
+    "There is someting wrong in menu`s 'CMS Statuses' 'CMS' table."
+  ],
+  "errors": [],
+  "state": "OK",
+  "additional": "There are 0 extended colmuns instead of 3."
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://icms.cern.ch/tools/publications/cadi/lines",
+  "status": 200,
+  "duration": 381,
+  "load_time": 3277.7700000006007,
+  "warnings": [
+    "'Year' has filtered a wrong option."
+  ],
+  "errors": [],
+  "state": "OK"
+}

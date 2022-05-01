@@ -1,0 +1,12 @@
+{
+  "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
+  "status": 200,
+  "duration": 345,
+  "load_time": 2563.2499999992433,
+  "warnings": [],
+  "errors": [
+    "GET request error (main) : 500  500 (Internal Server Error)",
+    "GET request error : 500  500 (Internal Server Error)"
+  ],
+  "state": "OK"
+}

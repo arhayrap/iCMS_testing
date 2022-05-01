@@ -4,12 +4,12 @@ import sys
 import json
 import time
 
-# suite_path = "cypress/integration/test_files_epr/"
-# path_array = [suite_path + "*_3.js"]
+suite_path = "cypress/integration/test_files_tools/"
+path_array = [suite_path + "*_1.js"]
 # path_array = [suite_path + "epr_*.js"]
 
-suite_path = "cypress/integration/"
-path_array = [suite_path + "*.js"]
+# suite_path = "cypress/integration/"
+# path_array = [suite_path + "*.js"]
 
 def Run_process(path, obj):
     print(path)
