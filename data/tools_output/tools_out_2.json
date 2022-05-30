@@ -1,25 +1,23 @@
 [
   {
-    "date": "04-25-2022, 11:33",
+    "date": "05-29-2022, 11:32",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "status": 200,
-        "duration": 438,
-        "load_time": 4501.114999875426,
-        "warnings": [
-          "Reference back to executive boards was not done correctly (wrong url in the result)."
-        ],
+        "duration": 759,
+        "load_time": 3694.194999989122,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/voting",
         "status": 200,
-        "duration": 494,
-        "load_time": 4528.105000033975,
+        "duration": 556,
+        "load_time": 4310.664999997243,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -27,8 +25,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
         "status": 200,
-        "duration": 1013,
-        "load_time": 7839.369999244809,
+        "duration": 692,
+        "load_time": 5046.265000011772,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -36,8 +34,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "status": 200,
-        "duration": 631,
-        "load_time": 3902.704999782145,
+        "duration": 935,
+        "load_time": 3936.2849998287857,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -45,8 +43,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
         "status": 200,
-        "duration": 526,
-        "load_time": 4323.125000111759,
+        "duration": 481,
+        "load_time": 4935.160000110045,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -54,8 +52,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
         "status": 200,
-        "duration": 445,
-        "load_time": 3697.5650005042553,
+        "duration": 686,
+        "load_time": 4056.5850001294166,
         "warnings": [],
         "errors": [
           "GET request error : 500  500 (Internal Server Error)"
@@ -65,8 +63,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
         "status": 200,
-        "duration": 401,
-        "load_time": 3193.9799999818206,
+        "duration": 690,
+        "load_time": 3344.770000083372,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -74,8 +72,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
         "status": 200,
-        "duration": 482,
-        "load_time": 3361.360000446439,
+        "duration": 644,
+        "load_time": 3431.6499999258667,
         "warnings": [],
         "errors": [
           "GET request error : 500  500 (Internal Server Error)",
@@ -86,8 +84,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/pending-authors",
         "status": 200,
-        "duration": 432,
-        "load_time": 3389.6550005301833,
+        "duration": 678,
+        "load_time": 3560.109999962151,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -95,8 +93,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "status": 200,
-        "duration": 468,
-        "load_time": 3423.964999616146,
+        "duration": 409,
+        "load_time": 3122.200000099838,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -104,8 +102,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
         "status": 200,
-        "duration": 673,
-        "load_time": 3514.8649998009205,
+        "duration": 793,
+        "load_time": 3297.8450001683086,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -113,8 +111,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
         "status": 200,
-        "duration": 591,
-        "load_time": 5640.979999676347,
+        "duration": 807,
+        "load_time": 5484.935000073165,
         "warnings": [],
         "errors": [],
         "state": "OK"

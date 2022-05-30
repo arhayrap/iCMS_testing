@@ -1,14 +1,14 @@
 [
   {
-    "date": "04-25-2022, 11:34",
+    "date": "05-30-2022, 6:44",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 729,
-        "load_time": 5216.175000183284,
+        "duration": 642,
+        "load_time": 5465.504999971017,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -16,107 +16,17 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 684,
-        "load_time": 4523.109999485314,
+        "duration": 588,
+        "load_time": 4423.384999856353,
         "warnings": [],
         "errors": [],
-        "state": "Fail! -> TypeError: Cannot read property 'innerText' of undefined"
+        "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
         "status": 200,
-        "duration": 579,
-        "load_time": 7283.7299993261695,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/tenures",
-        "status": 200,
-        "duration": 456,
-        "load_time": 4385.885000228882,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
-        "status": 200,
-        "duration": 489,
-        "load_time": 4164.435000158846,
-        "warnings": [],
-        "errors": [
-          "POST request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/awards",
-        "status": 200,
-        "duration": 709,
-        "load_time": 3737.509999424219,
-        "warnings": [],
-        "errors": [
-          "GET request error (main) : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
-        "status": 200,
-        "duration": 596,
-        "load_time": 3747.4100003018975,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)",
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
-        "status": 200,
-        "duration": 513,
-        "load_time": 3399.1099996492267,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/member-authors",
-        "status": 200,
-        "duration": 676,
-        "load_time": 3486.4099994301796,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
-        "status": 200,
-        "duration": 539,
-        "load_time": 3625.5850000306964,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
-        "status": 200,
-        "duration": 498,
-        "load_time": 3323.195000179112,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
-        "status": 200,
-        "duration": 525,
-        "load_time": 4152.270000427961,
+        "duration": 433,
+        "load_time": 4572.3399999551475,
         "warnings": [],
         "errors": [],
         "state": "OK"
