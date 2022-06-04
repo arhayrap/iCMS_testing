@@ -339,20 +339,33 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
     var mode = "";
     var i;
     var year;
+    cy.get(".v-card__title .col-2").click({multiple:true, force:true});
+    // CHANGE THE YEAR (2022 IS EMPTY)
+    cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
+    cy.get("div[role='listbox']").children().eq(1).then((children) => {
+        // i = Math.floor(Math.random() * children.length);
+        var i = 2;
+        cy.get("div[role='listbox'] div[role='option']").as("lb").children().eq(i).click({
+            force: true
+        });
+    });
+    cy.wait(3000);
+    // -------------------------------
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr0, index0, trs0) => {
         let initial = tr0.get(0).children[4].innerText;
     });
-    cy.wait(2000);
+    cy.wait(3000);
     cy.get(".v-card__title .col-2").children().eq(0).as("mode").click();
-    cy.get("div:visible[role='listbox']").children().eq(0).as("lb").children().then((children) => {
+    cy.get("div[role='listbox']").children().eq(0).then((children) => {
         // var i = Math.floor(Math.random() * children.length);
-        var i = 0;
-        cy.get("@lb").children().eq(i).click({
+        i = 3;
+        cy.get("div[role='listbox'] div[role='option']").children().eq(i).click({
             force: true
+        }).then((children) => {
+            mode = children[0].innerText;
         });
-        mode = children[i].innerText;
     });
-    cy.wait(2000);
+    cy.wait(3000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
         if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {
             stop0 = true;
@@ -364,17 +377,17 @@ Cypress.Commands.add("check_mo_list", (site_state, k) => {
             stop0 = false;
         }
     });
-    cy.wait(2000);
+    cy.wait(3000);
     cy.get(".v-card__title .col-2").children().eq(1).as("year").click();
-    cy.get("div:visible[role='listbox']").children().eq(1).as("lb").children().then((children) => {
+    cy.get("div[role='listbox']").children().eq(1).then((children) => {
         // i = Math.floor(Math.random() * children.length);
-        i = 0;
-        cy.get("@lb").children().eq(i).click({
+        i = 3;
+        cy.get("div[role='listbox'] div[role='option']").children().eq(i).click({
             force: true
         });
-        year = children[i].innerText;
+        year = children[0].innerText;
     });
-    cy.wait(2000);
+    cy.wait(3000);
     cy.get(".row .v-data-table__wrapper tbody tr").each((tr1, index1, trs1) => {
         console.log(tr1.get(0).children[4].innerText == initial[index1])
         if (tr1.get(0).children[4].innerText != initial[index1] && !stop0) {

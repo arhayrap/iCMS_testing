@@ -15,7 +15,7 @@ describe("Checking tools", () => {
     let n = 36;
     let job = 0;
     it('Wait for its turn.', () => {
-        cy.wait(2000 * 1)
+        cy.wait(5000 * 1)
     });
     let start = 1;
     let end = n;
