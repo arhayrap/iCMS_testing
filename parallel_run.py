@@ -4,6 +4,7 @@ import sys
 import json
 import time
 import math
+from jsmin import jsmin
 
 from multiprocessing import Pool, Manager, Value, cpu_count
 from datetime import datetime
@@ -32,6 +33,7 @@ def Run_process(obj, n_jobs):
 rm -f {path}/*.js
 rm -f -r runner-results
 rm -f multi-reporter-config.json
+rm -f cypress/parallel-weights.json
 for i in {{1..{n}}}
 do
 echo "$(cat {path}/gen_{website}_part_1_old.txt)"                   >> "{path}/{website}_test_spec_$i.js"
@@ -56,6 +58,7 @@ done
 rm -f {path}/*.js
 rm -f -r runner-results
 rm -f multi-reporter-config.json
+rm -f cypress/parallel-weights.json
 for i in {{1..{n}}}
 do
 echo "$(cat {path}/gen_{website}_part_1.txt)"                       >> "{path}/{website}_test_spec_$i.js"
@@ -72,13 +75,17 @@ echo "$(cat {path}/gen_{website}_part_2.txt)"                       >> "{path}/{
 done
 '''.format(path = path_web[website], website = website, n = n_jobs, n_1 = n_1, n_all_pages = n_web[website], step = n_jobs, bracket_sign_open = "{", bracket_sign_close = "}")
 
-    # echo "        cy.task('terminal_log', {{start: site_state[0].results.length}});"                               >> "{path}/{website}_test_spec_$i.js"
-
-    RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
+    # RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
+    RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*_min.js", str(flags).replace("'", '"').replace(" ", ""))
     print(CREATE_FILES_OLD)
     os.system(KILL_CYPRESS_PROCESSES)
     os.system(REMOVE_OLD_RESULTS)
     os.system(CREATE_FILES)
+    for i in range(1, n_jobs + 1):
+        with open("{path}/{website}_test_spec_{ind}.js".format(path = path_web[website], website = website, ind = i), "r") as f:
+            minified = jsmin(f.read())
+            with open("{path}/{website}_test_spec_{ind}_min.js".format(path = path_web[website], website = website, ind = i), "w") as new_f:
+                new_f.write(minified)
     os.system(RUN_COMMAND)
 
 if __name__ == '__main__':

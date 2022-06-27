@@ -1,14 +1,14 @@
 [
   {
-    "date": "06-04-2022, 11:38",
+    "date": "06-27-2022, 9:41",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
         "status": 200,
-        "duration": 460,
-        "load_time": 3489.3749998882413,
+        "duration": 431,
+        "load_time": 6581.059999763966,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -16,8 +16,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "status": 200,
-        "duration": 464,
-        "load_time": 3994.080000091344,
+        "duration": 485,
+        "load_time": 15122.374999336898,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -25,8 +25,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
         "status": 200,
-        "duration": 455,
-        "load_time": 3851.3050000183284,
+        "duration": 453,
+        "load_time": 3991.7449997738004,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -34,8 +34,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/tenures",
         "status": 200,
-        "duration": 581,
-        "load_time": 4131.6700000315905,
+        "duration": 461,
+        "load_time": 4597.930000163615,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -43,8 +43,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
         "status": 200,
-        "duration": 373,
-        "load_time": 3811.269999947399,
+        "duration": 596,
+        "load_time": 4678.254999220371,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -54,8 +54,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards",
         "status": 200,
-        "duration": 373,
-        "load_time": 3480.9050001204014,
+        "duration": 439,
+        "load_time": 3700.675000436604,
         "warnings": [],
         "errors": [
           "GET request error (main) : 500  500 (Internal Server Error)"
@@ -65,10 +65,11 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-openings",
         "status": 200,
-        "duration": 378,
-        "load_time": 3079.720000270754,
+        "duration": 663,
+        "load_time": 3193.394999951124,
         "warnings": [],
         "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
           "GET request error : 500  500 (Internal Server Error)"
         ],
         "state": "OK"
@@ -76,8 +77,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
         "status": 200,
-        "duration": 376,
-        "load_time": 2948.939999565482,
+        "duration": 397,
+        "load_time": 2985.609999857843,
         "warnings": [],
         "errors": [
           "GET request error : 500  500 (Internal Server Error)"
@@ -87,8 +88,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/member-authors",
         "status": 200,
-        "duration": 370,
-        "load_time": 2954.8400002531707,
+        "duration": 511,
+        "load_time": 3127.299999818206,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -96,8 +97,8 @@
       {
         "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
         "status": 200,
-        "duration": 377,
-        "load_time": 3106.7050001583993,
+        "duration": 585,
+        "load_time": 3557.5149999931455,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -105,8 +106,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
         "status": 200,
-        "duration": 379,
-        "load_time": 3101.620000321418,
+        "duration": 394,
+        "load_time": 3006.499999202788,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -114,8 +115,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
         "status": 200,
-        "duration": 518,
-        "load_time": 3789.9600001983345,
+        "duration": 466,
+        "load_time": 3763.314999639988,
         "warnings": [],
         "errors": [],
         "state": "OK"
