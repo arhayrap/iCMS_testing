@@ -1,4 +1,5 @@
 import configData from "../fixtures/tools_page_data.json";
+import linksTools from "../fixtures/tools_links.json";
 
 describe("Checking tools longest requests", () => {
     /*|------------------------------------<|       Paths       |>------------------------------------------------|*/
@@ -8,7 +9,7 @@ describe("Checking tools longest requests", () => {
     var INPUT_DATA = configData;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var start = 0;
-    var n = 36;
+    var n = linksTools[0]["links"].length;
     /*|-----------------------------------------------------------------------------------------------------------|*/
     var env      = Cypress.env()["flags"]
     var isadmin  = env["isAdmin"];

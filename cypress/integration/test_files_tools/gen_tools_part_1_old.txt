@@ -7,7 +7,6 @@ describe("Checking tools", () => {
     let INPUT_DATA = configData;
     let page_fail_limit = 5;
     let page_fails = 0;
-    let total = 36;
     let env = Cypress.env()["flags"]
     let login = env["login"];
     let password = env["password"];

@@ -32,7 +32,7 @@ describe("Checking tools", () => {
     }];
     for (let k = job, j = 0; k < n; k+=step, j++) {
         site_state[0].results.push({
-            url: "",
+            url: linksTools[0]["links"][k],
             status: 0,
             duration: 0,
             load_time: 0,
@@ -116,7 +116,8 @@ describe("Checking tools", () => {
             // cy.readFile(links_path).then(($link_obj) => {
                 let links = linksTools[0]["links"];
                 let link = links[k];
-                site_state[0].results[j].url = link;
+                // site_state[0].results[j].url = link;
+                cy.task("terminal_log", {start: site_state[0].results[j].url});
                 cy.get_stat_dur(link, site_state, j, page_fail_limit);
                 site_state[0].results[j].load_time = performance.now();
                 cy.visit(link);
@@ -126,17 +127,21 @@ describe("Checking tools", () => {
                 cy.wait(1000);
                 cy.get_load_time(site_state[0].results[j]);
                 cy.check_tables(site_state[0], j);
-                cy.task("terminal_log", {})
                 if (link == profile) {
                     cy.check_profile_dashboard(site_state[0], j, base);
                     cy.check_logo_reference(site_state[0], j, base);
-                } else if (link == base) {
+                }
+                else if (link == base) {
                     cy.check_dashboard(site_state[0], j, INPUT_DATA["dashboard_data"]);
-                } else if (link == base + "collaboration/units") {
+                }
+                else if (link == base + "collaboration/units") {
                     cy.check_units(site_state[0], j, INPUT_DATA["units_data"]);
-                } else if (link == base + "collaboration/institutes") {
-                    cy.check_institutes(site_state[0], j);
-                } else if (link == base + "collaboration/people") {
+                }
+                else if (link == base + "collaboration/institutes") {
+                    // cy.check_institutes(site_state[0], j);
+                    console.log("pass");
+                }
+                else if (link == base + "collaboration/people") {
                     cy.check_people(site_state[0], j);
                 } else if (link == base + "collaboration/mo-list") {
                     cy.check_mo_list(site_state[0], j);
@@ -157,8 +162,11 @@ describe("Checking tools", () => {
                 } else if (link == base + "publications/cadi/lines") {
                     cy.check_CADI_lines(site_state[0], j, INPUT_DATA["CADI_lines"]);
                 }
-                */
-                cy.task("writeFile", {path: out_path, data: site_state, index: j});
+                // cy.task("terminal_log", {start: linksTools[0]["links"][k]});
+                // cy.task("terminal_log", {start: site_state[0].results[j].url});
+                // cy.task("writeFile", {path: out_path, data: site_state, index: j});
+                cy.writeFile(out_path, site_state);
+                // cy.task("terminal_log", {start: j + "   " + k});
                 cy.save_data(site_state[0].results[j], base);
             // });
             if (k == (n - 1)) {

@@ -5,11 +5,11 @@ import json
 import time
 
 suite_path = "cypress/integration/test_files_tools/"
-path_array = [suite_path + "*_3.js"]
+path_array = [suite_path + "tools_test_spec_2.js"]
 # path_array = [suite_path + "epr_*.js"]
 
 # suite_path = "cypress/integration/"
-# path_array = [suite_path + "*.js"]
+# path_array = [suite_path + "tools_request_url.js"]
 
 def Run_process(path, obj):
     print(path)

@@ -1,14 +1,14 @@
 [
   {
-    "date": "06-27-2022, 9:40",
+    "date": "07-02-2022, 12:39",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 434,
-        "load_time": 3202.754999510944,
+        "duration": 328,
+        "load_time": 3252.534999512136,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -16,8 +16,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 711,
-        "load_time": 5752.890000119805,
+        "duration": 342,
+        "load_time": 5257.764999754727,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -25,8 +25,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "status": 200,
-        "duration": 678,
-        "load_time": 3815.065000206232,
+        "duration": 321,
+        "load_time": 3261.845000088215,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -34,8 +34,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "status": 200,
-        "duration": 531,
-        "load_time": 4502.839999273419,
+        "duration": 377,
+        "load_time": 4173.680000007153,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -43,8 +43,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/communications",
         "status": 200,
-        "duration": 421,
-        "load_time": 5005.979999899864,
+        "duration": 384,
+        "load_time": 5656.48499969393,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -52,8 +52,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "status": 200,
-        "duration": 412,
-        "load_time": 4037.4100003391504,
+        "duration": 691,
+        "load_time": 3887.804999947548,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
@@ -63,8 +63,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/awardees",
         "status": 200,
-        "duration": 401,
-        "load_time": 3069.680000655353,
+        "duration": 366,
+        "load_time": 2795.8399998024106,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -72,8 +72,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
         "status": 200,
-        "duration": 650,
-        "load_time": 3530.9650003910065,
+        "duration": 585,
+        "load_time": 3411.4950001239777,
         "warnings": [],
         "errors": [
           "GET request error (main) : 500  500 (Internal Server Error)",
@@ -84,8 +84,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "status": 200,
-        "duration": 382,
-        "load_time": 3429.109999909997,
+        "duration": 328,
+        "load_time": 4220.220000483096,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -93,8 +93,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/suspensions",
         "status": 200,
-        "duration": 443,
-        "load_time": 3127.9800003394485,
+        "duration": 317,
+        "load_time": 2846.9900004565716,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -102,8 +102,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines",
         "status": 200,
-        "duration": 510,
-        "load_time": 3987.3500000685453,
+        "duration": 317,
+        "load_time": 3678.109999746084,
         "warnings": [
           "'Year' has filtered a wrong option."
         ],
@@ -113,8 +113,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
         "status": 200,
-        "duration": 751,
-        "load_time": 4654.819999821484,
+        "duration": 327,
+        "load_time": 3177.079999819398,
         "warnings": [],
         "errors": [],
         "state": "OK"

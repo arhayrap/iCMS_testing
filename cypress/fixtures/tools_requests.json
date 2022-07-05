@@ -1,188 +1,223 @@
 [
   {
-    "date": "03-17-2022, 11:05",
+    "date": "07-03-2022, 1:16",
     "username": "arhayrap",
     "isAdmin": "false",
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 748
+        "dur": 815
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/units",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 410
+        "dur": 483
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/institutes",
-        "link": "https://icms.cern.ch/tools-api/restplus/statistics/members_count**",
-        "dur": 470
+        "link": "https://icms.cern.ch/tools-api/restplus/members/institutes",
+        "dur": 537
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "link": "https://icms.cern.ch/tools-api/restplus/members/people**",
-        "dur": 2286
+        "dur": 2288
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/voting",
-        "link": "https://icms.cern.ch/tools-api/restplus/voting/participants**",
-        "dur": 664
+        "link": "https://icms.cern.ch/tools-api/restplus/voting/events",
+        "dur": 581
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/mo-list",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 352
+        "dur": 421
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 395
+        "dur": 470
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
-        "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/people**",
-        "dur": 3476
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 461
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/statistics",
-        "link": "https://icms.cern.ch/tools-api/restplus/statistics/members_count**",
-        "dur": 346
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 370
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "link": "https://icms.cern.ch/tools-api/restplus/members/flags",
-        "dur": 1322
+        "dur": 1580
       },
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
-        "link": "https://icms.cern.ch/tools-api/restplus/admin/impersonate",
-        "dur": 354
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 423
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/tenures",
         "link": "https://icms.cern.ch/tools-api/restplus/org_chart/units",
-        "dur": 784
+        "dur": 598
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/communications",
         "link": "https://icms.cern.ch/tools-api/restplus/org_chart/positions**",
-        "dur": 1363
+        "dur": 1316
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
-        "link": "https://icms.cern.ch/tools-api/restplus/booking/slots**",
-        "dur": 1552
+        "link": "https://icms.cern.ch/tools-api/restplus/booking/requests**",
+        "dur": 1502
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
         "link": "https://icms.cern.ch/tools-api/restplus/booking/weeks",
-        "dur": 606
+        "dur": 644
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "link": "https://icms.cern.ch/tools-api/restplus/booking/rooms",
-        "dur": 881
+        "dur": 982
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
-        "link": "https://icms.cern.ch/tools-api/restplus/awards/nomination",
-        "dur": 726
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 427
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards",
         "link": "https://icms.cern.ch/tools-api/restplus/awards/awards",
-        "dur": 406
+        "dur": 428
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/awardees",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 314
+        "dur": 352
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 364
+        "dur": 392
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-openings",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 381
+        "dur": 438
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
-        "link": "https://icms.cern.ch/tools-api/restplus/org_chart/job_openings",
-        "dur": 398
+        "link": "https://icms.cern.ch/tools-api/restplus/org_chart/job_nomination",
+        "dur": 405
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
-        "link": "https://icms.cern.ch/tools-api/restplus/org_chart/job_nomination",
-        "dur": 396
+        "link": "https://icms.cern.ch/tools-api/restplus/org_chart/job_openings",
+        "dur": 400
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 318
+        "dur": 378
       },
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "link": "https://icms.cern.ch/tools-api/restplus/epr/timeline**",
-        "dur": 1571
+        "dur": 1609
       },
       {
         "url": "https://icms.cern.ch/tools/institute/pending-authors",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 343
+        "dur": 398
       },
       {
         "url": "https://icms.cern.ch/tools/institute/member-authors",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 366
+        "dur": 424
       },
       {
         "url": "https://icms.cern.ch/tools/institute/suspensions",
-        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 323
+        "link": "https://icms.cern.ch/tools-api/restplus/admin/impersonate",
+        "dur": 378
       },
       {
         "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 333
+        "dur": 475
       },
       {
         "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
         "link": "https://icms.cern.ch/tools-api/restplus/mo/phd_project_list**",
-        "dur": 454
+        "dur": 617
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines",
         "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/cadi/analyses**",
-        "dur": 506
+        "dur": 1178
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
-        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 3290
+        "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/cadi/arcs",
+        "dur": 3534
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 438
+        "dur": 378
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
         "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
-        "dur": 424
+        "dur": 495
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
         "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/cadi/analyses**",
-        "dur": 1068
+        "dur": 1147
       },
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
         "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/cadi/history/stateChanges**",
-        "dur": 847
+        "dur": 945
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 352
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 364
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/files",
+        "link": "https://icms.cern.ch/tools-api/restplus/authorlists/filesets",
+        "dur": 4030
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/author-data",
+        "link": "https://icms.cern.ch/tools-api/restplus/icms_public/user_info",
+        "dur": 369
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/notes/entries",
+        "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/notes/public**",
+        "dur": 1240
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/notes/pending",
+        "link": "https://icms.cern.ch/tools-api/restplus/relay/piggyback/notes/stubs",
+        "dur": 802
+      },
+      {
+        "url": "https://icms.cern.ch/tools/user/profile",
+        "link": "https://icms.cern.ch/tools-api/restplus/members/career_events**",
+        "dur": 3477
       }
     ],
     "cons_failed_pages": 0,

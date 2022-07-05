@@ -1,5 +1,6 @@
 import configData from "../../fixtures/tools_page_data.json";
 import requestData from "../../fixtures/tools_requests.json";
+import linksTools from "../../fixtures/tools_links.json";
 describe("Checking tools", () => {
     let links_path = "cypress/fixtures/tools_links.json";
     let base       = "https://icms.cern.ch/tools/";
@@ -7,18 +8,18 @@ describe("Checking tools", () => {
     let INPUT_DATA = configData;
     let page_fail_limit = 5;
     let page_fails = 0;
-    let total = 36;
     let env = Cypress.env()["flags"]
     let login = env["login"];
     let password = env["password"];
     let isadmin = env["isAdmin"] == "true";
-    let n = 36;
+    let n = 43;
     let job = 0;
     it('Wait for its turn.', () => {
-        cy.wait(5000 * 1)
+        cy.wait(7000 * 1)
     });
     let start = 1;
     let end = n;
+    let total = n;
     let step = 3;
     let out_path = 'data/tools_output/tools_out_' + 1 + '.json';
     let site_state = [{
@@ -29,7 +30,7 @@ describe("Checking tools", () => {
         cons_failed_pages: 0,
         app_status: "",
     }];
-    for (let j = job; j < n; j+=step) {
+    for (let k = job, j = 0; k < n; k+=step, j++) {
         site_state[0].results.push({
             url: "",
             status: 0,
@@ -112,8 +113,8 @@ describe("Checking tools", () => {
                     }
                 }
             }).as("deletes");
-            cy.readFile(links_path).then(($link_obj) => {
-                let links = $link_obj[0]["links"];
+            // cy.readFile(links_path).then(($link_obj) => {
+                let links = linksTools[0]["links"];
                 let link = links[k];
                 site_state[0].results[j].url = link;
                 cy.get_stat_dur(link, site_state, j, page_fail_limit);
@@ -157,7 +158,7 @@ describe("Checking tools", () => {
                 }
                 cy.task("writeFile", {path: out_path, data: site_state, index: j});
                 cy.save_data(site_state[0].results[j], base);
-            });
+            // });
             if (k == (n - 1)) {
                cy.clearCookies();
             }

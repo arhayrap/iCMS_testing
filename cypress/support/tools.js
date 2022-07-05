@@ -249,6 +249,7 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         "Cooperating": "Cooperating",
         "Leaving": "Leaving"
     };
+    /*
     cy.get("i.mdi-menu-down").eq(1).click();
     cy.get("div.menuable__content__active div[role='option']").eq(3).click();
     cy.get("i.mdi-menu-down").eq(0).click();
@@ -266,6 +267,7 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         cy.wait(1000);
         cy.get("@outline").eq(index).click();
     });
+    */
 })
 
 Cypress.Commands.add("check_people", (site_state, k) => {
