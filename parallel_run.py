@@ -85,16 +85,16 @@ done
     # RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*_min.js", str(flags).replace("'", '"').replace(" ", ""))
     os.system(REMOVE_OLD_RESULTS)
     os.system(CREATE_FILES)
+    os.system(KILL_CYPRESS_PROCESSES)
     '''
     print(CREATE_FILES_OLD)
-    os.system(KILL_CYPRESS_PROCESSES)
     for i in range(1, n_jobs + 1):
         with open("{path}/{website}_test_spec_{ind}.js".format(path = path_web[website], website = website, ind = i), "r") as f:
             minified = jsmin(f.read())
             with open("{path}/{website}_test_spec_{ind}_min.js".format(path = path_web[website], website = website, ind = i), "w") as new_f:
                 new_f.write(minified)
     '''
-    # os.system(RUN_COMMAND)
+    os.system(RUN_COMMAND)
 
 if __name__ == '__main__':
     n_jobs = int(sys.argv[1])

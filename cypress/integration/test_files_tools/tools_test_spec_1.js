@@ -20,7 +20,7 @@ describe("Checking tools", () => {
     let start = 1;
     let end = n;
     let total = n;
-    let step = 3;
+    let step = 1;
     let out_path = 'data/tools_output/tools_out_' + 1 + '.json';
     let site_state = [{
         date: "",
@@ -113,8 +113,8 @@ describe("Checking tools", () => {
                     }
                 }
             }).as("deletes");
-            // cy.readFile(links_path).then(($link_obj) => {
-                let links = linksTools[0]["links"];
+            cy.readFile(links_path).then(($link_obj) => {
+                let links = $link_obj[0]["links"];
                 let link = links[k];
                 site_state[0].results[j].url = link;
                 cy.get_stat_dur(link, site_state, j, page_fail_limit);
@@ -158,7 +158,7 @@ describe("Checking tools", () => {
                 }
                 cy.task("writeFile", {path: out_path, data: site_state, index: j});
                 cy.save_data(site_state[0].results[j], base);
-            // });
+            });
             if (k == (n - 1)) {
                cy.clearCookies();
             }

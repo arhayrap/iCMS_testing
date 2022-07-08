@@ -212,14 +212,9 @@ Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
             expect($title).to.contain("Full Name");
         })
         .siblings("div.v-list-item__title").eq(0).then(($elem) => {
-            if (!name) {
-                if ($elem.get(0).innerText != data) {
-		    site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
-                }
-            } else {
-                if ($elem.get(0).innerText != data) {
-                    site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
-                }
+            cy.task("terminal_log", {start: data});
+            if ($elem.get(0).innerText != data) {
+	        site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
             }
         });
 })
@@ -249,7 +244,6 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         "Cooperating": "Cooperating",
         "Leaving": "Leaving"
     };
-    /*
     cy.get("i.mdi-menu-down").eq(1).click();
     cy.get("div.menuable__content__active div[role='option']").eq(3).click();
     cy.get("i.mdi-menu-down").eq(0).click();
@@ -267,7 +261,6 @@ Cypress.Commands.add("check_institutes", (site_state, k) => {
         cy.wait(1000);
         cy.get("@outline").eq(index).click();
     });
-    */
 })
 
 Cypress.Commands.add("check_people", (site_state, k) => {
@@ -409,6 +402,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
         var length = tr.length;
     });
     cy.get("table tbody tr").as("rows").then((tr) => {
+        if (tr.get(0).length > 1) {
         var index = Math.floor(Math.random() * length);
         var f_name = tr.get(0).children[1].innerText;
         var l_name = tr.get(0).children[2].innerText;
@@ -444,7 +438,10 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
         cy.wait(1000);
         cy.go("back");
         cy.wait(1000);
-        
+        }
+        else {
+            site_state.results[k].warnings.push("The table of the page is empty.");
+        }
         // Admin
         if (site_state.results[k].isAdmin) {
 	    cy.get(".v-card .v-toolbar__title").then((title) => {

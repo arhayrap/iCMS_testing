@@ -5,7 +5,7 @@ import json
 import time
 
 suite_path = "cypress/integration/test_files_tools/"
-path_array = [suite_path + "tools_test_spec_2.js"]
+path_array = [suite_path + "tools_test_spec_1.js"]
 # path_array = [suite_path + "epr_*.js"]
 
 # suite_path = "cypress/integration/"
