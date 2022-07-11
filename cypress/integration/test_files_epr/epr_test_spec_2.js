@@ -8,15 +8,15 @@ describe("Checking epr", () => {
     let login    = env["login"];
     let password = env["password"];
     let isadmin  = env["isAdmin"] == "true";
-    let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    let n = 334;
+    let n = 336;
     let job = 1;
     it('Wait for its turn.', () => {
-        cy.wait(2000 * 2)
+        cy.wait(10000 * 2)
     });
     let start = 2;
     let end = n;
+    let total = n;
     let step = 3;
     let out_path = 'data/epr_output/epr_out_' + 2 + '.json';
     // let out_path = "data/epr_out/epr_out_" + String(id) + ".json";

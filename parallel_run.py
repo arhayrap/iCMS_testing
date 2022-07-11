@@ -14,9 +14,8 @@ import logging
 
 links_tools = json.load(open("cypress/fixtures/tools_links.json"))[0]["links"]
 links_epr   = json.load(open("cypress/fixtures/epr_links.json"))[0]["links"]
-print(len(links_tools), len(links_epr))
-website = "tools" # tools, epr
-n_web = {"tools": len(links_tools), "epr": len(links_epr)} # 334
+website = "epr" # tools, epr
+n_web = {"tools": len(links_tools), "epr": len(links_epr)}
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
 

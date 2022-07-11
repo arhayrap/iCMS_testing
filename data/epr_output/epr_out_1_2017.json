@@ -1,14 +1,14 @@
 [
   {
-    "date": "04-25-2022, 11:17",
+    "date": "07-11-2022, 3:08",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/epr/showMine",
         "status": 200,
-        "duration": 1321,
-        "load_time": 13341.155000030994,
+        "duration": 1340,
+        "load_time": 14694.609999656677,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -17,85 +17,82 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProject/173",
+        "url": "https://icms.cern.ch/epr/showProject/189",
         "status": 200,
-        "duration": 162,
-        "load_time": 9667.665000073612,
+        "duration": 122,
+        "load_time": 15229.814999736845,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProject/174",
-        "status": 200,
-        "duration": 121,
-        "load_time": 24771.355000324547,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showProject/171",
+        "url": "https://icms.cern.ch/epr/showProject/193",
         "status": 0,
         "duration": 0,
-        "load_time": 62489.529999904335,
+        "load_time": 47882.1549997665,
         "warnings": [],
         "errors": [],
         "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
       },
       {
-        "url": "https://icms.cern.ch/epr/showProject/178",
+        "url": "https://icms.cern.ch/epr/showProject/194",
         "status": 200,
-        "duration": 6261,
-        "load_time": 35990.12999981642,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showProject/181",
-        "status": 200,
-        "duration": 1236,
-        "load_time": 5018.525000661612,
+        "duration": 1361,
+        "load_time": 32071.195000316948,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProjectTasks/173",
+        "url": "https://icms.cern.ch/epr/showProject/192",
+        "status": 0,
+        "duration": 0,
+        "load_time": 102507.8799999319,
+        "warnings": [],
+        "errors": [],
+        "state": "Fail! -> CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands."
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProject/190",
+        "status": 200,
+        "duration": 128,
+        "load_time": 27950.32999990508,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showProjectTasks/189",
         "status": 200,
         "duration": 160,
-        "load_time": 18796.060000546277,
+        "load_time": 50171.68000014499,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProjectTasks/174",
+        "url": "https://icms.cern.ch/epr/showProjectTasks/193",
         "status": 200,
-        "duration": 1357,
-        "load_time": 46152.32500061393,
+        "duration": 166,
+        "load_time": 10556.630000006407,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProjectTasks/171",
+        "url": "https://icms.cern.ch/epr/showProjectTasks/194",
         "status": 200,
-        "duration": 145,
-        "load_time": 10705.609999597073,
+        "duration": 155,
+        "load_time": 12649.680000264198,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProjectTasks/178",
+        "url": "https://icms.cern.ch/epr/showProjectTasks/192",
         "status": 200,
-        "duration": 3915,
-        "load_time": 6343.574999831617,
+        "duration": 1407,
+        "load_time": 6755.034999921918,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -104,10 +101,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showProjectTasks/181",
+        "url": "https://icms.cern.ch/epr/showProjectTasks/190",
         "status": 200,
-        "duration": 1731,
-        "load_time": 14428.805000148714,
+        "duration": 599,
+        "load_time": 14291.085000149906,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -115,8 +112,8 @@
       {
         "url": "https://icms.cern.ch/epr/showProjectTasks/0",
         "status": 200,
-        "duration": 78,
-        "load_time": 7445.950000546873,
+        "duration": 766,
+        "load_time": 13179.974999744445,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -124,8 +121,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitutes",
         "status": 200,
-        "duration": 1017,
-        "load_time": 4885.704999789596,
+        "duration": 1107,
+        "load_time": 5438.984999898821,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -133,8 +130,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/BAHRAIN-UNIV",
         "status": 200,
-        "duration": 76,
-        "load_time": 4245.0149999931455,
+        "duration": 93,
+        "load_time": 5726.52000002563,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table",
@@ -151,8 +148,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/MINSK-UNIV",
         "status": 200,
-        "duration": 220,
-        "load_time": 3422.2050001844764,
+        "duration": 209,
+        "load_time": 5011.185000184923,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -163,8 +160,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/BRUXELLES-ULB",
         "status": 200,
-        "duration": 1551,
-        "load_time": 17178.535000421107,
+        "duration": 1719,
+        "load_time": 11457.419999875128,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -174,8 +171,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/LOUVAIN",
         "status": 200,
-        "duration": 1389,
-        "load_time": 9709.239999763668,
+        "duration": 1419,
+        "load_time": 7550.19999993965,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -185,8 +182,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/RIO-UERJ",
         "status": 200,
-        "duration": 1523,
-        "load_time": 9802.560000680387,
+        "duration": 1352,
+        "load_time": 9405.544999986887,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -196,8 +193,8 @@
       {
         "url": "https://icms.cern.ch/epr/showInstitute/SOFIA-ISER",
         "status": 200,
-        "duration": 1440,
-        "load_time": 4950.780000537634,
+        "duration": 441,
+        "load_time": 6304.140000138432,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -205,10 +202,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/BEIJING-IHEP",
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIJING-BUAA",
         "status": 200,
-        "duration": 1900,
-        "load_time": 10043.310000561178,
+        "duration": 292,
+        "load_time": 6666.6099997237325,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -216,22 +213,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/HEFEI-USTC",
+        "url": "https://icms.cern.ch/epr/showInstitute/GUANGZHOU-SYSU",
         "status": 200,
-        "duration": 224,
-        "load_time": 3472.380000166595,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/SHANGHAI-IC",
-        "status": 200,
-        "duration": 218,
-        "load_time": 5796.815000474453,
+        "duration": 1262,
+        "load_time": 3347.2600001841784,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table"
@@ -240,43 +225,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/UNIANDES",
+        "url": "https://icms.cern.ch/epr/showInstitute/SHANGHAI-FU",
         "status": 200,
-        "duration": 460,
-        "load_time": 9205.684999935329,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/ZAGREB-RUDJER",
-        "status": 200,
-        "duration": 339,
-        "load_time": 8514.720000326633,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/QUITO-EPN",
-        "status": 200,
-        "duration": 209,
-        "load_time": 5007.755000144243,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/FAYOUM-CHEP-FU",
-        "status": 200,
-        "duration": 83,
-        "load_time": 3259.584999643266,
+        "duration": 84,
+        "load_time": 4090.2800001204014,
         "warnings": [
           "Table warning: There is an empty table",
           "Table warning: There is an empty table",
@@ -291,10 +243,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/HELSINKI-UNIV",
+        "url": "https://icms.cern.ch/epr/showInstitute/ANTIOQUIA",
         "status": 200,
-        "duration": 263,
-        "load_time": 3930.5049991235137,
+        "duration": 245,
+        "load_time": 6667.275000363588,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -302,10 +254,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/LYON_CC",
+        "url": "https://icms.cern.ch/epr/showInstitute/SPLIT-UNIV",
         "status": 200,
-        "duration": 225,
-        "load_time": 3459.544999524951,
+        "duration": 1228,
+        "load_time": 4487.315000034869,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -313,10 +265,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/SACLAY",
+        "url": "https://icms.cern.ch/epr/showInstitute/CHARLES-UNIV",
         "status": 200,
-        "duration": 1689,
-        "load_time": 8333.88500008732,
+        "duration": 345,
+        "load_time": 3561.519999988377,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -324,10 +276,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/TBILISI-TSU",
+        "url": "https://icms.cern.ch/epr/showInstitute/ASRT-ENHEP",
         "status": 200,
-        "duration": 282,
-        "load_time": 6835.114999674261,
+        "duration": 2182,
+        "load_time": 8124.624999705702,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -335,19 +287,597 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/AACHEN-3B",
+        "url": "https://icms.cern.ch/epr/showInstitute/HELSINKI-HIP",
+        "status": 200,
+        "duration": 3253,
+        "load_time": 10032.424999866635,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LYON",
+        "status": 200,
+        "duration": 2010,
+        "load_time": 9731.974999886006,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/POLYTECHNIQUE",
+        "status": 200,
+        "duration": 2448,
+        "load_time": 12460.350000299513,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TBILISI-GTU",
+        "status": 200,
+        "duration": 378,
+        "load_time": 6032.819999847561,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AACHEN-3A",
+        "status": 200,
+        "duration": 2330,
+        "load_time": 10021.344999782741,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/GORLITZ-CASUS",
+        "status": 200,
+        "duration": 80,
+        "load_time": 3147.6049995981157,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ATHENS",
+        "status": 200,
+        "duration": 467,
+        "load_time": 4276.539999991655,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IOANNINA",
+        "status": 200,
+        "duration": 463,
+        "load_time": 5429.930000100285,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BUDAPEST-ELU",
+        "status": 200,
+        "duration": 506,
+        "load_time": 3994.864999782294,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CHANDIGARH",
+        "status": 200,
+        "duration": 580,
+        "load_time": 4323.61500011757,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KOLKATA-SAHA",
+        "status": 200,
+        "duration": 675,
+        "load_time": 5516.654999926686,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PUNE-IISER",
+        "status": 200,
+        "duration": 524,
+        "load_time": 7812.704999931157,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/IPM",
+        "status": 200,
+        "duration": 537,
+        "load_time": 4373.930000234395,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BARI",
+        "status": 200,
+        "duration": 3671,
+        "load_time": 13035.789999645203,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/FIRENZE",
+        "status": 200,
+        "duration": 1202,
+        "load_time": 7463.354999665171,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MILANO-BICOCCA",
+        "status": 200,
+        "duration": 1718,
+        "load_time": 8781.564999837428,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PAVIA",
+        "status": 200,
+        "duration": 590,
+        "load_time": 8897.35999982804,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ROMA-1",
+        "status": 200,
+        "duration": 1219,
+        "load_time": 11780.145000200719,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/JORDAN-PSUT",
+        "status": 200,
+        "duration": 254,
+        "load_time": 6782.700000330806,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KOREA-UNIV",
+        "status": 200,
+        "duration": 491,
+        "load_time": 4736.759999766946,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-KYUNGHEE",
+        "status": 200,
+        "duration": 75,
+        "load_time": 5228.7599998526275,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-UNIV",
+        "status": 200,
+        "duration": 536,
+        "load_time": 10661.919999867678,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KUWAIT-AUM",
+        "status": 200,
+        "duration": 88,
+        "load_time": 5363.029999658465,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/RIGA-RTU",
+        "status": 200,
+        "duration": 478,
+        "load_time": 5867.434999905527,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-LU",
+        "status": 200,
+        "duration": 1398,
+        "load_time": 3550.850000232458,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VILNIUS-UNIV",
+        "status": 200,
+        "duration": 4033,
+        "load_time": 15994.89999981597,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-IBEROAM",
+        "status": 200,
+        "duration": 328,
+        "load_time": 5803.384999744594,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SONORA-UNISON",
+        "status": 200,
+        "duration": 79,
+        "load_time": 3109.174999874085,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/AUCKLAND",
+        "status": 200,
+        "duration": 296,
+        "load_time": 3614.684999920428,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MUSCAT-QABOOS",
+        "status": 200,
+        "duration": 449,
+        "load_time": 3715.6299999915063,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KRAKOW-AGH",
+        "status": 200,
+        "duration": 1080,
+        "load_time": 19405.114999972284,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WARSAW-INS",
+        "status": 200,
+        "duration": 417,
+        "load_time": 7259.130000136793,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/DUBNA",
+        "status": 200,
+        "duration": 3419,
+        "load_time": 13068.984999787062,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-ITEP",
+        "status": 200,
+        "duration": 541,
+        "load_time": 4339.265000075102,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-MSU",
+        "status": 200,
+        "duration": 1582,
+        "load_time": 9394.820000045002,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NOVOSIBIRSK-NSU",
+        "status": 200,
+        "duration": 1344,
+        "load_time": 10970.770000014454,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TOMSK-POLYTEC",
+        "status": 200,
+        "duration": 260,
+        "load_time": 6000.980000011623,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VINCA",
+        "status": 200,
+        "duration": 356,
+        "load_time": 5884.275000076741,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/OVIEDO",
+        "status": 200,
+        "duration": 1420,
+        "load_time": 7762.899999972433,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/Zaragoza-ITA",
+        "status": 200,
+        "duration": 234,
+        "load_time": 6517.520000226796,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CERN",
+        "status": 200,
+        "duration": 5069,
+        "load_time": 28352.19499981031,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ZURICH-UNIV",
+        "status": 200,
+        "duration": 1378,
+        "load_time": 9043.209999799728,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BANGKOK",
+        "status": 200,
+        "duration": 1329,
+        "load_time": 3935.914999805391,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BOGAZICI",
+        "status": 200,
+        "duration": 397,
+        "load_time": 8130.284999962896,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-ISMA",
+        "status": 200,
+        "duration": 297,
+        "load_time": 3724.1050000302494,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/BATH-UNIV",
+        "status": 200,
+        "duration": 79,
+        "load_time": 6280.93499969691,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)",
+          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
+          "POST request error : 404  404 (Not Found)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/CCCS-UWE",
+        "status": 200,
+        "duration": 474,
+        "load_time": 5255.799999926239,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/LONDON-IC",
         "status": 0,
         "duration": 0,
-        "load_time": 382599.46000017226,
+        "load_time": 818595.9199997596,
         "warnings": [],
         "errors": [],
         "state": "Fail! -> AssertionError: Timed out retrying after 60000ms: expected 'wait' to match /default/"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/HAMBURG-UNIV",
+        "url": "https://icms.cern.ch/epr/showInstitute/BAYLOR-UNIV",
         "status": 200,
-        "duration": 4920,
-        "load_time": 17602.885000407696,
+        "duration": 1614,
+        "load_time": 6582.4899999424815,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -355,10 +885,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/ATHENS-NTUA",
+        "url": "https://icms.cern.ch/epr/showInstitute/CALTECH",
         "status": 200,
-        "duration": 271,
-        "load_time": 5167.140000499785,
+        "duration": 1686,
+        "load_time": 9751.560000237077,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -366,10 +896,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/ATOMKI",
+        "url": "https://icms.cern.ch/epr/showInstitute/COLORADO",
         "status": 200,
-        "duration": 354,
-        "load_time": 5240.094999782741,
+        "duration": 597,
+        "load_time": 6003.130000084639,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -377,10 +907,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/DEBRECEN-IEP",
+        "url": "https://icms.cern.ch/epr/showInstitute/FAIRFIELD",
         "status": 200,
-        "duration": 288,
-        "load_time": 3966.909999959171,
+        "duration": 249,
+        "load_time": 2460.8299997635186,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -388,10 +918,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/DELHI-UNIV",
+        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-STATE",
         "status": 200,
-        "duration": 7565,
-        "load_time": 5470.840000547469,
+        "duration": 1098,
+        "load_time": 8983.810000121593,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -399,10 +929,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/MUMBAI-BARC",
+        "url": "https://icms.cern.ch/epr/showInstitute/IOWA",
         "status": 200,
-        "duration": 434,
-        "load_time": 6141.4749994874,
+        "duration": 1587,
+        "load_time": 9551.745000295341,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -410,10 +940,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/TIFR-A",
+        "url": "https://icms.cern.ch/epr/showInstitute/KANSAS-UNIV",
         "status": 200,
-        "duration": 502,
-        "load_time": 8198.230000212789,
+        "duration": 1873,
+        "load_time": 12201.1750000529,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -421,28 +951,153 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/ISFAHAN-IUT",
+        "url": "https://icms.cern.ch/epr/showInstitute/MINNESOTA",
+        "status": 200,
+        "duration": 1399,
+        "load_time": 7058.439999818802,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NEBRASKA",
+        "status": 200,
+        "duration": 620,
+        "load_time": 4519.929999951273,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/NORTHWESTERN",
+        "status": 200,
+        "duration": 3463,
+        "load_time": 4202.684999909252,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PRINCETON",
+        "status": 200,
+        "duration": 1752,
+        "load_time": 8389.814999885857,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/PURDUE-CALUMET",
+        "status": 200,
+        "duration": 422,
+        "load_time": 3064.4100001081824,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/ROCKEFELLER",
+        "status": 200,
+        "duration": 253,
+        "load_time": 3336.5000002086163,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/SUNY-BUFFALO",
+        "status": 200,
+        "duration": 470,
+        "load_time": 4212.425000034273,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TEXAS-TECH",
+        "status": 200,
+        "duration": 580,
+        "load_time": 5161.995000205934,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/UCRIVERSIDE",
+        "status": 200,
+        "duration": 1172,
+        "load_time": 6797.164999879897,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/VANDERBILT",
+        "status": 200,
+        "duration": 1509,
+        "load_time": 7940.625000279397,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/WAYNE",
+        "status": 200,
+        "duration": 336,
+        "load_time": 4052.6749999262393,
+        "warnings": [
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showInstitute/TASHKENT",
+        "status": 200,
+        "duration": 277,
+        "load_time": 3335.0349999964237,
+        "warnings": [
+          "Table warning: There is an empty table",
+          "Table warning: There is an empty table"
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountries",
+        "status": 200,
+        "duration": 60,
+        "load_time": 2805.7399997487664,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/BAHRAIN",
         "status": 200,
         "duration": 87,
-        "load_time": 3233.2649994641542,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/BOLOGNA",
-        "status": 200,
-        "duration": 3004,
-        "load_time": 10475.384999997914,
+        "load_time": 2889.1799999400973,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -450,339 +1105,73 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/FRASCATI",
+        "url": "https://icms.cern.ch/epr/showCountry/BRAZIL",
         "status": 200,
-        "duration": 361,
-        "load_time": 6224.404999986291,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 1066,
+        "load_time": 2763.325000181794,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/NAPOLI",
+        "url": "https://icms.cern.ch/epr/showCountry/CHINA",
         "status": 200,
-        "duration": 749,
-        "load_time": 7621.199999935925,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 1109,
+        "load_time": 2456.1850000172853,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/PERUGIA",
+        "url": "https://icms.cern.ch/epr/showCountry/CYPRUS",
         "status": 200,
-        "duration": 2847,
-        "load_time": 6687.5,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 1072,
+        "load_time": 2603.4300001338124,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/TORINO",
+        "url": "https://icms.cern.ch/epr/showCountry/EGYPT",
         "status": 200,
-        "duration": 2380,
-        "load_time": 12542.829999700189,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 64,
+        "load_time": 2570.154999848455,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/CHONNAM",
+        "url": "https://icms.cern.ch/epr/showCountry/FRANCE",
         "status": 200,
-        "duration": 1311,
-        "load_time": 3830.8350006118417,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 1102,
+        "load_time": 3147.3950003273785,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/KYUNGPOOK",
-        "status": 200,
-        "duration": 626,
-        "load_time": 13295.71000020951,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/SEOUL-SEJONG",
-        "status": 200,
-        "duration": 209,
-        "load_time": 3228.4699995070696,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/SKK-UNIV",
-        "status": 200,
-        "duration": 361,
-        "load_time": 5371.799999848008,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/KUWAIT-UNIV",
-        "status": 200,
-        "duration": 92,
-        "load_time": 3302.4499993771315,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-AUB",
-        "status": 200,
-        "duration": 77,
-        "load_time": 5966.740000061691,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/BEIRUT-USJ",
-        "status": 200,
-        "duration": 82,
-        "load_time": 5977.83499956131,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MALAYA",
-        "status": 200,
-        "duration": 1477,
-        "load_time": 6904.829999431968,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MEXICO-PUEBLA",
-        "status": 200,
-        "duration": 413,
-        "load_time": 7995.310000143945,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/PODGORICA-UCG",
-        "status": 200,
-        "duration": 293,
-        "load_time": 6720.124999992549,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/CANTERBURY",
-        "status": 200,
-        "duration": 342,
-        "load_time": 5232.374999672174,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/ISLAMABAD-NCP",
-        "status": 200,
-        "duration": 2821,
-        "load_time": 11083.074999973178,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/KRAKOW-IET",
-        "status": 200,
-        "duration": 83,
-        "load_time": 5223.809999413788,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/WARSAW-ISE",
-        "status": 200,
-        "duration": 1257,
-        "load_time": 4590.955000370741,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MEPHI",
-        "status": 200,
-        "duration": 556,
-        "load_time": 14156.14499989897,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-LEBEDEV",
-        "status": 200,
-        "duration": 438,
-        "load_time": 6962.405000813305,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MOSCOW-NIKIET",
-        "status": 200,
-        "duration": 1439,
-        "load_time": 5182.435000315309,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/PROTVINO",
-        "status": 200,
-        "duration": 1470,
-        "load_time": 8380.365000106394,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/TOMSK-TSU",
-        "status": 200,
-        "duration": 88,
-        "load_time": 4640.594999305904,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MADRID-CIEMAT",
-        "status": 200,
-        "duration": 1727,
-        "load_time": 10399.650000035763,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/SANTANDER",
-        "status": 200,
-        "duration": 3801,
-        "load_time": 8660.339999943972,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/COLOMBO",
+        "url": "https://icms.cern.ch/epr/showCountry/GREECE",
         "status": 200,
         "duration": 91,
-        "load_time": 4069.1299997270107,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
+        "load_time": 3040.2099997736514,
+        "warnings": [],
+        "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/PSI",
+        "url": "https://icms.cern.ch/epr/showCountry/IRAN",
         "status": 200,
-        "duration": 446,
-        "load_time": 4660.119999200106,
+        "duration": 71,
+        "load_time": 2753.2600001432,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/JORDAN",
+        "status": 200,
+        "duration": 1070,
+        "load_time": 1859.740000218153,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -790,54 +1179,10 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/CHUNGLI-NCU",
-        "status": 200,
-        "duration": 1145,
-        "load_time": 5963.755000382662,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/ADANA-CUKUROVA",
-        "status": 200,
-        "duration": 1713,
-        "load_time": 13555.080000311136,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/ISTANBUL-TECH",
-        "status": 200,
-        "duration": 494,
-        "load_time": 4608.25000051409,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/KHARKOV-KIPT",
-        "status": 200,
-        "duration": 333,
-        "load_time": 6034.599999897182,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/BRISTOL",
+        "url": "https://icms.cern.ch/epr/showCountry/LATVIA",
         "status": 200,
         "duration": 1095,
-        "load_time": 7206.060000695288,
+        "load_time": 1786.3350003026426,
         "warnings": [
           "Table warning: There is an empty table"
         ],
@@ -845,428 +1190,74 @@
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showInstitute/CRANFIELD-UNIV",
-        "status": 200,
-        "duration": 81,
-        "load_time": 3175.355000421405,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/RAL",
-        "status": 200,
-        "duration": 1627,
-        "load_time": 6838.8499999418855,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/BOSTON-UNIV",
-        "status": 200,
-        "duration": 1715,
-        "load_time": 7138.465000316501,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/CARNEGIE-MELLON",
-        "status": 200,
-        "duration": 371,
-        "load_time": 5627.899999730289,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/CORNELL",
-        "status": 200,
-        "duration": 2768,
-        "load_time": 11033.87499973178,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/FERMILAB",
-        "status": 200,
-        "duration": 8094,
-        "load_time": 26223.255000077188,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/FLORIDA-TECH",
-        "status": 200,
-        "duration": 404,
-        "load_time": 3833.4699999541044,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/JOHNS-HOPKINS",
-        "status": 200,
-        "duration": 950,
-        "load_time": 6693.655000068247,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/LIVERMORE",
-        "status": 200,
-        "duration": 242,
-        "load_time": 2532.835000194609,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/MISSISSIPPI",
-        "status": 200,
-        "duration": 1268,
-        "load_time": 5513.109999708831,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/NEWYORK-SIMONS",
-        "status": 200,
-        "duration": 1403,
-        "load_time": 2305.8350002393126,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/NOTRE_DAME",
-        "status": 200,
-        "duration": 1604,
-        "load_time": 8538.184999488294,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/PUERTO_RICO",
-        "status": 200,
-        "duration": 312,
-        "load_time": 4873.604999855161,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/RICE",
-        "status": 200,
-        "duration": 1183,
-        "load_time": 9997.910000383854,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/RUTGERS",
-        "status": 200,
-        "duration": 2716,
-        "load_time": 12696.930000558496,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/TENNESSEE",
-        "status": 200,
-        "duration": 366,
-        "load_time": 4030.735000036657,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/UCDAVIS",
-        "status": 200,
-        "duration": 1869,
-        "load_time": 8259.174999780953,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/UCSB",
-        "status": 200,
-        "duration": 1376,
-        "load_time": 7135.080000385642,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/VIRGINIA-UNIV",
-        "status": 200,
-        "duration": 570,
-        "load_time": 4789.795000106096,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/WISCONSIN",
-        "status": 200,
-        "duration": 1756,
-        "load_time": 7985.714999958873,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showInstitute/JORDAN-UNIV",
-        "status": 200,
-        "duration": 79,
-        "load_time": 3290.710000321269,
-        "warnings": [
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table",
-          "Table warning: There is an empty table"
-        ],
-        "errors": [
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)",
-          "DataTables warning: table id=instituteTable - Ajax error. For more information about this error, please see http://datatables.net/tn/7",
-          "POST request error : 404  404 (Not Found)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/ARMENIA",
-        "status": 200,
-        "duration": 71,
-        "load_time": 1874.5649997144938,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/BELARUS",
-        "status": 200,
-        "duration": 66,
-        "load_time": 2565.0499993935227,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/BULGARIA",
-        "status": 200,
-        "duration": 68,
-        "load_time": 1594.6949999779463,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/CROATIA",
-        "status": 200,
-        "duration": 71,
-        "load_time": 5762.145000509918,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/ECUADOR",
-        "status": 200,
-        "duration": 68,
-        "load_time": 1669.850000180304,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/FINLAND",
+        "url": "https://icms.cern.ch/epr/showCountry/MALAYSIA",
         "status": 200,
         "duration": 69,
-        "load_time": 1746.1900003254414,
+        "load_time": 3159.5399999059737,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showCountry/GERMANY",
+        "url": "https://icms.cern.ch/epr/showCountry/NETHERLANDS",
         "status": 200,
-        "duration": 69,
-        "load_time": 3881.424999795854,
+        "duration": 64,
+        "load_time": 1652.655000332743,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showCountry/INDIA",
-        "status": 200,
-        "duration": 1075,
-        "load_time": 1732.2799991816282,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/ITALY",
-        "status": 200,
-        "duration": 67,
-        "load_time": 1711.880000308156,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/KUWAIT",
-        "status": 200,
-        "duration": 3084,
-        "load_time": 1959.6400000154972,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/LITHUANIA",
-        "status": 200,
-        "duration": 84,
-        "load_time": 1793.1399997323751,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/MONTENEGRO",
-        "status": 200,
-        "duration": 86,
-        "load_time": 4765.664999373257,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/NORWAY",
-        "status": 200,
-        "duration": 1071,
-        "load_time": 1771.1049998179078,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/POLAND",
-        "status": 200,
-        "duration": 66,
-        "load_time": 4837.615000084043,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/SAUDI%20ARABIA",
-        "status": 200,
-        "duration": 63,
-        "load_time": 2819.6799997240305,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/SRI%20LANKA",
-        "status": 200,
-        "duration": 66,
-        "load_time": 2644.7450006380677,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/epr/showCountry/THAILAND",
+        "url": "https://icms.cern.ch/epr/showCountry/OMAN",
         "status": 200,
         "duration": 65,
-        "load_time": 1714.0100002288818,
+        "load_time": 3610.8899996615946,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showCountry/UNITED%20KINGDOM",
+        "url": "https://icms.cern.ch/epr/showCountry/PORTUGAL",
         "status": 200,
-        "duration": 67,
-        "load_time": 3746.8050001189113,
+        "duration": 78,
+        "load_time": 3097.8399999439716,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/epr/showCountry/ZZ",
+        "url": "https://icms.cern.ch/epr/showCountry/SERBIA",
         "status": 200,
-        "duration": 66,
-        "load_time": 2266.4050003513694,
-        "warnings": [
-          "Table warning: There is an empty table"
-        ],
+        "duration": 1065,
+        "load_time": 2716.1349998787045,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/SWITZERLAND",
+        "status": 200,
+        "duration": 3072,
+        "load_time": 5318.045000080019,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/TURKEY",
+        "status": 200,
+        "duration": 70,
+        "load_time": 2645.299999974668,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/epr/showCountry/USA",
+        "status": 200,
+        "duration": 76,
+        "load_time": 2857.049999758601,
+        "warnings": [],
         "errors": [],
         "state": "OK"
       }

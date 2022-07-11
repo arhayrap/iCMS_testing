@@ -1,8 +1,8 @@
-describe('Get epr links', () => {
+describe('Getting the epr links', () => {
     let links = [];
     let user_path = "cypress/fixtures/users.json";
     let base = "https://icms.cern.ch/epr/"
-    it("Gets the links", () => {
+    it("Getting the links", () => {
         cy.visit(base);
 	let env = Cypress.env()["flags"]
         let login = env["login"];

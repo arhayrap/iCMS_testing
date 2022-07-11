@@ -8,5 +8,4 @@ describe("Checking epr", () => {
     let login    = env["login"];
     let password = env["password"];
     let isadmin  = env["isAdmin"] == "true";
-    let total = 15;
     /*|-----------------------------------------------------------------------------------------------------------|*/

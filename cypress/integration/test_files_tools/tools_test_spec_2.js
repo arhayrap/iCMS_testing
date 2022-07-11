@@ -120,6 +120,7 @@ describe("Checking tools", () => {
                 cy.get_stat_dur(link, site_state, j, page_fail_limit);
                 site_state[0].results[j].load_time = performance.now();
                 cy.visit(link);
+                cy.task("terminal_log", { start : "Visiting:   " + link});
                 site_state[0].username = login;
                 cy.wait_for_requests("@main", {timeout: 60000});
                 cy.wait_for_requests("@gets", {timeout: 60000});
