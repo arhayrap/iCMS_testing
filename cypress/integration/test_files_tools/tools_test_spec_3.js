@@ -1,3 +1,27 @@
+import configData from "../../fixtures/tools_page_data.json";
+import requestData from "../../fixtures/tools_requests.json";
+import linksTools from "../../fixtures/tools_links.json";
+describe("Checking tools", () => {
+    let links_path = "cypress/fixtures/tools_links.json";
+    let base       = "https://icms.cern.ch/tools/";
+    let profile    = "https://icms.cern.ch/tools/user/profile";
+    let INPUT_DATA = configData;
+    let page_fail_limit = 5;
+    let page_fails = 0;
+    let env = Cypress.env()["flags"]
+    let login = env["login"];
+    let password = env["password"];
+    let isadmin = env["isAdmin"] == "true";
+    let n = 43;
+    let job = 2;
+    it('Wait for its turn.', () => {
+        cy.wait(10000 * 3)
+    });
+    let start = 3;
+    let end = n;
+    let total = n;
+    let step = 3;
+    let out_path = 'data/tools_output/tools_out_' + 3 + '.json';
     let site_state = [{
         date: "",
         username: "",

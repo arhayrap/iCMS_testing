@@ -15,12 +15,12 @@ describe("Checking tools", () => {
     let n = 43;
     let job = 0;
     it('Wait for its turn.', () => {
-        cy.wait(7000 * 1)
+        cy.wait(10000 * 1)
     });
     let start = 1;
     let end = n;
     let total = n;
-    let step = 1;
+    let step = 3;
     let out_path = 'data/tools_output/tools_out_' + 1 + '.json';
     let site_state = [{
         date: "",
@@ -127,8 +127,8 @@ describe("Checking tools", () => {
                 cy.get_load_time(site_state[0].results[j]);
                 cy.check_tables(site_state[0], j);
                 if (link == profile) {
-                    cy.check_profile_dashboard(site_state[0], j, base);
-                    cy.check_logo_reference(site_state[0], j, base);
+                    cy.check_profile_dashboard(site_state[0], j, INPUT_DATA["dashboard_data"]["name_surname"]);
+                    cy.check_logo_reference(site_state[0], j, INPUT_DATA["dashboard_data"]["base"]);
                 } else if (link == base) {
                     cy.check_dashboard(site_state[0], j, INPUT_DATA["dashboard_data"]);
                 } else if (link == base + "collaboration/units") {

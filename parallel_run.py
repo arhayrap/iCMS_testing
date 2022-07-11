@@ -43,7 +43,7 @@ do
 echo "$(cat {path}/gen_{website}_part_1_old.txt)"                   >> "{path}/{website}_test_spec_$i.js"
 echo "    let n = {n_1};"                                           >> "{path}/{website}_test_spec_$i.js"
 echo "    it('Wait for its turn.', () => {bracket_sign_open}"       >> "{path}/{website}_test_spec_$i.js"
-echo "        cy.wait(7000 * $((i)))"                               >> "{path}/{website}_test_spec_$i.js"
+echo "        cy.wait(10000 * $((i)))"                               >> "{path}/{website}_test_spec_$i.js"
 echo "    {bracket_sign_close});"                                   >> "{path}/{website}_test_spec_$i.js"
 if [ $i == {n} ];
 then
@@ -70,7 +70,7 @@ echo "$(cat {path}/gen_{website}_part_1.txt)"                       >> "{path}/{
 echo "    let n = {n_1};"                                           >> "{path}/{website}_test_spec_$i.js"
 echo "    let job = $((i-1));"                                      >> "{path}/{website}_test_spec_$i.js"
 echo "    it('Wait for its turn.', () => {bracket_sign_open}"       >> "{path}/{website}_test_spec_$i.js"
-echo "        cy.wait(7000 * $((i)))"                               >> "{path}/{website}_test_spec_$i.js"
+echo "        cy.wait(10000 * $((i)))"                               >> "{path}/{website}_test_spec_$i.js"
 echo "    {bracket_sign_close});"                                   >> "{path}/{website}_test_spec_$i.js"
 echo "    let start = $i;"                                          >> "{path}/{website}_test_spec_$i.js"
 echo "    let end = n;"                                             >> "{path}/{website}_test_spec_$i.js"

@@ -191,7 +191,6 @@ Cypress.Commands.add("check_units", (site_state, k, data) => {
 	    });
 	});
     }
-
 })
 
 Cypress.Commands.add("check_dashboard", (site_state, k, data) => {
@@ -207,21 +206,16 @@ Cypress.Commands.add("check_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_profile_dashboard", (site_state, k, data) => {
-    cy.get("div.row div.v-card div.v-card__text", {timeout:60000}).eq(1).find("div.v-list-item__subtitle")
-        .should(($title) => {
-            expect($title).to.contain("Full Name");
-        })
-        .siblings("div.v-list-item__title").eq(0).then(($elem) => {
-            cy.task("terminal_log", {start: data});
-            if ($elem.get(0).innerText != data) {
-	        site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
-            }
-        });
+    cy.get("div.row div.v-card div.v-card__text", {timeout:60000}).eq(1).find("div.v-list-item")
+    .contains("Full Name").siblings("div.v-list-item__title").then(($elem) => {
+        if ($elem.get(0).innerText != data) {
+            site_state.results[k].warnings.push("The reference to the profile was not done correctly.");
+        }
+    });
 })
 
 Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
     cy.get(".text-left .container .row").eq(0).find(".col-9").then(($elem) => {
-        console.log($elem.get(0).innerText == data);
         if ($elem.get(0).innerText != data) {
             site_state.results[k].warnings.push("The reference to the institute was not done correctly.");
         }
@@ -229,10 +223,12 @@ Cypress.Commands.add("check_institute_dashboard", (site_state, k, data) => {
 })
 
 Cypress.Commands.add("check_logo_reference", (site_state, k, base) => {
-    cy.get("header .d-flex .v-toolbar__title").click();
-    if (cy.url() != base) {
-        site_state.results[k].warnings.push("The logo reference was not done correctly.");
-    }
+    cy.get("header .d-flex .v-toolbar__title").click().wait(1000);
+    cy.url().then((url) => {
+        if (url != base) {
+            site_state.results[k].warnings.push("The logo reference was not done correctly.");
+        }
+    });
 })
 
 Cypress.Commands.add("check_institutes", (site_state, k) => {
@@ -407,7 +403,7 @@ Cypress.Commands.add("check_em_nominations", (site_state, k, data = false) => {
         var f_name = tr.get(0).children[1].innerText;
         var l_name = tr.get(0).children[2].innerText;
         var institute = tr.get(0).children[3].innerText;
-	var t_date = new Date().getFullYear();
+        var t_date = new Date().getFullYear();
         //checking names
         cy.get("table tbody tr td a", {
             timeout: 60000
@@ -512,10 +508,12 @@ Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
 	if (index0 == 0){ // Year
 	    cy.get("div.v-card__title div.no-gutters input[type='number']").eq(0).clear().type(data["year"], {force:true}).wait(500);
 	    cy.get("@run").click({force:true});
-	    cy.wait(4000);
+	    cy.wait(5000);
 		cy.get("body table tbody tr[class='']").each((tr, index1, trs) => {
-		    console.log(tr.find("td").get(5).innerText.split("-")[0], data["year"]);
-			if (Number(tr.find("td").get(5).innerText.split("-")[0]) > Number(data["year"])) {
+		    console.log(tr.find("td").get(4).innerText.split("-")[0], data["year"]);
+			if (Number(tr.find("td").get(4).innerText.split("-")[0]) > Number(data["year"])) {
+			    cy.task("terminal_log", {start: Number(tr.find("td").get(4).innerText.split("-")[0])});
+			    cy.task("terminal_log", {start: Number(data["year"])});
 			    site_state.results[k].warnings.push("'Year' has filtered a wrong option.");
 			    return false;
 			}
@@ -526,8 +524,8 @@ Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
 		console.log("Number of options:",options.length);
 		// let n = Math.round(options.length * Math.random());
 		let n = 0;
-		options.get(n).click({force:true})
-		cy.get("@run").click().wait(4000);
+		options.get(n).click({force:true});
+		cy.get("@run").click().wait(5000);
 		cy.get("body table tbody tr[class='']").each((tr, index1, trs) => {
 			cy.get("div[role='listbox'] div.v-list-item__content").eq(n).then((option) => {
 			    console.log(option);
@@ -547,21 +545,21 @@ Cypress.Commands.add("check_CADI_lines", (site_state, k, data) => {
 		options.get(n).click();
 		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(0).type(data["start_date"], {force: true});
 		cy.get("div.v-card__title div.no-gutters input[type='date']").eq(1).type(data["end_date"], {force: true});
-		cy.get("@run").click().wait(4000);
+		cy.get("@run").click().wait(5000);
 		cy.get("body table th").then((ths) => {
 		    if (ths.get(7).innerText != "Event date") {
 			site_state.results[k].warnings.push("'Activity type' did not change the 'Updated' column into 'Event date'.");
 		    }
 		});
 		cy.get("body table tbody tr[class='']").each((tr, index1, trs) => {
-			    let middle   = new Date(tr.find("td").get(7).innerText.split("-")[0], tr.find("td").get(7).innerText.split("-")[1], tr.find("td").get(7).innerText.split("-")[2]).getTime();
-			    let start_selected = new Date(data["start_date"].split("-")[0], data["start_date"].split("-")[1], data["start_date"].split("-")[2]).getTime();
-			    let end_selected   = new Date(data["end_date"].split("-")[0], data["end_date"].split("-")[1], data["end_date"].split("-")[2]).getTime();
-			    console.log(start_selected, middle, end_selected);
-			    if (middle < start_selected || middle > end_selected) {
-				site_state.results[k].warnings.push("Data with wrong date were returned.");
-				return false;
-			    }
+			let middle   = new Date(tr.find("td").get(7).innerText.split("-")[0], tr.find("td").get(7).innerText.split("-")[1], tr.find("td").get(7).innerText.split("-")[2]).getTime();
+			let start_selected = new Date(data["start_date"].split("-")[0], data["start_date"].split("-")[1], data["start_date"].split("-")[2]).getTime();
+			let end_selected   = new Date(data["end_date"].split("-")[0], data["end_date"].split("-")[1], data["end_date"].split("-")[2]).getTime();
+			console.log(start_selected, middle, end_selected);
+			if (middle < start_selected || middle > end_selected) {
+			    site_state.results[k].warnings.push("Data with wrong date were returned.");
+			    return false;
+			}
 		});
 	    });
 	}
@@ -619,7 +617,6 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
 	    cy.get("div.v-menu__content div[aria-selected='true']").click({multiple:true, force:true});
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options1").each((option, index1, options) => {
                 if (cy.get("body").find("tbody tr[class='']").length != 0) {
-			//console.log(options);
         		op = options.get(index1).innerText;
         		cy.get(".v-data-footer__pagination").then((table_rows) => {
 			    n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
@@ -638,12 +635,10 @@ Cypress.Commands.add("check_statistics", (site_state, k) => {
         		cy.get("@options1").eq(index1).click({force: true}).wait(5000);
                 } else {
                     site_state.results[k].warnings.push("The menu`s '" + options.get(index1).innerText + "', '" + label.get(0).innerText + "' table is empty.");
-                    // return false;
                 }
             });
         } else if (index0 == 2) {
             cy.get("div.v-menu__content div:visible[aria-selected='false']").as("options2").each((option, index1, options) => {
-		//console.log(options);
                 cy.get(".v-data-footer__pagination").then((table_rows) => {
                     n_initial = Number(table_rows.get(0).innerText.split("of ")[1]);
                 });

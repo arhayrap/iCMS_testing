@@ -1,0 +1,146 @@
+[
+  {
+    "date": "07-11-2022, 1:36",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "status": 200,
+        "duration": 607,
+        "load_time": 3428.569999989122,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "status": 200,
+        "duration": 499,
+        "load_time": 3477.2800002247095,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "status": 200,
+        "duration": 455,
+        "load_time": 3496.619999874383,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/tenures",
+        "status": 200,
+        "duration": 541,
+        "load_time": 3899.2949998937547,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "status": 200,
+        "duration": 437,
+        "load_time": 3957.200000062585,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards",
+        "status": 200,
+        "duration": 612,
+        "load_time": 3313.2299999706447,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
+        "status": 200,
+        "duration": 485,
+        "load_time": 2967.9049998521805,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
+        "status": 200,
+        "duration": 442,
+        "load_time": 2917.4999999813735,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/member-authors",
+        "status": 200,
+        "duration": 474,
+        "load_time": 3055.424999911338,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
+        "status": 200,
+        "duration": 415,
+        "load_time": 2906.3900001347065,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
+        "status": 200,
+        "duration": 419,
+        "load_time": 2768.4050002135336,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
+        "status": 200,
+        "duration": 500,
+        "load_time": 3505.369999911636,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/files",
+        "status": 200,
+        "duration": 436,
+        "load_time": 6104.810000397265,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/notes/pending",
+        "status": 200,
+        "duration": 494,
+        "load_time": 3664.355000015348,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

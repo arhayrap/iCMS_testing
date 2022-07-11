@@ -1,32 +1,14 @@
 [
   {
-    "date": "07-08-2022, 1:24",
+    "date": "07-11-2022, 1:35",
     "username": "arhayrap",
     "isAdmin": false,
     "results": [
       {
         "url": "https://icms.cern.ch/tools/",
         "status": 200,
-        "duration": 456,
-        "load_time": 3050.9850000962615,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/units",
-        "status": 200,
-        "duration": 471,
-        "load_time": 4220.519999973476,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/institutes",
-        "status": 200,
-        "duration": 463,
-        "load_time": 3452.159999869764,
+        "duration": 411,
+        "load_time": 3508.889999706298,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -34,26 +16,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/people",
         "status": 200,
-        "duration": 589,
-        "load_time": 5749.245000071824,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/voting",
-        "status": 200,
-        "duration": 539,
-        "load_time": 4075.2299996092916,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
-        "status": 200,
-        "duration": 440,
-        "load_time": 2792.1500001102686,
+        "duration": 575,
+        "load_time": 5742.20999982208,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -61,28 +25,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/applicants",
         "status": 200,
-        "duration": 429,
-        "load_time": 3270.120000001043,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
-        "status": 200,
-        "duration": 434,
-        "load_time": 3032.369999680668,
-        "warnings": [
-          "The table of the page is empty."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/statistics",
-        "status": 200,
-        "duration": 481,
-        "load_time": 4045.3449999913573,
+        "duration": 486,
+        "load_time": 3279.7899995930493,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -90,26 +34,8 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/flags",
         "status": 200,
-        "duration": 482,
-        "load_time": 4479.95000006631,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
-        "status": 200,
-        "duration": 475,
-        "load_time": 3451.359999831766,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/tenures",
-        "status": 200,
-        "duration": 488,
-        "load_time": 3151.639999821782,
+        "duration": 486,
+        "load_time": 4285.690000280738,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -117,153 +43,49 @@
       {
         "url": "https://icms.cern.ch/tools/collaboration/communications",
         "status": 200,
-        "duration": 609,
-        "load_time": 4351.524999830872,
+        "duration": 446,
+        "load_time": 4479.2200000956655,
         "warnings": [],
         "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
-        "status": 200,
-        "duration": 414,
-        "load_time": 4784.090000204742,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
-        "status": 200,
-        "duration": 425,
-        "load_time": 3292.9549999535084,
-        "warnings": [],
-        "errors": [
-          "POST request error : 403  403 (Forbidden)"
-        ],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
         "status": 200,
-        "duration": 392,
-        "load_time": 3557.9750002361834,
+        "duration": 469,
+        "load_time": 3635.6099997647107,
         "warnings": [],
         "errors": [
           "POST request error : 403  403 (Forbidden)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
-        "status": 200,
-        "duration": 513,
-        "load_time": 3065.275000408292,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/awards",
-        "status": 200,
-        "duration": 410,
-        "load_time": 3239.6250003948808,
-        "warnings": [],
-        "errors": [
-          "GET request error (main) : 500  500 (Internal Server Error)"
         ],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/awardees",
         "status": 200,
-        "duration": 466,
-        "load_time": 3161.2350000068545,
+        "duration": 450,
+        "load_time": 3048.1549999676645,
         "warnings": [],
         "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
-        "status": 200,
-        "duration": 425,
-        "load_time": 3144.6199999190867,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
-        "status": 200,
-        "duration": 420,
-        "load_time": 3230.83999985829,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)",
-          "GET request error : 500  500 (Internal Server Error)"
-        ],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
         "status": 200,
-        "duration": 547,
-        "load_time": 3648.8699996843934,
+        "duration": 465,
+        "load_time": 3087.1850000694394,
         "warnings": [],
         "errors": [
           "GET request error : 500  500 (Internal Server Error)",
           "GET request error (main) : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
-        "status": 200,
-        "duration": 415,
-        "load_time": 3743.6000001616776,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)",
-          "GET request error (main) : 500  500 (Internal Server Error)"
-        ],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
-        "status": 200,
-        "duration": 486,
-        "load_time": 3675.2700000070035,
-        "warnings": [],
-        "errors": [
-          "GET request error : 500  500 (Internal Server Error)"
         ],
         "state": "OK"
       },
       {
         "url": "https://icms.cern.ch/tools/institute/profile",
         "status": 200,
-        "duration": 379,
-        "load_time": 5172.919999808073,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/pending-authors",
-        "status": 200,
-        "duration": 397,
-        "load_time": 3809.865000192076,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/member-authors",
-        "status": 200,
-        "duration": 391,
-        "load_time": 3983.67500025779,
+        "duration": 520,
+        "load_time": 4313.2600001990795,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -271,26 +93,8 @@
       {
         "url": "https://icms.cern.ch/tools/institute/suspensions",
         "status": 200,
-        "duration": 401,
-        "load_time": 3962.4399999156594,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
-        "status": 200,
-        "duration": 571,
-        "load_time": 4236.730000004172,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
-        "status": 200,
-        "duration": 625,
-        "load_time": 4887.27999990806,
+        "duration": 543,
+        "load_time": 2968.9850001595914,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -298,28 +102,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines",
         "status": 200,
-        "duration": 452,
-        "load_time": 7002.939999569207,
-        "warnings": [
-          "'Year' has filtered a wrong option."
-        ],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
-        "status": 200,
-        "duration": 595,
-        "load_time": 11594.790000002831,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
-        "status": 200,
-        "duration": 397,
-        "load_time": 5190.169999841601,
+        "duration": 444,
+        "load_time": 3479.074999690056,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -327,26 +111,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
         "status": 200,
-        "duration": 383,
-        "load_time": 5205.800000112504,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
-        "status": 200,
-        "duration": 397,
-        "load_time": 6725.305000320077,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
-        "status": 200,
-        "duration": 420,
-        "load_time": 6433.07500006631,
+        "duration": 733,
+        "load_time": 3705.4349998943508,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -354,26 +120,8 @@
       {
         "url": "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
         "status": 200,
-        "duration": 423,
-        "load_time": 6382.594999857247,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
-        "status": 200,
-        "duration": 462,
-        "load_time": 6620.714999735355,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/author-lists/files",
-        "status": 200,
-        "duration": 447,
-        "load_time": 10215.63500026241,
+        "duration": 635,
+        "load_time": 3022.659999784082,
         "warnings": [],
         "errors": [],
         "state": "OK"
@@ -381,35 +129,17 @@
       {
         "url": "https://icms.cern.ch/tools/publications/author-lists/author-data",
         "status": 200,
-        "duration": 455,
-        "load_time": 6582.129999995232,
+        "duration": 430,
+        "load_time": 2889.295000117272,
         "warnings": [],
         "errors": [],
         "state": "OK"
       },
       {
-        "url": "https://icms.cern.ch/tools/publications/notes/entries",
+        "url": "https://icms.cern.ch/tools/user/profile",
         "status": 200,
-        "duration": 449,
-        "load_time": 8038.845000322908,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "https://icms.cern.ch/tools/publications/notes/pending",
-        "status": 200,
-        "duration": 400,
-        "load_time": 7639.834999572486,
-        "warnings": [],
-        "errors": [],
-        "state": "OK"
-      },
-      {
-        "url": "",
-        "status": 0,
-        "duration": 0,
-        "load_time": 0,
+        "duration": 420,
+        "load_time": 4984.539999626577,
         "warnings": [],
         "errors": [],
         "state": "OK"
