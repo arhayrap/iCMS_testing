@@ -9,7 +9,7 @@ describe("Checking epr", () => {
     let password = env["password"];
     let isadmin  = env["isAdmin"] == "true";
     /*|-----------------------------------------------------------------------------------------------------------|*/
-    let n = 336;
+    let n = 337;
     let job = 0;
     it('Wait for its turn.', () => {
         cy.wait(10000 * 1)
@@ -17,7 +17,7 @@ describe("Checking epr", () => {
     let start = 1;
     let end = n;
     let total = n;
-    let step = 3;
+    let step = 1;
     let out_path = 'data/epr_output/epr_out_' + 1 + '.json';
     // let out_path = "data/epr_out/epr_out_" + String(id) + ".json";
     let check_string = "Logs in and tests the 'epr' pages.";

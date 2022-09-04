@@ -7,6 +7,12 @@ import math
 from jsmin import jsmin
 
 from multiprocessing import Pool, Manager, Value, cpu_count
+from coffea import processor
+from coffea.nanoevents.methods import vector, candidate
+
+from numba import jit
+from coffea.nanoevents import BaseSchema
+
 from datetime import datetime
 import coloredlogs
 import logging
@@ -14,10 +20,9 @@ import logging
 
 links_tools = json.load(open("cypress/fixtures/tools_links.json"))[0]["links"]
 links_epr   = json.load(open("cypress/fixtures/epr_links.json"))[0]["links"]
-website = "epr" # tools, epr
+website = "tools" # tools, epr len(links_tools)
 n_web = {"tools": len(links_tools), "epr": len(links_epr)}
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
-
 
 def Run_process(obj, n_jobs):
     flags = obj
@@ -80,8 +85,8 @@ echo "$(cat {path}/gen_{website}_part_2.txt)"                       >> "{path}/{
 done
 '''.format(path = path_web[website], website = website, n = n_jobs, n_1 = n_1, n_all_pages = n_web[website], step = n_jobs, bracket_sign_open = "{", bracket_sign_close = "}")
 
-    RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
-    # RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*_min.js", str(flags).replace("'", '"').replace(" ", ""))
+    RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run CYPRESS_NO_COMMAND_LOG=1 -t {} -r -d '{}' --js-flags=--expose-gc -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*.js", str(flags).replace("'", '"').replace(" ", ""))
+    # RUN_COMMAND = "./node_modules/.bin/cypress-parallel -s cy:run -t {} -r -d '{}' --js-flags=--expose-gc -a '\"--env flags={}\"' ".format(n_jobs, path_web[website] + "/*_min.js", str(flags).replace("'", '"').replace(" ", ""))
     os.system(REMOVE_OLD_RESULTS)
     os.system(CREATE_FILES)
     os.system(KILL_CYPRESS_PROCESSES)

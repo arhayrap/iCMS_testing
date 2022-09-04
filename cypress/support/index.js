@@ -20,3 +20,17 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+afterEach(() => {
+	cy.window().then(win => {
+		// window.gc is enabled with --js-flags=--expose-gc chrome flag
+		if (typeof win.gc === 'function') {
+			// run gc multiple times in an attempt to force a major GC between tests
+			win.gc();
+			win.gc();
+			win.gc();
+			win.gc();
+			win.gc();
+		}
+	});
+});

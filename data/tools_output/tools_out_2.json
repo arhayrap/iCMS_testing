@@ -1,0 +1,146 @@
+[
+  {
+    "date": "09-04-2022, 10:58",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/units",
+        "status": 200,
+        "duration": 465,
+        "load_time": 4056.435000151396,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/voting",
+        "status": 200,
+        "duration": 469,
+        "load_time": 3811.2200000323355,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/emeritus-nominations",
+        "status": 200,
+        "duration": 470,
+        "load_time": 3143.025000113994,
+        "warnings": [
+          "The table of the page is empty."
+        ],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 485,
+        "load_time": 3302.170000039041,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/bookings",
+        "status": 200,
+        "duration": 484,
+        "load_time": 4160.979999927804,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominations",
+        "status": 200,
+        "duration": 371,
+        "load_time": 3303.689999971539,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards/nominees",
+        "status": 200,
+        "duration": 379,
+        "load_time": 3014.560000039637,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/nominee-selection",
+        "status": 200,
+        "duration": 410,
+        "load_time": 3518.900000024587,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/pending-authors",
+        "status": 200,
+        "duration": 389,
+        "load_time": 2883.8049999903888,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/overdue-graduations",
+        "status": 200,
+        "duration": 395,
+        "load_time": 3000.8750001434237,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/arc-members",
+        "status": 200,
+        "duration": 386,
+        "load_time": 9545.640000142157,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines/updated",
+        "status": 200,
+        "duration": 430,
+        "load_time": 4671.729999827221,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/open-author-lists",
+        "status": 200,
+        "duration": 534,
+        "load_time": 3132.5300000607967,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/notes/entries",
+        "status": 200,
+        "duration": 554,
+        "load_time": 4161.169999977574,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

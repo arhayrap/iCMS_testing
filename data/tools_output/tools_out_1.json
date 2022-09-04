@@ -1,0 +1,151 @@
+[
+  {
+    "date": "09-04-2022, 11:00",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/",
+        "status": 200,
+        "duration": 482,
+        "load_time": 3701.710000168532,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/people",
+        "status": 200,
+        "duration": 408,
+        "load_time": 5516.505000181496,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/applicants",
+        "status": 200,
+        "duration": 424,
+        "load_time": 3351.6750000417233,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/flags",
+        "status": 200,
+        "duration": 443,
+        "load_time": 4192.805000115186,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/communications",
+        "status": 200,
+        "duration": 566,
+        "load_time": 4249.145000008866,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/rooms",
+        "status": 200,
+        "duration": 416,
+        "load_time": 3939.5299998577684,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awardees",
+        "status": 200,
+        "duration": 426,
+        "load_time": 2951.979999896139,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-nominations",
+        "status": 200,
+        "duration": 406,
+        "load_time": 3110.865000169724,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/profile",
+        "status": 200,
+        "duration": 405,
+        "load_time": 4411.179999820888,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/suspensions",
+        "status": 200,
+        "duration": 442,
+        "load_time": 3044.8249999899417,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines",
+        "status": 200,
+        "duration": 423,
+        "load_time": 3663.369999965653,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/lines/approved",
+        "status": 200,
+        "duration": 539,
+        "load_time": 4043.9949999563396,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/check-latex-build",
+        "status": 200,
+        "duration": 382,
+        "load_time": 2918.7300000339746,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/author-data",
+        "status": 200,
+        "duration": 352,
+        "load_time": 2851.4400001149625,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/user/profile",
+        "status": 200,
+        "duration": 390,
+        "load_time": 3671.3000000454485,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]
