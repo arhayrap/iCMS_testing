@@ -1,0 +1,152 @@
+[
+  {
+    "date": "09-04-2022, 11:18",
+    "username": "arhayrap",
+    "isAdmin": false,
+    "results": [
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/institutes",
+        "status": 200,
+        "duration": 545,
+        "load_time": 3760.900000052061,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/mo-list",
+        "status": 200,
+        "duration": 421,
+        "load_time": 3820.52999996813,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/statistics",
+        "status": 200,
+        "duration": 521,
+        "load_time": 4117.300000041723,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "Fail! -> AssertionError: Timed out retrying after 4000ms: Expected to find element: `tbody tr[class='']`, but never found it. Queried from element: <body>"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/tenures",
+        "status": 200,
+        "duration": 513,
+        "load_time": 4862.170000036713,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/cms-weeks/weeks",
+        "status": 200,
+        "duration": 452,
+        "load_time": 3893.6150000081398,
+        "warnings": [],
+        "errors": [
+          "POST request error : 403  403 (Forbidden)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/awards",
+        "status": 200,
+        "duration": 463,
+        "load_time": 3744.775000028312,
+        "warnings": [],
+        "errors": [
+          "GET request error (main) : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/job-openings",
+        "status": 200,
+        "duration": 498,
+        "load_time": 3206.7349999560975,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)",
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/collaboration/questionnaires",
+        "status": 200,
+        "duration": 504,
+        "load_time": 3140.5350000131875,
+        "warnings": [],
+        "errors": [
+          "GET request error : 500  500 (Internal Server Error)"
+        ],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/institute/member-authors",
+        "status": 200,
+        "duration": 408,
+        "load_time": 3007.2999999974854,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/administration/mo/mo-project-list",
+        "status": 200,
+        "duration": 504,
+        "load_time": 3375.5399999790825,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/awgs",
+        "status": 200,
+        "duration": 448,
+        "load_time": 4185.905000020284,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/cadi/dashboard",
+        "status": 200,
+        "duration": 488,
+        "load_time": 3963.7349999975413,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/author-lists/files",
+        "status": 200,
+        "duration": 400,
+        "load_time": 7118.2799999951385,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      },
+      {
+        "url": "https://icms.cern.ch/tools/publications/notes/pending",
+        "status": 200,
+        "duration": 397,
+        "load_time": 3927.1200000075623,
+        "warnings": [],
+        "errors": [],
+        "state": "OK"
+      }
+    ],
+    "cons_failed_pages": 0,
+    "app_status": ""
+  }
+]

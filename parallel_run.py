@@ -7,11 +7,6 @@ import math
 from jsmin import jsmin
 
 from multiprocessing import Pool, Manager, Value, cpu_count
-from coffea import processor
-from coffea.nanoevents.methods import vector, candidate
-
-from numba import jit
-from coffea.nanoevents import BaseSchema
 
 from datetime import datetime
 import coloredlogs
@@ -20,7 +15,7 @@ import logging
 
 links_tools = json.load(open("cypress/fixtures/tools_links.json"))[0]["links"]
 links_epr   = json.load(open("cypress/fixtures/epr_links.json"))[0]["links"]
-website = "tools" # tools, epr len(links_tools)
+website = "epr" # tools, epr len(links_tools)
 n_web = {"tools": len(links_tools), "epr": len(links_epr)}
 path_web = {"tools": "cypress/integration/test_files_tools", "epr": "cypress/integration/test_files_epr"}
 
